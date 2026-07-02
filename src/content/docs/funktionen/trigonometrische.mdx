@@ -1,10 +1,443 @@
 ---
 title: Trigonometrische Funktionen
 description: "Sinus und Kosinus als periodische Funktionen: Amplitude, Periode und Verschiebung."
-draft: true
 sidebar:
   order: 5
 ---
 
-Diese Seite ist noch in Arbeit und wird in einer späteren Ausbauphase der
-Website freigeschaltet.
+## Worum geht's?
+
+Atmung, Herzschlag, Gezeiten, ein Riesenrad, eine schwingende Gitarrensaite:
+Viele Vorgänge wiederholen sich in festen Zeitabständen. Für solche
+**periodischen** Prozesse braucht man Funktionen, die selbst periodisch
+sind – Sinus und Kosinus. **Leitfrage:** Wie steuern die Parameter in
+$f(x) = a \cdot \sin(b \cdot x) + d$ Höhe, Länge und Lage der Schwingung?
+
+## Erklärung
+
+### Bogenmaß
+
+Winkel misst man in der Analysis nicht in Grad, sondern im **Bogenmaß**:
+der Länge des zugehörigen Bogens am Einheitskreis. Umrechnung:
+
+$$
+180^\circ = \pi \qquad\Rightarrow\qquad
+x_{\text{Bogen}} = \frac{\alpha}{180^\circ} \cdot \pi
+$$
+
+| Grad | $30^\circ$ | $45^\circ$ | $60^\circ$ | $90^\circ$ | $180^\circ$ | $360^\circ$ |
+| --- | --- | --- | --- | --- | --- | --- |
+| Bogenmaß | $\frac{\pi}{6}$ | $\frac{\pi}{4}$ | $\frac{\pi}{3}$ | $\frac{\pi}{2}$ | $\pi$ | $2\pi$ |
+
+(Taschenrechner auf **RAD** stellen!)
+
+### Sinus- und Kosinusfunktion
+
+Am Einheitskreis ist $\sin(x)$ die $y$-Koordinate und $\cos(x)$ die
+$x$-Koordinate des Punktes, der zum Winkel $x$ gehört. Lässt man $x$
+laufen, entstehen die bekannten Wellen:
+
+![Die Graphen von Sinus und Kosinus zwischen −2π und 2π: gleiche Form, der Kosinus ist um π/2 nach links verschoben](../../../assets/plots/funktionen/trigonometrische/sinus-kosinus.svg)
+
+Eigenschaften von $\sin$ und $\cos$:
+
+- **Periode** $2\pi$: Nach $2\pi$ wiederholt sich alles –
+  $\sin(x + 2\pi) = \sin(x)$
+- **Wertebereich** $[-1;\ 1]$, **Amplitude** 1
+- Der Kosinus ist ein um $\frac{\pi}{2}$ nach links verschobener Sinus:
+  $\cos(x) = \sin\!\left(x + \frac{\pi}{2}\right)$
+- Symmetrie: $\sin$ ist punktsymmetrisch zum Ursprung
+  ($\sin(-x) = -\sin(x)$), $\cos$ ist achsensymmetrisch zur $y$-Achse
+  ($\cos(-x) = \cos(x)$)
+- Nullstellen: $\sin(x) = 0$ bei $x = 0,\ \pm\pi,\ \pm 2\pi,\ \dots$;
+  $\ \cos(x) = 0$ bei $x = \pm\frac{\pi}{2},\ \pm\frac{3\pi}{2},\ \dots$
+
+### Die allgemeine Sinusfunktion
+
+$$
+f(x) = a \cdot \sin(b \cdot x) + d
+$$
+
+**Amplitude $|a|$** – streckt die Welle in $y$-Richtung:
+
+![Sinuskurven mit den Amplituden 2, 1 und 0,5 im Vergleich](../../../assets/plots/funktionen/trigonometrische/amplitude.svg)
+
+**Faktor $b$** – staucht die Welle in $x$-Richtung und ändert die Periode:
+
+$$
+T = \frac{2\pi}{b}
+$$
+
+![y = sin(x) mit Periode 2π und y = sin(2x) mit Periode π im Vergleich](../../../assets/plots/funktionen/trigonometrische/periode.svg)
+
+**Verschiebung $d$** – hebt die **Mittellinie** auf $y = d$; der
+Wertebereich wird $[d - |a|;\ d + |a|]$:
+
+![f(x) = 2·sin(x) + 1 schwingt mit Amplitude 2 um die gestrichelte Mittellinie y = 1](../../../assets/plots/funktionen/trigonometrische/amplitude-mittellinie.svg)
+
+## Beispiele
+
+**Beispiel 1:** Rechne um: a) $90^\circ$ und $45^\circ$ ins Bogenmaß,
+b) $\frac{\pi}{3}$ und $\frac{3\pi}{2}$ in Grad.
+
+<details>
+<summary>Lösung</summary>
+
+a) Mit $180^\circ = \pi$:
+
+$$
+90^\circ = \frac{90}{180} \cdot \pi = \frac{\pi}{2}, \qquad
+45^\circ = \frac{45}{180} \cdot \pi = \frac{\pi}{4}
+$$
+
+b) Rückrichtung ($\pi = 180^\circ$):
+
+$$
+\frac{\pi}{3} = \frac{180^\circ}{3} = 60^\circ, \qquad
+\frac{3\pi}{2} = \frac{3 \cdot 180^\circ}{2} = 270^\circ
+$$
+
+</details>
+
+**Beispiel 2:** Bestimme für $f(x) = 3 \cdot \sin(2x) - 1$ Amplitude,
+Periode, Mittellinie und Wertebereich.
+
+<details>
+<summary>Lösung</summary>
+
+Parameter ablesen: $a = 3$, $b = 2$, $d = -1$.
+
+- **Amplitude:** $|a| = 3$
+- **Periode:** $T = \frac{2\pi}{b} = \frac{2\pi}{2} = \pi$
+- **Mittellinie:** $y = -1$
+- **Wertebereich:** von $d - |a| = -4$ bis $d + |a| = 2$, also
+  $W = [-4;\ 2]$
+
+</details>
+
+**Beispiel 3:** Ein Riesenrad dreht sich gleichmäßig; die Höhe einer
+Gondel beschreibt $h(t) = 6 - 5 \cdot \cos\!\left(\frac{\pi}{6} t\right)$
+($t$ in Minuten, $h$ in Metern – Graph in der Erklärung).
+a) In welcher Höhe steigt man ein? Wie hoch fährt die Gondel maximal?
+b) Wie lange dauert eine Umdrehung?
+c) Wann erreicht die Gondel zum ersten Mal 8,5 m Höhe?
+
+<details>
+<summary>Lösung</summary>
+
+a) Einstieg bei $t = 0$:
+
+$$
+h(0) = 6 - 5 \cdot \cos(0) = 6 - 5 = 1
+$$
+
+Einstieg in **1 m** Höhe. Maximal wird $h$, wenn $\cos = -1$ ist:
+$h_{\max} = 6 + 5 = 11$ m (Mittellinie 6 m, Amplitude 5 m).
+
+b) Periode:
+
+$$
+T = \frac{2\pi}{\pi/6} = 12
+$$
+
+Eine Umdrehung dauert **12 Minuten**.
+
+c) $h(t) = 8{,}5$ lösen:
+
+$$
+\begin{aligned}
+6 - 5\cos\!\left(\tfrac{\pi}{6}t\right) &= 8{,}5 &&\text{| } -6 \\
+-5\cos\!\left(\tfrac{\pi}{6}t\right) &= 2{,}5 &&\text{| } :(-5) \\
+\cos\!\left(\tfrac{\pi}{6}t\right) &= -0{,}5 &&\text{| } \cos^{-1} \\
+\tfrac{\pi}{6}t &= \tfrac{2\pi}{3} &&\text{| } \cdot \tfrac{6}{\pi} \\
+t &= 4
+\end{aligned}
+$$
+
+Nach **4 Minuten**. (Kontrolle: $h(4) = 6 - 5\cos\!\left(\frac{2\pi}{3}\right)
+= 6 - 5 \cdot (-0{,}5) = 8{,}5$ ✓)
+
+</details>
+
+## Aufgaben
+
+**Aufgabe 1** (⭐) Rechne ins Bogenmaß um:
+a) $180^\circ$  b) $90^\circ$  c) $60^\circ$  d) $30^\circ$
+
+<details>
+<summary>Lösung zu Aufgabe 1</summary>
+
+a) $\pi$  b) $\frac{\pi}{2}$  c) $\frac{\pi}{3}$  d) $\frac{\pi}{6}$
+
+(jeweils $\frac{\alpha}{180^\circ}\cdot\pi$)
+
+</details>
+
+**Aufgabe 2** (⭐) Rechne in Grad um:
+a) $\frac{\pi}{4}$  b) $\frac{2\pi}{3}$  c) $\frac{3\pi}{2}$  d) $2\pi$
+
+<details>
+<summary>Lösung zu Aufgabe 2</summary>
+
+a) $45^\circ$  b) $120^\circ$  c) $270^\circ$  d) $360^\circ$
+
+</details>
+
+**Aufgabe 3** (⭐) Gib ohne Taschenrechner an:
+a) $\sin(0)$  b) $\sin\!\left(\frac{\pi}{2}\right)$  c) $\sin(\pi)$
+d) $\cos(0)$  e) $\cos(\pi)$
+
+<details>
+<summary>Lösung zu Aufgabe 3</summary>
+
+a) $0$  b) $1$  c) $0$  d) $1$  e) $-1$
+
+(am Einheitskreis oder am Graphen ablesen)
+
+</details>
+
+**Aufgabe 4** (⭐) Gib für $f(x) = \sin(x)$ Wertebereich, Amplitude und
+Periode an.
+
+<details>
+<summary>Lösung zu Aufgabe 4</summary>
+
+$W = [-1;\ 1]$, Amplitude $1$, Periode $2\pi$.
+
+</details>
+
+**Aufgabe 5** (⭐) Gib Amplitude und Wertebereich an:
+a) $y = 4\sin(x)$  b) $y = 0{,}5\cos(x)$
+
+<details>
+<summary>Lösung zu Aufgabe 5</summary>
+
+a) Amplitude $4$, $\ W = [-4;\ 4]$
+
+b) Amplitude $0{,}5$, $\ W = [-0{,}5;\ 0{,}5]$
+
+</details>
+
+**Aufgabe 6** (⭐⭐) Berechne die Periode:
+a) $y = \sin(2x)$  b) $y = \sin\!\left(\frac{x}{2}\right)$  c) $y = \cos(3x)$
+
+<details>
+<summary>Lösung zu Aufgabe 6</summary>
+
+Mit $T = \frac{2\pi}{b}$:
+
+a) $T = \frac{2\pi}{2} = \pi$
+
+b) $T = \frac{2\pi}{1/2} = 4\pi$
+
+c) $T = \frac{2\pi}{3}$
+
+</details>
+
+**Aufgabe 7** (⭐⭐) $f(x) = 2\sin(x) + 3$. Gib Amplitude, Mittellinie und
+Wertebereich an.
+
+<details>
+<summary>Lösung zu Aufgabe 7</summary>
+
+Amplitude $2$, Mittellinie $y = 3$, Wertebereich
+$[3 - 2;\ 3 + 2] = [1;\ 5]$.
+
+</details>
+
+**Aufgabe 8** (⭐⭐) Im Amplituden-Vergleichsgraphen der Erklärung sind drei
+Kurven zu sehen. Ordne die Terme $2\sin(x)$, $\sin(x)$ und $0{,}5\sin(x)$
+zu und begründe.
+
+<details>
+<summary>Lösung zu Aufgabe 8</summary>
+
+Die Amplitude ist der maximale Ausschlag von der Mittellinie:
+
+- höchste Kurve (bis $\pm 2$): $y = 2\sin(x)$ (rot)
+- mittlere Kurve (bis $\pm 1$): $y = \sin(x)$ (blau)
+- flachste Kurve (bis $\pm 0{,}5$): $y = 0{,}5\sin(x)$ (grün)
+
+Alle drei haben dieselben Nullstellen, da der Faktor $a$ nur in
+$y$-Richtung streckt.
+
+</details>
+
+**Aufgabe 9** (⭐⭐) $f(x) = 5\sin(2x) - 2$. Gib Wertebereich und Periode an.
+
+<details>
+<summary>Lösung zu Aufgabe 9</summary>
+
+Wertebereich: $[-2 - 5;\ -2 + 5] = [-7;\ 3]$.
+Periode: $T = \frac{2\pi}{2} = \pi$.
+
+</details>
+
+**Aufgabe 10** (⭐⭐) Bestimme alle Lösungen in $[0;\ 2\pi]$:
+a) $\sin(x) = 0$  b) $\cos(x) = 0$
+
+<details>
+<summary>Lösung zu Aufgabe 10</summary>
+
+a) Der Sinus ist null bei $x = 0,\ \pi,\ 2\pi$.
+
+b) Der Kosinus ist null bei $x = \frac{\pi}{2},\ \frac{3\pi}{2}$.
+
+(am Graphen der Erklärung ablesbar)
+
+</details>
+
+**Aufgabe 11** (⭐⭐) Bestimme alle Lösungen von $\sin(x) = 0{,}5$ in
+$[0;\ 2\pi]$.
+
+<details>
+<summary>Lösung zu Aufgabe 11</summary>
+
+Der Taschenrechner (RAD!) liefert $x_1 = \sin^{-1}(0{,}5) = \frac{\pi}{6}$.
+
+Wegen der Symmetrie der Sinuskurve zur Stelle $\frac{\pi}{2}$ gibt es im
+Intervall eine zweite Lösung:
+
+$$
+x_2 = \pi - \frac{\pi}{6} = \frac{5\pi}{6}
+$$
+
+</details>
+
+**Aufgabe 12** (⭐⭐) Welche Symmetrie haben Sinus- und Kosinusfunktion?
+Belege beide mit einer Rechnung an der Stelle $x = \frac{\pi}{2}$.
+
+<details>
+<summary>Lösung zu Aufgabe 12</summary>
+
+$\sin$ ist **punktsymmetrisch** zum Ursprung: $\sin(-x) = -\sin(x)$.
+Check: $\sin\!\left(-\frac{\pi}{2}\right) = -1 = -\sin\!\left(\frac{\pi}{2}\right)$ ✓
+
+$\cos$ ist **achsensymmetrisch** zur $y$-Achse: $\cos(-x) = \cos(x)$.
+Check: $\cos\!\left(-\frac{\pi}{2}\right) = 0 = \cos\!\left(\frac{\pi}{2}\right)$ ✓
+
+</details>
+
+**Aufgabe 13** (⭐⭐) Gib einen Funktionsterm an: Sinuskurve mit Amplitude 3,
+Periode $\pi$ und Mittellinie $y = 0$.
+
+<details>
+<summary>Lösung zu Aufgabe 13</summary>
+
+Amplitude $\Rightarrow a = 3$. Periode $\pi$ bedeutet
+$\frac{2\pi}{b} = \pi \Rightarrow b = 2$. Mittellinie $0 \Rightarrow d = 0$:
+
+$$
+f(x) = 3\sin(2x)
+$$
+
+</details>
+
+**Aufgabe 14** (⭐⭐⭐) Beim Riesenrad aus Beispiel 3 wird die Gondel nach
+einer Umdrehung nicht angehalten.
+a) In welcher Höhe befindet sie sich nach 15 Minuten?
+b) Zu welchen Zeiten in der ersten Umdrehung ist die Gondel genau 6 m hoch?
+
+<details>
+<summary>Lösung zu Aufgabe 14</summary>
+
+a) Periode 12 min → nach 15 min ist die Gondel wie bei $t = 3$:
+
+$$
+h(15) = h(3) = 6 - 5\cos\!\left(\frac{\pi}{2}\right) = 6 - 0 = 6
+$$
+
+**6 m**.
+
+b) $h(t) = 6$ bedeutet $\cos\!\left(\frac{\pi}{6}t\right) = 0$, also
+$\frac{\pi}{6}t = \frac{\pi}{2}$ oder $\frac{3\pi}{2}$:
+
+$$
+t_1 = 3, \qquad t_2 = 9
+$$
+
+Nach 3 und nach 9 Minuten (auf halber Höhe beim Auf- bzw. Abstieg).
+
+</details>
+
+**Aufgabe 15** (⭐⭐⭐) Der Kammerton $a^1$ ist eine Schwingung mit 440 Hz
+(440 Schwingungen pro Sekunde): $y(t) = 0{,}8 \cdot \sin(2\pi \cdot 440 \cdot t)$.
+a) Gib die Amplitude an. b) Berechne die Periodendauer.
+c) Was müsste man am Term ändern, damit der Ton **lauter** klingt?
+
+<details>
+<summary>Lösung zu Aufgabe 15</summary>
+
+a) Amplitude $0{,}8$.
+
+b) $b = 2\pi \cdot 440$, also
+
+$$
+T = \frac{2\pi}{2\pi \cdot 440} = \frac{1}{440} \approx 0{,}0023\ \text{s}
+$$
+
+c) Lautstärke entspricht der Amplitude → den Faktor $0{,}8$ vergrößern
+(die Frequenz/Periode bleibt, sonst änderte sich die Tonhöhe).
+
+</details>
+
+**Aufgabe 16** (⭐⭐⭐) In einem Hafenbecken schwankt der Wasserstand durch
+die Gezeiten: $W(t) = 4 + 1{,}5 \cdot \sin\!\left(\frac{\pi}{6}t\right)$
+($t$ in Stunden nach Mitternacht, $W$ in Metern).
+a) Zwischen welchen Werten schwankt der Wasserstand?
+b) Wie groß ist der zeitliche Abstand zwischen zwei Hochwassern?
+c) Wann ist am ersten Tag zum ersten Mal Hochwasser?
+
+<details>
+<summary>Lösung zu Aufgabe 16</summary>
+
+a) Mittellinie 4, Amplitude 1,5 → zwischen $2{,}5$ m und $5{,}5$ m.
+
+b) Periode:
+
+$$
+T = \frac{2\pi}{\pi/6} = 12
+$$
+
+Alle **12 Stunden** ist Hochwasser.
+
+c) Hochwasser, wenn der Sinus 1 ist:
+
+$$
+\frac{\pi}{6}t = \frac{\pi}{2} \quad\Rightarrow\quad t = 3
+$$
+
+Um **3 Uhr** nachts.
+
+</details>
+
+## Merksatz
+
+<details>
+<summary>Merksatz anzeigen</summary>
+
+$f(x) = a \cdot \sin(b \cdot x) + d$ schwingt mit **Amplitude** $|a|$ um
+die **Mittellinie** $y = d$; die **Periode** ist $T = \frac{2\pi}{b}$, der
+Wertebereich $[d - |a|;\ d + |a|]$. Sinus und Kosinus haben dieselbe
+Form – der Kosinus ist ein um $\frac{\pi}{2}$ verschobener Sinus. Winkel
+im **Bogenmaß** ($180^\circ = \pi$), Taschenrechner auf RAD.
+
+</details>
+
+## Vertiefung
+
+:::caution
+Der häufigste Fehler in Klassenarbeiten ist ein Taschenrechner im
+**DEG-Modus**: $\sin(\pi)$ ergibt dann $0{,}0548\ldots$ statt $0$. Vor
+jeder Rechnung mit Bogenmaß den Modus **RAD** prüfen!
+:::
+
+**Warum der Faktor $b$ die Periode *verkleinert*:** $\sin(2x)$ durchläuft
+beim Wachsen von $x$ das Argument doppelt so schnell – die Welle ist
+fertig, wenn $2x = 2\pi$ gilt, also schon bei $x = \pi$. Allgemein:
+Periodenlänge $= \frac{2\pi}{b}$.
+
+**Ausblick:** Auf der Seite [Transformationen](../transformationen/)
+erkennst du die Parameter $a$, $b$, $d$ als Spezialfall eines allgemeinen
+Prinzips wieder, das für **alle** Funktionstypen gilt – inklusive der
+Verschiebung in $x$-Richtung, die hier noch fehlte.
