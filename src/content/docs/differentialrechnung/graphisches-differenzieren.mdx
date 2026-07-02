@@ -1,10 +1,401 @@
 ---
 title: Graphisches Differenzieren
 description: "Vom Graphen von f auf den Graphen von f′ schließen – ganz ohne Funktionsterm."
-draft: true
 sidebar:
   order: 5
 ---
 
-Diese Seite ist noch in Arbeit und wird in einer späteren Ausbauphase der
-Website freigeschaltet.
+## Worum geht's?
+
+Ein EKG, ein Höhenprofil einer Radetappe, eine Fieberkurve: Oft liegt nur
+ein **Graph** vor, kein Funktionsterm. Trotzdem lässt sich die Ableitung
+bestimmen – als Graph. **Leitfrage:** Wie überträgt man die
+Steigungsinformation eines Graphen Punkt für Punkt in den Graphen der
+Ableitungsfunktion – und wie liest man umgekehrt aus $f'$ den Verlauf
+von $f$ ab?
+
+## Erklärung
+
+### Das Übersetzungs-Wörterbuch
+
+Der $f'$-Graph zeigt an jeder Stelle die **Steigung** des $f$-Graphen.
+Daraus ergeben sich feste Übersetzungsregeln:
+
+| am Graphen von $f$ | am Graphen von $f'$ |
+| --- | --- |
+| $f$ steigt | $f'$ verläuft **oberhalb** der $x$-Achse |
+| $f$ fällt | $f'$ verläuft **unterhalb** der $x$-Achse |
+| Hoch- oder Tiefpunkt (waagerechte Tangente) | **Nullstelle** von $f'$ |
+| $f$ am steilsten (Wendepunkt) | $f'$ hat Hoch-/Tiefpunkt |
+| Sattelpunkt | $f'$ **berührt** die $x$-Achse |
+
+![Über den Extrempunkten H(−1|2) und T(1|−2) von f liegen genau die Nullstellen der rot eingezeichneten Ableitung f'; gepunktete senkrechte Hilfslinien verbinden sie](../../../assets/plots/differentialrechnung/graphisches-differenzieren/schema-f-und-fstrich.svg)
+
+### Vorgehen in drei Schritten
+
+1. **Besondere Stellen übertragen:** Unter jedem Hoch-/Tiefpunkt von
+   $f$ eine Nullstelle von $f'$ markieren (senkrechte Hilfslinien!).
+2. **Vorzeichen festlegen:** Wo $f$ steigt, liegt $f'$ oben, wo $f$
+   fällt, unten.
+3. **Steigungswerte schätzen:** An einigen Stellen die
+   Tangentensteigung abschätzen (z. B. mit einem Geodreieck als
+   „Tangentenlineal“) und als $y$-Werte von $f'$ eintragen, dann glatt
+   verbinden.
+
+**Grad-Faustregel:** Der $f'$-Graph ist immer „eine Stufe einfacher“ –
+aus einer Parabel wird eine Gerade, aus einer kubischen Kurve eine
+Parabel, aus einer W-Form eine kubische Kurve.
+
+### Rückwärts lesen: von f′ auf f
+
+Auch die Gegenrichtung folgt dem Wörterbuch, von rechts nach links
+gelesen: Nullstelle von $f'$ mit Vorzeichenwechsel von $-$ nach $+$ →
+Tiefpunkt von $f$, usw. **Aber:** $f$ ist dabei nur bis auf eine
+Verschiebung in $y$-Richtung bestimmt – alle senkrecht verschobenen
+Kopien haben dieselbe Ableitung.
+
+## Beispiele
+
+**Beispiel 1:** Am Schema-Graphen oben (blaue Kurve $f$ mit
+$H(-1 \mid 2)$ und $T(1 \mid -2)$): Leite die Form des $f'$-Graphen
+Schritt für Schritt her.
+
+<details>
+<summary>Lösung</summary>
+
+**Schritt 1:** Unter $H(-1 \mid 2)$ und $T(1 \mid -2)$ liegen
+Nullstellen von $f'$: bei $x = -1$ und $x = 1$.
+
+**Schritt 2 – Vorzeichen:**
+
+| Bereich | $f$ | $f'$ |
+| --- | --- | --- |
+| $x < -1$ | steigt | positiv |
+| $-1 < x < 1$ | fällt | negativ |
+| $x > 1$ | steigt | positiv |
+
+**Schritt 3:** Positiv – null – negativ – null – positiv, glatt
+verbunden: eine nach oben geöffnete **Parabel** mit Nullstellen $\pm 1$
+und Tiefpunkt bei $x = 0$ (dort fällt $f$ am steilsten). Genau der rote
+Graph im Bild.
+
+</details>
+
+**Beispiel 2:** Der Graph zeigt eine Parabel $f$ mit Tiefpunkt
+$T(1 \mid -1)$ (erster Aufgaben-Graph unten, siehe Aufgabe 3).
+Konstruiere den $f'$-Graphen über eine Steigungstabelle.
+
+<details>
+<summary>Lösung</summary>
+
+Tangentensteigungen am Graphen abschätzen:
+
+| $x$ | $-1$ | $0$ | $1$ | $2$ | $3$ |
+| --- | --- | --- | --- | --- | --- |
+| Steigung von $f$ | $-4$ | $-2$ | $0$ | $2$ | $4$ |
+
+Die Werte wachsen gleichmäßig um 2 pro Schritt – die Punkte
+$(x \mid f'(x))$ liegen auf einer **Geraden** durch $(1 \mid 0)$ mit
+Steigung 2. (Plausibel: Ableitung einer Parabel ist eine Gerade.)
+
+</details>
+
+**Beispiel 3:** Gegeben ist der Graph von $f'$: eine steigende Gerade
+mit Nullstelle bei $x = -1$ (Aufgaben-Graph von Aufgabe 8). Was lässt
+sich über $f$ sagen?
+
+<details>
+<summary>Lösung</summary>
+
+- Für $x < -1$ ist $f'$ **negativ** → $f$ fällt.
+- Bei $x = -1$ Vorzeichenwechsel von $-$ nach $+$ → **Tiefpunkt** von
+  $f$.
+- Für $x > -1$ ist $f'$ **positiv** → $f$ steigt, und zwar immer
+  steiler (denn $f'$ wächst).
+
+Fallend–Tiefpunkt–steigend mit linear wachsender Steigung: $f$ ist eine
+nach oben geöffnete **Parabel** mit Scheitel bei $x = -1$. Ihre Höhe ist
+nicht bestimmt – jede in $y$-Richtung verschobene Parabel passt.
+
+</details>
+
+## Aufgaben
+
+**Aufgabe 1** (⭐) Vervollständige das „Wörterbuch“: Was gilt am
+$f'$-Graphen, wenn a) $f$ streng steigt, b) $f$ einen Tiefpunkt hat,
+c) $f$ einen Sattelpunkt hat?
+
+<details>
+<summary>Lösung zu Aufgabe 1</summary>
+
+a) $f'$ verläuft oberhalb der $x$-Achse ($f' > 0$).
+
+b) $f'$ hat eine Nullstelle mit Vorzeichenwechsel von $-$ nach $+$.
+
+c) $f'$ **berührt** die $x$-Achse (Nullstelle ohne Vorzeichenwechsel).
+
+</details>
+
+**Aufgabe 2** (⭐) Der Graph von $f$ hat einen Hochpunkt bei $x = -1$ und
+einen Tiefpunkt bei $x = 3$. Gib die Nullstellen von $f'$ an und die
+Bereiche, in denen $f'$ negativ ist.
+
+<details>
+<summary>Lösung zu Aufgabe 2</summary>
+
+Nullstellen von $f'$: $x = -1$ und $x = 3$.
+Zwischen Hoch- und Tiefpunkt fällt $f$, also ist $f'$ **negativ für
+$-1 < x < 3$**.
+
+</details>
+
+**Aufgabe 3** (⭐) Skizziere den Graphen von $f'$ zum abgebildeten
+Graphen:
+
+![Aufgabengraph: nach oben geöffnete Parabel f mit Tiefpunkt T(1|−1), ohne Funktionsterm](../../../assets/plots/differentialrechnung/graphisches-differenzieren/aufgabe-parabel.svg)
+
+<details>
+<summary>Lösung zu Aufgabe 3</summary>
+
+Unter dem Tiefpunkt $T(1 \mid -1)$ liegt die Nullstelle von $f'$.
+Links davon fällt $f$ ($f'$ negativ), rechts steigt $f$ ($f'$ positiv),
+die Steigung wächst gleichmäßig → $f'$ ist eine steigende Gerade:
+
+![Lösungsgraph: Die Ableitung f'(x) = 2x − 2 ist eine steigende Gerade mit Nullstelle bei x = 1; f gestrichelt im Hintergrund](../../../assets/plots/differentialrechnung/graphisches-differenzieren/loesung-parabel.svg)
+
+</details>
+
+**Aufgabe 4** (⭐) Skizziere den Graphen von $f'$:
+
+![Aufgabengraph: nach unten geöffnete Parabel f mit Hochpunkt H(0|2), ohne Funktionsterm](../../../assets/plots/differentialrechnung/graphisches-differenzieren/aufgabe-parabel-unten.svg)
+
+<details>
+<summary>Lösung zu Aufgabe 4</summary>
+
+Nullstelle von $f'$ unter dem Hochpunkt bei $x = 0$; links steigt $f$
+($f' > 0$), rechts fällt $f$ ($f' < 0$) → fallende Gerade durch den
+Ursprung:
+
+![Lösungsgraph: Die Ableitung f'(x) = −x ist eine fallende Ursprungsgerade; f gestrichelt im Hintergrund](../../../assets/plots/differentialrechnung/graphisches-differenzieren/loesung-parabel-unten.svg)
+
+</details>
+
+**Aufgabe 5** (⭐⭐) Skizziere den Graphen von $f'$:
+
+![Aufgabengraph: kubische Kurve f mit Hochpunkt H(−1|1) und Tiefpunkt T(1|−1), ohne Funktionsterm](../../../assets/plots/differentialrechnung/graphisches-differenzieren/aufgabe-kubisch.svg)
+
+<details>
+<summary>Lösung zu Aufgabe 5</summary>
+
+Nullstellen von $f'$ unter $H$ und $T$: bei $\pm 1$. Außen steigt $f$
+($f' > 0$), dazwischen fällt $f$ ($f' < 0$) → nach oben geöffnete
+Parabel mit Tiefpunkt bei $x = 0$:
+
+![Lösungsgraph: Die Ableitung f'(x) = 1,5x² − 1,5 ist eine nach oben geöffnete Parabel mit Nullstellen bei −1 und 1](../../../assets/plots/differentialrechnung/graphisches-differenzieren/loesung-kubisch.svg)
+
+</details>
+
+**Aufgabe 6** (⭐⭐) Skizziere den Graphen von $f'$:
+
+![Aufgabengraph: kubische Kurve f mit Hochpunkt H(0|2) und Tiefpunkt T(2|−2), ohne Funktionsterm](../../../assets/plots/differentialrechnung/graphisches-differenzieren/aufgabe-kubisch2.svg)
+
+<details>
+<summary>Lösung zu Aufgabe 6</summary>
+
+Nullstellen von $f'$ bei $x = 0$ und $x = 2$; dazwischen negativ
+(fallendes $f$), außen positiv → nach oben geöffnete Parabel mit
+Scheitel bei $x = 1$:
+
+![Lösungsgraph: Die Ableitung f'(x) = 3x² − 6x ist eine Parabel mit Nullstellen bei 0 und 2](../../../assets/plots/differentialrechnung/graphisches-differenzieren/loesung-kubisch2.svg)
+
+</details>
+
+**Aufgabe 7** (⭐⭐⭐) Skizziere den Graphen von $f'$:
+
+![Aufgabengraph: W-förmige Kurve f mit Tiefpunkten T(−2|−4) und T(2|−4) und Hochpunkt H(0|0), ohne Funktionsterm](../../../assets/plots/differentialrechnung/graphisches-differenzieren/aufgabe-w-form.svg)
+
+<details>
+<summary>Lösung zu Aufgabe 7</summary>
+
+Drei Extrempunkte → drei Nullstellen von $f'$ bei $-2$, $0$, $2$.
+Vorzeichen von links: $f$ fällt ($-$), steigt ($+$), fällt ($-$),
+steigt ($+$) → kubische Kurve „von unten nach oben“ durch die drei
+Nullstellen:
+
+![Lösungsgraph: Die Ableitung f'(x) = x³ − 4x ist eine kubische Kurve mit Nullstellen bei −2, 0 und 2](../../../assets/plots/differentialrechnung/graphisches-differenzieren/loesung-w-form.svg)
+
+</details>
+
+**Aufgabe 8** (⭐⭐) Diesmal umgekehrt – gegeben ist der Graph der
+**Ableitung** $f'$. Skizziere einen möglichen Graphen von $f$:
+
+![Aufgabengraph: gegeben ist die Ableitung f' als steigende Gerade mit Nullstelle N(−1|0)](../../../assets/plots/differentialrechnung/graphisches-differenzieren/aufgabe-rueckwaerts.svg)
+
+<details>
+<summary>Lösung zu Aufgabe 8</summary>
+
+$f'$ wechselt bei $x = -1$ von $-$ nach $+$ → Tiefpunkt von $f$ bei
+$x = -1$; links fällt $f$, rechts steigt $f$ mit wachsender Steigung →
+nach oben geöffnete Parabel mit Scheitelstelle $-1$:
+
+![Lösungsgraph: Zwei mögliche Stammkurven (gestrichelte Parabeln mit Scheitel bei x = −1) zur gegebenen Ableitung f'(x) = x + 1](../../../assets/plots/differentialrechnung/graphisches-differenzieren/loesung-rueckwaerts.svg)
+
+Jede in $y$-Richtung verschobene Parabel ist ebenfalls richtig.
+
+</details>
+
+**Aufgabe 9** (⭐⭐) Warum ist der Graph von $f$ in Aufgabe 8 nicht
+eindeutig bestimmt? Gib zwei verschiedene Funktionen an, die beide die
+Ableitung $f'(x) = x + 1$ haben.
+
+<details>
+<summary>Lösung zu Aufgabe 9</summary>
+
+$f'$ legt nur die **Steigungen** fest, nicht die Höhenlage. Zum
+Beispiel haben
+
+$$
+f_1(x) = 0{,}5x^2 + x \qquad\text{und}\qquad f_2(x) = 0{,}5x^2 + x + 1{,}5
+$$
+
+beide die Ableitung $x + 1$ – konstante Summanden fallen beim Ableiten
+weg.
+
+</details>
+
+**Aufgabe 10** (⭐⭐) Woran erkennt man am $f'$-Graphen, dass $f$ einen
+**Sattelpunkt** hat und keinen Extrempunkt?
+
+<details>
+<summary>Lösung zu Aufgabe 10</summary>
+
+$f'$ hat zwar eine Nullstelle, aber **ohne Vorzeichenwechsel**: Der
+$f'$-Graph berührt die $x$-Achse nur (z. B. Parabel mit Scheitel auf der
+Achse). $f$ hat dort eine waagerechte Tangente, steigt aber davor und
+danach in dieselbe Richtung weiter.
+
+</details>
+
+**Aufgabe 11** (⭐⭐) An welcher Stelle fällt der Graph aus Aufgabe 5 am
+steilsten? Woran erkennt man das am $f'$-Graphen?
+
+<details>
+<summary>Lösung zu Aufgabe 11</summary>
+
+Zwischen Hoch- und Tiefpunkt, bei $x = 0$: Dort hat der $f'$-Graph
+seinen **Tiefpunkt** ($f'(0) = -1{,}5$, der negativste Wert). Die
+steilste Stelle von $f$ ist zugleich ihr Wendepunkt.
+
+</details>
+
+**Aufgabe 12** (⭐⭐) Der Graph von $f'$ ist eine nach oben geöffnete
+Parabel mit den Nullstellen $-1$ und $1$. In welchen Intervallen steigt
+bzw. fällt $f$? Wo liegen Hoch- und Tiefpunkt?
+
+<details>
+<summary>Lösung zu Aufgabe 12</summary>
+
+$f' > 0$ für $x < -1$ und $x > 1$ → $f$ **steigt** dort.
+$f' < 0$ für $-1 < x < 1$ → $f$ **fällt** dazwischen.
+
+Bei $x = -1$: Wechsel $+ \to -$ → **Hochpunkt**;
+bei $x = 1$: Wechsel $- \to +$ → **Tiefpunkt**.
+
+</details>
+
+**Aufgabe 13** (⭐) Ergänze die Faustregel: Der Graph einer
+ganzrationalen Funktion vom Grad $n$ hat eine Ableitung vom Grad … Gib
+die Paare für Parabel und W-Form an.
+
+<details>
+<summary>Lösung zu Aufgabe 13</summary>
+
+Grad $n - 1$ (die Potenzregel senkt jeden Exponenten um 1):
+Parabel (Grad 2) → Gerade (Grad 1); W-Form (Grad 4) → kubische Kurve
+(Grad 3).
+
+</details>
+
+**Aufgabe 14** (⭐⭐) Fehlersuche: Lena zeichnet als $f'$-Graphen einfach
+den $f$-Graphen um 1 nach unten verschoben. Erkläre grundsätzlich, warum
+das nicht funktionieren kann.
+
+<details>
+<summary>Lösung zu Aufgabe 14</summary>
+
+Der $f'$-Graph zeigt nicht die **Werte** von $f$, sondern ihre
+**Steigungen** – das sind völlig andere Größen. Konkretes Gegenargument:
+Am Hochpunkt hat $f$ einen großen Wert, aber die Steigung 0; die
+verschobene Kopie hätte dort keinen Achsenschnittpunkt. Auch der Grad
+passt nicht (er müsste um 1 sinken).
+
+</details>
+
+**Aufgabe 15** (⭐⭐⭐) Wende das Verfahren zweimal an: Der Graph von $f$
+sei die kubische Kurve aus Aufgabe 5. Beschreibe den Graphen von $f''$.
+An welcher Stelle hat $f''$ seine Nullstelle, und was bedeutet sie für
+$f$?
+
+<details>
+<summary>Lösung zu Aufgabe 15</summary>
+
+$f'$ ist eine nach oben geöffnete Parabel mit Tiefpunkt bei $x = 0$
+(Aufgabe 5). Deren Ableitung $f''$ ist eine **steigende Gerade** mit
+Nullstelle unter dem Parabel-Tiefpunkt, also bei $x = 0$.
+
+Bedeutung für $f$: Bei $x = 0$ liegt die **steilste Stelle** zwischen
+Hoch- und Tiefpunkt – der Wendepunkt von $f$ (dort wechselt die
+Krümmung).
+
+</details>
+
+**Aufgabe 16** (⭐⭐⭐) Höhenprofil einer Radetappe: erst gleichmäßiger
+Anstieg, oben ein Gipfelplateau, dann steile Abfahrt ins Tal, zuletzt
+flaches Ziel. Beschreibe den Verlauf des zugehörigen
+Steigungsgraphen ($f'$) in Worten.
+
+<details>
+<summary>Lösung zu Aufgabe 16</summary>
+
+- Anstieg: $f'$ konstant **positiv** (etwa waagerechtes Stück oberhalb
+  der Achse)
+- Gipfelplateau: $f'$ fällt auf **0** und bleibt dort kurz
+- Steile Abfahrt: $f'$ springt deutlich ins **Negative** (tiefster
+  Wert = steilstes Gefälle)
+- Flaches Ziel: $f'$ kehrt auf **0** zurück
+
+Der Steigungsgraph pendelt also um die $x$-Achse und bildet Anstieg,
+Plateau, Abfahrt und Zielflachstück als positiv/null/negativ/null ab.
+
+</details>
+
+## Merksatz
+
+<details>
+<summary>Merksatz anzeigen</summary>
+
+Der $f'$-Graph zeigt **Steigungen**, nicht Werte: $f$ steigt ↔ $f'$
+über der Achse; Extrempunkt von $f$ ↔ Nullstelle von $f'$ (mit
+Vorzeichenwechsel); steilste Stelle von $f$ ↔ Extrempunkt von $f'$;
+Sattelpunkt ↔ $f'$ berührt die Achse. Der Grad sinkt um 1. Rückwärts
+gilt alles genauso – aber $f$ ist nur bis auf Verschiebung nach
+oben/unten bestimmt.
+
+</details>
+
+## Vertiefung
+
+:::caution
+Häufigster Fehler: den $f'$-Graphen wie eine „Kopie“ von $f$ behandeln
+(Aufgabe 14). Kontrolliere jede Skizze mit den zwei harten Kriterien:
+Nullstellen von $f'$ **exakt unter** den Extrempunkten von $f$, und
+Vorzeichen von $f'$ passend zu steigt/fällt.
+:::
+
+**Warum das trainiert wird:** In Klassenarbeiten (und im Abitur) sind
+Zuordnungsaufgaben „Welcher Graph gehört zu $f'$?“ Standard – sie
+prüfen das Verständnis der Ableitung ohne jede Rechnung.
+
+**Ausblick:** Die Wörterbuch-Regeln sind genau die Kriterien, mit denen
+die nächste Seite [Extrem- und Wendepunkte](../extrem-wendepunkte/)
+**rechnerisch** arbeitet: $f'(x_0) = 0$ plus Vorzeichenwechsel.

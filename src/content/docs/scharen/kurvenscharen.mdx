@@ -1,10 +1,776 @@
 ---
 title: Kurvenscharen
 description: "Funktionenscharen mit Parameter: Ableiten, Kurvendiskussion mit Fallunterscheidung, gemeinsame Punkte."
-draft: true
 sidebar:
   order: 1
 ---
 
-Diese Seite ist noch in Arbeit und wird in einer späteren Ausbauphase der
-Website freigeschaltet.
+## Worum geht's?
+
+Welche Dosis muss ein Medikament haben, damit der Wirkstoffspiegel die
+Wirkschwelle erreicht? Wie weit fliegt ein Ball – abhängig von der
+Abwurfgeschwindigkeit? In beiden Fällen beschreibt **eine Formel mit
+einem Parameter** gleich unendlich viele Kurven auf einmal.
+**Leitfrage:** Wie rechnet man mit einem Funktionsterm, in dem neben
+$x$ noch ein Parameter $t$ steckt – und was lässt sich über **alle**
+Kurven der Schar gleichzeitig sagen?
+
+## Erklärung
+
+### Was ist eine Kurvenschar?
+
+Eine **Funktionenschar** (Kurvenschar) ist eine Familie von Funktionen
+mit einem **Parameter** $t$ (auch $a$, $k$, $d$ …):
+
+$$
+f_t(x) = x^2 + t
+$$
+
+Für jeden Wert von $t$ entsteht **eine** Kurve der Schar – hier lauter
+in $y$-Richtung verschobene Normalparabeln:
+
+![Kurvenschar f_t(x) = x² + t für t = −2, 0, 1 und 2: in y-Richtung verschobene Normalparabeln](../../../assets/plots/scharen/kurvenscharen/schar-verschiebung.svg)
+
+Der Parameter kann auch die **Form** ändern:
+
+![Kurvenschar f_t(x) = t·x² für t = −1, 0,5, 1 und 2: unterschiedlich stark gestreckte und gespiegelte Parabeln](../../../assets/plots/scharen/kurvenscharen/schar-streckung.svg)
+
+Wichtig: $x$ ist die Variable, $t$ ist innerhalb jeder Kurve eine
+**feste Zahl**. $f_2(3)$ heißt: Kurve zu $t = 2$, Stelle $x = 3$.
+
+### Ableiten mit Parameter
+
+Abgeleitet wird **nach $x$** – der Parameter wird dabei behandelt wie
+eine ganz normale Zahl (wie die 5 in $5x$):
+
+$$
+f_t(x) = x^3 - tx
+\quad\Rightarrow\quad
+f_t'(x) = 3x^2 - t
+$$
+
+:::caution
+**Die klassische Fehlerquelle:** $t$ ist beim Ableiten nach $x$ eine
+**Konstante**! Aus $-tx$ wird $-t$ (nicht $-x$, nicht $0$). Und aus
+$t^2 x$ wird $t^2$. Wer unsicher ist, ersetzt $t$ testweise durch 5:
+$x^3 - 5x \to 3x^2 - 5$ – genauso mit $t$.
+:::
+
+### Kurvendiskussion mit Fallunterscheidung
+
+Die Kurvendiskussion läuft wie gewohnt – nur hängen die Ergebnisse von
+$t$ ab, und manchmal auch die **Anzahl** der Lösungen. Beispiel
+$f_t(x) = x^3 - tx$ mit $f_t'(x) = 3x^2 - t = 0$, also
+$x^2 = \frac{t}{3}$:
+
+- $t > 0$: **zwei** Lösungen $x = \pm\sqrt{t/3}$ → Hoch- und Tiefpunkt
+- $t = 0$: nur $x = 0$, kein VZW → **Sattelpunkt**
+- $t < 0$: keine Lösung → $f_t$ ist streng monoton, **keine**
+  Extrempunkte
+
+![Drei Kurven der Schar f_t(x) = x³ − tx für t = −3, 0 und 3: Für t = 3 gibt es Hoch- und Tiefpunkt, für t = 0 einen Sattelpunkt, für t = −3 keine Extrempunkte](../../../assets/plots/scharen/kurvenscharen/schar-fallunterscheidung.svg)
+
+Solche **Fallunterscheidungen** (z. B. $t > 0$ / $t = 0$ / $t < 0$)
+gehören bei Scharen zum Standard.
+
+### Gemeinsame Punkte aller Scharkurven
+
+Manche Punkte liegen auf **jeder** Kurve der Schar. Man findet sie,
+indem man den Term nach Potenzen von $t$ **sortiert**: Ein Punkt ist
+gemeinsam, wenn der Wert nicht mehr von $t$ abhängt – also wenn alles,
+was bei $t$ steht, null wird.
+
+Beispiel $f_t(x) = tx^2 + 1 - t$:
+
+$$
+f_t(x) = t\left(x^2 - 1\right) + 1
+$$
+
+Für $x^2 - 1 = 0$, also $x = \pm 1$, ist $f_t(\pm 1) = 1$ – egal,
+welches $t$:
+
+![Drei Kurven der Schar f_t(x) = tx² + 1 − t laufen alle durch die gemeinsamen Punkte P(−1|1) und Q(1|1)](../../../assets/plots/scharen/kurvenscharen/schar-gemeinsame-punkte.svg)
+
+(Alternative: $f_t(x) = f_s(x)$ für zwei verschiedene Parameter $t
+\neq s$ lösen – führt auf dieselbe Bedingung.)
+
+## Beispiele
+
+**Beispiel 1:** Gegeben ist die Schar $f_t(x) = x^2 + t$.
+a) Berechne $f_2(3)$ und $f_{-1}(0)$.
+b) Für welchen Wert von $t$ verläuft die Kurve durch $P(1 \mid 3)$?
+
+<details>
+<summary>Lösung</summary>
+
+a) $t$ einsetzen, dann $x$:
+
+$$
+f_2(3) = 3^2 + 2 = 11, \qquad f_{-1}(0) = 0 - 1 = -1
+$$
+
+b) Punktprobe mit unbekanntem $t$:
+
+$$
+\begin{aligned}
+f_t(1) &= 3 \\
+1 + t &= 3 \\
+t &= 2
+\end{aligned}
+$$
+
+Die Scharkurve zu $t = 2$ läuft durch $P$.
+
+</details>
+
+**Beispiel 2:** Leite nach $x$ ab:
+a) $f_t(x) = x^3 - tx$  b) $g_t(x) = tx^2 - 2t^2x + 5$
+
+<details>
+<summary>Lösung</summary>
+
+$t$ wird wie eine Zahl behandelt:
+
+a)
+
+$$
+f_t'(x) = 3x^2 - t
+$$
+
+b) $t$ und $t^2$ sind konstante Faktoren, die $5$ fällt weg:
+
+$$
+g_t'(x) = 2tx - 2t^2
+$$
+
+</details>
+
+**Beispiel 3:** Untersuche $f_t(x) = x^3 - tx$ in Abhängigkeit von $t$
+auf Extrempunkte (vollständige Fallunterscheidung).
+
+<details>
+<summary>Lösung</summary>
+
+$f_t'(x) = 3x^2 - t$, $\ f_t''(x) = 6x$.
+
+**Notwendige Bedingung:**
+
+$$
+3x^2 - t = 0 \quad\Longleftrightarrow\quad x^2 = \frac{t}{3}
+$$
+
+**Fall 1: $t > 0$.** Zwei Lösungen $x = \pm\sqrt{\frac{t}{3}}$.
+Hinreichend: $f_t''\!\left(-\sqrt{t/3}\right) < 0$ → Hochpunkt;
+$f_t''\!\left(+\sqrt{t/3}\right) > 0$ → Tiefpunkt. Die Schar hat für
+jedes positive $t$ je einen Hoch- und Tiefpunkt.
+
+**Fall 2: $t = 0$.** $f_0(x) = x^3$: Kandidat $x = 0$ ohne VZW von
+$f'$ → **Sattelpunkt** $(0 \mid 0)$, kein Extremum.
+
+**Fall 3: $t < 0$.** $x^2 = \frac{t}{3} < 0$ hat keine Lösung –
+$f_t'(x) = 3x^2 - t > 0$ überall: streng steigend, **keine
+Extrempunkte**.
+
+(Alle drei Fälle sind im Scharplot der Erklärung sichtbar.)
+
+</details>
+
+**Beispiel 4:** Zeige, dass alle Kurven der Schar
+$f_t(x) = tx^2 + 1 - t$ durch zwei gemeinsame Punkte verlaufen.
+
+<details>
+<summary>Lösung</summary>
+
+Term nach $t$ sortieren:
+
+$$
+f_t(x) = t\left(x^2 - 1\right) + 1
+$$
+
+Der Funktionswert hängt genau dann **nicht** von $t$ ab, wenn der
+Faktor bei $t$ verschwindet:
+
+$$
+x^2 - 1 = 0 \quad\Rightarrow\quad x = \pm 1
+$$
+
+Dort gilt $f_t(\pm 1) = t \cdot 0 + 1 = 1$ für **jedes** $t$:
+
+$$
+P(-1 \mid 1), \qquad Q(1 \mid 1)
+$$
+
+</details>
+
+**Beispiel 5:** Ein Ball wird unter 45° mit der Geschwindigkeit $v$
+abgeworfen; seine Flugbahn ist näherungsweise
+$h_v(x) = x - \frac{10}{v^2}\,x^2$ ($x$, $h$ in m, $v$ in m/s).
+a) Zeige: Die Wurfweite beträgt $\frac{v^2}{10}$.
+b) Wie hoch fliegt der Ball maximal (in Abhängigkeit von $v$)?
+
+<details>
+<summary>Lösung</summary>
+
+a) Wurfweite = zweite Nullstelle:
+
+$$
+x - \frac{10}{v^2}x^2 = x\left(1 - \frac{10}{v^2}x\right) = 0
+\quad\Rightarrow\quad x = 0 \ \text{oder}\ x = \frac{v^2}{10}
+$$
+
+Für $v = 10$ m/s also 10 m (siehe Scharplot in den Aufgaben).
+
+b) Scheitel über die Ableitung ($v$ ist Parameter!):
+
+$$
+h_v'(x) = 1 - \frac{20}{v^2}x = 0
+\quad\Rightarrow\quad x = \frac{v^2}{20}
+$$
+
+$$
+h_v\!\left(\frac{v^2}{20}\right)
+= \frac{v^2}{20} - \frac{10}{v^2} \cdot \frac{v^4}{400}
+= \frac{v^2}{20} - \frac{v^2}{40} = \frac{v^2}{40}
+$$
+
+Die maximale Höhe wächst **quadratisch** mit $v$: doppelte
+Geschwindigkeit → vierfache Höhe (und vierfache Weite).
+
+</details>
+
+## Aufgaben
+
+**Aufgabe 1** (⭐) $f_t(x) = x^2 + t$. Berechne $f_2(3)$, $f_0(2)$ und
+$f_{-3}(1)$.
+
+<details>
+<summary>Lösung zu Aufgabe 1</summary>
+
+$$
+f_2(3) = 9 + 2 = 11, \qquad f_0(2) = 4, \qquad f_{-3}(1) = 1 - 3 = -2
+$$
+
+</details>
+
+**Aufgabe 2** (⭐) Beschreibe die Wirkung des Parameters:
+a) $f_t(x) = x^2 + t$  b) $g_t(x) = (x - t)^2$
+
+<details>
+<summary>Lösung zu Aufgabe 2</summary>
+
+a) Verschiebung der Normalparabel um $t$ in $y$-Richtung.
+
+b) Verschiebung um $t$ in $x$-Richtung (Scheitel bei $x = t$).
+
+</details>
+
+**Aufgabe 3** (⭐) Durch welchen Punkt verlaufen **alle** Kurven der
+Schar $f_t(x) = t \cdot x^2$?
+
+<details>
+<summary>Lösung zu Aufgabe 3</summary>
+
+$f_t(0) = t \cdot 0 = 0$ für jedes $t$ – alle Parabeln laufen durch den
+**Ursprung** $(0 \mid 0)$.
+
+</details>
+
+**Aufgabe 4** (⭐) Für welches $t$ verläuft $f_t(x) = x^2 + t$ durch
+$P(2 \mid 1)$?
+
+<details>
+<summary>Lösung zu Aufgabe 4</summary>
+
+$$
+4 + t = 1 \quad\Rightarrow\quad t = -3
+$$
+
+</details>
+
+**Aufgabe 5** (⭐) $g_t(x) = tx + 1$. Was haben alle Geraden der Schar
+gemeinsam, was unterscheidet sie?
+
+<details>
+<summary>Lösung zu Aufgabe 5</summary>
+
+Gemeinsam: der $y$-Achsenabschnitt 1 – alle laufen durch $(0 \mid 1)$.
+Unterschied: die Steigung $t$ (ein „Geradenbüschel“ durch den Punkt).
+
+</details>
+
+**Aufgabe 6** (⭐) Leite nach $x$ ab:
+a) $f_t(x) = x^2 + t$  b) $f_t(x) = x^3 - tx$  c) $f_t(x) = tx^2$
+
+<details>
+<summary>Lösung zu Aufgabe 6</summary>
+
+a) $f_t'(x) = 2x$ (das $+t$ fällt als Konstante weg)
+
+b) $f_t'(x) = 3x^2 - t$
+
+c) $f_t'(x) = 2tx$
+
+</details>
+
+**Aufgabe 7** (⭐⭐) Leite nach $x$ ab: $f_t(x) = tx^3 - 3t^2x$
+
+<details>
+<summary>Lösung zu Aufgabe 7</summary>
+
+$t$ und $t^2$ sind konstante Faktoren:
+
+$$
+f_t'(x) = 3tx^2 - 3t^2
+$$
+
+</details>
+
+**Aufgabe 8** (⭐⭐) $f_t(x) = x^3 - 3tx^2 + 2$. Bestimme $f_t'$ und
+$f_t''$.
+
+<details>
+<summary>Lösung zu Aufgabe 8</summary>
+
+$$
+f_t'(x) = 3x^2 - 6tx, \qquad f_t''(x) = 6x - 6t
+$$
+
+</details>
+
+**Aufgabe 9** (⭐⭐) Fehlersuche: Jemand leitet $f_t(x) = x^3 - tx$ so
+ab: „$f_t'(x) = 3x^2 - x$, weil $t$ abgeleitet 1 ergibt.“ Erkläre den
+Fehler und korrigiere.
+
+<details>
+<summary>Lösung zu Aufgabe 9</summary>
+
+Abgeleitet wird **nach $x$** – dabei ist $t$ keine Variable, sondern
+eine Konstante (wie eine Zahl). $-tx$ ist „Konstante mal $x$“ und hat
+die Ableitung $-t$ (Faktorregel). Richtig:
+
+$$
+f_t'(x) = 3x^2 - t
+$$
+
+Kontrolltrick: $t$ durch 5 ersetzen – $x^3 - 5x$ leitet niemand zu
+$3x^2 - x$ ab.
+
+</details>
+
+**Aufgabe 10** (⭐⭐) Bestimme den Extrempunkt der Schar
+$f_t(x) = x^2 - tx$ in Abhängigkeit von $t$ und gib seine Art an.
+
+<details>
+<summary>Lösung zu Aufgabe 10</summary>
+
+$f_t'(x) = 2x - t = 0 \Rightarrow x = \frac{t}{2}$;
+$f_t''(x) = 2 > 0$ → **Tiefpunkt** (für jedes $t$).
+
+$$
+f_t\!\left(\frac{t}{2}\right) = \frac{t^2}{4} - \frac{t^2}{2}
+= -\frac{t^2}{4}
+\qquad\Rightarrow\qquad
+T\left(\frac{t}{2} \,\middle|\, -\frac{t^2}{4}\right)
+$$
+
+</details>
+
+**Aufgabe 11** (⭐⭐) $f_t(x) = x^3 - 3tx$ mit $t > 0$. Bestimme Hoch-
+und Tiefpunkt in Abhängigkeit von $t$.
+
+<details>
+<summary>Lösung zu Aufgabe 11</summary>
+
+$f_t'(x) = 3x^2 - 3t = 0 \Rightarrow x^2 = t \Rightarrow
+x = \pm\sqrt{t}$ (existiert, da $t > 0$). $f_t''(x) = 6x$:
+links Hochpunkt, rechts Tiefpunkt.
+
+$$
+f_t\!\left(\sqrt{t}\right) = t\sqrt{t} - 3t\sqrt{t} = -2t\sqrt{t}
+$$
+
+$$
+H\!\left(-\sqrt{t} \mid 2t\sqrt{t}\right), \qquad
+T\!\left(\sqrt{t} \mid -2t\sqrt{t}\right)
+$$
+
+</details>
+
+**Aufgabe 12** (⭐⭐⭐) Untersuche $f_t(x) = x^3 + tx$ vollständig auf
+Extrempunkte (Fallunterscheidung nach $t$).
+
+<details>
+<summary>Lösung zu Aufgabe 12</summary>
+
+$f_t'(x) = 3x^2 + t = 0 \Leftrightarrow x^2 = -\frac{t}{3}$.
+
+**$t < 0$:** zwei Lösungen $x = \pm\sqrt{-t/3}$; mit
+$f_t''(x) = 6x$: Hochpunkt links, Tiefpunkt rechts.
+
+**$t = 0$:** $f_0(x) = x^3$ – Sattelpunkt bei $(0 \mid 0)$, kein
+Extremum.
+
+**$t > 0$:** keine Lösung; $f_t' > 0$ überall → streng steigend, keine
+Extrempunkte.
+
+(Gleiches Muster wie Beispiel 3, nur mit umgekehrtem Vorzeichen
+von $t$.)
+
+</details>
+
+**Aufgabe 13** (⭐⭐) $f_t(x) = tx^2 - 4x$ mit $t \neq 0$. Bestimme den
+Extrempunkt in Abhängigkeit von $t$ und entscheide, für welche $t$ es
+ein Hoch- bzw. Tiefpunkt ist.
+
+<details>
+<summary>Lösung zu Aufgabe 13</summary>
+
+$f_t'(x) = 2tx - 4 = 0 \Rightarrow x = \frac{2}{t}$;
+$f_t''(x) = 2t$.
+
+$$
+f_t\!\left(\frac{2}{t}\right) = t \cdot \frac{4}{t^2} - \frac{8}{t}
+= -\frac{4}{t}
+\qquad\Rightarrow\qquad
+E\left(\frac{2}{t} \,\middle|\, -\frac{4}{t}\right)
+$$
+
+$t > 0$: $f_t'' = 2t > 0$ → **Tiefpunkt**;
+$t < 0$: $f_t'' < 0$ → **Hochpunkt**.
+
+</details>
+
+**Aufgabe 14** (⭐⭐) Bestimme den Wendepunkt der Schar
+$f_t(x) = x^3 - 3tx^2$ in Abhängigkeit von $t$.
+
+<details>
+<summary>Lösung zu Aufgabe 14</summary>
+
+$f_t''(x) = 6x - 6t = 0 \Rightarrow x = t$;
+$f_t'''(x) = 6 \neq 0$ ✓.
+
+$$
+f_t(t) = t^3 - 3t \cdot t^2 = -2t^3
+\qquad\Rightarrow\qquad
+W\left(t \mid -2t^3\right)
+$$
+
+</details>
+
+**Aufgabe 15** (⭐⭐) Wie viele Nullstellen hat $f_t(x) = x^2 - t$ in
+Abhängigkeit von $t$?
+
+<details>
+<summary>Lösung zu Aufgabe 15</summary>
+
+$x^2 = t$:
+
+- $t > 0$: **zwei** Nullstellen $\pm\sqrt{t}$
+- $t = 0$: **eine** (doppelte) Nullstelle $x = 0$
+- $t < 0$: **keine** Nullstelle
+
+</details>
+
+**Aufgabe 16** (⭐⭐) Bestimme die Nullstellen von
+$f_t(x) = x^3 - tx$ in Abhängigkeit von $t$ ($t > 0$).
+
+<details>
+<summary>Lösung zu Aufgabe 16</summary>
+
+$$
+x\left(x^2 - t\right) = 0 \quad\Rightarrow\quad
+x = 0,\ x = \pm\sqrt{t}
+$$
+
+Drei Nullstellen; für $t \to 0$ rücken sie zusammen (bei $t = 0$:
+dreifache Nullstelle im Ursprung).
+
+</details>
+
+**Aufgabe 17** (⭐⭐⭐) $f_t(x) = x^2 - 2tx + t^2$. Zeige, dass jede
+Scharkurve genau eine (doppelte) Nullstelle hat, und gib sie an.
+
+<details>
+<summary>Lösung zu Aufgabe 17</summary>
+
+Der Term ist eine binomische Formel:
+
+$$
+f_t(x) = (x - t)^2
+$$
+
+Jede Kurve ist eine verschobene Normalparabel mit Scheitel **auf** der
+$x$-Achse: doppelte Nullstelle $x = t$. Die Schar „wandert“ mit $t$
+die $x$-Achse entlang.
+
+</details>
+
+**Aufgabe 18** (⭐⭐) Zeige, dass alle Kurven der Schar
+$f_t(x) = x^2 + tx$ durch den Ursprung laufen, und begründe, dass es
+keinen weiteren gemeinsamen Punkt gibt.
+
+<details>
+<summary>Lösung zu Aufgabe 18</summary>
+
+$f_t(0) = 0$ für jedes $t$ → Ursprung ✓.
+
+Gemeinsame Punkte zweier Kurven ($t \neq s$):
+
+$$
+x^2 + tx = x^2 + sx \ \Rightarrow\ (t - s)x = 0
+\ \Rightarrow\ x = 0
+$$
+
+Da $t - s \neq 0$, ist $x = 0$ die einzige Stelle – kein weiterer
+gemeinsamer Punkt.
+
+</details>
+
+**Aufgabe 19** (⭐⭐⭐) Bestimme alle gemeinsamen Punkte der Schar
+$f_t(x) = tx^2 + 1 - t$.
+
+<details>
+<summary>Lösung zu Aufgabe 19</summary>
+
+Nach $t$ sortieren: $f_t(x) = t(x^2 - 1) + 1$. Unabhängig von $t$
+genau dort, wo $x^2 - 1 = 0$:
+
+$$
+x = \pm 1, \qquad f_t(\pm 1) = 1
+$$
+
+Gemeinsame Punkte: $P(-1 \mid 1)$ und $Q(1 \mid 1)$ (siehe Scharplot
+in der Erklärung).
+
+</details>
+
+**Aufgabe 20** (⭐⭐⭐) Bestimme den gemeinsamen Punkt aller Kurven der
+Schar $f_t(x) = x^2 + t(x - 2)$.
+
+<details>
+<summary>Lösung zu Aufgabe 20</summary>
+
+Der $t$-Anteil verschwindet für $x - 2 = 0$, also $x = 2$:
+
+$$
+f_t(2) = 4 + t \cdot 0 = 4
+$$
+
+Gemeinsamer Punkt: $(2 \mid 4)$.
+
+</details>
+
+**Aufgabe 21** (⭐⭐) Wurfschar $h_v(x) = x - \frac{10}{v^2}x^2$ (Graph
+in der Erklärung von Beispiel 5):
+
+![Wurfparabeln für die Abwurfgeschwindigkeiten v = 5, 7 und 10 m/s: je schneller der Abwurf, desto weiter und höher fliegt der Ball](../../../assets/plots/scharen/kurvenscharen/wurfparabel-schar.svg)
+
+Berechne die Wurfweite für $v = 5$ und $v = 10$ m/s.
+
+<details>
+<summary>Lösung zu Aufgabe 21</summary>
+
+Wurfweite $= \frac{v^2}{10}$ (Beispiel 5):
+
+$$
+v = 5:\ \frac{25}{10} = 2{,}5 \text{ m}; \qquad
+v = 10:\ \frac{100}{10} = 10 \text{ m}
+$$
+
+Doppelte Geschwindigkeit → **vierfache** Weite.
+
+</details>
+
+**Aufgabe 22** (⭐⭐) Berechne die maximale Wurfhöhe für $v = 10$ m/s
+und kontrolliere am Scharplot.
+
+<details>
+<summary>Lösung zu Aufgabe 22</summary>
+
+Maximale Höhe $\frac{v^2}{40}$ (Beispiel 5):
+
+$$
+\frac{100}{40} = 2{,}5 \text{ m}
+$$
+
+Passt zum Graphen: Scheitel der $v = 10$-Kurve bei $(5 \mid 2{,}5)$.
+
+</details>
+
+**Aufgabe 23** (⭐⭐⭐) Mit welcher Abwurfgeschwindigkeit muss man
+werfen, damit der Ball 15 m weit fliegt?
+
+<details>
+<summary>Lösung zu Aufgabe 23</summary>
+
+$$
+\frac{v^2}{10} = 15 \quad\Rightarrow\quad v^2 = 150
+\quad\Rightarrow\quad v = \sqrt{150} \approx 12{,}2 \text{ m/s}
+$$
+
+(Nur die positive Wurzel – Geschwindigkeiten sind positiv.)
+
+</details>
+
+**Aufgabe 24** (⭐⭐) Medikamentenschar $K_d(t) = 0{,}1d \cdot t(t - 12)^2$
+($d$ = Dosisfaktor, $t$ in h):
+
+![Wirkstoffkurven für die Dosisfaktoren d = 0,5, 1 und 1,5: gleicher Verlauf, aber proportional skalierte Konzentration](../../../assets/plots/scharen/kurvenscharen/medikamenten-schar.svg)
+
+a) Begründe, dass das Maximum für **jede** Dosis bei $t = 4$ liegt.
+b) Für welche Dosis $d$ beträgt der Spitzenwert 38,4 mg/l?
+
+<details>
+<summary>Lösung zu Aufgabe 24</summary>
+
+a) $K_d(t) = d \cdot K_1(t)$: Der Dosisfaktor streckt die Kurve nur in
+$y$-Richtung. Streckungen verschieben Extrem**stellen** nicht
+($K_d' = d \cdot K_1'$ hat dieselben Nullstellen) – das Maximum bleibt
+bei $t = 4$ mit Wert $d \cdot 25{,}6$.
+
+b)
+
+$$
+25{,}6 \, d = 38{,}4 \quad\Rightarrow\quad d = 1{,}5
+$$
+
+</details>
+
+**Aufgabe 25** (⭐⭐⭐) Das Medikament wirkt ab 10 mg/l. Welche
+Mindestdosis $d$ ist nötig, damit die Wirkschwelle überhaupt erreicht
+wird?
+
+<details>
+<summary>Lösung zu Aufgabe 25</summary>
+
+Der Spitzenwert $25{,}6\,d$ muss mindestens 10 betragen:
+
+$$
+25{,}6\,d \geq 10 \quad\Rightarrow\quad d \geq \frac{10}{25{,}6} \approx 0{,}39
+$$
+
+Ab etwa **39 %** der Standarddosis wird die Schwelle (gerade so)
+erreicht – bei $d = 0{,}39$ allerdings nur für einen Augenblick am
+Maximum.
+
+</details>
+
+**Aufgabe 26** (⭐⭐) Für welche $t$ hat $f_t(x) = x^2 + t$ genau eine
+Nullstelle?
+
+<details>
+<summary>Lösung zu Aufgabe 26</summary>
+
+$x^2 = -t$ hat genau eine Lösung ($x = 0$), wenn $-t = 0$:
+
+$$
+t = 0
+$$
+
+(Für $t < 0$ zwei, für $t > 0$ keine Nullstellen.)
+
+</details>
+
+**Aufgabe 27** (⭐⭐) Der Tiefpunkt von $f_t(x) = x^2 - tx$ ist
+$T\left(\frac{t}{2} \mid -\frac{t^2}{4}\right)$ (Aufgabe 10). Für
+welche $t$ liegt er auf der Geraden $y = -1$?
+
+<details>
+<summary>Lösung zu Aufgabe 27</summary>
+
+$$
+-\frac{t^2}{4} = -1 \quad\Rightarrow\quad t^2 = 4
+\quad\Rightarrow\quad t = \pm 2
+$$
+
+Zwei Scharkurven ($t = 2$ und $t = -2$) haben ihren Tiefpunkt auf
+Höhe $-1$.
+
+</details>
+
+**Aufgabe 28** (⭐⭐⭐) Für welchen Wert von $t$ **berührt** die Parabel
+$f_t(x) = x^2 + t$ die Gerade $y = 2x$?
+
+<details>
+<summary>Lösung zu Aufgabe 28</summary>
+
+Gleichsetzen; Berühren = genau eine Lösung = Diskriminante null:
+
+$$
+\begin{aligned}
+x^2 + t &= 2x \\
+x^2 - 2x + t &= 0 &&\text{| } D = 1 - t \\
+1 - t &= 0 \ \Rightarrow\ t = 1
+\end{aligned}
+$$
+
+Für $t = 1$ berührt die Scharkurve die Gerade im Punkt $(1 \mid 2)$.
+
+</details>
+
+**Aufgabe 29** (⭐⭐) Ordne im Fallunterscheidungs-Plot der Erklärung
+(Schar $f_t(x) = x^3 - tx$) die drei Kurven den Werten $t = -3$,
+$t = 0$ und $t = 3$ zu. Begründe über die Extrempunkte.
+
+<details>
+<summary>Lösung zu Aufgabe 29</summary>
+
+- Kurve **mit** Hoch- und Tiefpunkt → $t = 3$ (Fall $t > 0$)
+- Kurve mit Sattelpunkt im Ursprung (kurz waagerecht) → $t = 0$
+- durchgehend steil steigende Kurve ohne waagerechte Stelle →
+  $t = -3$ (Fall $t < 0$: $f' = 3x^2 + 3 > 0$)
+
+</details>
+
+**Aufgabe 30** (⭐⭐⭐) Begründe: **Alle** Kurven der Schar
+$f_t(x) = x^3 - tx$ haben ihren Wendepunkt im Ursprung.
+
+<details>
+<summary>Lösung zu Aufgabe 30</summary>
+
+$f_t''(x) = 6x$ – **unabhängig von $t$**. Nullstelle $x = 0$ mit
+$f_t''' = 6 \neq 0$ ✓, und $f_t(0) = 0$ für jedes $t$:
+
+$$
+W(0 \mid 0) \ \text{für alle } t
+$$
+
+Der Ursprung ist zugleich gemeinsamer Punkt und gemeinsames
+Symmetriezentrum der ganzen Schar (alle $f_t$ sind punktsymmetrisch).
+
+</details>
+
+## Merksatz
+
+<details>
+<summary>Merksatz anzeigen</summary>
+
+Eine **Kurvenschar** $f_t$ ist eine Funktionsfamilie: jedes $t$ eine
+Kurve. Beim **Ableiten nach $x$** ist $t$ eine Konstante ($x^3 - tx
+\to 3x^2 - t$). Die Kurvendiskussion läuft wie gewohnt, aber Ergebnisse
+hängen von $t$ ab – oft mit **Fallunterscheidung** ($t > 0$ / $t = 0$ /
+$t < 0$). **Gemeinsame Punkte** aller Kurven: Term nach $t$ sortieren
+und den $t$-Anteil null setzen.
+
+</details>
+
+## Vertiefung
+
+:::caution
+Beim Prüfen hinreichender Bedingungen mit Parametern auf die
+**Vorzeichen achten**: $f_t''(\sqrt{t}) = 6\sqrt{t}$ ist nur für
+$t > 0$ definiert und positiv – solche Aussagen gelten immer nur im
+jeweiligen Fall der Fallunterscheidung. Wer Fälle vergisst, verliert
+regelmäßig die halbe Aufgabe.
+:::
+
+**Parameter im Sachkontext** haben fast immer eine Bedeutung mit
+eingeschränktem Bereich: Eine Dosis $d$ oder eine Geschwindigkeit $v$
+ist positiv – dann entfallen manche Fälle von selbst. Das gehört in
+den Antwortsatz.
+
+**Ausblick:** Die Extrempunkte
+$T\left(\frac{t}{2} \mid -\frac{t^2}{4}\right)$ aus Aufgabe 10 wandern,
+wenn $t$ variiert – aber nicht irgendwie, sondern **auf einer eigenen
+Kurve**. Wie man diese [Ortskurve](../ortskurven/) bestimmt, zeigt die
+nächste Seite.

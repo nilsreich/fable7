@@ -1,10 +1,503 @@
 ---
 title: Die Ableitung – h-Methode
 description: "Der Differentialquotient: Die Ableitung als Grenzwert mit der h-Methode berechnen."
-draft: true
 sidebar:
   order: 2
 ---
 
-Diese Seite ist noch in Arbeit und wird in einer späteren Ausbauphase der
-Website freigeschaltet.
+## Worum geht's?
+
+Auf der letzten Seite haben wir die Momentangeschwindigkeit nur
+**angenähert**: Sekantensteigungen für immer kürzere Intervalle
+ausrechnen und schauen, wohin die Werte laufen. Das ist mühsam und bleibt
+eine Vermutung. **Leitfrage:** Wie berechnet man die Tangentensteigung
+**exakt** – mit einer einzigen Rechnung statt einer endlosen
+Zahlenfolge?
+
+## Erklärung
+
+### Der Differentialquotient
+
+Die Sekantensteigung an der Stelle $x_0$ mit Schrittweite $h$ ist der
+Differenzenquotient
+
+$$
+\frac{f(x_0 + h) - f(x_0)}{h}
+$$
+
+Lässt man $h$ gegen 0 laufen, entsteht die Tangentensteigung – der
+**Differentialquotient**. Sein Wert heißt **Ableitung von $f$ an der
+Stelle $x_0$**, geschrieben $f'(x_0)$:
+
+$$
+f'(x_0) = \lim_{h \to 0} \frac{f(x_0 + h) - f(x_0)}{h}
+$$
+
+![Die Tangente y = 2x − 1 berührt die Normalparabel im Punkt P(1|1); ihre Steigung ist die Ableitung f'(1) = 2](../../../assets/plots/differentialrechnung/ableitung-h-methode/tangente-parabel.svg)
+
+### Die h-Methode in drei Schritten
+
+Man kann nicht einfach $h = 0$ einsetzen ($\frac{0}{0}$!). Der Trick:
+**erst vereinfachen, bis $h$ gekürzt ist** – dann ist der Grenzübergang
+harmlos.
+
+1. **Aufstellen:** Differenzenquotient mit $f(x_0 + h)$ hinschreiben.
+2. **Vereinfachen:** ausmultiplizieren (binomische Formel!),
+   zusammenfassen, $h$ ausklammern und **kürzen**.
+3. **Grenzübergang:** $h \to 0$ setzen – übrig bleibt $f'(x_0)$.
+
+Musterdurchlauf für $f(x) = x^2$ an der Stelle $x_0 = 1$:
+
+$$
+\begin{aligned}
+f'(1) &= \lim_{h \to 0} \frac{(1 + h)^2 - 1^2}{h}
+&&\text{| 1. aufstellen} \\
+&= \lim_{h \to 0} \frac{1 + 2h + h^2 - 1}{h}
+&&\text{| binomische Formel} \\
+&= \lim_{h \to 0} \frac{h\,(2 + h)}{h}
+&&\text{| } h \text{ ausklammern} \\
+&= \lim_{h \to 0} \,(2 + h)
+&&\text{| kürzen} \\
+&= 2 &&\text{| 3. } h \to 0
+\end{aligned}
+$$
+
+Exakt das Ergebnis, das die Zahlenfolgen vermuten ließen – ohne jede
+Näherung.
+
+### Von der Stelle zur Ableitungsfunktion
+
+Führt man die h-Methode an einer **allgemeinen** Stelle $x$ durch,
+erhält man auf einen Schlag die Tangentensteigung für **jede** Stelle –
+die **Ableitungsfunktion** $f'$:
+
+![An der Normalparabel sind kurze orangefarbene Tangentenstücke bei x = −2 bis 2 eingezeichnet; ihre Steigungen −4, −2, 0, 2, 4 folgen dem Muster m = 2x](../../../assets/plots/differentialrechnung/ableitung-h-methode/tangentensteigungen.svg)
+
+Die Steigungen $-4, -2, 0, 2, 4$ an den Stellen $-2, -1, 0, 1, 2$ legen
+das Muster nahe – und Beispiel 1 beweist es: $f'(x) = 2x$.
+
+![Die Graphen von f(x) = x² (blau) und der Ableitungsfunktion f'(x) = 2x (rot) im selben Koordinatensystem](../../../assets/plots/differentialrechnung/ableitung-h-methode/ableitungsfunktion.svg)
+
+Ablesen am Bild: Wo $f$ fällt, ist $f'$ negativ; am Scheitel ist
+$f'(0) = 0$; wo $f$ steigt, ist $f'$ positiv.
+
+## Beispiele
+
+**Beispiel 1:** Bestimme mit der h-Methode die Ableitungsfunktion von
+$f(x) = x^2$.
+
+<details>
+<summary>Lösung</summary>
+
+Allgemeine Stelle $x$ statt konkreter Zahl – sonst gleiches Schema:
+
+$$
+\begin{aligned}
+f'(x) &= \lim_{h \to 0} \frac{(x + h)^2 - x^2}{h}
+&&\text{| aufstellen} \\
+&= \lim_{h \to 0} \frac{x^2 + 2xh + h^2 - x^2}{h}
+&&\text{| 1. binomische Formel} \\
+&= \lim_{h \to 0} \frac{h\,(2x + h)}{h}
+&&\text{| } h \text{ ausklammern} \\
+&= \lim_{h \to 0} \,(2x + h)
+&&\text{| kürzen} \\
+&= 2x
+\end{aligned}
+$$
+
+$$
+\boxed{f(x) = x^2 \quad\Rightarrow\quad f'(x) = 2x}
+$$
+
+</details>
+
+**Beispiel 2:** Bestimme mit der h-Methode die Ableitungsfunktion von
+$f(x) = x^3$.
+
+<details>
+<summary>Lösung</summary>
+
+Zuerst die dritte Potenz ausmultiplizieren:
+$(x + h)^3 = x^3 + 3x^2h + 3xh^2 + h^3$ (zweimal ausmultiplizieren oder
+Merkformel).
+
+$$
+\begin{aligned}
+f'(x) &= \lim_{h \to 0} \frac{(x + h)^3 - x^3}{h} \\
+&= \lim_{h \to 0} \frac{x^3 + 3x^2h + 3xh^2 + h^3 - x^3}{h}
+&&\text{| } x^3 \text{ fällt weg} \\
+&= \lim_{h \to 0} \frac{h\left(3x^2 + 3xh + h^2\right)}{h}
+&&\text{| } h \text{ ausklammern} \\
+&= \lim_{h \to 0} \left(3x^2 + 3xh + h^2\right)
+&&\text{| kürzen} \\
+&= 3x^2 &&\text{| beide } h\text{-Terme} \to 0
+\end{aligned}
+$$
+
+$$
+\boxed{f(x) = x^3 \quad\Rightarrow\quad f'(x) = 3x^2}
+$$
+
+(Kontrolle mit der Zahlenfolge von der vorigen Seite: $f'(1) = 3$ ✓)
+
+</details>
+
+**Beispiel 3:** Berechne mit der h-Methode $f'(2)$ für
+$f(x) = x^2 - 4x$ und deute das Ergebnis am Graphen.
+
+<details>
+<summary>Lösung</summary>
+
+$f(2) = 4 - 8 = -4$.
+
+$$
+\begin{aligned}
+f'(2) &= \lim_{h \to 0} \frac{(2 + h)^2 - 4(2 + h) - (-4)}{h} \\
+&= \lim_{h \to 0} \frac{4 + 4h + h^2 - 8 - 4h + 4}{h}
+&&\text{| ausmultiplizieren} \\
+&= \lim_{h \to 0} \frac{h^2}{h}
+&&\text{| alles andere hebt sich auf} \\
+&= \lim_{h \to 0} h = 0
+\end{aligned}
+$$
+
+$f'(2) = 0$: **waagerechte Tangente**. Das passt – die Parabel
+$x^2 - 4x = (x - 2)^2 - 4$ hat bei $x = 2$ ihren Scheitel.
+
+</details>
+
+## Aufgaben
+
+**Aufgabe 1** (⭐) $f(x) = x^2$. Stelle den Differenzenquotienten an der
+Stelle $x_0 = 3$ auf, vereinfache ihn und bestimme $f'(3)$.
+
+<details>
+<summary>Lösung zu Aufgabe 1</summary>
+
+$$
+\begin{aligned}
+\frac{(3 + h)^2 - 9}{h}
+&= \frac{9 + 6h + h^2 - 9}{h} \\
+&= \frac{h(6 + h)}{h} = 6 + h
+\end{aligned}
+$$
+
+Grenzübergang: $f'(3) = \lim_{h \to 0}(6 + h) = 6$.
+
+</details>
+
+**Aufgabe 2** (⭐) Berechne mit der h-Methode $f'(2)$ für $f(x) = x^2$.
+
+<details>
+<summary>Lösung zu Aufgabe 2</summary>
+
+$$
+\begin{aligned}
+f'(2) &= \lim_{h \to 0} \frac{(2 + h)^2 - 4}{h}
+= \lim_{h \to 0} \frac{4h + h^2}{h} \\
+&= \lim_{h \to 0} (4 + h) = 4
+\end{aligned}
+$$
+
+</details>
+
+**Aufgabe 3** (⭐) Berechne mit der h-Methode $f'(-1)$ für $f(x) = x^2$.
+
+<details>
+<summary>Lösung zu Aufgabe 3</summary>
+
+$$
+\begin{aligned}
+f'(-1) &= \lim_{h \to 0} \frac{(-1 + h)^2 - 1}{h}
+= \lim_{h \to 0} \frac{1 - 2h + h^2 - 1}{h} \\
+&= \lim_{h \to 0} (-2 + h) = -2
+\end{aligned}
+$$
+
+(Negativ – links vom Scheitel fällt die Parabel.)
+
+</details>
+
+**Aufgabe 4** (⭐) Was bedeutet das Ergebnis $f'(3) = 6$ aus Aufgabe 1
+grafisch? Gib auch an, was es für $f(x) = x^2$ als Weg-Zeit-Funktion
+bedeuten würde.
+
+<details>
+<summary>Lösung zu Aufgabe 4</summary>
+
+Grafisch: Die **Tangente** an den Graphen im Punkt $(3 \mid 9)$ hat die
+Steigung 6. Als Weg-Zeit-Funktion gelesen: Zum Zeitpunkt 3 beträgt die
+**Momentangeschwindigkeit** 6 (Längeneinheiten pro Zeiteinheit).
+
+</details>
+
+**Aufgabe 5** (⭐⭐) Bestimme mit der h-Methode die Ableitungsfunktion von
+$f(x) = x^2 + 3$. Was fällt im Vergleich zu $x^2$ auf?
+
+<details>
+<summary>Lösung zu Aufgabe 5</summary>
+
+$$
+\begin{aligned}
+f'(x) &= \lim_{h \to 0} \frac{(x + h)^2 + 3 - \left(x^2 + 3\right)}{h} \\
+&= \lim_{h \to 0} \frac{2xh + h^2}{h}
+&&\text{| die } +3 \text{ hebt sich auf} \\
+&= \lim_{h \to 0} (2x + h) = 2x
+\end{aligned}
+$$
+
+Gleiche Ableitung wie $x^2$! Die Konstante verschiebt den Graphen nur
+nach oben und ändert keine einzige Tangentensteigung.
+
+</details>
+
+**Aufgabe 6** (⭐⭐) Bestimme mit der h-Methode die Ableitungsfunktion von
+$f(x) = 2x^2$.
+
+<details>
+<summary>Lösung zu Aufgabe 6</summary>
+
+$$
+\begin{aligned}
+f'(x) &= \lim_{h \to 0} \frac{2(x + h)^2 - 2x^2}{h} \\
+&= \lim_{h \to 0} \frac{2x^2 + 4xh + 2h^2 - 2x^2}{h} \\
+&= \lim_{h \to 0} (4x + 2h) = 4x
+\end{aligned}
+$$
+
+(Doppelter Vorfaktor → doppelte Ableitung: $2 \cdot 2x = 4x$.)
+
+</details>
+
+**Aufgabe 7** (⭐⭐) Berechne mit der h-Methode $f'(1)$ für $f(x) = x^3$.
+
+<details>
+<summary>Lösung zu Aufgabe 7</summary>
+
+$$
+\begin{aligned}
+f'(1) &= \lim_{h \to 0} \frac{(1 + h)^3 - 1}{h} \\
+&= \lim_{h \to 0} \frac{1 + 3h + 3h^2 + h^3 - 1}{h} \\
+&= \lim_{h \to 0} \left(3 + 3h + h^2\right) = 3
+\end{aligned}
+$$
+
+</details>
+
+**Aufgabe 8** (⭐⭐) Berechne mit der h-Methode $f'(2)$ für $f(x) = x^3$.
+
+<details>
+<summary>Lösung zu Aufgabe 8</summary>
+
+$$
+\begin{aligned}
+f'(2) &= \lim_{h \to 0} \frac{(2 + h)^3 - 8}{h} \\
+&= \lim_{h \to 0} \frac{8 + 12h + 6h^2 + h^3 - 8}{h} \\
+&= \lim_{h \to 0} \left(12 + 6h + h^2\right) = 12
+\end{aligned}
+$$
+
+(Kontrolle mit $f'(x) = 3x^2$ aus Beispiel 2: $3 \cdot 4 = 12$ ✓)
+
+</details>
+
+**Aufgabe 9** (⭐⭐) Bestimme mit der h-Methode die Ableitung von
+$f(x) = 5x + 2$ und deute das Ergebnis.
+
+<details>
+<summary>Lösung zu Aufgabe 9</summary>
+
+$$
+\begin{aligned}
+f'(x) &= \lim_{h \to 0} \frac{5(x + h) + 2 - (5x + 2)}{h} \\
+&= \lim_{h \to 0} \frac{5h}{h} = 5
+\end{aligned}
+$$
+
+Die Ableitung ist **konstant 5**: Eine Gerade hat überall dieselbe
+Steigung – jede Tangente ist die Gerade selbst.
+
+</details>
+
+**Aufgabe 10** (⭐⭐) Bestimme mit der h-Methode die Ableitung einer
+konstanten Funktion $f(x) = c$.
+
+<details>
+<summary>Lösung zu Aufgabe 10</summary>
+
+$$
+f'(x) = \lim_{h \to 0} \frac{c - c}{h} = \lim_{h \to 0} \frac{0}{h} = 0
+$$
+
+Ein waagerechter Graph hat überall Steigung 0.
+
+</details>
+
+**Aufgabe 11** (⭐⭐) $f(x) = x^2 - 4x$. Bestimme mit der h-Methode die
+Ableitungsfunktion $f'$ und berechne, an welcher Stelle die Tangente
+waagerecht ist.
+
+<details>
+<summary>Lösung zu Aufgabe 11</summary>
+
+$$
+\begin{aligned}
+f'(x) &= \lim_{h \to 0} \frac{(x+h)^2 - 4(x+h) - \left(x^2 - 4x\right)}{h} \\
+&= \lim_{h \to 0} \frac{2xh + h^2 - 4h}{h} \\
+&= \lim_{h \to 0} (2x + h - 4) = 2x - 4
+\end{aligned}
+$$
+
+Waagerechte Tangente: $f'(x) = 0$:
+
+$$
+2x - 4 = 0 \quad\Rightarrow\quad x = 2
+$$
+
+(der Scheitel der Parabel, vgl. Beispiel 3)
+
+</details>
+
+**Aufgabe 12** (⭐⭐) Für $f(x) = x^2$ gilt $f'(x) = 2x$.
+a) Gib die Tangentensteigungen an den Stellen $-2$, $0$ und $3$ an.
+b) An welcher Stelle hat der Graph die Steigung 5?
+
+<details>
+<summary>Lösung zu Aufgabe 12</summary>
+
+a) $f'(-2) = -4$, $\ f'(0) = 0$, $\ f'(3) = 6$.
+
+b) $f'(x) = 5$:
+
+$$
+2x = 5 \quad\Rightarrow\quad x = 2{,}5
+$$
+
+</details>
+
+**Aufgabe 13** (⭐⭐⭐) Berechne mit der h-Methode $f'(2)$ für
+$f(x) = \dfrac{1}{x}$.
+
+<details>
+<summary>Lösung zu Aufgabe 13</summary>
+
+$$
+\begin{aligned}
+f'(2) &= \lim_{h \to 0} \frac{\frac{1}{2 + h} - \frac{1}{2}}{h}
+&&\text{| Brüche gleichnamig machen} \\
+&= \lim_{h \to 0} \frac{\frac{2 - (2 + h)}{2(2 + h)}}{h} \\
+&= \lim_{h \to 0} \frac{-h}{2(2 + h) \cdot h}
+&&\text{| } h \text{ kürzen} \\
+&= \lim_{h \to 0} \frac{-1}{2(2 + h)} \\
+&= -\frac{1}{4}
+\end{aligned}
+$$
+
+Die Tangente im Punkt $(2 \mid 0{,}5)$ fällt mit Steigung
+$-\frac{1}{4}$.
+
+</details>
+
+**Aufgabe 14** (⭐⭐⭐) Bestimme mit der h-Methode die Ableitungsfunktion
+von $f(x) = x^3 - x$.
+
+<details>
+<summary>Lösung zu Aufgabe 14</summary>
+
+$$
+\begin{aligned}
+f'(x) &= \lim_{h \to 0} \frac{(x+h)^3 - (x+h) - \left(x^3 - x\right)}{h} \\
+&= \lim_{h \to 0} \frac{3x^2h + 3xh^2 + h^3 - h}{h}
+&&\text{| } x^3 \text{ und } x \text{ heben sich auf} \\
+&= \lim_{h \to 0} \left(3x^2 + 3xh + h^2 - 1\right) \\
+&= 3x^2 - 1
+\end{aligned}
+$$
+
+(Die Ableitungen der Summanden addieren sich: $3x^2$ von $x^3$, $-1$
+von $-x$.)
+
+</details>
+
+**Aufgabe 15** (⭐⭐) Fehlersuche! Ein Schüler rechnet für $f(x) = x^2$:
+
+$$
+\frac{(x + h)^2 - x^2}{h} = \frac{x^2 + h^2 - x^2}{h} = \frac{h^2}{h} = h
+\ \Rightarrow\ f'(x) = 0
+$$
+
+Finde und korrigiere den Fehler.
+
+<details>
+<summary>Lösung zu Aufgabe 15</summary>
+
+Der Fehler steckt im ersten Schritt: $(x + h)^2$ ist **nicht**
+$x^2 + h^2$, sondern (1. binomische Formel!)
+
+$$
+(x + h)^2 = x^2 + 2xh + h^2
+$$
+
+Richtig weitergerechnet bleibt $\frac{2xh + h^2}{h} = 2x + h$, also
+$f'(x) = 2x$.
+
+</details>
+
+**Aufgabe 16** (⭐⭐⭐) Sprintmodell $s(t) = 1{,}5t^2$ (vorige Seite).
+a) Zeige mit der h-Methode: Die Geschwindigkeitsfunktion ist $v(t) = 3t$.
+b) Berechne $v(3)$ und vergleiche mit der Näherung „9 m/s“ der vorigen
+Seite.
+
+<details>
+<summary>Lösung zu Aufgabe 16</summary>
+
+a)
+
+$$
+\begin{aligned}
+v(t) = s'(t) &= \lim_{h \to 0} \frac{1{,}5(t+h)^2 - 1{,}5t^2}{h} \\
+&= \lim_{h \to 0} \frac{1{,}5\left(2th + h^2\right)}{h} \\
+&= \lim_{h \to 0} \left(3t + 1{,}5h\right) = 3t
+\end{aligned}
+$$
+
+b) $v(3) = 9$ m/s – die Zahlenfolge der vorigen Seite (10,5; 9,75;
+9,15; 9,015 …) hatte also exakt den richtigen Grenzwert. Die h-Methode
+liefert ihn in einer Rechnung.
+
+</details>
+
+## Merksatz
+
+<details>
+<summary>Merksatz anzeigen</summary>
+
+Die **Ableitung** $f'(x_0) = \lim\limits_{h \to 0}
+\frac{f(x_0+h) - f(x_0)}{h}$ ist die exakte Tangentensteigung an der
+Stelle $x_0$. **h-Methode:** aufstellen → vereinfachen (binomische
+Formel, $h$ ausklammern und **kürzen**) → dann erst $h \to 0$. An einer
+allgemeinen Stelle $x$ durchgeführt liefert sie die
+**Ableitungsfunktion**, z. B. $\left(x^2\right)' = 2x$ und
+$\left(x^3\right)' = 3x^2$.
+
+</details>
+
+## Vertiefung
+
+:::caution
+Niemals sofort $h = 0$ einsetzen – das ergibt den unbestimmten Ausdruck
+$\frac{0}{0}$. Der Grenzübergang ist erst erlaubt, **nachdem** $h$
+gekürzt wurde. Und der häufigste Rechenfehler davor: $(x+h)^2$ ohne
+Mittelterm $2xh$ ausmultiplizieren (Aufgabe 15).
+:::
+
+**Ein Muster zeichnet sich ab:**
+$\left(x^2\right)' = 2x$, $\ \left(x^3\right)' = 3x^2$ – Exponent nach
+vorne, Exponent um 1 kleiner. Konstante Summanden fallen weg
+(Aufgabe 5), Vorfaktoren bleiben stehen (Aufgabe 6), Summen darf man
+gliedweise ableiten (Aufgabe 14).
+
+**Ausblick:** Diese Beobachtungen sind kein Zufall, sondern die
+[Ableitungsregeln](../ableitungsregeln/) – mit ihnen leitet man ab
+Übermorgen jede ganzrationale Funktion in einer Zeile ab, ganz ohne
+Grenzwert.
