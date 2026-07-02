@@ -1,10 +1,679 @@
 ---
 title: Algebra-Werkzeugkasten
-description: "Terme umformen, Gleichungen lösen, binomische Formeln – das Handwerkszeug für das ganze Schuljahr."
-draft: true
+description: "Terme umformen, binomische Formeln, Potenzgesetze und Gleichungen lösen – das Handwerkszeug für das ganze Schuljahr."
 sidebar:
   order: 1
 ---
 
-Diese Seite ist noch in Arbeit und wird in einer späteren Ausbauphase der
-Website freigeschaltet.
+## Worum geht's?
+
+Diese Seite sammelt die Rechentechniken aus der Sekundarstufe I, die wir in
+diesem Schuljahr ständig brauchen – zum Nachschlagen und Auffrischen.
+
+## Erklärung
+
+### Terme zusammenfassen und ausmultiplizieren
+
+Nur **gleichartige** Terme dürfen zusammengefasst werden (gleiche Variable,
+gleiche Potenz):
+
+$$
+3x^2 + 5x - x^2 + 2x = 2x^2 + 7x
+$$
+
+Klammern werden mit dem **Distributivgesetz** aufgelöst; jedes Glied in der
+Klammer wird multipliziert:
+
+$$
+a \cdot (b + c) = ab + ac
+$$
+
+Ein Minuszeichen vor der Klammer dreht **alle** Vorzeichen in der Klammer um:
+
+$$
+-(3x - 5) = -3x + 5
+$$
+
+Zwei Klammern: jedes Glied der ersten mit jedem Glied der zweiten
+multiplizieren:
+
+$$
+(a + b)(c + d) = ac + ad + bc + bd
+$$
+
+### Ausklammern (Faktorisieren)
+
+Ausklammern ist das Rückwärtslesen des Distributivgesetzes. Man zieht den
+größten gemeinsamen Faktor aller Glieder heraus:
+
+$$
+6x^2 - 9x = 3x \cdot (2x - 3)
+$$
+
+Ausklammern ist im gesamten Schuljahr die wichtigste Technik, um Gleichungen
+in Produktform zu bringen (→ Satz vom Nullprodukt).
+
+### Binomische Formeln
+
+| Nr. | Formel |
+| --- | --- |
+| 1 | $(a+b)^2 = a^2 + 2ab + b^2$ |
+| 2 | $(a-b)^2 = a^2 - 2ab + b^2$ |
+| 3 | $(a+b)(a-b) = a^2 - b^2$ |
+
+Beide Richtungen beherrschen: ausmultiplizieren (links → rechts) **und**
+faktorisieren (rechts → links), z. B. $x^2 - 25 = (x+5)(x-5)$.
+
+### Potenzgesetze
+
+Für $a, b \neq 0$ und Exponenten $m, n$ gilt:
+
+| Gesetz | Formel |
+| --- | --- |
+| gleiche Basis, Multiplikation | $a^m \cdot a^n = a^{m+n}$ |
+| gleiche Basis, Division | $\dfrac{a^m}{a^n} = a^{m-n}$ |
+| Potenz einer Potenz | $\left(a^m\right)^n = a^{m \cdot n}$ |
+| gleicher Exponent | $a^n \cdot b^n = (ab)^n$ |
+| negativer Exponent | $a^{-n} = \dfrac{1}{a^n}$ |
+| Exponent Null | $a^0 = 1$ |
+
+### Lineare Gleichungen
+
+Lineare Gleichungen löst man durch **Äquivalenzumformungen**: Auf beiden
+Seiten dieselbe Zahl addieren/subtrahieren oder mit derselben Zahl
+($\neq 0$) multiplizieren/dividieren, bis $x$ allein steht.
+
+$$
+\begin{aligned}
+3x + 7 &= 22 &&\text{| } -7 \\
+3x &= 15 &&\text{| } :3 \\
+x &= 5
+\end{aligned}
+$$
+
+### Quadratische Gleichungen
+
+**Reinquadratisch** ($x^2 = c$): Wurzel ziehen, an **beide** Lösungen denken:
+
+$$
+x^2 = 36 \quad\Rightarrow\quad x_1 = 6,\ x_2 = -6
+$$
+
+**Normalform** $x^2 + px + q = 0$: **pq-Formel**
+
+$$
+x_{1,2} = -\frac{p}{2} \pm \sqrt{\left(\frac{p}{2}\right)^2 - q}
+$$
+
+Steht vor $x^2$ ein Faktor, erst durch ihn teilen. Der Term unter der Wurzel
+(**Diskriminante** $D$) entscheidet über die Zahl der Lösungen:
+$D > 0$: zwei Lösungen, $D = 0$: genau eine, $D < 0$: keine.
+
+**Produktform:** Ein Produkt ist genau dann null, wenn (mindestens) ein
+Faktor null ist (**Satz vom Nullprodukt**):
+
+$$
+x \cdot (x - 4) = 0 \quad\Rightarrow\quad x_1 = 0,\ x_2 = 4
+$$
+
+:::caution
+$x^2 = 36$ hat **zwei** Lösungen – die negative wird am häufigsten
+vergessen. Und: Aus $x \cdot (x-4) = 0$ darf man **nicht** durch $x$
+teilen, sonst verliert man die Lösung $x = 0$.
+:::
+
+### Bruchgleichungen (einfacher Fall)
+
+Erst die **Definitionsmenge** bestimmen (Nenner $\neq 0$), dann mit dem
+Nenner multiplizieren:
+
+$$
+\begin{aligned}
+\frac{8}{x} &= 2 &&\text{| } \cdot x \quad (x \neq 0) \\
+8 &= 2x &&\text{| } :2 \\
+x &= 4
+\end{aligned}
+$$
+
+## Beispiele
+
+**Beispiel 1:** Vereinfache den Term $4(2x - 3) - 3(x - 1)$.
+
+<details>
+<summary>Lösung</summary>
+
+Beide Klammern ausmultiplizieren – beim zweiten Produkt dreht das Minus alle
+Vorzeichen:
+
+$$
+\begin{aligned}
+4(2x - 3) - 3(x - 1) &= 8x - 12 - 3x + 3 &&\text{| Klammern auflösen} \\
+&= 5x - 9 &&\text{| zusammenfassen}
+\end{aligned}
+$$
+
+</details>
+
+**Beispiel 2:** a) Multipliziere $(3x - 4)^2$ aus.
+b) Faktorisiere $x^2 + 10x + 25$.
+
+<details>
+<summary>Lösung</summary>
+
+a) Zweite binomische Formel mit $a = 3x$ und $b = 4$:
+
+$$
+\begin{aligned}
+(3x - 4)^2 &= (3x)^2 - 2 \cdot 3x \cdot 4 + 4^2 \\
+&= 9x^2 - 24x + 16
+\end{aligned}
+$$
+
+b) Rückrichtung: Passt $x^2 + 10x + 25$ auf die erste binomische Formel?
+Test mit $a = x$, $b = 5$: Mittelglied $2 \cdot x \cdot 5 = 10x$ ✓ und
+$5^2 = 25$ ✓. Also:
+
+$$
+x^2 + 10x + 25 = (x + 5)^2
+$$
+
+</details>
+
+**Beispiel 3:** Löse die Gleichung $x^2 - 2x - 8 = 0$.
+
+<details>
+<summary>Lösung</summary>
+
+Die Gleichung ist in Normalform mit $p = -2$ und $q = -8$. pq-Formel:
+
+$$
+\begin{aligned}
+x_{1,2} &= -\frac{-2}{2} \pm \sqrt{\left(\frac{-2}{2}\right)^2 - (-8)}
+&&\text{| einsetzen} \\
+&= 1 \pm \sqrt{1 + 8} \\
+&= 1 \pm 3
+\end{aligned}
+$$
+
+Also $x_1 = 4$ und $x_2 = -2$.
+
+Probe (immer sinnvoll): $4^2 - 2 \cdot 4 - 8 = 16 - 8 - 8 = 0$ ✓ und
+$(-2)^2 - 2 \cdot (-2) - 8 = 4 + 4 - 8 = 0$ ✓.
+
+</details>
+
+**Beispiel 4:** Löse die Bruchgleichung $\dfrac{24}{x + 1} = 6$.
+
+<details>
+<summary>Lösung</summary>
+
+Der Nenner darf nicht null werden: Definitionsmenge $x \neq -1$.
+
+$$
+\begin{aligned}
+\frac{24}{x + 1} &= 6 &&\text{| } \cdot (x + 1) \\
+24 &= 6(x + 1) &&\text{| ausmultiplizieren} \\
+24 &= 6x + 6 &&\text{| } -6 \\
+18 &= 6x &&\text{| } :6 \\
+x &= 3
+\end{aligned}
+$$
+
+$x = 3$ liegt in der Definitionsmenge, ist also Lösung.
+Probe: $\frac{24}{3+1} = \frac{24}{4} = 6$ ✓.
+
+</details>
+
+## Aufgaben
+
+**Aufgabe 1** (⭐) Fasse so weit wie möglich zusammen:
+a) $3x + 5x - 2x$  b) $4a + 2b - a + 3b$  c) $2x^2 + 3x - x^2 + x$
+
+<details>
+<summary>Lösung zu Aufgabe 1</summary>
+
+Nur gleichartige Terme zusammenfassen:
+
+a) $3x + 5x - 2x = 6x$
+
+b) $4a - a = 3a$ und $2b + 3b = 5b$, also $3a + 5b$
+
+c) $2x^2 - x^2 = x^2$ und $3x + x = 4x$, also $x^2 + 4x$
+
+</details>
+
+**Aufgabe 2** (⭐) Multipliziere aus:
+a) $3(x + 4)$  b) $-2(3x - 5)$  c) $x(2x - 7)$
+
+<details>
+<summary>Lösung zu Aufgabe 2</summary>
+
+Jedes Glied der Klammer wird multipliziert:
+
+a) $3(x+4) = 3x + 12$
+
+b) $-2(3x - 5) = -6x + 10$ (das Minus dreht beide Vorzeichen)
+
+c) $x(2x - 7) = 2x^2 - 7x$
+
+</details>
+
+**Aufgabe 3** (⭐) Klammere den größten gemeinsamen Faktor aus:
+a) $6x + 9$  b) $4x^2 - 8x$  c) $15a^2b - 10ab^2$
+
+<details>
+<summary>Lösung zu Aufgabe 3</summary>
+
+a) Größter gemeinsamer Faktor 3: $\ 6x + 9 = 3(2x + 3)$
+
+b) Größter gemeinsamer Faktor $4x$: $\ 4x^2 - 8x = 4x(x - 2)$
+
+c) Größter gemeinsamer Faktor $5ab$: $\ 15a^2b - 10ab^2 = 5ab(3a - 2b)$
+
+Kontrolle jeweils durch Ausmultiplizieren.
+
+</details>
+
+**Aufgabe 4** (⭐) Wende die binomischen Formeln an:
+a) $(x + 3)^2$  b) $(x - 5)^2$  c) $(2x + 1)^2$
+
+<details>
+<summary>Lösung zu Aufgabe 4</summary>
+
+a) $(x+3)^2 = x^2 + 2 \cdot x \cdot 3 + 3^2 = x^2 + 6x + 9$
+
+b) $(x-5)^2 = x^2 - 2 \cdot x \cdot 5 + 5^2 = x^2 - 10x + 25$
+
+c) $(2x+1)^2 = (2x)^2 + 2 \cdot 2x \cdot 1 + 1^2 = 4x^2 + 4x + 1$
+
+</details>
+
+**Aufgabe 5** (⭐) Multipliziere mit der dritten binomischen Formel:
+a) $(x + 4)(x - 4)$  b) $(3a - 2b)(3a + 2b)$
+
+<details>
+<summary>Lösung zu Aufgabe 5</summary>
+
+Dritte binomische Formel $(a+b)(a-b) = a^2 - b^2$:
+
+a) $(x+4)(x-4) = x^2 - 16$
+
+b) $(3a - 2b)(3a + 2b) = (3a)^2 - (2b)^2 = 9a^2 - 4b^2$
+
+</details>
+
+**Aufgabe 6** (⭐) Löse: a) $4x - 7 = 13$  b) $3(x - 2) = x + 8$
+
+<details>
+<summary>Lösung zu Aufgabe 6</summary>
+
+a)
+
+$$
+\begin{aligned}
+4x - 7 &= 13 &&\text{| } +7 \\
+4x &= 20 &&\text{| } :4 \\
+x &= 5
+\end{aligned}
+$$
+
+b)
+
+$$
+\begin{aligned}
+3(x - 2) &= x + 8 &&\text{| ausmultiplizieren} \\
+3x - 6 &= x + 8 &&\text{| } -x \\
+2x - 6 &= 8 &&\text{| } +6 \\
+2x &= 14 &&\text{| } :2 \\
+x &= 7
+\end{aligned}
+$$
+
+</details>
+
+**Aufgabe 7** (⭐) Löse durch Wurzelziehen:
+a) $x^2 = 49$  b) $(x - 2)^2 = 25$
+
+<details>
+<summary>Lösung zu Aufgabe 7</summary>
+
+a) $x_1 = 7$, $x_2 = -7$ (beide Vorzeichen!)
+
+b) Wurzelziehen liefert $x - 2 = 5$ oder $x - 2 = -5$:
+
+$$
+x_1 = 7, \qquad x_2 = -3
+$$
+
+</details>
+
+**Aufgabe 8** (⭐⭐) Multipliziere aus und fasse zusammen:
+$(2x - 3)(x + 4) - 2x^2$
+
+<details>
+<summary>Lösung zu Aufgabe 8</summary>
+
+$$
+\begin{aligned}
+(2x - 3)(x + 4) - 2x^2 &= 2x^2 + 8x - 3x - 12 - 2x^2
+&&\text{| jedes mit jedem} \\
+&= 5x - 12 &&\text{| zusammenfassen}
+\end{aligned}
+$$
+
+</details>
+
+**Aufgabe 9** (⭐⭐) Faktorisiere mit einer binomischen Formel:
+a) $x^2 + 8x + 16$  b) $x^2 - 49$  c) $4x^2 - 12x + 9$
+
+<details>
+<summary>Lösung zu Aufgabe 9</summary>
+
+a) Test: $2 \cdot x \cdot 4 = 8x$ ✓, also $x^2 + 8x + 16 = (x + 4)^2$
+
+b) Dritte binomische Formel: $x^2 - 49 = (x + 7)(x - 7)$
+
+c) $a = 2x$, $b = 3$: Test $2 \cdot 2x \cdot 3 = 12x$ ✓, also
+$4x^2 - 12x + 9 = (2x - 3)^2$
+
+</details>
+
+**Aufgabe 10** (⭐⭐) Löse: $5(2x - 1) - 3(x + 4) = x + 1$
+
+<details>
+<summary>Lösung zu Aufgabe 10</summary>
+
+$$
+\begin{aligned}
+5(2x - 1) - 3(x + 4) &= x + 1 &&\text{| Klammern auflösen} \\
+10x - 5 - 3x - 12 &= x + 1 &&\text{| zusammenfassen} \\
+7x - 17 &= x + 1 &&\text{| } -x \\
+6x - 17 &= 1 &&\text{| } +17 \\
+6x &= 18 &&\text{| } :6 \\
+x &= 3
+\end{aligned}
+$$
+
+</details>
+
+**Aufgabe 11** (⭐⭐) Löse mit der pq-Formel: $x^2 - 6x + 8 = 0$
+
+<details>
+<summary>Lösung zu Aufgabe 11</summary>
+
+$p = -6$, $q = 8$:
+
+$$
+\begin{aligned}
+x_{1,2} &= 3 \pm \sqrt{9 - 8} \\
+&= 3 \pm 1
+\end{aligned}
+$$
+
+$x_1 = 4$, $x_2 = 2$. Probe: $16 - 24 + 8 = 0$ ✓ und $4 - 12 + 8 = 0$ ✓.
+
+</details>
+
+**Aufgabe 12** (⭐⭐) Löse mit der pq-Formel: $x^2 + 2x - 15 = 0$
+
+<details>
+<summary>Lösung zu Aufgabe 12</summary>
+
+$p = 2$, $q = -15$:
+
+$$
+\begin{aligned}
+x_{1,2} &= -1 \pm \sqrt{1 + 15} \\
+&= -1 \pm 4
+\end{aligned}
+$$
+
+$x_1 = 3$, $x_2 = -5$.
+
+</details>
+
+**Aufgabe 13** (⭐⭐) Löse: $2x^2 - 8x - 10 = 0$
+
+<details>
+<summary>Lösung zu Aufgabe 13</summary>
+
+Erst durch 2 teilen, um die Normalform zu erhalten:
+
+$$
+\begin{aligned}
+2x^2 - 8x - 10 &= 0 &&\text{| } :2 \\
+x^2 - 4x - 5 &= 0 &&\text{| pq-Formel, } p = -4,\ q = -5 \\
+x_{1,2} &= 2 \pm \sqrt{4 + 5} \\
+&= 2 \pm 3
+\end{aligned}
+$$
+
+$x_1 = 5$, $x_2 = -1$.
+
+</details>
+
+**Aufgabe 14** (⭐⭐) Wie viele Lösungen hat $x^2 + 4x + 5 = 0$? Begründe,
+ohne die Gleichung vollständig zu lösen.
+
+<details>
+<summary>Lösung zu Aufgabe 14</summary>
+
+Diskriminante prüfen ($p = 4$, $q = 5$):
+
+$$
+D = \left(\frac{p}{2}\right)^2 - q = 4 - 5 = -1 < 0
+$$
+
+Die Wurzel aus einer negativen Zahl existiert nicht – die Gleichung hat
+**keine** Lösung.
+
+</details>
+
+**Aufgabe 15** (⭐⭐) Löse mit dem Satz vom Nullprodukt:
+a) $x(x - 3)(x + 5) = 0$  b) $(2x - 4)(x + 1) = 0$
+
+<details>
+<summary>Lösung zu Aufgabe 15</summary>
+
+Ein Produkt ist null, wenn ein Faktor null ist:
+
+a) $x_1 = 0$, $x_2 = 3$, $x_3 = -5$
+
+b) $2x - 4 = 0 \Rightarrow x_1 = 2$ und $x + 1 = 0 \Rightarrow x_2 = -1$
+
+</details>
+
+**Aufgabe 16** (⭐⭐) Löse durch Ausklammern:
+a) $2x^2 + 6x = 0$  b) $x^3 - 9x = 0$
+
+<details>
+<summary>Lösung zu Aufgabe 16</summary>
+
+a)
+
+$$
+\begin{aligned}
+2x^2 + 6x &= 0 &&\text{| } 2x \text{ ausklammern} \\
+2x(x + 3) &= 0 &&\text{| Satz vom Nullprodukt} \\
+x_1 = 0&,\quad x_2 = -3
+\end{aligned}
+$$
+
+b)
+
+$$
+\begin{aligned}
+x^3 - 9x &= 0 &&\text{| } x \text{ ausklammern} \\
+x(x^2 - 9) &= 0 &&\text{| 3. binomische Formel} \\
+x(x + 3)(x - 3) &= 0
+\end{aligned}
+$$
+
+$x_1 = 0$, $x_2 = -3$, $x_3 = 3$.
+
+</details>
+
+**Aufgabe 17** (⭐⭐) Vereinfache mit den Potenzgesetzen:
+a) $x^3 \cdot x^4$  b) $\left(x^2\right)^5$  c) $\dfrac{x^7}{x^3}$  d) $\left(2x^3\right)^2$
+
+<details>
+<summary>Lösung zu Aufgabe 17</summary>
+
+a) $x^3 \cdot x^4 = x^{3+4} = x^7$
+
+b) $\left(x^2\right)^5 = x^{2 \cdot 5} = x^{10}$
+
+c) $\dfrac{x^7}{x^3} = x^{7-3} = x^4$
+
+d) $\left(2x^3\right)^2 = 2^2 \cdot x^{3 \cdot 2} = 4x^6$
+
+</details>
+
+**Aufgabe 18** (⭐⭐) Vereinfache:
+a) $a^2b^3 \cdot a^4b$  b) $\left(3x^2y\right)^3$  c) $x^{-2} \cdot x^5$
+
+<details>
+<summary>Lösung zu Aufgabe 18</summary>
+
+a) $a^2b^3 \cdot a^4b = a^{2+4} \, b^{3+1} = a^6b^4$
+
+b) $\left(3x^2y\right)^3 = 3^3 \, x^{2 \cdot 3} \, y^3 = 27x^6y^3$
+
+c) $x^{-2} \cdot x^5 = x^{-2+5} = x^3$
+
+</details>
+
+**Aufgabe 19** (⭐⭐) Kürze so weit wie möglich und gib an, welche Werte
+$x$ nicht annehmen darf: a) $\dfrac{4x^2 - 8x}{2x}$  b) $\dfrac{x^2 - 9}{x + 3}$
+
+<details>
+<summary>Lösung zu Aufgabe 19</summary>
+
+a) Zähler faktorisieren, dann kürzen ($x \neq 0$):
+
+$$
+\frac{4x^2 - 8x}{2x} = \frac{4x(x - 2)}{2x} = 2(x - 2) = 2x - 4
+$$
+
+b) Dritte binomische Formel im Zähler ($x \neq -3$):
+
+$$
+\frac{x^2 - 9}{x + 3} = \frac{(x + 3)(x - 3)}{x + 3} = x - 3
+$$
+
+</details>
+
+**Aufgabe 20** (⭐⭐) Löse die Bruchgleichungen:
+a) $\dfrac{12}{x} = 3$  b) $\dfrac{5}{x - 2} = 1$
+
+<details>
+<summary>Lösung zu Aufgabe 20</summary>
+
+a) Definitionsmenge $x \neq 0$. Mit $x$ multiplizieren:
+$12 = 3x$, also $x = 4$. Probe: $\frac{12}{4} = 3$ ✓
+
+b) Definitionsmenge $x \neq 2$. Mit $(x-2)$ multiplizieren:
+
+$$
+\begin{aligned}
+5 &= x - 2 &&\text{| } +2 \\
+x &= 7
+\end{aligned}
+$$
+
+$x = 7$ liegt in der Definitionsmenge. Probe: $\frac{5}{7-2} = 1$ ✓
+
+</details>
+
+**Aufgabe 21** (⭐⭐) Löse $(x + 3)^2 = x^2 + 21$.
+
+<details>
+<summary>Lösung zu Aufgabe 21</summary>
+
+Links binomische Formel – dann fällt $x^2$ weg, und es bleibt eine lineare
+Gleichung:
+
+$$
+\begin{aligned}
+x^2 + 6x + 9 &= x^2 + 21 &&\text{| } -x^2 \\
+6x + 9 &= 21 &&\text{| } -9 \\
+6x &= 12 &&\text{| } :6 \\
+x &= 2
+\end{aligned}
+$$
+
+</details>
+
+**Aufgabe 22** (⭐⭐⭐) Die Formel für den Flächeninhalt eines Trapezes lautet
+$A = \frac{1}{2}(a + c) \cdot h$. Stelle die Formel nach $a$ um.
+
+<details>
+<summary>Lösung zu Aufgabe 22</summary>
+
+Schritt für Schritt freistellen:
+
+$$
+\begin{aligned}
+A &= \tfrac{1}{2}(a + c) \cdot h &&\text{| } \cdot 2 \\
+2A &= (a + c) \cdot h &&\text{| } :h \\
+\frac{2A}{h} &= a + c &&\text{| } -c \\
+a &= \frac{2A}{h} - c
+\end{aligned}
+$$
+
+</details>
+
+**Aufgabe 23** (⭐⭐⭐) Zeige mit einer binomischen Formel: Die Differenz der
+Quadrate zweier aufeinanderfolgender natürlicher Zahlen ist immer ungerade.
+
+<details>
+<summary>Lösung zu Aufgabe 23</summary>
+
+Zwei aufeinanderfolgende Zahlen: $n$ und $n + 1$. Differenz der Quadrate:
+
+$$
+\begin{aligned}
+(n + 1)^2 - n^2 &= n^2 + 2n + 1 - n^2 &&\text{| 1. binomische Formel} \\
+&= 2n + 1
+\end{aligned}
+$$
+
+$2n$ ist gerade, also ist $2n + 1$ immer ungerade. ∎
+
+</details>
+
+**Aufgabe 24** (⭐⭐⭐) Für welche Werte von $t$ hat die Gleichung
+$x^2 + tx + 9 = 0$ genau **eine** Lösung?
+
+<details>
+<summary>Lösung zu Aufgabe 24</summary>
+
+Genau eine Lösung bedeutet: Diskriminante gleich null.
+
+$$
+\begin{aligned}
+D = \left(\frac{t}{2}\right)^2 - 9 &= 0 &&\text{| } +9 \\
+\frac{t^2}{4} &= 9 &&\text{| } \cdot 4 \\
+t^2 &= 36 &&\text{| Wurzel, beide Vorzeichen} \\
+t_1 = 6&,\quad t_2 = -6
+\end{aligned}
+$$
+
+Kontrolle: Für $t = 6$ ist $x^2 + 6x + 9 = (x+3)^2 = 0$ mit der einzigen
+Lösung $x = -3$ ✓ (analog $t = -6$ mit $x = 3$).
+
+</details>
+
+## Merksatz
+
+<details>
+<summary>Merksatz anzeigen</summary>
+
+Gleichungen löst man durch **Äquivalenzumformungen**. Quadratische
+Gleichungen bringt man in die Normalform $x^2 + px + q = 0$ und nutzt die
+**pq-Formel**; steht die Gleichung als Produkt da, liefert der **Satz vom
+Nullprodukt** die Lösungen direkt – deshalb sind **Ausklammern** und
+**Faktorisieren** (binomische Formeln!) die wichtigsten Werkzeuge der
+Algebra.
+
+</details>

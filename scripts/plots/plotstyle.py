@@ -102,8 +102,31 @@ class Plot:
     legend_loc: str = "upper left"
     figsize: tuple[float, float] = (8.0, 6.0)  # 4:3
     samples: int = 600
+    # Zahlengerade: nur x-Achse, keine y-Achse/-Beschriftung, flaches Format
+    numberline: bool = False
     # Fluchtluke für Sonderelemente (Schraffuren, Hilfslinien …):
     extras: Callable | None = None
+
+
+def _setup_numberline(ax, spec: Plot) -> None:
+    """Zahlengerade: nur die x-Achse mit Pfeilspitze und ganzzahligen Ticks."""
+    xmin, xmax = spec.xlim
+    ax.set_xlim(xmin, xmax)
+    ax.set_ylim(-1, 1)
+    for side in ("top", "right", "left"):
+        ax.spines[side].set_visible(False)
+    ax.spines["bottom"].set_position("zero")
+    ax.spines["bottom"].set_color(_AXIS_COLOR)
+    ax.spines["bottom"].set_linewidth(1.2)
+    ax.plot(1, 0, ">", color=_AXIS_COLOR, transform=ax.get_yaxis_transform(),
+            clip_on=False, markersize=8)
+    ax.annotate(spec.xlabel, xy=(1, 0), xycoords=ax.get_yaxis_transform(),
+                xytext=(4, 10), textcoords="offset points",
+                fontsize=_BASE_FONTSIZE, style="italic", ha="left", va="bottom")
+    ax.xaxis.set_major_locator(MultipleLocator(spec.xtick_step))
+    ax.tick_params(labelsize=_BASE_FONTSIZE - 1, length=6, color=_AXIS_COLOR)
+    ax.xaxis.set_major_formatter(lambda v, _pos: fmt_de(v))
+    ax.yaxis.set_visible(False)
 
 
 def _setup_axes(ax, spec: Plot) -> None:
@@ -153,11 +176,15 @@ def _setup_axes(ax, spec: Plot) -> None:
 
 def render(spec: Plot, out_path: str) -> None:
     """Rendert einen deklarierten Plot als deterministisches SVG."""
-    fig, ax = plt.subplots(figsize=spec.figsize)
+    figsize = (spec.figsize[0], 1.8) if spec.numberline else spec.figsize
+    fig, ax = plt.subplots(figsize=figsize)
     fig.patch.set_facecolor("white")
     ax.set_facecolor("white")
 
-    _setup_axes(ax, spec)
+    if spec.numberline:
+        _setup_numberline(ax, spec)
+    else:
+        _setup_axes(ax, spec)
 
     ymin, ymax = spec.ylim
     yspan = ymax - ymin

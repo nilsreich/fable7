@@ -1,10 +1,521 @@
 ---
 title: Lineare und quadratische Funktionen
 description: "Geraden und Parabeln: Steigung, Achsenabschnitt, Scheitelpunkt und Nullstellen."
-draft: true
 sidebar:
   order: 2
 ---
 
-Diese Seite ist noch in Arbeit und wird in einer späteren Ausbauphase der
-Website freigeschaltet.
+## Worum geht's?
+
+Handytarif, Taxipreis, Stromrechnung: Wächst etwas mit konstanter Rate,
+steckt eine **lineare** Funktion dahinter. Wirft man dagegen einen Ball,
+beschreibt seine Flugbahn eine **Parabel** – eine **quadratische** Funktion.
+**Leitfrage:** Wie liest man Steigung, Achsenabschnitt, Scheitelpunkt und
+Nullstellen aus Term und Graph ab – und wie rechnet man sie aus?
+
+## Erklärung
+
+### Lineare Funktionen
+
+$$
+f(x) = mx + b
+$$
+
+- $m$ ist die **Steigung**: Gehe ich 1 nach rechts, geht der Graph um $m$
+  nach oben ($m > 0$) bzw. unten ($m < 0$).
+- $b$ ist der **y-Achsenabschnitt**: Der Graph schneidet die $y$-Achse im
+  Punkt $B(0 \mid b)$.
+
+![Gerade g(x) = 0,5x + 1 mit Steigungsdreieck (2 nach rechts, 1 nach oben) und y-Achsenabschnitt B(0|1)](../../../assets/plots/funktionen/lineare-quadratische/gerade-steigungsdreieck.svg)
+
+Am **Steigungsdreieck** liest man $m$ ab: hier $m = \frac{1}{2} = 0{,}5$.
+Allgemein gilt für zwei Punkte $A(x_1 \mid y_1)$ und $B(x_2 \mid y_2)$:
+
+$$
+m = \frac{y_2 - y_1}{x_2 - x_1}
+$$
+
+![Drei Geraden im Vergleich: steigend f(x) = 2x − 1, fallend g(x) = −0,5x + 2 und konstant h(x) = 2](../../../assets/plots/funktionen/lineare-quadratische/geraden-vergleich.svg)
+
+**Nullstelle:** $f(x) = 0$ setzen und nach $x$ auflösen. Eine Gerade mit
+$m \neq 0$ hat genau eine Nullstelle.
+
+### Quadratische Funktionen
+
+Allgemeine Form und Scheitelform:
+
+$$
+f(x) = ax^2 + bx + c
+\qquad\text{bzw.}\qquad
+f(x) = a(x - d)^2 + e
+$$
+
+Aus der **Scheitelform** liest man den **Scheitelpunkt** $S(d \mid e)$
+direkt ab – den tiefsten Punkt (für $a > 0$) bzw. höchsten Punkt (für
+$a < 0$) der Parabel.
+
+![Verschobene Parabel f(x) = (x − 2)² − 1 mit Scheitelpunkt S(2|−1), zum Vergleich gestrichelt die Normalparabel y = x²](../../../assets/plots/funktionen/lineare-quadratische/parabel-scheitelform.svg)
+
+Der **Formfaktor** $a$ steuert Öffnung und Breite:
+
+- $a > 0$: nach oben geöffnet, $a < 0$: nach unten geöffnet
+- $|a| > 1$: enger (gestreckt), $|a| < 1$: weiter (gestaucht) als die
+  Normalparabel
+
+![Vier Parabeln im Vergleich: y = x², die engere y = 2x², die weitere y = 0,5x² und die nach unten geöffnete y = −x²](../../../assets/plots/funktionen/lineare-quadratische/parabel-oeffnung.svg)
+
+**Von der allgemeinen Form zur Scheitelform** führt die quadratische
+Ergänzung:
+
+$$
+\begin{aligned}
+x^2 + 6x + 5 &= x^2 + 6x + 9 - 9 + 5 &&\text{| } \left(\tfrac{6}{2}\right)^2 = 9 \text{ ergänzen} \\
+&= (x + 3)^2 - 4 &&\text{| binomische Formel}
+\end{aligned}
+$$
+
+**Nullstellen** quadratischer Funktionen liefert die pq-Formel (siehe
+[Algebra-Werkzeugkasten](../../basiswissen/algebra-werkzeugkasten/)). Je
+nach Lage des Scheitels gibt es zwei, eine oder keine Nullstelle.
+
+![Parabel f(x) = x² − x − 6 mit den Nullstellen N₁(−2|0) und N₂(3|0) und dem Scheitelpunkt S(0,5|−6,25)](../../../assets/plots/funktionen/lineare-quadratische/parabel-nullstellen.svg)
+
+## Beispiele
+
+**Beispiel 1:** Bestimme die Gleichung der Geraden durch $A(1 \mid 1)$ und
+$B(3 \mid 5)$.
+
+<details>
+<summary>Lösung</summary>
+
+Zuerst die Steigung aus den beiden Punkten:
+
+$$
+m = \frac{y_2 - y_1}{x_2 - x_1} = \frac{5 - 1}{3 - 1} = \frac{4}{2} = 2
+$$
+
+Dann $b$ bestimmen: Ansatz $y = 2x + b$, Punkt $A$ einsetzen (seine
+Koordinaten müssen die Gleichung erfüllen):
+
+$$
+\begin{aligned}
+1 &= 2 \cdot 1 + b &&\text{| } -2 \\
+b &= -1
+\end{aligned}
+$$
+
+Also $f(x) = 2x - 1$. Kontrolle mit $B$: $f(3) = 6 - 1 = 5$ ✓
+
+</details>
+
+**Beispiel 2:** Bestimme Scheitelpunkt und Nullstellen von
+$f(x) = x^2 - 4x + 3$.
+
+<details>
+<summary>Lösung</summary>
+
+**Scheitel** über die quadratische Ergänzung ($\left(\frac{4}{2}\right)^2 = 4$
+ergänzen):
+
+$$
+\begin{aligned}
+f(x) &= x^2 - 4x + 4 - 4 + 3 &&\text{| ergänzen und wieder abziehen} \\
+&= (x - 2)^2 - 1 &&\text{| 2. binomische Formel}
+\end{aligned}
+$$
+
+Scheitelpunkt $S(2 \mid -1)$.
+
+**Nullstellen** mit der pq-Formel ($p = -4$, $q = 3$):
+
+$$
+\begin{aligned}
+x_{1,2} &= 2 \pm \sqrt{4 - 3} \\
+&= 2 \pm 1
+\end{aligned}
+$$
+
+$x_1 = 3$, $x_2 = 1$. (Plausibel: Die Nullstellen liegen symmetrisch um
+$x = 2$, die Scheitelstelle.)
+
+</details>
+
+**Beispiel 3:** Ein Ball wird hochgeworfen. Seine Höhe (in m) nach $t$
+Sekunden: $h(t) = -5t^2 + 10t$.
+a) Wann erreicht der Ball seine maximale Höhe, und wie hoch ist sie?
+b) Wann landet der Ball wieder auf dem Boden?
+
+<details>
+<summary>Lösung</summary>
+
+a) Die maximale Höhe ist der Scheitel der (nach unten geöffneten) Parabel.
+Quadratische Ergänzung – zuerst $-5$ ausklammern:
+
+$$
+\begin{aligned}
+h(t) &= -5(t^2 - 2t) &&\text{| ausklammern} \\
+&= -5\left((t - 1)^2 - 1\right) &&\text{| quadratisch ergänzen} \\
+&= -5(t - 1)^2 + 5 &&\text{| ausmultiplizieren}
+\end{aligned}
+$$
+
+Scheitel $S(1 \mid 5)$: Nach **1 Sekunde** erreicht der Ball die maximale
+Höhe von **5 m**.
+
+b) Boden bedeutet $h(t) = 0$:
+
+$$
+\begin{aligned}
+-5t^2 + 10t &= 0 &&\text{| } -5t \text{ ausklammern} \\
+-5t(t - 2) &= 0 &&\text{| Nullprodukt} \\
+t_1 = 0&,\quad t_2 = 2
+\end{aligned}
+$$
+
+$t_1 = 0$ ist der Abwurf – der Ball landet nach **2 Sekunden**.
+
+</details>
+
+## Aufgaben
+
+**Aufgabe 1** (⭐) Gib Steigung $m$ und $y$-Achsenabschnitt $b$ an:
+a) $y = 3x - 2$  b) $y = -x + 4$  c) $y = 0{,}5x$
+
+<details>
+<summary>Lösung zu Aufgabe 1</summary>
+
+a) $m = 3$, $b = -2$
+
+b) $m = -1$, $b = 4$
+
+c) $m = 0{,}5$, $b = 0$ (Ursprungsgerade)
+
+</details>
+
+**Aufgabe 2** (⭐) Lege eine Wertetabelle für $f(x) = -2x + 3$ an
+($x = -1$ bis $x = 2$).
+
+<details>
+<summary>Lösung zu Aufgabe 2</summary>
+
+| $x$ | $-1$ | $0$ | $1$ | $2$ |
+| --- | --- | --- | --- | --- |
+| $f(x)$ | $5$ | $3$ | $1$ | $-1$ |
+
+Pro Schritt nach rechts sinkt der Wert um 2 – das ist die Steigung $-2$.
+
+</details>
+
+**Aufgabe 3** (⭐) Liegt der Punkt auf der Geraden $y = 2x - 1$?
+a) $P(3 \mid 5)$  b) $Q(-2 \mid -4)$
+
+<details>
+<summary>Lösung zu Aufgabe 3</summary>
+
+a) $f(3) = 2 \cdot 3 - 1 = 5$ ✓ → $P$ liegt auf der Geraden.
+
+b) $f(-2) = -4 - 1 = -5 \neq -4$ → $Q$ liegt nicht auf der Geraden.
+
+</details>
+
+**Aufgabe 4** (⭐) Lies aus dem ersten Graphen der Erklärung
+(Steigungsdreieck) die Steigung und den $y$-Achsenabschnitt ab und gib den
+Funktionsterm an.
+
+<details>
+<summary>Lösung zu Aufgabe 4</summary>
+
+Steigungsdreieck: 2 nach rechts, 1 nach oben → $m = \frac{1}{2} = 0{,}5$.
+Schnitt mit der $y$-Achse bei $B(0 \mid 1)$ → $b = 1$.
+
+$$
+g(x) = 0{,}5x + 1
+$$
+
+</details>
+
+**Aufgabe 5** (⭐) Berechne die Nullstelle:
+a) $f(x) = 3x - 6$  b) $g(x) = -2x - 8$
+
+<details>
+<summary>Lösung zu Aufgabe 5</summary>
+
+a)
+
+$$
+3x - 6 = 0 \ \Rightarrow\ 3x = 6 \ \Rightarrow\ x = 2
+$$
+
+b)
+
+$$
+-2x - 8 = 0 \ \Rightarrow\ -2x = 8 \ \Rightarrow\ x = -4
+$$
+
+</details>
+
+**Aufgabe 6** (⭐⭐) Bestimme die Gleichung der Geraden durch $A(2 \mid 3)$
+und $B(4 \mid 7)$.
+
+<details>
+<summary>Lösung zu Aufgabe 6</summary>
+
+$$
+m = \frac{7 - 3}{4 - 2} = \frac{4}{2} = 2
+$$
+
+$b$ über Punkt $A$: $3 = 2 \cdot 2 + b \Rightarrow b = -1$.
+
+$$
+f(x) = 2x - 1
+$$
+
+Kontrolle mit $B$: $f(4) = 8 - 1 = 7$ ✓
+
+</details>
+
+**Aufgabe 7** (⭐⭐) Bestimme die Gleichung der Geraden durch $A(-1 \mid 4)$
+und $B(2 \mid -2)$.
+
+<details>
+<summary>Lösung zu Aufgabe 7</summary>
+
+$$
+m = \frac{-2 - 4}{2 - (-1)} = \frac{-6}{3} = -2
+$$
+
+$b$ über Punkt $A$:
+
+$$
+\begin{aligned}
+4 &= -2 \cdot (-1) + b \\
+4 &= 2 + b \\
+b &= 2
+\end{aligned}
+$$
+
+$$
+f(x) = -2x + 2
+$$
+
+Kontrolle mit $B$: $f(2) = -4 + 2 = -2$ ✓
+
+</details>
+
+**Aufgabe 8** (⭐⭐) Berechne den Schnittpunkt der Geraden $f(x) = 2x - 1$
+und $g(x) = -x + 5$.
+
+<details>
+<summary>Lösung zu Aufgabe 8</summary>
+
+Gleichsetzen:
+
+$$
+\begin{aligned}
+2x - 1 &= -x + 5 &&\text{| } +x \\
+3x - 1 &= 5 &&\text{| } +1 \\
+3x &= 6 &&\text{| } :3 \\
+x &= 2
+\end{aligned}
+$$
+
+$y$-Wert: $f(2) = 3$. Schnittpunkt $S(2 \mid 3)$.
+Kontrolle: $g(2) = -2 + 5 = 3$ ✓
+
+</details>
+
+**Aufgabe 9** (⭐⭐) Welche der Geraden sind zueinander parallel? Begründe.
+$f(x) = 2x + 3$, $\ g(x) = -2x + 3$, $\ h(x) = 2x - 4$
+
+<details>
+<summary>Lösung zu Aufgabe 9</summary>
+
+Parallele Geraden haben dieselbe Steigung. $f$ und $h$ haben beide $m = 2$
+→ **parallel**. $g$ hat $m = -2$ → nicht parallel zu den anderen (gleicher
+$y$-Achsenabschnitt wie $f$ bedeutet nur: gleicher Schnittpunkt mit der
+$y$-Achse).
+
+</details>
+
+**Aufgabe 10** (⭐⭐) $f(x) = (x + 1)^2 - 4$.
+a) Gib den Scheitelpunkt an. b) Berechne die Nullstellen.
+
+<details>
+<summary>Lösung zu Aufgabe 10</summary>
+
+a) Scheitelform ablesen: $S(-1 \mid -4)$.
+
+b)
+
+$$
+\begin{aligned}
+(x + 1)^2 - 4 &= 0 &&\text{| } +4 \\
+(x + 1)^2 &= 4 &&\text{| Wurzel, beide Vorzeichen} \\
+x + 1 = 2 \ \ \text{oder} \ \ x + 1 &= -2 \\
+x_1 = 1,\quad x_2 &= -3
+\end{aligned}
+$$
+
+</details>
+
+**Aufgabe 11** (⭐⭐) Bringe $f(x) = x^2 + 6x + 5$ in die Scheitelform und
+gib den Scheitelpunkt an.
+
+<details>
+<summary>Lösung zu Aufgabe 11</summary>
+
+Quadratische Ergänzung mit $\left(\frac{6}{2}\right)^2 = 9$:
+
+$$
+\begin{aligned}
+f(x) &= x^2 + 6x + 9 - 9 + 5 \\
+&= (x + 3)^2 - 4
+\end{aligned}
+$$
+
+Scheitelpunkt $S(-3 \mid -4)$.
+
+</details>
+
+**Aufgabe 12** (⭐⭐) Berechne die Nullstellen von $f(x) = x^2 - x - 6$ und
+vergleiche mit dem letzten Graphen der Erklärung.
+
+<details>
+<summary>Lösung zu Aufgabe 12</summary>
+
+pq-Formel mit $p = -1$, $q = -6$:
+
+$$
+\begin{aligned}
+x_{1,2} &= \frac{1}{2} \pm \sqrt{\frac{1}{4} + 6} \\
+&= \frac{1}{2} \pm \sqrt{\frac{25}{4}} \\
+&= \frac{1}{2} \pm \frac{5}{2}
+\end{aligned}
+$$
+
+$x_1 = 3$, $x_2 = -2$ – genau die markierten Punkte $N_1(-2 \mid 0)$ und
+$N_2(3 \mid 0)$ im Graphen. ✓
+
+</details>
+
+**Aufgabe 13** (⭐⭐) Ordne die Terme $y = 2x^2$, $y = 0{,}5x^2$ und
+$y = -x^2$ den Parabeln im Öffnungs-Vergleichsgraphen zu und begründe mit
+dem Formfaktor.
+
+<details>
+<summary>Lösung zu Aufgabe 13</summary>
+
+- $y = 2x^2$: $|a| = 2 > 1$ → die **engste** nach oben geöffnete Parabel
+  (rot)
+- $y = 0{,}5x^2$: $|a| = 0{,}5 < 1$ → die **weiteste** nach oben geöffnete
+  Parabel (grün)
+- $y = -x^2$: $a < 0$ → die **nach unten** geöffnete Parabel (violett)
+
+</details>
+
+**Aufgabe 14** (⭐⭐) Berechne die Schnittpunkte der Parabel $f(x) = x^2$ mit
+der Geraden $g(x) = x + 2$.
+
+<details>
+<summary>Lösung zu Aufgabe 14</summary>
+
+Gleichsetzen und auf Normalform bringen:
+
+$$
+\begin{aligned}
+x^2 &= x + 2 &&\text{| } -x - 2 \\
+x^2 - x - 2 &= 0 &&\text{| pq-Formel, } p = -1,\ q = -2 \\
+x_{1,2} &= \frac{1}{2} \pm \sqrt{\frac{1}{4} + 2} = \frac{1}{2} \pm \frac{3}{2}
+\end{aligned}
+$$
+
+$x_1 = 2$, $x_2 = -1$. Die $y$-Werte liefert $f$: $f(2) = 4$, $f(-1) = 1$.
+
+Schnittpunkte: $S_1(2 \mid 4)$ und $S_2(-1 \mid 1)$.
+
+</details>
+
+**Aufgabe 15** (⭐⭐⭐) Beim Handballtraining wird ein Ball geworfen; seine
+Höhe beschreibt $h(t) = -5t^2 + 20t$ ($t$ in s, $h$ in m).
+a) Nach welcher Zeit erreicht der Ball die maximale Höhe? Wie hoch fliegt er?
+b) Wie lange ist der Ball in der Luft?
+
+<details>
+<summary>Lösung zu Aufgabe 15</summary>
+
+a) Scheitelform ($-5$ ausklammern, quadratisch ergänzen):
+
+$$
+\begin{aligned}
+h(t) &= -5(t^2 - 4t) \\
+&= -5\left((t - 2)^2 - 4\right) \\
+&= -5(t - 2)^2 + 20
+\end{aligned}
+$$
+
+Scheitel $S(2 \mid 20)$: nach **2 s** maximale Höhe **20 m**.
+
+b) $h(t) = 0$:
+
+$$
+-5t(t - 4) = 0 \quad\Rightarrow\quad t_1 = 0,\ t_2 = 4
+$$
+
+Der Ball ist **4 Sekunden** in der Luft.
+
+</details>
+
+**Aufgabe 16** (⭐⭐⭐) Für welchen Wert von $c$ berührt die Parabel
+$y = x^2 + c$ die Gerade $y = 2x$ in genau einem Punkt?
+
+<details>
+<summary>Lösung zu Aufgabe 16</summary>
+
+Gleichsetzen; „genau ein Schnittpunkt“ heißt: Die entstehende quadratische
+Gleichung hat genau eine Lösung, also Diskriminante $D = 0$.
+
+$$
+\begin{aligned}
+x^2 + c &= 2x &&\text{| } -2x \\
+x^2 - 2x + c &= 0 &&\text{| } p = -2,\ q = c \\
+D = 1 - c &= 0 \\
+c &= 1
+\end{aligned}
+$$
+
+Für $c = 1$ berührt die Parabel die Gerade – im Punkt mit $x = 1$, also in
+$(1 \mid 2)$.
+
+</details>
+
+## Merksatz
+
+<details>
+<summary>Merksatz anzeigen</summary>
+
+**Gerade:** $f(x) = mx + b$ – Steigung $m$ (Steigungsdreieck bzw.
+$m = \frac{y_2 - y_1}{x_2 - x_1}$), $y$-Achsenabschnitt $b$.
+**Parabel:** $f(x) = a(x-d)^2 + e$ mit Scheitel $S(d \mid e)$; $a$ steuert
+Öffnung und Breite. Nullstellen über pq-Formel oder Scheitelform;
+Schnittpunkte zweier Graphen immer durch **Gleichsetzen**.
+
+</details>
+
+## Vertiefung
+
+:::caution
+In der Scheitelform steht ein **Minus**: $f(x) = (x - d)^2 + e$ hat den
+Scheitel bei $x = \boldsymbol{+d}$. Also: $(x + 3)^2$ → Scheitelstelle
+$x = -3$, nicht $+3$!
+:::
+
+**Sonderfall Diskriminante:** Ob eine Parabel die $x$-Achse zweimal, einmal
+oder gar nicht schneidet, entscheidet die Diskriminante der pq-Formel –
+dasselbe Kriterium, mit dem Aufgabe 16 die Berührung erzwingt. Dieses
+Muster („Berühren = genau eine Lösung“) kommt bei
+[Tangenten](../../differentialrechnung/tangente-normale/) wieder.
+
+**Ausblick:** Auf der Seite
+[Transformationen](../transformationen/) wird aus der Scheitelform ein
+allgemeines Prinzip: Verschieben, Strecken und Spiegeln funktioniert bei
+**jeder** Funktion so wie hier bei der Parabel.
