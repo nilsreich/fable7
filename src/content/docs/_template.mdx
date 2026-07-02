@@ -1,0 +1,113 @@
+---
+title: <Thema>
+description: "<Ein Satz, der das Thema der Seite beschreibt.>"
+draft: true
+sidebar:
+  order: 99
+---
+
+{/*
+  VORLAGE für alle Inhaltsseiten. Diese Datei beginnt mit "_" und wird
+  deshalb nicht gebaut. Abschnittsreihenfolge ist verbindlich (§4 des Briefs):
+  Worum geht's? → Erklärung → Beispiele → Aufgaben → Merksatz → Vertiefung.
+  Ausnahmen: basiswissen/* ohne Alltagskontext und ohne Vertiefung;
+  Seiten vor einer Klassenarbeit zusätzlich mit "Checkliste zur Klassenarbeit".
+*/}
+
+## Worum geht's?
+
+2–4 Sätze Alltagskontext und eine Leitfrage. Kein Vorgriff auf die Lösung.
+
+## Erklärung
+
+Definitionen, Herleitung, zentrale Formeln. Inline-Mathe mit $f(x) = x^2$,
+Display-Mathe mit:
+
+$$
+f(x) = a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x + a_0
+$$
+
+Mehrschrittige Rechnungen in `aligned`, EIN Schritt pro Zeile, am
+Gleichheitszeichen ausgerichtet:
+
+$$
+\begin{aligned}
+x^2 - 2x - 3 &= 0 \\
+(x-3)(x+1) &= 0 \\
+x_1 = 3,\quad x_2 &= -1
+\end{aligned}
+$$
+
+Plots als Markdown-Bild mit deutschem Alt-Text:
+
+![Parabel mit den Nullstellen −1 und 3 und dem Scheitelpunkt S(1|−4)](../../assets/plots/demo/parabel-nullstellen.svg)
+
+### Teilkonzept
+
+Bei mehreren Teilkonzepten `###`-Unterüberschriften verwenden.
+
+## Beispiele
+
+**Beispiel 1:** Aufgabenstellung sichtbar.
+
+<details>
+<summary>Lösung</summary>
+
+Vollständiger Lösungsweg, jeder Schritt kommentiert („Warum dieser Schritt?“).
+
+$$
+\begin{aligned}
+x^2 - 4 &= 0 &&\text{| } +4 \\
+x^2 &= 4 &&\text{| Wurzel ziehen} \\
+x_{1,2} &= \pm 2
+\end{aligned}
+$$
+
+</details>
+
+## Aufgaben
+
+**Aufgabe 1** (⭐) Grundniveau-Aufgabe.
+
+<details>
+<summary>Lösung zu Aufgabe 1</summary>
+
+Vollständiger Rechenweg, nicht nur das Ergebnis.
+
+</details>
+
+**Aufgabe 2** (⭐⭐) Standard-/Klassenarbeitsniveau.
+
+<details>
+<summary>Lösung zu Aufgabe 2</summary>
+
+Vollständiger Rechenweg.
+
+</details>
+
+**Aufgabe 3** (⭐⭐⭐) Transferaufgabe.
+
+<details>
+<summary>Lösung zu Aufgabe 3</summary>
+
+Vollständiger Rechenweg.
+
+</details>
+
+## Merksatz
+
+<details>
+<summary>Merksatz anzeigen</summary>
+
+Der Kernsatz des Themas – so formuliert, dass die Klasse ihn erst selbst
+entwickeln kann.
+
+</details>
+
+## Vertiefung
+
+Sonderfälle, typische Fehler, Ausblick auf das Folgethema.
+
+:::caution
+Typische Fehlerquelle hier beschreiben.
+:::
