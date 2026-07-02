@@ -1,0 +1,92 @@
+/* ==========================================================================
+   Mathe BGY 11 – eigene Stile
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Plots: weißer Hintergrund mit dezentem Rahmen, damit die SVGs auch im
+   Dark Mode lesbar bleiben. Die Seite enthält als Bilder ausschließlich
+   Funktionsgraphen.
+   -------------------------------------------------------------------------- */
+.sl-markdown-content img {
+	background-color: #fff;
+	border: 1px solid var(--sl-color-gray-5);
+	border-radius: 0.5rem;
+	padding: 0.5rem;
+	box-sizing: border-box;
+}
+
+/* --------------------------------------------------------------------------
+   Eingeklappte Lösungen (<details>): klar erkennbar, angenehm klickbar.
+   -------------------------------------------------------------------------- */
+.sl-markdown-content details {
+	border: 1px solid var(--sl-color-gray-5);
+	border-radius: 0.5rem;
+	padding: 0.75rem 1rem;
+	background-color: var(--sl-color-gray-7, var(--sl-color-gray-6));
+}
+
+.sl-markdown-content details > summary {
+	cursor: pointer;
+	font-weight: 600;
+	color: var(--sl-color-accent-high);
+}
+
+.sl-markdown-content details[open] > summary {
+	margin-bottom: 0.75rem;
+	border-bottom: 1px solid var(--sl-color-gray-5);
+	padding-bottom: 0.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   KaTeX: Displayformeln dürfen nie horizontal überlaufen; im Zweifel
+   scrollen statt das Layout sprengen (halbe Beamerbreite!).
+   -------------------------------------------------------------------------- */
+.sl-markdown-content .katex-display {
+	overflow-x: auto;
+	overflow-y: hidden;
+	padding: 0.25rem 0;
+}
+
+/* ==========================================================================
+   Beamer-Modus (html.beamer): Aufruf mit ?beamer, Ende mit ?beamer=off.
+   Für die Projektion im geteilten Bildschirm neben dem Schreib-Canvas.
+   Der Normalmodus bleibt vollständig unberührt.
+   ========================================================================== */
+
+/* Grundschrift ~1,25-fach: alles rem-basierte (Text, KaTeX, Überschriften)
+   skaliert mit. */
+html.beamer {
+	font-size: 125%;
+	--sl-sidebar-width: 0rem;
+	--sl-content-width: 100%;
+	--sl-content-inline-start: 0rem;
+	--sl-mobile-toc-height: 0rem;
+}
+
+/* Linke Sidebar und rechtes Inhaltsverzeichnis ausblenden */
+html.beamer nav.sidebar,
+html.beamer .right-sidebar-container,
+html.beamer mobile-starlight-toc,
+html.beamer starlight-menu-button {
+	display: none !important;
+}
+
+/* Inhalt auf volle Breite */
+html.beamer .main-pane {
+	width: 100% !important;
+}
+
+/* Mehr Zeilenabstand für Lesbarkeit aus der letzten Reihe */
+html.beamer .sl-markdown-content {
+	line-height: 1.75;
+}
+
+/* KaTeX zusätzlich leicht vergrößern */
+html.beamer .katex {
+	font-size: 1.15em;
+}
+
+/* Plots nutzen die volle Inhaltsbreite */
+html.beamer .sl-markdown-content img {
+	max-width: 100%;
+}

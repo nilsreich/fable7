@@ -111,3 +111,10 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Astro generated types
+.astro/
+
+# Python (Plot-Pipeline)
+__pycache__/
+*.pyc
