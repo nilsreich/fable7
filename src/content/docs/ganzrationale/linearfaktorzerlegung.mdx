@@ -1,10 +1,467 @@
 ---
 title: Linearfaktorzerlegung
 description: "Ganzrationale Funktionen in Linearfaktoren zerlegen und die Vielfachheit von Nullstellen deuten."
-draft: true
 sidebar:
   order: 3
 ---
 
-Diese Seite ist noch in Arbeit und wird in einer späteren Ausbauphase der
-Website freigeschaltet.
+## Worum geht's?
+
+Warum schneidet ein Graph die $x$-Achse an einer Nullstelle manchmal glatt,
+berührt sie woanders aber nur wie eine aufgesetzte Parabel? Die Antwort
+steckt in der Produktdarstellung des Funktionsterms. **Leitfrage:** Wie
+zerlegt man einen Funktionsterm vollständig in **Linearfaktoren** – und
+was verrät die **Vielfachheit** jeder Nullstelle über den Graphen?
+
+## Erklärung
+
+### Die Linearfaktorzerlegung
+
+Kennt man alle Nullstellen $x_1, x_2, \dots$ einer ganzrationalen
+Funktion, lässt sich der Term als Produkt von **Linearfaktoren**
+$(x - x_i)$ schreiben:
+
+$$
+f(x) = a_n \cdot (x - x_1) \cdot (x - x_2) \cdot \ldots
+$$
+
+Der Vorfaktor $a_n$ ist der **Leitkoeffizient** – ihn zu vergessen ist
+der Klassiker (z. B. $2x^2 - 8x + 6 = 2(x-1)(x-3)$, nicht
+$(x-1)(x-3)$!).
+
+Beide Leserichtungen sind nützlich:
+
+- **Faktoren → Nullstellen:** ablesen, Vorzeichen umdrehen:
+  $(x - 3) \Rightarrow x = 3$, $\ (x + 2) = (x - (-2)) \Rightarrow x = -2$
+- **Nullstellen → Faktoren:** Term rekonstruieren (→ Beispiel 3)
+
+Nicht jede Funktion zerfällt vollständig: Ein quadratischer Faktor ohne
+Nullstellen (z. B. $x^2 + 1$) bleibt als „unzerlegbarer Rest“ stehen.
+
+### Vielfachheit von Nullstellen
+
+Taucht ein Linearfaktor mehrfach auf, heißt der Exponent
+**Vielfachheit** der Nullstelle. Sie bestimmt, wie der Graph die
+$x$-Achse trifft:
+
+| Vielfachheit | Verhalten des Graphen |
+| --- | --- |
+| 1 (einfach) | schneidet die Achse (Vorzeichenwechsel) |
+| 2, 4, … (gerade) | **berührt** die Achse (kein Vorzeichenwechsel) |
+| 3, 5, … (ungerade $\geq 3$) | schneidet mit **Sattel** (flacher Durchgang) |
+
+![Graph von f(x) = (x + 2)(x − 1)²: An der einfachen Nullstelle −2 schneidet der Graph die x-Achse, an der doppelten Nullstelle 1 berührt er sie nur](../../../assets/plots/ganzrationale/linearfaktorzerlegung/vielfachheiten.svg)
+
+![Graph von f(x) = (x − 1)³: An der dreifachen Nullstelle 1 durchquert der Graph die x-Achse mit einem flachen Sattel](../../../assets/plots/ganzrationale/linearfaktorzerlegung/dreifache-nullstelle.svg)
+
+Merkhilfe: **gerade Vielfachheit = kein Seitenwechsel** (wie bei $x^2$
+am Ursprung), ungerade = Seitenwechsel.
+
+### Graphen skizzieren ohne Wertetabelle
+
+Aus der Produktform liest man in Sekunden ab: Nullstellen samt
+Verhalten (Vielfachheit), Randverhalten (Grad = Summe der
+Vielfachheiten, Vorzeichen von $a_n$) und den $y$-Achsenabschnitt
+($x = 0$ einsetzen). Das reicht für eine qualitative Skizze.
+
+## Beispiele
+
+**Beispiel 1:** Zerlege $f(x) = x^3 - 3x + 2$ vollständig in
+Linearfaktoren.
+
+<details>
+<summary>Lösung</summary>
+
+Erst die Nullstellen (Methoden der [Nullstellen-Seite](../nullstellen/)):
+Kandidaten sind die Teiler von 2. $f(1) = 1 - 3 + 2 = 0$ → $x_1 = 1$.
+
+Horner-Schema (Koeffizienten $1,\ 0,\ -3,\ 2$):
+
+| | $1$ | $0$ | $-3$ | $2$ |
+| --- | --- | --- | --- | --- |
+| $x_0 = 1$ | | $1$ | $1$ | $-2$ |
+| | $1$ | $1$ | $-2$ | $\mathbf{0}$ |
+
+Quotient $x^2 + x - 2 = 0$ → $x = -\frac{1}{2} \pm \frac{3}{2}$ →
+$x_2 = 1$, $x_3 = -2$.
+
+Die 1 ist also **doppelte** Nullstelle:
+
+$$
+f(x) = (x - 1)^2 (x + 2)
+$$
+
+(Der Graph in der Erklärung zeigt genau das: Berühren bei 1, Schneiden
+bei $-2$.)
+
+</details>
+
+**Beispiel 2:** $f(x) = -2(x + 3)(x - 1)^2(x - 4)$. Beschreibe den
+Graphen ohne Wertetabelle: Nullstellen mit Verhalten, Grad,
+Randverhalten und $y$-Achsenabschnitt.
+
+<details>
+<summary>Lösung</summary>
+
+**Nullstellen:** $x = -3$ (einfach → schneidet), $x = 1$ (doppelt →
+berührt), $x = 4$ (einfach → schneidet).
+
+**Grad:** Summe der Vielfachheiten $1 + 2 + 1 = 4$.
+
+**Randverhalten:** Leitterm $-2x^4$ (Grad gerade, Koeffizient negativ):
+
+$$
+x \to \pm\infty:\quad f(x) \to -\infty
+$$
+
+**$y$-Achsenabschnitt:**
+
+$$
+f(0) = -2 \cdot 3 \cdot (-1)^2 \cdot (-4) = 24
+$$
+
+Skizze im Kopf: von unten links hoch, Schnitt bei $-3$, über
+$(0 \mid 24)$, herunter zum Berührpunkt bei $1$, wieder hoch, Schnitt
+bei $4$, dann nach unten rechts.
+
+</details>
+
+**Beispiel 3:** Bestimme den Funktionsterm zum abgebildeten Graphen
+(Grad 3):
+
+![Graph einer ganzrationalen Funktion dritten Grades mit einfacher Nullstelle N₁(−1|0), doppelter Nullstelle N₂(2|0) und y-Achsenabschnitt P(0|−2)](../../../assets/plots/ganzrationale/linearfaktorzerlegung/term-aus-graph.svg)
+
+<details>
+<summary>Lösung</summary>
+
+**Nullstellen ablesen:** Bei $x = -1$ schneidet der Graph (einfach), bei
+$x = 2$ berührt er (doppelt). Ansatz mit unbekanntem Vorfaktor:
+
+$$
+f(x) = a\,(x + 1)(x - 2)^2
+$$
+
+**$a$ bestimmen** über den markierten Punkt $P(0 \mid -2)$:
+
+$$
+\begin{aligned}
+f(0) = a \cdot 1 \cdot (-2)^2 &= -2 \\
+4a &= -2 &&\text{| } :4 \\
+a &= -\frac{1}{2}
+\end{aligned}
+$$
+
+$$
+f(x) = -\frac{1}{2}(x + 1)(x - 2)^2
+$$
+
+(Plausibel: $a < 0$ passt zum Randverhalten von oben links nach unten
+rechts.)
+
+</details>
+
+## Aufgaben
+
+**Aufgabe 1** (⭐) $f(x) = (x - 3)(x + 1)(x - 5)$. Gib alle Nullstellen und
+den Grad an.
+
+<details>
+<summary>Lösung zu Aufgabe 1</summary>
+
+Nullstellen: $3$, $-1$, $5$ (Vorzeichen in den Klammern umdrehen).
+Grad: 3 Linearfaktoren → Grad 3.
+
+</details>
+
+**Aufgabe 2** (⭐) $f(x) = (x + 2)^2(x - 1)$. Gib die Nullstellen mit ihren
+Vielfachheiten an.
+
+<details>
+<summary>Lösung zu Aufgabe 2</summary>
+
+$x = -2$: Vielfachheit 2 (doppelt), $\ x = 1$: Vielfachheit 1 (einfach).
+
+</details>
+
+**Aufgabe 3** (⭐) Eine Funktion vom Grad 2 mit Leitkoeffizient 1 hat die
+Nullstellen $2$ und $-4$. Gib die Linearfaktorzerlegung an und
+multipliziere aus.
+
+<details>
+<summary>Lösung zu Aufgabe 3</summary>
+
+$$
+f(x) = (x - 2)(x + 4) = x^2 + 4x - 2x - 8 = x^2 + 2x - 8
+$$
+
+</details>
+
+**Aufgabe 4** (⭐) Schneidet, berührt oder Sattel? Entscheide an der
+Vielfachheit: a) $(x - 3)^2$  b) $(x + 1)^3$  c) $(x - 2)$
+
+<details>
+<summary>Lösung zu Aufgabe 4</summary>
+
+a) Vielfachheit 2 (gerade) → **berührt**
+
+b) Vielfachheit 3 (ungerade $\geq 3$) → schneidet mit **Sattel**
+
+c) Vielfachheit 1 → **schneidet** normal
+
+</details>
+
+**Aufgabe 5** (⭐⭐) Zerlege $f(x) = x^2 - x - 12$ in Linearfaktoren.
+
+<details>
+<summary>Lösung zu Aufgabe 5</summary>
+
+Nullstellen mit pq-Formel:
+
+$$
+x_{1,2} = \frac{1}{2} \pm \sqrt{\frac{1}{4} + 12} = \frac{1}{2} \pm \frac{7}{2}
+$$
+
+$x_1 = 4$, $x_2 = -3$, also
+
+$$
+f(x) = (x - 4)(x + 3)
+$$
+
+</details>
+
+**Aufgabe 6** (⭐⭐) Zerlege $f(x) = x^3 - 9x$ in Linearfaktoren.
+
+<details>
+<summary>Lösung zu Aufgabe 6</summary>
+
+$$
+x^3 - 9x = x\left(x^2 - 9\right) = x(x + 3)(x - 3)
+$$
+
+(Der Faktor $x$ ist der Linearfaktor zur Nullstelle 0.)
+
+</details>
+
+**Aufgabe 7** (⭐⭐) Zerlege $f(x) = x^3 - 6x^2 + 9x$ und gib das Verhalten
+des Graphen an den Nullstellen an.
+
+<details>
+<summary>Lösung zu Aufgabe 7</summary>
+
+$$
+x^3 - 6x^2 + 9x = x\left(x^2 - 6x + 9\right) = x(x - 3)^2
+$$
+
+$x = 0$ einfach → schneidet; $x = 3$ doppelt → berührt.
+
+</details>
+
+**Aufgabe 8** (⭐⭐) Zerlege $f(x) = 2x^2 - 8x + 6$ in Linearfaktoren.
+(Achtung, Leitkoeffizient!)
+
+<details>
+<summary>Lösung zu Aufgabe 8</summary>
+
+Erst 2 ausklammern, dann Nullstellen der Klammer:
+
+$$
+2x^2 - 8x + 6 = 2\left(x^2 - 4x + 3\right)
+$$
+
+$x^2 - 4x + 3 = 0$ → $x = 2 \pm 1$ → $x_1 = 3$, $x_2 = 1$:
+
+$$
+f(x) = 2(x - 1)(x - 3)
+$$
+
+Kontrolle durch Ausmultiplizieren: $2(x^2 - 4x + 3) = 2x^2 - 8x + 6$ ✓
+
+</details>
+
+**Aufgabe 9** (⭐⭐) Zerlege $f(x) = x^3 - 12x + 16$ vollständig.
+
+<details>
+<summary>Lösung zu Aufgabe 9</summary>
+
+Kandidaten (Teiler von 16): $f(2) = 8 - 24 + 16 = 0$ → $x_1 = 2$.
+
+Horner (Koeffizienten $1,\ 0,\ -12,\ 16$):
+
+| | $1$ | $0$ | $-12$ | $16$ |
+| --- | --- | --- | --- | --- |
+| $x_0 = 2$ | | $2$ | $4$ | $-16$ |
+| | $1$ | $2$ | $-8$ | $\mathbf{0}$ |
+
+Quotient $x^2 + 2x - 8 = 0$ → $x = -1 \pm 3$ → $x_2 = 2$, $x_3 = -4$.
+
+Die 2 ist doppelt:
+
+$$
+f(x) = (x - 2)^2(x + 4)
+$$
+
+</details>
+
+**Aufgabe 10** (⭐⭐) Beschreibe den Graphen von $f(x) = (x + 1)^2(x - 3)$
+ohne zu zeichnen: Nullstellenverhalten, Randverhalten,
+$y$-Achsenabschnitt.
+
+<details>
+<summary>Lösung zu Aufgabe 10</summary>
+
+- $x = -1$ doppelt → Graph **berührt** die Achse
+- $x = 3$ einfach → Graph **schneidet**
+- Grad $2 + 1 = 3$, Leitkoeffizient $1 > 0$ → von $-\infty$ nach
+  $+\infty$
+- $f(0) = 1 \cdot (-3) = -3$ → Punkt $(0 \mid -3)$
+
+Verlauf: von unten links hoch zum Berührpunkt $(-1 \mid 0)$, hinunter
+durch $(0 \mid -3)$, dann hoch durch $(3 \mid 0)$ nach oben rechts.
+
+</details>
+
+**Aufgabe 11** (⭐⭐) Gib einen Funktionsterm an: Grad 3, doppelte
+Nullstelle bei $-2$, einfache Nullstelle bei $3$, Graph verläuft durch
+$(0 \mid -6)$.
+
+<details>
+<summary>Lösung zu Aufgabe 11</summary>
+
+Ansatz $f(x) = a(x + 2)^2(x - 3)$. Punkt einsetzen:
+
+$$
+\begin{aligned}
+f(0) = a \cdot 4 \cdot (-3) &= -6 \\
+-12a &= -6 &&\text{| } :(-12) \\
+a &= \frac{1}{2}
+\end{aligned}
+$$
+
+$$
+f(x) = \frac{1}{2}(x + 2)^2(x - 3)
+$$
+
+</details>
+
+**Aufgabe 12** (⭐⭐) Begründe, warum sich $f(x) = x^2 + 1$ nicht in
+Linearfaktoren zerlegen lässt.
+
+<details>
+<summary>Lösung zu Aufgabe 12</summary>
+
+Jeder Linearfaktor $(x - x_0)$ gehört zu einer Nullstelle $x_0$. Aber
+$x^2 + 1 \geq 1$ für alle $x$ – die Funktion hat **keine** reellen
+Nullstellen, also gibt es keine Linearfaktoren. Solche quadratischen
+Terme bleiben in Zerlegungen als Rest stehen.
+
+</details>
+
+**Aufgabe 13** (⭐⭐) $f(x) = 3(x - 1)(x + 2)^2(x - 5)^3$.
+a) Gib Nullstellen mit Vielfachheiten und den Grad an.
+b) Gib das Randverhalten an.
+
+<details>
+<summary>Lösung zu Aufgabe 13</summary>
+
+a) $x = 1$ einfach, $x = -2$ doppelt, $x = 5$ dreifach.
+Grad $= 1 + 2 + 3 = 6$.
+
+b) Leitterm $3x^6$: Grad gerade, Koeffizient positiv →
+$f(x) \to +\infty$ für $x \to \pm\infty$.
+
+</details>
+
+**Aufgabe 14** (⭐⭐⭐) Zerlege $f(x) = x^4 - 5x^2 + 4$ vollständig in
+Linearfaktoren.
+
+<details>
+<summary>Lösung zu Aufgabe 14</summary>
+
+Substitution $z = x^2$: $\ z^2 - 5z + 4 = 0$ → $z_1 = 4$, $z_2 = 1$
+→ Nullstellen $\pm 2, \pm 1$ (alle einfach). Also:
+
+$$
+f(x) = (x - 1)(x + 1)(x - 2)(x + 2)
+$$
+
+(Eleganter Zwischenschritt: $x^4 - 5x^2 + 4 = (x^2 - 1)(x^2 - 4)$, dann
+zweimal dritte binomische Formel.)
+
+</details>
+
+**Aufgabe 15** (⭐⭐⭐) $f(x) = x^4 - 2x^3 - 3x^2$. Zerlege in
+Linearfaktoren und beschreibe den Verlauf des Graphen entlang der
+$x$-Achse.
+
+<details>
+<summary>Lösung zu Aufgabe 15</summary>
+
+$$
+x^4 - 2x^3 - 3x^2 = x^2\left(x^2 - 2x - 3\right) = x^2(x + 1)(x - 3)
+$$
+
+Nullstellen: $-1$ (einfach, schneidet), $0$ (doppelt, **berührt**),
+$3$ (einfach, schneidet). Grad 4, $a_4 = 1 > 0$: von oben links – Schnitt
+bei $-1$ – Berührpunkt im Ursprung – Schnitt bei $3$ – nach oben rechts.
+
+</details>
+
+**Aufgabe 16** (⭐⭐⭐) Eine ganzrationale Funktion vom Grad 4 ist
+achsensymmetrisch zur $y$-Achse, hat die Nullstellen $1$ und $3$ und den
+$y$-Achsenabschnitt $9$. Bestimme den Funktionsterm.
+
+<details>
+<summary>Lösung zu Aufgabe 16</summary>
+
+Achsensymmetrie: Zu jeder Nullstelle gehört ihr Spiegelbild – also sind
+auch $-1$ und $-3$ Nullstellen. Das sind bereits 4 Stück (= Grad):
+
+$$
+f(x) = a(x - 1)(x + 1)(x - 3)(x + 3)
+$$
+
+$a$ über $f(0) = 9$:
+
+$$
+f(0) = a \cdot (-1) \cdot 1 \cdot (-3) \cdot 3 = 9a = 9
+\quad\Rightarrow\quad a = 1
+$$
+
+$$
+f(x) = (x^2 - 1)(x^2 - 9) = x^4 - 10x^2 + 9
+$$
+
+</details>
+
+## Merksatz
+
+<details>
+<summary>Merksatz anzeigen</summary>
+
+$f(x) = a_n(x - x_1)(x - x_2)\cdots$ – **Leitkoeffizient nicht
+vergessen!** Die **Vielfachheit** einer Nullstelle steuert den Graphen:
+einfach → schneiden, gerade → berühren, ungerade ab 3 → Sattel-Durchgang.
+Aus der Produktform lassen sich Nullstellen, Grad, Randverhalten und
+$y$-Achsenabschnitt ablesen – und umgekehrt aus dem Graphen der Term
+rekonstruieren (Ansatz mit $a$, Punkt einsetzen).
+
+</details>
+
+## Vertiefung
+
+:::caution
+Beim Rekonstruieren des Terms aus Nullstellen den Ansatz **immer** mit
+Vorfaktor $a$ schreiben: Durch die Nullstellen allein ist die Funktion
+nicht festgelegt – erst ein zusätzlicher Punkt (oft der
+$y$-Achsenabschnitt) bestimmt $a$. Und in den Klammern drehen sich die
+Vorzeichen um: Nullstelle $-2$ → Faktor $(x + 2)$.
+:::
+
+**Grad vs. Anzahl Nullstellen:** Die Summe aller Vielfachheiten kann
+höchstens $n$ sein. Bleibt ein nullstellenfreier quadratischer Faktor
+übrig (wie $x^2 + 1$), gibt es entsprechend weniger Nullstellen.
+
+**Ausblick:** Das „Berühren“ bei gerader Vielfachheit ist kein Zufall:
+Dort liegt zugleich ein Extrempunkt auf der $x$-Achse. Warum, klärt die
+[Differentialrechnung](../../differentialrechnung/aenderungsrate/) – das
+nächste große Kapitel.
