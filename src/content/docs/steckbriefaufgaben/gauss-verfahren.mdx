@@ -1,10 +1,817 @@
 ---
 title: Das Gauß-Verfahren
 description: "Lineare Gleichungssysteme systematisch lösen – auch in Matrixschreibweise."
-draft: true
 sidebar:
   order: 2
 ---
 
-Diese Seite ist noch in Arbeit und wird in einer späteren Ausbauphase der
-Website freigeschaltet.
+## Worum geht's?
+
+Bei den Steckbriefaufgaben entstehen Gleichungssysteme mit drei, vier
+oder mehr Unbekannten. Mit „geschicktem Einsetzen“ verliert man da
+schnell den Überblick – ein Rechenfehler in Zeile 2 ruiniert alles.
+**Leitfrage:** Wie löst man lineare Gleichungssysteme (LGS) **jeder**
+Größe nach einem festen, fehlerarmen Schema – und wie schreibt man das
+platzsparend als Matrix?
+
+## Erklärung
+
+### Lineare Gleichungssysteme und erlaubte Umformungen
+
+Ein LGS besteht aus mehreren linearen Gleichungen mit denselben
+Unbekannten. Die Lösungsmenge ändert sich **nicht**, wenn man
+
+1. zwei Gleichungen **vertauscht**,
+2. eine Gleichung mit einer Zahl $\neq 0$ **multipliziert**,
+3. das Vielfache einer Gleichung zu einer anderen **addiert**.
+
+### Die Idee des Gauß-Verfahrens: Stufenform
+
+Mit den erlaubten Umformungen werden systematisch Unbekannte
+eliminiert, bis **Stufenform** erreicht ist – dann löst man von unten
+nach oben durch **Rückwärtseinsetzen**:
+
+$$
+\begin{aligned}
+x + 2y - z &= 3 \\
+y + z &= 4 \\
+2z &= 2
+\end{aligned}
+$$
+
+Von unten: $z = 1$; dann $y = 4 - 1 = 3$; dann
+$x = 3 - 2 \cdot 3 + 1 = -2$.
+
+### Das Verfahren am Beispiel
+
+$$
+\begin{aligned}
+\text{I}:&\quad x + y + z = 6 \\
+\text{II}:&\quad 2x - y + z = 3 \\
+\text{III}:&\quad x + 2y - z = 2
+\end{aligned}
+$$
+
+**Schritt 1 – $x$ aus II und III eliminieren** (immer „Zeile minus
+Vielfaches der ersten Zeile“):
+
+$$
+\begin{aligned}
+\text{II} - 2 \cdot \text{I}:&\quad -3y - z = -9 \\
+\text{III} - \text{I}:&\quad y - 2z = -4
+\end{aligned}
+$$
+
+**Schritt 2 – $y$ aus der letzten Zeile eliminieren:**
+
+$$
+\text{II}' + 3 \cdot \text{III}':\quad -z - 6z = -9 - 12
+\ \Rightarrow\ -7z = -21
+$$
+
+**Schritt 3 – Rückwärtseinsetzen:** $z = 3$; aus III′:
+$y = -4 + 2 \cdot 3 = 2$; aus I: $x = 6 - 2 - 3 = 1$.
+
+$$
+L = \{(1;\ 2;\ 3)\}
+$$
+
+**Probe** in II: $2 - 2 + 3 = 3$ ✓
+
+### Matrixschreibweise
+
+Da immer nur die **Koeffizienten** rechnen, lässt man die Buchstaben
+weg und schreibt das LGS als **erweiterte Koeffizientenmatrix** –
+links die Koeffizienten, rechts (hinter dem Strich) die rechte Seite:
+
+$$
+\begin{aligned}
+x + y + z &= 6 \\
+2x - y + z &= 3 \\
+x + 2y - z &= 2
+\end{aligned}
+\qquad\Longleftrightarrow\qquad
+\left(\begin{array}{ccc|c}
+1 & 1 & 1 & 6 \\
+2 & -1 & 1 & 3 \\
+1 & 2 & -1 & 2
+\end{array}\right)
+$$
+
+Die Zeilenumformungen laufen identisch; Ziel ist die
+**Dreiecksgestalt** (unterhalb der Diagonale nur Nullen):
+
+$$
+\left(\begin{array}{ccc|c}
+1 & 1 & 1 & 6 \\
+0 & -3 & -1 & -9 \\
+0 & 0 & -7 & -21
+\end{array}\right)
+$$
+
+### Sonderfälle
+
+Nicht jedes LGS hat genau eine Lösung. Beim Gauß-Verfahren zeigen sich
+die Sonderfälle in der letzten Zeile:
+
+- Zeile $0 = 5$ (falsche Aussage) → **keine Lösung**
+- Zeile $0 = 0$ (immer wahr) → **unendlich viele Lösungen**
+
+## Beispiele
+
+**Beispiel 1 (Gauß in Gleichungsschreibweise):** Löse
+
+$$
+\text{I}:\ x + y + z = 6; \qquad
+\text{II}:\ 2x - y + z = 3; \qquad
+\text{III}:\ x + 2y - z = 2
+$$
+
+<details>
+<summary>Lösung</summary>
+
+**Eliminieren von $x$:**
+
+$$
+\begin{aligned}
+\text{II}' = \text{II} - 2 \cdot \text{I}:&\quad -3y - z = -9 \\
+\text{III}' = \text{III} - \text{I}:&\quad y - 2z = -4
+\end{aligned}
+$$
+
+**Eliminieren von $y$:**
+
+$$
+\text{II}' + 3 \cdot \text{III}':\quad -7z = -21
+\quad\Rightarrow\quad z = 3
+$$
+
+**Rückwärtseinsetzen:**
+
+$$
+\text{III}':\ y = -4 + 2z = 2; \qquad
+\text{I}:\ x = 6 - y - z = 1
+$$
+
+$$
+L = \{(1;\ 2;\ 3)\}
+$$
+
+Probe in III: $1 + 4 - 3 = 2$ ✓
+
+</details>
+
+**Beispiel 2 (Matrixschreibweise):** Löse mit der erweiterten
+Koeffizientenmatrix:
+
+$$
+\begin{aligned}
+x + 2y + z &= 8 \\
+2x + y - z &= 1 \\
+3x - y + 2z &= 7
+\end{aligned}
+$$
+
+<details>
+<summary>Lösung</summary>
+
+$$
+\left(\begin{array}{ccc|c}
+1 & 2 & 1 & 8 \\
+2 & 1 & -1 & 1 \\
+3 & -1 & 2 & 7
+\end{array}\right)
+\ \xrightarrow[\text{III} - 3\text{I}]{\text{II} - 2\text{I}}\
+\left(\begin{array}{ccc|c}
+1 & 2 & 1 & 8 \\
+0 & -3 & -3 & -15 \\
+0 & -7 & -1 & -17
+\end{array}\right)
+$$
+
+Zeile II durch $-3$ teilen (kleinere Zahlen!):
+
+$$
+\left(\begin{array}{ccc|c}
+1 & 2 & 1 & 8 \\
+0 & 1 & 1 & 5 \\
+0 & -7 & -1 & -17
+\end{array}\right)
+\ \xrightarrow{\text{III} + 7\text{II}}\
+\left(\begin{array}{ccc|c}
+1 & 2 & 1 & 8 \\
+0 & 1 & 1 & 5 \\
+0 & 0 & 6 & 18
+\end{array}\right)
+$$
+
+Rückwärts: $z = 3$; $\ y = 5 - 3 = 2$; $\ x = 8 - 4 - 3 = 1$:
+
+$$
+L = \{(1;\ 2;\ 3)\}
+$$
+
+Probe in der 3. Ausgangsgleichung: $3 - 2 + 6 = 7$ ✓
+
+</details>
+
+**Beispiel 3 (Steckbrief-System mit Gauß):** Beim Rekonstruieren einer
+Funktion dritten Grades durch die Punkte $(0 \mid 0)$, $(1 \mid 2)$,
+$(-1 \mid -4)$ und $(2 \mid 8)$ entsteht (nach $d = 0$) das System
+
+$$
+a + b + c = 2; \qquad -a + b - c = -4; \qquad 8a + 4b + 2c = 8
+$$
+
+Löse es mit dem Gauß-Verfahren.
+
+<details>
+<summary>Lösung</summary>
+
+$$
+\left(\begin{array}{ccc|c}
+1 & 1 & 1 & 2 \\
+-1 & 1 & -1 & -4 \\
+8 & 4 & 2 & 8
+\end{array}\right)
+\ \xrightarrow[\text{III} - 8\text{I}]{\text{II} + \text{I}}\
+\left(\begin{array}{ccc|c}
+1 & 1 & 1 & 2 \\
+0 & 2 & 0 & -2 \\
+0 & -4 & -6 & -8
+\end{array}\right)
+$$
+
+$$
+\xrightarrow{\text{III} + 2\,\text{II}}\
+\left(\begin{array}{ccc|c}
+1 & 1 & 1 & 2 \\
+0 & 2 & 0 & -2 \\
+0 & 0 & -6 & -12
+\end{array}\right)
+$$
+
+Rückwärts: $c = 2$; $\ b = -1$; $\ a = 2 - (-1) - 2 = 1$:
+
+$$
+f(x) = x^3 - x^2 + 2x
+$$
+
+(Probe: $f(2) = 8 - 4 + 4 = 8$ ✓ – Gauß und Steckbriefaufgaben
+greifen ineinander.)
+
+</details>
+
+**Beispiel 4 (Sonderfälle):** Untersuche die Lösungsmengen:
+a) $\ x + y = 2$ und $2x + 2y = 5$
+b) $\ x + y = 2$ und $2x + 2y = 4$
+
+<details>
+<summary>Lösung</summary>
+
+a) $\text{II} - 2\text{I}$: $\ 0 = 1$ – eine **falsche Aussage**. Das
+LGS hat **keine Lösung** ($L = \{\}$; die Geraden sind parallel).
+
+b) $\text{II} - 2\text{I}$: $\ 0 = 0$ – eine **immer wahre Aussage**.
+Das LGS hat **unendlich viele Lösungen**: alle Paare mit $y = 2 - x$
+(beide Gleichungen beschreiben dieselbe Gerade).
+
+</details>
+
+## Aufgaben
+
+**Aufgabe 1** (⭐) Löse: $\ x + y = 5$ und $x - y = 1$
+
+<details>
+<summary>Lösung zu Aufgabe 1</summary>
+
+Addieren: $2x = 6 \Rightarrow x = 3$; dann $y = 2$.
+$L = \{(3;\ 2)\}$
+
+</details>
+
+**Aufgabe 2** (⭐) Löse: $\ 2x + y = 7$ und $x - y = 2$
+
+<details>
+<summary>Lösung zu Aufgabe 2</summary>
+
+Addieren: $3x = 9 \Rightarrow x = 3$; $\ y = x - 2 = 1$.
+$L = \{(3;\ 1)\}$
+
+</details>
+
+**Aufgabe 3** (⭐) Schreibe als erweiterte Koeffizientenmatrix:
+
+$$
+2x - y + 3z = 5; \qquad x + 4z = 1; \qquad -x + 2y - z = 0
+$$
+
+<details>
+<summary>Lösung zu Aufgabe 3</summary>
+
+Fehlende Unbekannte = Koeffizient 0 (zweite Gleichung hat kein $y$):
+
+$$
+\left(\begin{array}{ccc|c}
+2 & -1 & 3 & 5 \\
+1 & 0 & 4 & 1 \\
+-1 & 2 & -1 & 0
+\end{array}\right)
+$$
+
+</details>
+
+**Aufgabe 4** (⭐) Übersetze zurück in ein Gleichungssystem:
+
+$$
+\left(\begin{array}{ccc|c}
+1 & 2 & -1 & 4 \\
+0 & 3 & 1 & 5 \\
+0 & 0 & 2 & 6
+\end{array}\right)
+$$
+
+<details>
+<summary>Lösung zu Aufgabe 4</summary>
+
+$$
+x + 2y - z = 4; \qquad 3y + z = 5; \qquad 2z = 6
+$$
+
+(bereits in Stufenform!)
+
+</details>
+
+**Aufgabe 5** (⭐) Löse das LGS aus Aufgabe 4 durch
+Rückwärtseinsetzen.
+
+<details>
+<summary>Lösung zu Aufgabe 5</summary>
+
+$z = 3$; $\ 3y = 5 - 3 = 2$?? – Moment: $3y + z = 5 \Rightarrow
+3y = 2$… kein glatter Wert? Doch: $3y = 5 - 3 = 2$ ergibt
+$y = \frac{2}{3}$ – hier lohnt der zweite Blick: **Richtig gerechnet**
+ist das die Lösung; nicht jedes System hat ganzzahlige Lösungen.
+
+$$
+z = 3, \qquad y = \frac{2}{3}, \qquad
+x = 4 - \frac{4}{3} + 3 = \frac{17}{3}
+$$
+
+$L = \left\{\left(\frac{17}{3};\ \frac{2}{3};\ 3\right)\right\}$
+(Probe I: $\frac{17}{3} + \frac{4}{3} - 3 = \frac{21}{3} - 3 = 4$ ✓)
+
+</details>
+
+**Aufgabe 6** (⭐⭐) Löse: $\ x + y + z = 2$; $\ x - y + z = 0$;
+$\ x + y - z = 4$
+
+<details>
+<summary>Lösung zu Aufgabe 6</summary>
+
+$\text{I} - \text{II}$: $2y = 2 \Rightarrow y = 1$.
+$\text{I} - \text{III}$: $2z = -2 \Rightarrow z = -1$.
+In I: $x = 2 - 1 + 1 = 2$.
+
+$L = \{(2;\ 1;\ -1)\}$ (Probe III: $2 + 1 + 1 = 4$ ✓)
+
+</details>
+
+**Aufgabe 7** (⭐⭐) Löse mit dem Gauß-Verfahren:
+
+$$
+x + 2y + 3z = 14; \qquad 2x + y + z = 7; \qquad 3x + 3y + z = 12
+$$
+
+<details>
+<summary>Lösung zu Aufgabe 7</summary>
+
+$\text{II} - 2\text{I}$: $-3y - 5z = -21$;
+$\ \text{III} - 3\text{I}$: $-3y - 8z = -30$.
+
+$\text{III}' - \text{II}'$: $-3z = -9 \Rightarrow z = 3$.
+$\text{II}'$: $-3y = -21 + 15 = -6 \Rightarrow y = 2$.
+I: $x = 14 - 4 - 9 = 1$.
+
+$L = \{(1;\ 2;\ 3)\}$
+
+</details>
+
+**Aufgabe 8** (⭐⭐) Löse mit dem Gauß-Verfahren:
+
+$$
+2x + y - z = 1; \qquad x + 3y + 2z = 13; \qquad x - y + z = 2
+$$
+
+<details>
+<summary>Lösung zu Aufgabe 8</summary>
+
+Zeilen tauschen (mit der einfachsten Zeile oben rechnen): neue I =
+$x - y + z = 2$.
+
+$\text{II} - \text{I}$: $\ 4y + z = 11$;
+$\ \text{III(alt I)} - 2\text{I}$: $\ 3y - 3z = -3
+\Leftrightarrow y - z = -1$.
+
+$\text{II}' + \text{III}'$? Besser: aus $y - z = -1$ folgt
+$z = y + 1$; einsetzen: $4y + y + 1 = 11 \Rightarrow y = 2$,
+$z = 3$; $\ x = 2 + 2 - 3 = 1$.
+
+$L = \{(1;\ 2;\ 3)\}$ (Probe alt-I: $2 + 2 - 3 = 1$ ✓)
+
+</details>
+
+**Aufgabe 9** (⭐⭐) Löse: $\ x + y + z = 0$; $\ 2x - y + 3z = 10$;
+$\ x + 2y - z = -5$
+
+<details>
+<summary>Lösung zu Aufgabe 9</summary>
+
+$\text{II} - 2\text{I}$: $-3y + z = 10$;
+$\ \text{III} - \text{I}$: $y - 2z = -5$.
+
+$\text{II}' + 3\,\text{III}'$: $z - 6z = 10 - 15 \Rightarrow
+-5z = -5 \Rightarrow z = 1$.
+$\text{III}'$: $y = -5 + 2 = -3$; I: $x = 0 + 3 - 1 = 2$.
+
+$L = \{(2;\ -3;\ 1)\}$
+
+</details>
+
+**Aufgabe 10** (⭐⭐) Löse das in Matrixform gegebene LGS:
+
+$$
+\left(\begin{array}{ccc|c}
+1 & 1 & 1 & 6 \\
+0 & 1 & 2 & 8 \\
+0 & 0 & 2 & 4
+\end{array}\right)
+$$
+
+<details>
+<summary>Lösung zu Aufgabe 10</summary>
+
+Stufenform → rückwärts: $z = 2$; $\ y = 8 - 4 = 4$;
+$\ x = 6 - 4 - 2 = 0$.
+
+$L = \{(0;\ 4;\ 2)\}$
+
+</details>
+
+**Aufgabe 11** (⭐⭐⭐) Löse mit dem Gauß-Verfahren (Matrixschreibweise):
+
+$$
+2x + 2y + 4z = 16; \qquad x + 3y + z = 8; \qquad 2x - y + z = 7
+$$
+
+<details>
+<summary>Lösung zu Aufgabe 11</summary>
+
+Erst I durch 2 teilen, dann eliminieren:
+
+$$
+\left(\begin{array}{ccc|c}
+1 & 1 & 2 & 8 \\
+1 & 3 & 1 & 8 \\
+2 & -1 & 1 & 7
+\end{array}\right)
+\ \xrightarrow[\text{III} - 2\text{I}]{\text{II} - \text{I}}\
+\left(\begin{array}{ccc|c}
+1 & 1 & 2 & 8 \\
+0 & 2 & -1 & 0 \\
+0 & -3 & -3 & -9
+\end{array}\right)
+$$
+
+III durch $-3$: $\ y + z = 3$. Mit II ($2y - z = 0$): addieren →
+$3y = 3$? Vorsicht, erst ordnen: $2y - z = 0$ und $y + z = 3$
+addieren: $3y = 3 \Rightarrow y = 1$; $z = 2$; $x = 8 - 1 - 4 = 3$.
+
+$L = \{(3;\ 1;\ 2)\}$ (Probe III: $6 - 1 + 2 = 7$ ✓)
+
+</details>
+
+**Aufgabe 12** (⭐⭐) Eine Parabel verläuft durch $(1 \mid 2)$,
+$(2 \mid 3)$ und $(3 \mid 6)$. Stelle das LGS auf und löse es mit
+Gauß.
+
+<details>
+<summary>Lösung zu Aufgabe 12</summary>
+
+Ansatz $ax^2 + bx + c$:
+
+$$
+a + b + c = 2; \qquad 4a + 2b + c = 3; \qquad 9a + 3b + c = 6
+$$
+
+$\text{II} - \text{I}$: $3a + b = 1$; $\ \text{III} - \text{I}$:
+$8a + 2b = 4 \Leftrightarrow 4a + b = 2$.
+
+Subtrahieren: $a = 1$; $\ b = -2$; $\ c = 3$:
+
+$$
+f(x) = x^2 - 2x + 3
+$$
+
+</details>
+
+**Aufgabe 13** (⭐⭐⭐) Eine Funktion dritten Grades verläuft durch
+$(0 \mid 1)$, $(1 \mid 0)$, $(2 \mid -1)$ und $(-1 \mid -4)$.
+Bestimme den Funktionsterm mit dem Gauß-Verfahren.
+
+<details>
+<summary>Lösung zu Aufgabe 13</summary>
+
+$f(0) = 1 \Rightarrow d = 1$. Übrig (nach Einsetzen von $d$):
+
+$$
+a + b + c = -1; \qquad 8a + 4b + 2c = -2; \qquad -a + b - c = -5
+$$
+
+$\text{I} + \text{III}$: $\ 2b = -6 \Rightarrow b = -3$.
+II durch 2: $4a + 2b + c = -1 \Rightarrow 4a + c = 5$;
+I: $a + c = 2$. Subtrahieren: $3a = 3 \Rightarrow a = 1$, $c = 1$:
+
+$$
+f(x) = x^3 - 3x^2 + x + 1
+$$
+
+Probe: $f(2) = 8 - 12 + 2 + 1 = -1$ ✓
+
+</details>
+
+**Aufgabe 14** (⭐⭐) Untersuche die Lösungsmenge:
+$\ x + y = 3$ und $2x + 2y = 6$
+
+<details>
+<summary>Lösung zu Aufgabe 14</summary>
+
+$\text{II} - 2\text{I}$: $\ 0 = 0$ – wahr für alle $x, y$:
+**unendlich viele Lösungen** (alle Punkte der Geraden $y = 3 - x$;
+beide Gleichungen beschreiben dieselbe Gerade).
+
+</details>
+
+**Aufgabe 15** (⭐⭐) Untersuche die Lösungsmenge:
+$\ x + y = 3$ und $2x + 2y = 7$
+
+<details>
+<summary>Lösung zu Aufgabe 15</summary>
+
+$\text{II} - 2\text{I}$: $\ 0 = 1$ – Widerspruch: **keine Lösung**
+(parallele Geraden ohne Schnittpunkt).
+
+</details>
+
+**Aufgabe 16** (⭐⭐⭐) Untersuche die Lösungsmenge:
+
+$$
+x + y + z = 1; \qquad 2x + 2y + 2z = 3; \qquad x - y + z = 0
+$$
+
+<details>
+<summary>Lösung zu Aufgabe 16</summary>
+
+$\text{II} - 2\text{I}$ liefert sofort $0 = 1$ – ein Widerspruch,
+egal was die dritte Gleichung sagt: $L = \{\}$, **keine Lösung**.
+(Im Steckbrief-Kontext: Die geforderten Eigenschaften sind
+unvereinbar.)
+
+</details>
+
+**Aufgabe 17** (⭐⭐) Prüfe ohne vollständiges Lösen, ob
+$(2;\ 1;\ -1)$ das folgende LGS löst:
+
+$$
+x + y + z = 2; \qquad 2x - y + z = 2; \qquad x + 2y - 3z = 7
+$$
+
+<details>
+<summary>Lösung zu Aufgabe 17</summary>
+
+Einsetzen in alle drei Gleichungen:
+
+$$
+2 + 1 - 1 = 2\ \checkmark; \qquad 4 - 1 - 1 = 2\ \checkmark; \qquad
+2 + 2 + 3 = 7\ \checkmark
+$$
+
+Ja – $(2;\ 1;\ -1)$ ist Lösung. (Eine Probe ersetzt keinen
+Lösungsweg, aber sie entlarvt jeden Rechenfehler.)
+
+</details>
+
+**Aufgabe 18** (⭐⭐) Nenne die drei erlaubten Zeilenumformungen und
+begründe an Umformung 3, warum sich die Lösungsmenge nicht ändert.
+
+<details>
+<summary>Lösung zu Aufgabe 18</summary>
+
+1. Zeilen vertauschen, 2. Zeile mit Zahl $\neq 0$ multiplizieren,
+3. Vielfaches einer Zeile zu einer anderen addieren.
+
+Zu 3.: Erfüllt ein Zahlentripel beide Ausgangsgleichungen, erfüllt es
+auch deren Summe (Gleiches zu Gleichem addiert bleibt gleich) – und
+die Umformung ist **umkehrbar** (das Vielfache wieder subtrahieren),
+also gehen auch keine Lösungen verloren.
+
+</details>
+
+**Aufgabe 19** (⭐⭐) Fehlersuche: Beim Umformen von
+$\ 2x + y = 7\ $ (II) mit $\ \text{II} - 2 \cdot \text{I}$ für
+$\text{I}: x + y = 5$ schreibt jemand „$-y = 7$“. Finde beide Fehler.
+
+<details>
+<summary>Lösung zu Aufgabe 19</summary>
+
+Richtig ist $\ (2x + y) - 2(x + y) = 7 - 2 \cdot 5$, also
+$-y = -3$. Fehler 1: Auf der **rechten Seite** wurde das $-2 \cdot 5$
+vergessen (die rechte Seite macht jede Umformung mit!). Fehler 2
+steckt nicht im $-y$ – das stimmt. Also: $y = 3$, dann $x = 2$.
+
+</details>
+
+**Aufgabe 20** (⭐⭐⭐) Beim Bäcker: 2 Brezeln, 1 Kaffee und 1 Donut
+kosten 6 €; 1 Brezel, 2 Kaffee und 1 Donut kosten 7,50 €; 1 Brezel,
+1 Kaffee und 2 Donuts kosten 6,50 €. Bestimme die Einzelpreise.
+
+<details>
+<summary>Lösung zu Aufgabe 20</summary>
+
+$b$ = Brezel, $k$ = Kaffee, $d$ = Donut:
+
+$$
+2b + k + d = 6; \qquad b + 2k + d = 7{,}5; \qquad b + k + 2d = 6{,}5
+$$
+
+Alle addieren: $4b + 4k + 4d = 20 \Rightarrow b + k + d = 5$.
+Damit aus I: $b = 6 - 5 = 1$; aus II: $k = 7{,}5 - 5 = 2{,}5$; aus
+III: $d = 6{,}5 - 5 = 1{,}5$.
+
+**Brezel 1 €, Kaffee 2,50 €, Donut 1,50 €.** (Der Additions-Trick
+ersetzt hier das volle Gauß-Schema – erlaubte Umformungen kreativ
+genutzt.)
+
+</details>
+
+**Aufgabe 21** (⭐⭐⭐) In einer Liga gibt es $s$ Punkte pro Sieg, $r$
+pro Remis, $n$ pro Niederlage. Team A (5 Siege, 3 Remis,
+2 Niederlagen) hat 18 Punkte, Team B (4/4/2) hat 16, Team C (6/1/3)
+hat 19. Bestimme $s$, $r$, $n$.
+
+<details>
+<summary>Lösung zu Aufgabe 21</summary>
+
+$$
+5s + 3r + 2n = 18; \qquad 4s + 4r + 2n = 16; \qquad 6s + r + 3n = 19
+$$
+
+$\text{I} - \text{II}$: $\ s - r = 2$.
+$\ 3\,\text{II} - 2\,\text{III}$: $12s + 12r + 6n - 12s - 2r - 6n =
+48 - 38 \Rightarrow 10r = 10 \Rightarrow r = 1$.
+
+Dann $s = 3$; aus II: $12 + 4 + 2n = 16 \Rightarrow n = 0$:
+
+**Sieg 3, Remis 1, Niederlage 0 Punkte** – das übliche
+Fußball-Punktesystem.
+
+</details>
+
+**Aufgabe 22** (⭐⭐) Drei Zahlen haben die Summe 30. Die erste ist so
+groß wie die beiden anderen zusammen; die zweite ist um 3 größer als
+die dritte. Bestimme die Zahlen.
+
+<details>
+<summary>Lösung zu Aufgabe 22</summary>
+
+$$
+x + y + z = 30; \qquad x = y + z; \qquad y = z + 3
+$$
+
+Zweite in erste einsetzen: $(y + z) + y + z = 30$… schneller:
+$x + x = 30 \Rightarrow x = 15$. Dann $y + z = 15$ und $y - z = 3$:
+addieren → $2y = 18 \Rightarrow y = 9$, $z = 6$.
+
+Die Zahlen sind **15, 9 und 6**.
+
+</details>
+
+**Aufgabe 23** (⭐⭐⭐) Aus der Steckbrief-Seite (Beispiel 4,
+Krankenstand) stammt das System
+
+$$
+8a + 4b + 2c = 4; \qquad 12a + 4b + c = 0; \qquad 108a + 12b + c = 0
+$$
+
+Löse es mit dem Gauß-Verfahren.
+
+<details>
+<summary>Lösung zu Aufgabe 23</summary>
+
+$\text{III} - \text{II}$: $\ 96a + 8b = 0 \Rightarrow b = -12a$.
+
+In II: $12a - 48a + c = 0 \Rightarrow c = 36a$.
+
+In I: $8a - 48a + 72a = 4 \Rightarrow 32a = 4 \Rightarrow
+a = \frac{1}{8}$; $\ b = -\frac{3}{2}$, $\ c = \frac{9}{2}$.
+
+$$
+L = \left\{\left(\tfrac{1}{8};\ -\tfrac{3}{2};\ \tfrac{9}{2}\right)\right\}
+$$
+
+– genau die Koeffizienten des Krankenstand-Modells.
+
+</details>
+
+**Aufgabe 24** (⭐⭐) Wahr oder falsch: „Ein LGS mit drei Gleichungen
+und drei Unbekannten hat immer genau eine Lösung.“ Begründe.
+
+<details>
+<summary>Lösung zu Aufgabe 24</summary>
+
+**Falsch.** Es gibt drei Möglichkeiten: genau eine Lösung, keine
+Lösung (Widerspruchszeile $0 = 1$, Aufgabe 16) oder unendlich viele
+(Nullzeile $0 = 0$). Erst das Gauß-Verfahren zeigt, welcher Fall
+vorliegt.
+
+</details>
+
+**Aufgabe 25** (⭐⭐⭐) Für welchen Wert von $k$ hat das LGS
+$\ x + y = 2$, $\ 2x + 2y = k\ $ unendlich viele Lösungen – und was
+gilt für alle anderen $k$?
+
+<details>
+<summary>Lösung zu Aufgabe 25</summary>
+
+$\text{II} - 2\text{I}$: $\ 0 = k - 4$.
+
+- $k = 4$: Nullzeile → **unendlich viele Lösungen** (identische
+  Geraden).
+- $k \neq 4$: Widerspruch → **keine Lösung** (parallele Geraden).
+
+Genau **eine** Lösung ist hier für kein $k$ möglich – die linken
+Seiten sind Vielfache voneinander.
+
+</details>
+
+## Merksatz
+
+<details>
+<summary>Merksatz anzeigen</summary>
+
+**Gauß-Verfahren:** Mit den erlaubten Umformungen (tauschen,
+vervielfachen, Vielfache addieren) das LGS auf **Stufenform** bringen,
+dann von unten nach oben **rückwärts einsetzen**. Kompakt geht das in
+der **Matrixschreibweise** (erweiterte Koeffizientenmatrix, rechte
+Seite hinter dem Strich – sie rechnet **immer mit**!). Letzte Zeile
+$0 = 0$ → unendlich viele, $0 = c \neq 0$ → keine Lösung.
+
+</details>
+
+## Vertiefung
+
+:::caution
+Die zwei Dauerbrenner-Fehler: **(1)** Bei Zeilenumformungen die
+**rechte Seite vergessen** (Aufgabe 19) – in der Matrixschreibweise
+passiert das seltener, weil die rechte Spalte mitläuft.
+**(2)** Fehlende Unbekannte nicht als **0** in die Matrix schreiben –
+dann verrutschen alle Spalten.
+:::
+
+**Warum Matrixschreibweise?** Gleiches Rechnen, weniger Schreiben,
+klare Buchführung – und sie ist die Grundlage dafür, wie Taschenrechner
+und Computer LGS lösen (viele WTR haben einen LGS-Modus: perfekt zur
+**Kontrolle**, der Lösungsweg bleibt trotzdem gefragt).
+
+**Rückblick statt Ausblick:** Mit dem Gauß-Verfahren ist der Werkzeugkasten
+des Schuljahres komplett – von den [Grundlagen](../../basiswissen/algebra-werkzeugkasten/)
+über [Funktionen](../../funktionen/funktionsbegriff/) und
+[Differentialrechnung](../../differentialrechnung/aenderungsrate/) bis zu
+[Kurvendiskussion](../../kurvendiskussion/vollstaendig/),
+[Scharen](../../scharen/kurvenscharen/),
+[Extremwertproblemen](../../extremwertprobleme/extremwertprobleme/) und
+[Steckbriefaufgaben](../steckbriefaufgaben/).
+
+## Checkliste zur Klassenarbeit
+
+Die vierte Klassenarbeit umfasst Extremwertprobleme, Steckbriefaufgaben
+und das Gauß-Verfahren:
+
+- [ ] Ich kann bei Extremwertproblemen Zielfunktion und Nebenbedingung
+  aufstellen und das Optimum bestimmen (inkl. Randwerte).
+  → [Extremwertprobleme](../../extremwertprobleme/extremwertprobleme/#erklärung)
+- [ ] Ich kann Eigenschaften mit dem Wörterbuch in Gleichungen
+  übersetzen ($f(a)=b$, $f'(a)=0$, $f''(a)=0$ …).
+  → [Steckbriefaufgaben](../steckbriefaufgaben/#das-übersetzungs-wörterbuch)
+- [ ] Ich kann Ansätze passend zu Grad und Symmetrie wählen und weiß,
+  dass Grad $n$ genau $n+1$ Bedingungen braucht.
+  → [Steckbriefaufgaben](../steckbriefaufgaben/#symmetrie-verkürzt-den-ansatz)
+- [ ] Ich kann Steckbriefaufgaben im Sachkontext lösen und die Probe
+  mit den hinreichenden Bedingungen führen.
+  → [Steckbriefaufgaben, Beispiel 4](../steckbriefaufgaben/#beispiele)
+- [ ] Ich kann LGS mit dem Gauß-Verfahren in Stufenform bringen und
+  durch Rückwärtseinsetzen lösen. → [diese Seite](#das-verfahren-am-beispiel)
+- [ ] Ich kann LGS in Matrixschreibweise notieren und darin rechnen.
+  → [diese Seite](#matrixschreibweise)
+- [ ] Ich erkenne an der letzten Zeile, ob ein LGS keine oder
+  unendlich viele Lösungen hat. → [Sonderfälle](#sonderfälle)
