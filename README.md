@@ -17,9 +17,18 @@ Mathematik-Rendering mit KaTeX, Funktionsgraphen als statische SVGs.
 ## Beamer-Modus
 
 Für die Projektion im Unterricht (halber Bildschirm neben dem Schreib-Canvas):
-an eine beliebige Seiten-URL `?beamer` anhängen. Sidebar und Inhaltsverzeichnis
-verschwinden, Schrift und Formeln werden größer. Der Modus bleibt beim
-Seitenwechsel erhalten; `?beamer=off` beendet ihn.
+an eine beliebige Seiten-URL `?beamer` anhängen **oder** den Knopf „Beamer“
+unten rechts antippen. Sidebar und Inhaltsverzeichnis verschwinden, Schrift
+und Formeln werden größer. Der Modus bleibt beim Seitenwechsel erhalten;
+`?beamer=off` oder erneutes Antippen beendet ihn.
+
+## Interaktive Elemente
+
+`public/interaktiv.js` (eingebunden über den `head` in `astro.config.mjs`)
+schaltet die Kästchen der Checklisten zur Klassenarbeit frei — der Stand wird
+pro Seite in `localStorage` gespeichert — und fügt den Beamer-Schalter ein.
+Die Quiz-Antworten tragen Buchstaben A–D für das Abstimmen per Handzeichen
+(`src/components/Quiz.astro`, ohne Client-JavaScript).
 
 ## Plots
 

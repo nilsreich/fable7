@@ -33,6 +33,11 @@ export default defineConfig({
   if (sessionStorage.getItem('beamer')) document.documentElement.classList.add('beamer');
 })();`,
 				},
+				{
+					// Checklisten abhakbar machen + Beamer-Schalter (siehe public/interaktiv.js)
+					tag: 'script',
+					attrs: { src: '/interaktiv.js', defer: true },
+				},
 			],
 			customCss: ['katex/dist/katex.min.css', './src/styles/custom.css'],
 			sidebar: [
