@@ -19,9 +19,8 @@ Mathematik-Rendering mit KaTeX, Funktionsgraphen als statische SVGs.
 Für die Projektion im Unterricht (halber Bildschirm neben dem Schreib-Canvas):
 an eine beliebige Seiten-URL `?beamer` anhängen **oder** den Knopf „Beamer“
 unten rechts antippen. Topbar, Sidebar und Inhaltsverzeichnis verschwinden,
-Schrift und Formeln werden größer, und statt des Mauscursors folgt ein roter
-Laserpointer-Punkt Maus, Stift oder Finger. Der Modus bleibt beim
-Seitenwechsel erhalten; `?beamer=off` oder erneutes Antippen beendet ihn.
+Schrift und Formeln werden größer. Der Modus bleibt beim Seitenwechsel
+erhalten; `?beamer=off` oder erneutes Antippen beendet ihn.
 
 ## PWA
 

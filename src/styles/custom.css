@@ -124,38 +124,6 @@ html.beamer starlight-menu-button {
 	display: none !important;
 }
 
-/* Laserpointer: Systemcursor aus, stattdessen folgt der rote Leuchtpunkt
-   (.laserpunkt, per interaktiv.js eingefügt) Maus, Stift oder Finger. */
-html.beamer,
-html.beamer * {
-	cursor: none !important;
-}
-
-.laserpunkt {
-	display: none;
-	position: fixed;
-	left: 0;
-	top: 0;
-	width: 30px;
-	height: 30px;
-	margin: -15px 0 0 -15px;
-	border-radius: 50%;
-	pointer-events: none;
-	z-index: 9999;
-	background: radial-gradient(
-		circle,
-		rgba(255, 235, 235, 0.95) 0 12%,
-		rgba(255, 45, 45, 0.9) 30%,
-		rgba(255, 45, 45, 0.35) 55%,
-		transparent 72%
-	);
-	box-shadow: 0 0 14px 5px rgba(255, 0, 0, 0.35);
-}
-
-html.beamer .laserpunkt {
-	display: block;
-}
-
 /* Inhalt auf volle Breite */
 html.beamer .main-pane {
 	width: 100% !important;
