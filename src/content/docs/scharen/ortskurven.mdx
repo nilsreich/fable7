@@ -5,6 +5,8 @@ sidebar:
   order: 2
 ---
 
+import Quiz from '../../../components/Quiz.astro';
+
 ## Worum geht's?
 
 Wirft man einen Ball mit wachsender Geschwindigkeit, wandert der höchste
@@ -766,3 +768,31 @@ Punkt ausrechnen und in die Ortskurve einsetzen (Aufgabe 18) – dauert
 es folgt die Königsdisziplin des Anwendens: [Optimieren mit
 Nebenbedingungen](../../extremwertprobleme/extremwertprobleme/)
 (Extremwertprobleme).
+
+## Quiz
+
+Zum Abschluss: Klicke bei jeder Frage eine Antwort an – die Auswertung kommt sofort.
+
+<Quiz fragen={[
+  { frage: 'Was ist eine Ortskurve?',
+    antworten: ['Der Graph einer einzelnen Scharkurve', 'Die Kurve, auf der z. B. alle Tiefpunkte der Schar liegen', 'Die x-Achse', 'Die Tangente an die Schar'],
+    richtig: 1, erklaerung: 'Lässt man t laufen, wandert der markante Punkt (Extremum, Wendepunkt) – seine Bahn ist die Ortskurve.' },
+  { frage: 'Wie lautet Schritt 2 des Standardverfahrens?',
+    antworten: ['y-Gleichung nach x auflösen', 'Die x-Gleichung nach t auflösen', 'Beide Gleichungen addieren', 't = 0 setzen'],
+    richtig: 1, erklaerung: 'Aus x = x(t) wird t = …, das setzt man dann in die y-Gleichung ein – so verschwindet der Parameter.' },
+  { frage: 'Die Tiefpunkte einer Schar sind T(t | −t²). Wie lautet die Ortskurve?',
+    antworten: ['y = −t²', 'y = x²', 'y = −x²', 'y = −2x'],
+    richtig: 2, erklaerung: 'Aus x = t folgt t = x, eingesetzt: y = −x².' },
+  { frage: 'Die Hochpunkte sind H(2t | 4t). Wie lautet die Ortskurve?',
+    antworten: ['y = 2x', 'y = 4x', 'y = x/2', 'y = 8x'],
+    richtig: 0, erklaerung: 't = x/2 in y = 4t einsetzen: y = 4 · x/2 = 2x.' },
+  { frage: 'Welche Variablen darf das Endergebnis einer Ortskurve enthalten?',
+    antworten: ['x, y und t', 'Nur x und y', 'Nur t', 'Nur y'],
+    richtig: 1, erklaerung: 'Der Parameter muss vollständig eliminiert sein – steht noch ein t im Ergebnis, ist die Aufgabe nicht fertig.' },
+  { frage: 'Wie zeichnet man die Ortskurve in eine Skizze der Schar ein?',
+    antworten: ['Gar nicht', 'Gestrichelt (violett)', 'Als dickste durchgezogene Linie', 'Nur die Punkte, keine Kurve'],
+    richtig: 1, erklaerung: 'Die Konvention „gestrichelt“ unterscheidet die Ortskurve klar von den Scharkurven selbst.' },
+  { frage: 'Die Tiefpunkte liegen bei T(0 | t) für alle t. Was ist die „Ortskurve“?',
+    antworten: ['y = 0', 'Die x-Achse', 'Die senkrechte Gerade x = 0 – keine Funktion', 'y = t'],
+    richtig: 2, erklaerung: 'Die x-Koordinate ist konstant – die Punkte wandern auf der y-Achse. Eine senkrechte Gerade besteht den Senkrechten-Test nicht.' },
+]} />

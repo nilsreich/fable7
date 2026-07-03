@@ -5,6 +5,8 @@ sidebar:
   order: 1
 ---
 
+import Quiz from '../../../components/Quiz.astro';
+
 ## Worum geht's?
 
 Wie schneidet man aus einem Blech die Schachtel mit dem größten
@@ -997,3 +999,34 @@ Argument, kein Naturgesetz.
 Bei den [Steckbriefaufgaben](../../steckbriefaufgaben/steckbriefaufgaben/)
 ist es umgekehrt: Eigenschaften sind gegeben – gesucht ist die
 **Funktion selbst**.
+
+## Quiz
+
+Zum Abschluss: Klicke bei jeder Frage eine Antwort an – die Auswertung kommt sofort.
+
+<Quiz fragen={[
+  { frage: 'Was ist die Zielfunktion eines Extremwertproblems?',
+    antworten: ['Der feste Zusammenhang zwischen den Variablen', 'Die Größe, die maximal oder minimal werden soll', 'Immer der Flächeninhalt', 'Die Ableitung'],
+    richtig: 1, erklaerung: 'Die Zielfunktion ist die Größe aus der Frage („… soll maximal werden“); der feste Zusammenhang ist die Nebenbedingung.' },
+  { frage: 'Wozu dient die Nebenbedingung?',
+    antworten: ['Sie liefert die y-Koordinate', 'Sie eliminiert eine Variable aus der Zielfunktion', 'Sie prüft das Ergebnis', 'Sie ist optional'],
+    richtig: 1, erklaerung: 'Nach einer Variablen auflösen und einsetzen – erst dann hat die Zielfunktion nur noch eine Variable und kann abgeleitet werden.' },
+  { frage: 'Zwei Zahlen haben die Summe 20. Wann ist ihr Produkt maximal?',
+    antworten: ['Bei 5 und 15', 'Bei 10 und 10', 'Bei 1 und 19', 'Bei 20 und 0'],
+    richtig: 1, erklaerung: 'P(x) = x(20 − x) hat das Maximum bei x = 10: Produkt 100.' },
+  { frage: 'Welches Rechteck mit festem Umfang hat die größte Fläche?',
+    antworten: ['Ein möglichst langes', 'Das Quadrat', 'Eines mit Seitenverhältnis 2:1', 'Alle sind gleich groß'],
+    richtig: 1, erklaerung: 'Die Rechnung führt immer auf gleiche Seitenlängen – das Quadrat gewinnt.' },
+  { frage: 'Warum muss man die Randwerte des Definitionsbereichs prüfen?',
+    antworten: ['Weil die Ableitung dort falsch ist', 'Weil das Optimum am Rand liegen kann, wo f′ nicht null ist', 'Aus Höflichkeit', 'Nur bei Minima nötig'],
+    richtig: 1, erklaerung: 'f′ = 0 findet nur innere Kandidaten – auf einem Intervall kann der beste Wert am Rand sitzen.' },
+  { frage: 'Schachtelproblem mit 12-cm-Karton: Welcher Definitionsbereich ist sinnvoll für V(x) = x(12 − 2x)²?',
+    antworten: ['x &gt; 0', '0 &lt; x &lt; 12', '0 &lt; x &lt; 6', 'x beliebig'],
+    richtig: 2, erklaerung: 'Bei x = 6 wäre die Grundfläche 12 − 2·6 = 0 – mehr als die halbe Seitenlänge kann man nicht einschneiden.' },
+  { frage: 'Welche Form hat die materialsparendste geschlossene Dose mit festem Volumen?',
+    antworten: ['Möglichst flach', 'Möglichst hoch und schmal', 'Höhe = Durchmesser (h = 2r)', 'Höhe = Radius'],
+    richtig: 2, erklaerung: 'Die Optimierung liefert h = 2r – die Dose ist „so hoch wie breit“, unabhängig vom Volumen.' },
+  { frage: 'Warum darf man statt des Abstands das Abstandsquadrat minimieren?',
+    antworten: ['Weil es dasselbe Ergebnis mit einfacherer Rechnung liefert', 'Weil der Abstand nie minimal wird', 'Darf man nicht', 'Weil Quadrate immer kleiner sind'],
+    richtig: 0, erklaerung: 'Quadrieren ist für nichtnegative Zahlen monoton – Minimum an derselben Stelle, aber ohne störende Wurzel im Term.' },
+]} />

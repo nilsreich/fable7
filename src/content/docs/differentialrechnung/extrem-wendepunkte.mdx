@@ -5,6 +5,8 @@ sidebar:
   order: 6
 ---
 
+import Quiz from '../../../components/Quiz.astro';
+
 ## Worum geht's?
 
 Wann ist die Wirkstoffkonzentration am höchsten? Wann steigt der
@@ -490,6 +492,34 @@ geprüft werden – wichtig bei den
 Wendepunkte – alle Werkzeuge sind beisammen. Die
 [vollständige Kurvendiskussion](../../kurvendiskussion/vollstaendig/)
 setzt sie zum Standardverfahren zusammen.
+
+## Quiz
+
+Zum Abschluss: Klicke bei jeder Frage eine Antwort an – die Auswertung kommt sofort.
+
+<Quiz fragen={[
+  { frage: 'Wie lautet die notwendige Bedingung für einen Extrempunkt?',
+    antworten: ['f(x₀) = 0', 'f′(x₀) = 0', 'f″(x₀) = 0', 'f″(x₀) &lt; 0'],
+    richtig: 1, erklaerung: 'Ohne waagerechte Tangente kein Extremum – f′(x₀) = 0 liefert die Kandidaten.' },
+  { frage: 'Warum reicht f′(x₀) = 0 allein nicht für einen Extrempunkt?',
+    antworten: ['Weil f′ ungenau ist', 'Weil dort auch ein Sattelpunkt liegen kann (z. B. bei x³)', 'Weil man f(x₀) nicht kennt', 'f′(x₀) = 0 reicht immer'],
+    richtig: 1, erklaerung: 'f(x) = x³ hat f′(0) = 0, aber keinen Extrempunkt – deshalb braucht jeder Kandidat eine hinreichende Prüfung.' },
+  { frage: 'Es gilt f′(x₀) = 0 und f″(x₀) &lt; 0. Was liegt vor?',
+    antworten: ['Tiefpunkt', 'Hochpunkt', 'Wendepunkt', 'Sattelpunkt'],
+    richtig: 1, erklaerung: 'Rechtsgekrümmt (f″ &lt; 0) mit waagerechter Tangente – ein Hochpunkt.' },
+  { frage: 'Wie lautet die notwendige Bedingung für einen Wendepunkt?',
+    antworten: ['f′(x₀) = 0', 'f″(x₀) = 0', 'f(x₀) = 0', 'f‴(x₀) = 0'],
+    richtig: 1, erklaerung: 'Am Wendepunkt wechselt die Krümmung – dafür muss f″ null werden; hinreichend ist zusätzlich f‴(x₀) ≠ 0.' },
+  { frage: 'Womit berechnet man die y-Koordinate eines Extrempunkts?',
+    antworten: ['Mit f′', 'Mit f″', 'Mit f', 'Mit f‴'],
+    richtig: 2, erklaerung: 'Die Höhe des Punktes liefert immer die Originalfunktion f – ein beliebter Flüchtigkeitsfehler.' },
+  { frage: 'An welchen Stellen hat f(x) = x³ − 12x waagerechte Tangenten?',
+    antworten: ['x = 0 und x = 12', 'x = ±2', 'x = ±4', 'Nur x = 2'],
+    richtig: 1, erklaerung: 'f′(x) = 3x² − 12 = 0 führt auf x² = 4, also x = ±2.' },
+  { frage: 'Was bedeutet ein Wendepunkt im Sachkontext (z. B. Fieberkurve)?',
+    antworten: ['Der höchste Wert', 'Die Stelle der stärksten Zu- oder Abnahme', 'Der Startwert', 'Das Ende des Vorgangs'],
+    richtig: 1, erklaerung: 'Am Wendepunkt ist die Änderungsrate extremal – das Fieber steigt (oder fällt) dort am schnellsten.' },
+]} />
 
 ## Checkliste zur Klassenarbeit
 

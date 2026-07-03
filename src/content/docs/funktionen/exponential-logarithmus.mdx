@@ -5,6 +5,8 @@ sidebar:
   order: 4
 ---
 
+import Quiz from '../../../components/Quiz.astro';
+
 ## Worum geht's?
 
 Eine Bakterienkultur, die sich stündlich verdoppelt. Ein Medikament, dessen
@@ -678,3 +680,31 @@ strecken lassen, behandelt die Seite
 [Transformationen](../transformationen/) – und in der
 [Differentialrechnung](../../differentialrechnung/aenderungsrate/) wirst du
 untersuchen, wie **schnell** solche Prozesse wachsen.
+
+## Quiz
+
+Zum Abschluss: Klicke bei jeder Frage eine Antwort an – die Auswertung kommt sofort.
+
+<Quiz fragen={[
+  { frage: 'Ein Bestand wächst um 5 % pro Jahr. Welcher Wachstumsfaktor gehört dazu?',
+    antworten: ['a = 0,05', 'a = 5', 'a = 1,05', 'a = 1,5'],
+    richtig: 2, erklaerung: 'a = 1 + 5/100 = 1,05 – pro Jahr wird mit 1,05 multipliziert.' },
+  { frage: 'Was ist f(0) für f(x) = b · aˣ?',
+    antworten: ['a', 'b', '0', 'a · b'],
+    richtig: 1, erklaerung: 'a⁰ = 1, also f(0) = b – der Startwert ist der y-Achsenabschnitt.' },
+  { frage: 'Welcher Term beschreibt exponentiellen Zerfall?',
+    antworten: ['f(t) = 3 · 0,8ᵗ', 'f(t) = 0,3 · 1,8ᵗ', 'f(t) = 3 · 1,08ᵗ', 'f(t) = 3 + 0,8t'],
+    richtig: 0, erklaerung: 'Zerfall bedeutet Faktor zwischen 0 und 1 – hier a = 0,8. Der Startwert spielt dafür keine Rolle.' },
+  { frage: 'Löse 2ˣ = 32.',
+    antworten: ['x = 4', 'x = 5', 'x = 16', 'x = 6'],
+    richtig: 1, erklaerung: '32 = 2⁵, also x = 5.' },
+  { frage: 'Was bedeutet Halbwertszeit?',
+    antworten: ['Die halbe Beobachtungsdauer', 'Die Zeit, in der sich der Bestand halbiert – sie ist konstant', 'Die Zeit bis zum vollständigen Abbau', 'Die Hälfte der Verdopplungszeit'],
+    richtig: 1, erklaerung: 'Bei exponentiellem Zerfall halbiert sich der Bestand in immer gleich langen Zeitabschnitten – egal, wo man startet.' },
+  { frage: 'Was ist log₃(81)?',
+    antworten: ['3', '27', '4', '9'],
+    richtig: 2, erklaerung: 'Gefragt ist der Exponent: 3⁴ = 81, also log₃(81) = 4.' },
+  { frage: 'Welche Asymptote hat der Graph von y = 2ˣ?',
+    antworten: ['x = 0', 'y = 1', 'y = 0', 'Keine'],
+    richtig: 2, erklaerung: 'Für x → −∞ nähern sich die Werte der 0 – die x-Achse ist waagerechte Asymptote.' },
+]} />

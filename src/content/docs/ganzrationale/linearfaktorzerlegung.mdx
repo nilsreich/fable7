@@ -5,6 +5,8 @@ sidebar:
   order: 3
 ---
 
+import Quiz from '../../../components/Quiz.astro';
+
 ## Worum geht's?
 
 Warum schneidet ein Graph die $x$-Achse an einer Nullstelle manchmal glatt,
@@ -465,3 +467,28 @@ höchstens $n$ sein. Bleibt ein nullstellenfreier quadratischer Faktor
 Dort liegt zugleich ein Extrempunkt auf der $x$-Achse. Warum, klärt die
 [Differentialrechnung](../../differentialrechnung/aenderungsrate/) – das
 nächste große Kapitel.
+
+## Quiz
+
+Zum Abschluss: Klicke bei jeder Frage eine Antwort an – die Auswertung kommt sofort.
+
+<Quiz fragen={[
+  { frage: 'Welche Nullstellen hat f(x) = (x + 3)(x − 5)?',
+    antworten: ['3 und −5', '−3 und 5', '3 und 5', '−3 und −5'],
+    richtig: 1, erklaerung: 'Vorzeichen in den Klammern umdrehen: x + 3 = 0 bei x = −3, x − 5 = 0 bei x = 5.' },
+  { frage: 'Was macht der Graph an einer doppelten Nullstelle?',
+    antworten: ['Er schneidet die x-Achse', 'Er berührt die x-Achse', 'Er hat dort eine Lücke', 'Er hat dort einen Sprung'],
+    richtig: 1, erklaerung: 'Gerade Vielfachheit = kein Vorzeichenwechsel: Der Graph kommt zur Achse und dreht wieder um.' },
+  { frage: 'Was passiert an einer dreifachen Nullstelle?',
+    antworten: ['Berühren ohne Durchgang', 'Schneiden mit flachem Sattel-Durchgang', 'Normales steiles Schneiden', 'Polstelle'],
+    richtig: 1, erklaerung: 'Ungerade Vielfachheit ≥ 3: Der Graph quert die Achse, aber mit waagerechter Tangente – wie bei y = x³ im Ursprung.' },
+  { frage: 'Welche Zerlegung von 2x² − 8x + 6 ist richtig?',
+    antworten: ['(x − 1)(x − 3)', '2(x − 1)(x − 3)', '(2x − 1)(x − 3)', '2(x + 1)(x + 3)'],
+    richtig: 1, erklaerung: 'Nullstellen sind 1 und 3, aber der Leitkoeffizient 2 muss als Vorfaktor erhalten bleiben – Kontrolle durch Ausmultiplizieren.' },
+  { frage: 'Welchen Grad hat f(x) = 3(x − 1)(x + 2)²?',
+    antworten: ['2', '3', '4', '6'],
+    richtig: 1, erklaerung: 'Die Summe der Vielfachheiten zählt: 1 + 2 = 3.' },
+  { frage: 'Warum lässt sich x² + 1 nicht in Linearfaktoren zerlegen?',
+    antworten: ['Weil der Grad zu klein ist', 'Weil es keine reellen Nullstellen gibt', 'Weil das Absolutglied 1 ist', 'Es geht: (x + 1)(x − 1)'],
+    richtig: 1, erklaerung: 'Jeder Linearfaktor gehört zu einer Nullstelle – x² + 1 ≥ 1 hat aber keine. ((x+1)(x−1) wäre x² − 1!)' },
+]} />

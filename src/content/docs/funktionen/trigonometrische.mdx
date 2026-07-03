@@ -5,6 +5,8 @@ sidebar:
   order: 5
 ---
 
+import Quiz from '../../../components/Quiz.astro';
+
 ## Worum geht's?
 
 Atmung, Herzschlag, Gezeiten, ein Riesenrad, eine schwingende Gitarrensaite:
@@ -441,3 +443,28 @@ Periodenlänge $= \frac{2\pi}{b}$.
 erkennst du die Parameter $a$, $b$, $d$ als Spezialfall eines allgemeinen
 Prinzips wieder, das für **alle** Funktionstypen gilt – inklusive der
 Verschiebung in $x$-Richtung, die hier noch fehlte.
+
+## Quiz
+
+Zum Abschluss: Klicke bei jeder Frage eine Antwort an – die Auswertung kommt sofort.
+
+<Quiz fragen={[
+  { frage: 'Was ist 90° im Bogenmaß?',
+    antworten: ['π', 'π/2', 'π/4', '2π'],
+    richtig: 1, erklaerung: '180° = π, also 90° = π/2.' },
+  { frage: 'Welche Periode hat y = sin(2x)?',
+    antworten: ['4π', '2π', 'π', 'π/2'],
+    richtig: 2, erklaerung: 'T = 2π/b = 2π/2 = π – der Faktor 2 staucht die Welle auf die halbe Länge.' },
+  { frage: 'Welche Amplitude hat f(x) = 3 · sin(x) + 1?',
+    antworten: ['4', '1', '2', '3'],
+    richtig: 3, erklaerung: 'Die Amplitude ist |a| = 3; die +1 verschiebt nur die Mittellinie.' },
+  { frage: 'Welchen Wertebereich hat f(x) = 2 · sin(x) − 1?',
+    antworten: ['[−1; 1]', '[−3; 1]', '[−2; 2]', '[−1; 3]'],
+    richtig: 1, erklaerung: 'Mittellinie −1, Amplitude 2: von −1 − 2 = −3 bis −1 + 2 = 1.' },
+  { frage: 'Wie hängen Sinus- und Kosinuskurve zusammen?',
+    antworten: ['Der Kosinus ist ein um π/2 verschobener Sinus', 'Der Kosinus ist der an der x-Achse gespiegelte Sinus', 'Sie haben verschiedene Perioden', 'Sie haben verschiedene Amplituden'],
+    richtig: 0, erklaerung: 'cos(x) = sin(x + π/2) – gleiche Form, nur seitlich verschoben.' },
+  { frage: 'In welchem Modus muss der Taschenrechner beim Bogenmaß stehen?',
+    antworten: ['DEG', 'GRAD', 'RAD', 'Egal'],
+    richtig: 2, erklaerung: 'Bogenmaß = Radiant: Im DEG-Modus wäre z. B. sin(π) nicht 0 – ein Klassiker unter den Klausurfehlern.' },
+]} />

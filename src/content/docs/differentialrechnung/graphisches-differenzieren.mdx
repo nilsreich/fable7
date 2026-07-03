@@ -5,6 +5,8 @@ sidebar:
   order: 5
 ---
 
+import Quiz from '../../../components/Quiz.astro';
+
 ## Worum geht's?
 
 Ein EKG, ein Höhenprofil einer Radetappe, eine Fieberkurve: Oft liegt nur
@@ -399,3 +401,25 @@ prüfen das Verständnis der Ableitung ohne jede Rechnung.
 **Ausblick:** Die Wörterbuch-Regeln sind genau die Kriterien, mit denen
 die nächste Seite [Extrem- und Wendepunkte](../extrem-wendepunkte/)
 **rechnerisch** arbeitet: $f'(x_0) = 0$ plus Vorzeichenwechsel.
+
+## Quiz
+
+Zum Abschluss: Klicke bei jeder Frage eine Antwort an – die Auswertung kommt sofort.
+
+<Quiz fragen={[
+  { frage: 'f hat bei x = 2 einen Hochpunkt. Was gilt für den Graphen von f′?',
+    antworten: ['f′ hat bei x = 2 einen Hochpunkt', 'f′ hat bei x = 2 eine Nullstelle', 'f′ ist bei x = 2 maximal steil', 'f′ hat bei x = 2 den Wert 2'],
+    richtig: 1, erklaerung: 'Am Extrempunkt ist die Tangente waagerecht – die Ableitung ist dort null.' },
+  { frage: 'f fällt auf einem Intervall. Wo verläuft dort der Graph von f′?',
+    antworten: ['Oberhalb der x-Achse', 'Unterhalb der x-Achse', 'Auf der x-Achse', 'Das kann man nicht sagen'],
+    richtig: 1, erklaerung: 'Fallend bedeutet negative Steigungen – f′ ist dort negativ.' },
+  { frage: 'Woran erkennt man einen Sattelpunkt von f am Graphen von f′?',
+    antworten: ['f′ schneidet die x-Achse steil', 'f′ berührt die x-Achse ohne Vorzeichenwechsel', 'f′ hat dort einen Sprung', 'f′ ist dort maximal'],
+    richtig: 1, erklaerung: 'Nullstelle ohne Vorzeichenwechsel: waagerechte Tangente, aber f steigt (oder fällt) auf beiden Seiten weiter.' },
+  { frage: 'f ist eine Parabel. Welche Form hat der Graph von f′?',
+    antworten: ['Ebenfalls eine Parabel', 'Eine Gerade', 'Eine kubische Kurve', 'Eine Waagerechte'],
+    richtig: 1, erklaerung: 'Der Grad sinkt beim Ableiten um 1: Aus Grad 2 wird Grad 1 – eine Gerade.' },
+  { frage: 'Warum ist f durch den Graphen von f′ nicht eindeutig bestimmt?',
+    antworten: ['Weil f′ ungenau ist', 'Weil alle in y-Richtung verschobenen Kopien von f dieselbe Ableitung haben', 'Weil f′ nur für x &gt; 0 gilt', 'f ist eindeutig bestimmt'],
+    richtig: 1, erklaerung: 'Konstante Summanden fallen beim Ableiten weg – f + c hat für jedes c dieselbe Ableitung.' },
+]} />

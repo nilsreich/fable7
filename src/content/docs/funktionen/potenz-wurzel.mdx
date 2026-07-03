@@ -5,6 +5,8 @@ sidebar:
   order: 3
 ---
 
+import Quiz from '../../../components/Quiz.astro';
+
 ## Worum geht's?
 
 Verdoppelt man die Kantenlänge eines Würfels, verachtfacht sich sein
@@ -456,3 +458,28 @@ zu jeder Wurzelgleichung die Probe in der Ausgangsgleichung.
 $f(x) = 2x^3 - 5x^2 + 1$ – heißen [ganzrationale
 Funktionen](../../ganzrationale/eigenschaften/). Ihre Symmetrie- und
 Verlaufsregeln bauen direkt auf dieser Seite auf.
+
+## Quiz
+
+Zum Abschluss: Klicke bei jeder Frage eine Antwort an – die Auswertung kommt sofort.
+
+<Quiz fragen={[
+  { frage: 'Welche Symmetrie hat f(x) = x⁴?',
+    antworten: ['Punktsymmetrisch zum Ursprung', 'Achsensymmetrisch zur y-Achse', 'Symmetrisch zur x-Achse', 'Keine Symmetrie'],
+    richtig: 1, erklaerung: 'Gerader Exponent: (−x)⁴ = x⁴, also f(−x) = f(x) – Achsensymmetrie.' },
+  { frage: 'Was passiert mit f(x) = x⁵ für x → −∞?',
+    antworten: ['f(x) → +∞', 'f(x) → −∞', 'f(x) → 0', 'f(x) → −1'],
+    richtig: 1, erklaerung: 'Ungerader Exponent: Das Minus bleibt erhalten – der Graph kommt von unten links.' },
+  { frage: 'Welche Gerade ist die senkrechte Asymptote von f(x) = 1/x?',
+    antworten: ['y = 0', 'x = 0', 'y = x', 'x = 1'],
+    richtig: 1, erklaerung: 'An der Polstelle x = 0 schmiegt sich der Graph an die y-Achse (x = 0) an, ohne sie zu erreichen.' },
+  { frage: 'Welche Lösungen hat x³ = −27?',
+    antworten: ['x = 3 und x = −3', 'x = 3', 'x = −3', 'Keine Lösung'],
+    richtig: 2, erklaerung: 'Ungerader Exponent → genau eine Lösung: (−3)³ = −27.' },
+  { frage: 'Welche Lösungen hat x⁴ = 16?',
+    antworten: ['Nur x = 2', 'x = 2 und x = −2', 'x = 4 und x = −4', 'Nur x = 4'],
+    richtig: 1, erklaerung: 'Gerader Exponent und positive rechte Seite → zwei Lösungen: 2⁴ = 16 und (−2)⁴ = 16.' },
+  { frage: 'Warum ist nach dem Lösen einer Wurzelgleichung die Probe Pflicht?',
+    antworten: ['Weil man sich verrechnet haben könnte', 'Weil Quadrieren keine Äquivalenzumformung ist und Scheinlösungen erzeugen kann', 'Weil Wurzeln nie exakt sind', 'Die Probe ist freiwillig'],
+    richtig: 1, erklaerung: 'Aus a = b folgt a² = b², aber nicht umgekehrt – beim Quadrieren können Lösungen dazukommen, die die Ausgangsgleichung nicht erfüllen.' },
+]} />

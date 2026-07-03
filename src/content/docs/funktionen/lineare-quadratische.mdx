@@ -5,6 +5,8 @@ sidebar:
   order: 2
 ---
 
+import Quiz from '../../../components/Quiz.astro';
+
 ## Worum geht's?
 
 Handytarif, Taxipreis, Stromrechnung: Wächst etwas mit konstanter Rate,
@@ -519,3 +521,28 @@ Muster („Berühren = genau eine Lösung“) kommt bei
 [Transformationen](../transformationen/) wird aus der Scheitelform ein
 allgemeines Prinzip: Verschieben, Strecken und Spiegeln funktioniert bei
 **jeder** Funktion so wie hier bei der Parabel.
+
+## Quiz
+
+Zum Abschluss: Klicke bei jeder Frage eine Antwort an – die Auswertung kommt sofort.
+
+<Quiz fragen={[
+  { frage: 'Welche Steigung hat die Gerade durch A(1|2) und B(3|8)?',
+    antworten: ['m = 6', 'm = 3', 'm = 2', 'm = 1/3'],
+    richtig: 1, erklaerung: 'm = (8 − 2)/(3 − 1) = 6/2 = 3.' },
+  { frage: 'Wo schneidet y = −2x + 5 die y-Achse?',
+    antworten: ['Bei −2', 'Bei 5', 'Bei 2,5', 'Bei 0'],
+    richtig: 1, erklaerung: 'Der y-Achsenabschnitt ist b = 5: Punkt (0|5).' },
+  { frage: 'Welchen Scheitel hat f(x) = (x − 3)² + 2?',
+    antworten: ['S(−3|2)', 'S(3|2)', 'S(3|−2)', 'S(2|3)'],
+    richtig: 1, erklaerung: 'Scheitelform a(x − d)² + e: Vorzeichen in der Klammer umdrehen – Scheitel bei (3|2).' },
+  { frage: 'Woran erkennt man, dass zwei Geraden parallel sind?',
+    antworten: ['Gleicher y-Achsenabschnitt', 'Gleiche Steigung', 'Gleiche Nullstelle', 'Beide steigen'],
+    richtig: 1, erklaerung: 'Parallel bedeutet gleiche Steigung m – der y-Achsenabschnitt darf sich unterscheiden.' },
+  { frage: 'Was bewirkt der Formfaktor a = −0,5 bei einer Parabel?',
+    antworten: ['Nach unten geöffnet und breiter als die Normalparabel', 'Nach unten geöffnet und enger', 'Nach oben geöffnet und breiter', 'Nach oben geöffnet und enger'],
+    richtig: 0, erklaerung: 'a &lt; 0 öffnet nach unten, |a| = 0,5 &lt; 1 staucht – die Parabel wird breiter.' },
+  { frage: 'Die Diskriminante der pq-Formel ist negativ. Wie viele Nullstellen gibt es?',
+    antworten: ['Zwei', 'Genau eine', 'Keine', 'Das hängt von p ab'],
+    richtig: 2, erklaerung: 'Aus einer negativen Zahl kann man keine (reelle) Wurzel ziehen – keine Lösung, keine Nullstelle.' },
+]} />

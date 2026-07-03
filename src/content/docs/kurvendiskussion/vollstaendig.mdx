@@ -5,6 +5,8 @@ sidebar:
   order: 1
 ---
 
+import Quiz from '../../../components/Quiz.astro';
+
 ## Worum geht's?
 
 Fieberkurve, Laktatwert, Wirkstoffspiegel: Wer solche Verläufe versteht,
@@ -1232,6 +1234,43 @@ einen Antwortsatz mit **Einheiten**.
 **Ausblick:** Als Nächstes bekommen die Funktionen einen **Parameter**:
 [Kurvenscharen](../../scharen/kurvenscharen/) – die Kurvendiskussion
 läuft dann buchstabengetreu genauso, nur mit $t$ im Gepäck.
+
+## Quiz
+
+Zum Abschluss: Klicke bei jeder Frage eine Antwort an – die Auswertung kommt sofort.
+
+<Quiz fragen={[
+  { frage: 'Welcher Punkt gehört NICHT zum Schema der Kurvendiskussion?',
+    antworten: ['Randverhalten', 'Nullstellen', 'Ortskurve', 'Wendepunkte'],
+    richtig: 2, erklaerung: 'Ortskurven gehören zu Funktionenscharen – die Kurvendiskussion untersucht eine einzelne Funktion.' },
+  { frage: 'Warum lohnt es sich, die Symmetrie zuerst zu prüfen?',
+    antworten: ['Weil sie am schwersten ist', 'Weil man dann nur die halbe Rechnung braucht und spiegeln kann', 'Weil sonst die pq-Formel nicht gilt', 'Sie ist reine Formsache'],
+    richtig: 1, erklaerung: 'Bei Achsen- oder Punktsymmetrie liefert jedes Ergebnis für x &gt; 0 automatisch das Spiegelbild mit.' },
+  { frage: 'Der Graph berührt die x-Achse bei x = 3. Was gilt dort?',
+    antworten: ['Einfache Nullstelle', 'Doppelte Nullstelle und Extrempunkt auf der Achse', 'Polstelle', 'Wendepunkt'],
+    richtig: 1, erklaerung: 'Berühren = gerade Vielfachheit; der Punkt ist zugleich Hoch- oder Tiefpunkt auf der Achse.' },
+  { frage: 'Wo liegt bei einer kubischen Funktion der Wendepunkt?',
+    antworten: ['Immer im Ursprung', 'Genau in der Mitte zwischen Hoch- und Tiefpunkt', 'Auf der y-Achse', 'Am tiefsten Punkt'],
+    richtig: 1, erklaerung: 'Bei Grad 3 liegt der Wendepunkt exakt mittig zwischen den Extrempunkten – eine praktische Kontrolle.' },
+  { frage: 'An welchen Stellen hat f(x) = x³ − 3x² Extrempunkte?',
+    antworten: ['x = 0 und x = 2', 'x = ±1', 'x = 1 und x = 3', 'x = 0 und x = 3'],
+    richtig: 0, erklaerung: 'f′(x) = 3x² − 6x = 3x(x − 2) = 0 bei x = 0 (Hochpunkt) und x = 2 (Tiefpunkt).' },
+  { frage: 'Leitterm −x³: Wie verläuft der Graph global?',
+    antworten: ['Von −∞ nach +∞', 'Von +∞ nach −∞', 'Beidseitig nach +∞', 'Beidseitig nach −∞'],
+    richtig: 1, erklaerung: 'Ungerader Grad mit negativem Koeffizienten: von oben links nach unten rechts.' },
+  { frage: 'Was bedeutet der Wendepunkt der Fieberkurve?',
+    antworten: ['Das Fieber ist maximal', 'Das Fieber steigt dort am schnellsten', 'Das Fieber ist vorbei', 'Die Temperatur ist normal'],
+    richtig: 1, erklaerung: 'Im Wendepunkt ist die Änderungsrate maximal – danach verlangsamt sich der Anstieg Richtung Maximum.' },
+  { frage: 'Welchen Wertebereich hat f(x) = x⁴ − 2x² (Tiefpunkte bei y = −1)?',
+    antworten: ['ℝ', '[−1; ∞[', '[0; ∞[', ']−∞; −1]'],
+    richtig: 1, erklaerung: 'Tiefster Wert −1 (Tiefpunkte), Randverhalten beidseitig +∞: alle Werte ab −1.' },
+  { frage: 'Warum muss man im Sachkontext zusätzlich die Ränder prüfen?',
+    antworten: ['Weil f′ dort nicht existiert', 'Weil das globale Maximum am Rand des Definitionsbereichs liegen kann', 'Weil die Einheiten fehlen', 'Muss man nicht'],
+    richtig: 1, erklaerung: 'f′ = 0 findet nur innere Extrema – auf einem Intervall kann der größte Wert am Rand sitzen.' },
+  { frage: 'Die beste schnelle Fehlerkontrolle am Ende einer Kurvendiskussion?',
+    antworten: ['Alles noch einmal rechnen', 'Prüfen, ob alle Ergebnisse zur Skizze zusammenpassen', 'Den Taschenrechner fragen', 'Die Aufgabe überspringen'],
+    richtig: 1, erklaerung: 'Nullstellen, Extrema, Wendepunkt und Randverhalten müssen ein stimmiges Bild ergeben – Widersprüche zeigen Rechenfehler an.' },
+]} />
 
 ## Checkliste zur Klassenarbeit
 

@@ -5,6 +5,8 @@ sidebar:
   order: 1
 ---
 
+import Quiz from '../../../components/Quiz.astro';
+
 ## Worum geht's?
 
 Die Heimleitung eines Pflegeheims kennt vom Krankenstand nur ein paar
@@ -787,3 +789,31 @@ Steckbriefaufgabe.
 **Ausblick:** Bei vier und mehr Unbekannten wird das Lösen per
 Einsetzen unübersichtlich. Das systematische Verfahren dafür – mit
 Matrixschreibweise – ist das [Gauß-Verfahren](../gauss-verfahren/).
+
+## Quiz
+
+Zum Abschluss: Klicke bei jeder Frage eine Antwort an – die Auswertung kommt sofort.
+
+<Quiz fragen={[
+  { frage: 'Wie viele Bedingungen braucht eine Steckbriefaufgabe vom Grad 3?',
+    antworten: ['3', '4', '5', '2'],
+    richtig: 1, erklaerung: 'Grad n hat n + 1 Koeffizienten (a, b, c, d) – also braucht man 4 Gleichungen.' },
+  { frage: 'Welche Gleichungen liefert die Angabe „Hochpunkt H(2|5)“?',
+    antworten: ['Nur f(2) = 5', 'Nur f′(2) = 0', 'f(2) = 5 und f′(2) = 0', 'f″(2) = 5'],
+    richtig: 2, erklaerung: 'Ein Extrempunkt liefert immer zwei Informationen: den Punkt selbst und die waagerechte Tangente.' },
+  { frage: 'Welche Gleichungen liefert „Wendepunkt W(1|3)“?',
+    antworten: ['f(1) = 3 und f″(1) = 0', 'f(1) = 3 und f′(1) = 0', 'Nur f″(1) = 0', 'f′(1) = 3'],
+    richtig: 0, erklaerung: 'Der Punkt liegt auf dem Graphen (f(1) = 3), und an der Wendestelle gilt f″(1) = 0.' },
+  { frage: 'Welcher Ansatz passt zu „Grad 3, punktsymmetrisch zum Ursprung“?',
+    antworten: ['ax³ + bx² + cx + d', 'ax³ + cx', 'ax³ + bx²', 'ax⁴ + bx²'],
+    richtig: 1, erklaerung: 'Punktsymmetrie erlaubt nur ungerade Exponenten – zwei Unbekannte statt vier.' },
+  { frage: '„Der Graph berührt die x-Achse bei x = 4“ bedeutet:',
+    antworten: ['f(4) = 0', 'f′(4) = 0', 'f(4) = 0 und f′(4) = 0', 'f(4) = 4'],
+    richtig: 2, erklaerung: 'Berühren = doppelte Nullstelle: Nullstelle plus waagerechte Tangente – zwei Gleichungen.' },
+  { frage: 'Warum gehört ans Ende jeder Steckbriefaufgabe eine Probe?',
+    antworten: ['Weil das LGS meist falsch ist', 'Weil im Ansatz nur notwendige Bedingungen stecken – ob z. B. wirklich ein Hochpunkt vorliegt, zeigt erst die hinreichende Prüfung', 'Nur zur Übung', 'Die Probe ist überflüssig'],
+    richtig: 1, erklaerung: 'f′(a) = 0 erzwingt nur eine waagerechte Tangente – es könnte auch ein Tief- oder Sattelpunkt herauskommen.' },
+  { frage: 'Eine Parabel ist durch zwei Punkte gegeben. Wie viele passende Parabeln gibt es?',
+    antworten: ['Genau eine', 'Zwei', 'Keine', 'Unendlich viele'],
+    richtig: 3, erklaerung: 'Grad 2 braucht drei Bedingungen – mit nur zwei bleibt ein Koeffizient frei: unendlich viele Lösungen.' },
+]} />
