@@ -5,6 +5,8 @@ sidebar:
   order: 2
 ---
 
+import Quiz from '../../../components/Quiz.astro';
+
 ## Worum geht's?
 
 Bei den Steckbriefaufgaben entstehen Gleichungssysteme mit drei, vier
@@ -791,6 +793,31 @@ des Schuljahres komplett – von den [Grundlagen](../../basiswissen/algebra-werk
 [Scharen](../../scharen/kurvenscharen/),
 [Extremwertproblemen](../../extremwertprobleme/extremwertprobleme/) und
 [Steckbriefaufgaben](../steckbriefaufgaben/).
+
+## Quiz
+
+Zum Abschluss: Klicke bei jeder Frage eine Antwort an – die Auswertung kommt sofort.
+
+<Quiz fragen={[
+  { frage: 'Was ist das Ziel des Gauß-Verfahrens?',
+    antworten: ['Alle Gleichungen quadrieren', 'Das LGS auf Stufenform bringen', 'Die Unbekannten raten', 'Die Matrix transponieren'],
+    richtig: 1, erklaerung: 'In Stufenform lässt sich das System von unten nach oben durch Rückwärtseinsetzen lösen.' },
+  { frage: 'Welche Umformung ist erlaubt und ändert die Lösungsmenge nicht?',
+    antworten: ['Eine Gleichung quadrieren', 'Das Vielfache einer Zeile zu einer anderen addieren', 'Eine Unbekannte weglassen', 'Nur die linke Seite mit 2 multiplizieren'],
+    richtig: 1, erklaerung: 'Tauschen, Vervielfachen (≠ 0) und Addieren von Vielfachen sind die drei erlaubten Zeilenumformungen – immer auf beiden Seiten!' },
+  { frage: 'Was steht in der erweiterten Koeffizientenmatrix hinter dem Strich?',
+    antworten: ['Die Unbekannten', 'Die rechten Seiten der Gleichungen', 'Die Lösung', 'Nichts'],
+    richtig: 1, erklaerung: 'Links die Koeffizienten, rechts die Zahlen der rechten Seite – und die rechnet bei jeder Umformung mit.' },
+  { frage: 'Beim Umformen entsteht die Zeile 0 = 0. Was bedeutet das?',
+    antworten: ['Keine Lösung', 'Genau eine Lösung', 'Unendlich viele Lösungen', 'Rechenfehler'],
+    richtig: 2, erklaerung: 'Eine immer wahre Aussage: Eine Gleichung war überflüssig – das System hat unendlich viele Lösungen.' },
+  { frage: 'Beim Umformen entsteht die Zeile 0 = 5. Was bedeutet das?',
+    antworten: ['x = 5', 'Unendlich viele Lösungen', 'Das LGS hat keine Lösung', 'Man muss durch 5 teilen'],
+    richtig: 2, erklaerung: 'Eine falsche Aussage: Kein Zahlentupel kann alle Gleichungen erfüllen – Widerspruch, leere Lösungsmenge.' },
+  { frage: 'In welcher Reihenfolge löst man ein System in Stufenform?',
+    antworten: ['Von oben nach unten', 'Von unten nach oben (Rückwärtseinsetzen)', 'In beliebiger Reihenfolge', 'Alle gleichzeitig'],
+    richtig: 1, erklaerung: 'Die unterste Zeile enthält nur noch eine Unbekannte – ihr Wert wird nach oben durchgereicht.' },
+]} />
 
 ## Checkliste zur Klassenarbeit
 

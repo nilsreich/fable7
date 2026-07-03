@@ -5,6 +5,8 @@ sidebar:
   order: 1
 ---
 
+import Quiz from '../../../components/Quiz.astro';
+
 ## Worum geht's?
 
 Welche Dosis muss ein Medikament haben, damit der Wirkstoffspiegel die
@@ -774,3 +776,34 @@ $T\left(\frac{t}{2} \mid -\frac{t^2}{4}\right)$ aus Aufgabe 10 wandern,
 wenn $t$ variiert – aber nicht irgendwie, sondern **auf einer eigenen
 Kurve**. Wie man diese [Ortskurve](../ortskurven/) bestimmt, zeigt die
 nächste Seite.
+
+## Quiz
+
+Zum Abschluss: Klicke bei jeder Frage eine Antwort an – die Auswertung kommt sofort.
+
+<Quiz fragen={[
+  { frage: 'Wie viele Kurven gehören zur Schar f_t(x) = x² + t?',
+    antworten: ['Eine', 'Zwei', 'Unendlich viele – eine pro t-Wert', 'So viele wie Nullstellen'],
+    richtig: 2, erklaerung: 'Jeder Parameterwert t liefert eine eigene Kurve – die Schar ist eine ganze Funktionsfamilie.' },
+  { frage: 'Was ist die Ableitung von f_t(x) = x³ − tx nach x?',
+    antworten: ['3x² − 1', '3x² − t', '3x² − x', '3x²'],
+    richtig: 1, erklaerung: 't wird wie eine Zahl behandelt: Aus −tx wird −t (Faktorregel).' },
+  { frage: 'f_t(x) = x² + t. Was ist f₂(3)?',
+    antworten: ['9', '11', '5', '6'],
+    richtig: 1, erklaerung: 't = 2 und x = 3 einsetzen: 3² + 2 = 11.' },
+  { frage: 'Wie behandelt man den Parameter t beim Ableiten nach x?',
+    antworten: ['Wie eine zweite Variable', 'Wie eine Konstante (feste Zahl)', 'Er wird zu 1', 'Er fällt immer weg'],
+    richtig: 1, erklaerung: 'Innerhalb jeder Kurve ist t fest – beim Ableiten nach x verhält sich t wie die 5 in 5x.' },
+  { frage: 'Die Bedingung x² = t/3 hat für t &gt; 0 …',
+    antworten: ['keine Lösung', 'genau eine Lösung', 'zwei Lösungen', 'drei Lösungen'],
+    richtig: 2, erklaerung: 'Für positives t/3 gibt es x = ±√(t/3) – deshalb braucht die Schar eine Fallunterscheidung nach t.' },
+  { frage: 'Wie findet man Punkte, die auf ALLEN Kurven einer Schar liegen?',
+    antworten: ['Alle Nullstellen berechnen', 'Den Term nach t sortieren und den t-Anteil null setzen', 'Den Mittelwert aller Kurven bilden', 't = 0 einsetzen'],
+    richtig: 1, erklaerung: 'Wo der Faktor bei t verschwindet, hängt der Funktionswert nicht mehr von t ab – gemeinsamer Punkt.' },
+  { frage: 'Durch welchen Punkt laufen alle Kurven der Schar f_t(x) = t · x²?',
+    antworten: ['(1|1)', '(0|0)', '(t|0)', 'Es gibt keinen'],
+    richtig: 1, erklaerung: 'f_t(0) = t · 0 = 0 für jedes t – alle Parabeln laufen durch den Ursprung.' },
+  { frage: 'Wurfparabel: Was passiert mit der Wurfweite bei doppelter Abwurfgeschwindigkeit?',
+    antworten: ['Sie verdoppelt sich', 'Sie vervierfacht sich', 'Sie bleibt gleich', 'Sie halbiert sich'],
+    richtig: 1, erklaerung: 'Die Weite ist v²/10 – sie wächst quadratisch mit v: doppeltes v, vierfache Weite.' },
+]} />

@@ -5,6 +5,8 @@ sidebar:
   order: 1
 ---
 
+import Quiz from '../../../components/Quiz.astro';
+
 ## Worum geht's?
 
 Usain Bolt lief die 100 m in 9,58 s – im Schnitt also
@@ -470,3 +472,25 @@ mit anschließendem Grenzübergang $h \to 0$ (wie in Aufgabe 9) wird auf
 der nächsten Seite zum systematischen Verfahren: der
 [h-Methode](../ableitung-h-methode/). Ihr Ergebnis bekommt einen eigenen
 Namen – die **Ableitung**.
+
+## Quiz
+
+Zum Abschluss: Klicke bei jeder Frage eine Antwort an – die Auswertung kommt sofort.
+
+<Quiz fragen={[
+  { frage: 'Was ist die mittlere Änderungsrate von f auf [a; b] grafisch?',
+    antworten: ['Die Steigung der Tangente in a', 'Die Steigung der Sekante durch die Punkte bei a und b', 'Der Funktionswert in der Mitte', 'Die Fläche unter dem Graphen'],
+    richtig: 1, erklaerung: 'Der Differenzenquotient (f(b) − f(a))/(b − a) ist genau die Sekantensteigung.' },
+  { frage: 'Berechne die mittlere Änderungsrate von f(x) = x² auf [1; 3].',
+    antworten: ['2', '8', '4', '3'],
+    richtig: 2, erklaerung: '(f(3) − f(1))/(3 − 1) = (9 − 1)/2 = 4.' },
+  { frage: 'Was ist die lokale Änderungsrate an einer Stelle grafisch?',
+    antworten: ['Die Sekantensteigung', 'Die Tangentensteigung', 'Der y-Achsenabschnitt', 'Die Nullstelle'],
+    richtig: 1, erklaerung: 'Lokal = an einer einzigen Stelle: Dort misst die Tangente die momentane Steigung.' },
+  { frage: 'Ein Blitzer an der Straße misst …',
+    antworten: ['die mittlere Geschwindigkeit', 'die momentane Geschwindigkeit', 'die Beschleunigung', 'den zurückgelegten Weg'],
+    richtig: 1, erklaerung: 'Der Blitzer misst an einem Punkt – das ist die lokale Änderungsrate des Weges, die Momentangeschwindigkeit.' },
+  { frage: 'Was passiert mit den Sekanten, wenn h gegen 0 läuft?',
+    antworten: ['Sie werden waagerecht', 'Sie kippen in die Tangente', 'Sie verschwinden', 'Sie werden senkrecht'],
+    richtig: 1, erklaerung: 'Der zweite Punkt rückt auf den ersten zu – die Sekante nähert sich der Tangente, ihre Steigung dem Grenzwert.' },
+]} />

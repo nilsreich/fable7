@@ -5,6 +5,8 @@ sidebar:
   order: 2
 ---
 
+import Quiz from '../../../components/Quiz.astro';
+
 ## Worum geht's?
 
 Diese Seite ordnet die Zahlenmengen $\mathbb{N}$, $\mathbb{Z}$, $\mathbb{Q}$
@@ -248,3 +250,22 @@ $\sqrt{2}$, $\pi$). Erst rationale und irrationale Zahlen zusammen füllen
 die Zahlengerade vollständig.
 
 </details>
+
+## Quiz
+
+Zum Abschluss: Klicke bei jeder Frage eine Antwort an – die Auswertung kommt sofort.
+
+<Quiz fragen={[
+  { frage: 'Zu welchen Zahlenmengen gehört √2?',
+    antworten: ['√2 ∈ ℚ, denn jede Wurzel ist ein Bruch', '√2 ∈ ℝ, aber nicht ∈ ℚ', '√2 ∈ ℤ, denn √2 geht auf', '√2 gehört zu keiner Zahlenmenge'],
+    richtig: 1, erklaerung: '√2 = 1,41421… ist unendlich und nicht periodisch – also irrational: reell, aber nicht rational.' },
+  { frage: 'Wie schreibt man 0,75 als vollständig gekürzten Bruch?',
+    antworten: ['7/5', '15/2', '3/4', '3/40'],
+    richtig: 2, erklaerung: '0,75 = 75/100, gekürzt mit 25 ergibt das 3/4.' },
+  { frage: 'Woran erkennt man eine rationale Zahl an ihrer Dezimaldarstellung?',
+    antworten: ['Sie hat höchstens zwei Nachkommastellen', 'Sie bricht ab oder ist periodisch', 'Sie ist immer positiv', 'Sie enthält keine Null'],
+    richtig: 1, erklaerung: 'Genau die abbrechenden und periodischen Dezimalzahlen lassen sich als Bruch schreiben.' },
+  { frage: 'Was ist die <em>kleinste</em> der vier Zahlenmengen, zu der −5 gehört?',
+    antworten: ['ℕ', 'ℤ', 'ℚ', 'ℝ'],
+    richtig: 1, erklaerung: '−5 ist negativ (also nicht in ℕ), aber eine ganze Zahl: −5 ∈ ℤ – und damit automatisch auch in ℚ und ℝ.' },
+]} />

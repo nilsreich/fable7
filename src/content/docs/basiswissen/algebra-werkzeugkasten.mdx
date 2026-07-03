@@ -5,6 +5,8 @@ sidebar:
   order: 1
 ---
 
+import Quiz from '../../../components/Quiz.astro';
+
 ## Worum geht's?
 
 Diese Seite sammelt die Rechentechniken aus der Sekundarstufe I, die wir in
@@ -677,3 +679,28 @@ Nullprodukt** die Lösungen direkt – deshalb sind **Ausklammern** und
 Algebra.
 
 </details>
+
+## Quiz
+
+Zum Abschluss: Klicke bei jeder Frage eine Antwort an – die Auswertung kommt sofort.
+
+<Quiz fragen={[
+  { frage: 'Was ergibt (x + 5)²?',
+    antworten: ['x² + 25', 'x² + 5x + 25', 'x² + 10x + 25', 'x² − 10x + 25'],
+    richtig: 2, erklaerung: 'Erste binomische Formel: (a+b)² = a² + 2ab + b² – das Mittelglied 2 · x · 5 = 10x nicht vergessen!' },
+  { frage: 'Welche Lösungen hat x · (x − 4) = 0?',
+    antworten: ['Nur x = 4', 'Nur x = 0', 'x = 0 und x = 4', 'x = 4 und x = −4'],
+    richtig: 2, erklaerung: 'Satz vom Nullprodukt: Ein Produkt ist null, wenn ein Faktor null ist – also x = 0 oder x − 4 = 0.' },
+  { frage: 'Für welche Form gilt die pq-Formel direkt?',
+    antworten: ['ax² + bx + c = 0 mit beliebigem a', 'x² + px + q = 0', 'x² = c', 'px + q = 0'],
+    richtig: 1, erklaerung: 'Die pq-Formel braucht die Normalform mit dem Koeffizienten 1 vor x² – sonst erst durch a teilen.' },
+  { frage: 'Welche Lösungen hat x² = 49?',
+    antworten: ['Nur x = 7', 'x = 7 und x = −7', 'x = 24,5', 'Keine Lösung'],
+    richtig: 1, erklaerung: 'Beim Wurzelziehen beide Vorzeichen beachten: 7² = 49 und (−7)² = 49.' },
+  { frage: 'Vereinfache x⁷ : x³.',
+    antworten: ['x⁴', 'x¹⁰', 'x²¹', '1/x⁴'],
+    richtig: 0, erklaerung: 'Bei Division mit gleicher Basis werden die Exponenten subtrahiert: 7 − 3 = 4.' },
+  { frage: 'Welche Zahl darf man in 5/(x − 2) nicht einsetzen?',
+    antworten: ['x = 0', 'x = 5', 'x = 2', 'x = −2'],
+    richtig: 2, erklaerung: 'Der Nenner darf nicht null werden: x − 2 = 0 bei x = 2.' },
+]} />

@@ -5,6 +5,8 @@ sidebar:
   order: 2
 ---
 
+import Quiz from '../../../components/Quiz.astro';
+
 ## Worum geht's?
 
 Auf der letzten Seite haben wir die Momentangeschwindigkeit nur
@@ -501,3 +503,25 @@ gliedweise ableiten (Aufgabe 14).
 [Ableitungsregeln](../ableitungsregeln/) – mit ihnen leitet man ab
 Übermorgen jede ganzrationale Funktion in einer Zeile ab, ganz ohne
 Grenzwert.
+
+## Quiz
+
+Zum Abschluss: Klicke bei jeder Frage eine Antwort an – die Auswertung kommt sofort.
+
+<Quiz fragen={[
+  { frage: 'Wie ist die Ableitung f′(x₀) definiert?',
+    antworten: ['Als Differenzenquotient mit h = 1', 'Als Grenzwert des Differenzenquotienten für h → 0', 'Als f(x₀ + h) − f(x₀)', 'Als Steigung der Sekante'],
+    richtig: 1, erklaerung: 'f′(x₀) = lim (f(x₀+h) − f(x₀))/h für h → 0 – der Differentialquotient.' },
+  { frage: 'Warum darf man nicht sofort h = 0 einsetzen?',
+    antworten: ['Weil h immer positiv sein muss', 'Weil dann der unbestimmte Ausdruck 0/0 entsteht', 'Weil die Formel nur für h = 1 gilt', 'Man darf sofort einsetzen'],
+    richtig: 1, erklaerung: 'Zähler und Nenner wären beide 0. Erst vereinfachen und h kürzen – dann ist der Grenzübergang harmlos.' },
+  { frage: 'Was ist die Ableitungsfunktion von f(x) = x²?',
+    antworten: ['f′(x) = x', 'f′(x) = 2x', 'f′(x) = x²/2', 'f′(x) = 2'],
+    richtig: 1, erklaerung: 'Die h-Methode liefert (2xh + h²)/h = 2x + h → 2x.' },
+  { frage: 'f(x) = x². Was ist f′(3)?',
+    antworten: ['9', '3', '6', '2'],
+    richtig: 2, erklaerung: 'f′(x) = 2x, also f′(3) = 6 – die Tangente im Punkt (3|9) hat Steigung 6.' },
+  { frage: 'Was passiert mit dem Summanden +5 in f(x) = x² + 5 beim Ableiten?',
+    antworten: ['Er bleibt stehen', 'Er wird zu 5x', 'Er fällt weg', 'Er wird zu 1/5'],
+    richtig: 2, erklaerung: 'Konstanten verschieben den Graphen nur nach oben und ändern keine Steigung – ihre Ableitung ist 0.' },
+]} />

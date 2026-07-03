@@ -5,6 +5,8 @@ sidebar:
   order: 4
 ---
 
+import Quiz from '../../../components/Quiz.astro';
+
 ## Worum geht's?
 
 Wie steil ist eine Skaterrampe an ihrer Kante? In welche Richtung fliegt
@@ -498,3 +500,25 @@ Kandidaten für Hoch- und Tiefpunkte – das Kernwerkzeug der Seite
 [Extrem- und Wendepunkte](../extrem-wendepunkte/). Vorher trainiert
 [Graphisches Differenzieren](../graphisches-differenzieren/) den Blick
 für den Zusammenhang zwischen $f$ und $f'$.
+
+## Quiz
+
+Zum Abschluss: Klicke bei jeder Frage eine Antwort an – die Auswertung kommt sofort.
+
+<Quiz fragen={[
+  { frage: 'Woher kommt die Steigung der Tangente an der Stelle x₀?',
+    antworten: ['Aus f(x₀)', 'Aus f′(x₀)', 'Aus f(0)', 'Aus dem y-Achsenabschnitt'],
+    richtig: 1, erklaerung: 'Die Ableitung an der Stelle ist genau die Tangentensteigung – f(x₀) liefert nur den Berührpunkt.' },
+  { frage: 'Welcher Zusammenhang gilt zwischen Tangenten- und Normalensteigung?',
+    antworten: ['mₜ = mₙ', 'mₜ + mₙ = 0', 'mₜ · mₙ = −1', 'mₜ · mₙ = 1'],
+    richtig: 2, erklaerung: 'Die Normale steht senkrecht auf der Tangente: mₙ = −1/mₜ.' },
+  { frage: 'Wie lautet die Tangente an f(x) = x² an der Stelle x₀ = 1?',
+    antworten: ['y = 2x', 'y = 2x − 1', 'y = x − 1', 'y = 2x + 1'],
+    richtig: 1, erklaerung: 'B(1|1), m = f′(1) = 2; aus 1 = 2 · 1 + b folgt b = −1.' },
+  { frage: 'Was bedeutet f′(x₀) = 0 für die Tangente?',
+    antworten: ['Es gibt keine Tangente', 'Die Tangente ist waagerecht', 'Die Tangente ist senkrecht', 'Die Tangente geht durch den Ursprung'],
+    richtig: 1, erklaerung: 'Steigung 0 = waagerechte Tangente – Kandidat für Hoch-, Tief- oder Sattelpunkt.' },
+  { frage: 'Woran erkennt man beim Gleichsetzen von Gerade und Parabel, dass die Gerade Tangente ist?',
+    antworten: ['Es gibt zwei Lösungen', 'Es gibt genau eine (doppelte) Lösung', 'Es gibt keine Lösung', 'Die Gerade hat Steigung 0'],
+    richtig: 1, erklaerung: 'Berühren = genau ein gemeinsamer Punkt: Die quadratische Gleichung hat Diskriminante 0.' },
+]} />

@@ -5,6 +5,8 @@ sidebar:
   order: 3
 ---
 
+import Quiz from '../../../components/Quiz.astro';
+
 ## Worum geht's?
 
 Die h-Methode funktioniert – aber wer möchte für
@@ -420,3 +422,28 @@ Grenzübergang.
 **Ausblick:** Mit dem schnellen Ableiten im Gepäck lassen sich jetzt
 [Tangenten- und Normalengleichungen](../tangente-normale/) aufstellen –
 und danach Hoch-, Tief- und Wendepunkte rechnerisch bestimmen.
+
+## Quiz
+
+Zum Abschluss: Klicke bei jeder Frage eine Antwort an – die Auswertung kommt sofort.
+
+<Quiz fragen={[
+  { frage: 'Was ist die Ableitung von f(x) = x⁵?',
+    antworten: ['5x⁵', 'x⁴', '5x⁴', '4x⁵'],
+    richtig: 2, erklaerung: 'Potenzregel: Exponent nach vorn, Exponent um 1 herunter – 5x⁴.' },
+  { frage: 'Was ist die Ableitung von f(x) = 3x²?',
+    antworten: ['6x', '3x', '6x²', '2x'],
+    richtig: 0, erklaerung: 'Faktorregel: Der Vorfaktor bleibt stehen – 3 · 2x = 6x.' },
+  { frage: 'Was ist die Ableitung von f(x) = x?',
+    antworten: ['0', 'x', '1', '2x'],
+    richtig: 2, erklaerung: 'x = x¹, also 1 · x⁰ = 1 – eine Gerade mit Steigung 1.' },
+  { frage: 'Was ist die Ableitung von f(x) = x² − 4x + 7?',
+    antworten: ['2x − 4 + 7', '2x − 4', 'x − 4', '2x + 7'],
+    richtig: 1, erklaerung: 'Gliedweise: 2x − 4; die Konstante 7 fällt weg.' },
+  { frage: 'Wie leitet man f(x) = x²(x − 3) richtig ab?',
+    antworten: ['Faktorweise: 2x · 1', 'Erst ausmultiplizieren, dann gliedweise ableiten', 'Nur die Klammer ableiten', 'Geht mit unseren Regeln nicht'],
+    richtig: 1, erklaerung: 'Die Faktorregel gilt nur für konstante Faktoren! Also: x³ − 3x², abgeleitet 3x² − 6x.' },
+  { frage: 'Was ist die zweite Ableitung von f(x) = x⁴?',
+    antworten: ['4x³', '12x²', '24x', 'x²'],
+    richtig: 1, erklaerung: 'Zweimal Potenzregel: f′(x) = 4x³, dann f″(x) = 12x².' },
+]} />

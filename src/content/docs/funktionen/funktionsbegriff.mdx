@@ -5,6 +5,8 @@ sidebar:
   order: 1
 ---
 
+import Quiz from '../../../components/Quiz.astro';
+
 ## Worum geht's?
 
 Die Wetter-App zeigt für jede Uhrzeit genau eine Temperatur an, der
@@ -541,3 +543,25 @@ ein Blick auf die Situation.
 Funktionstypen im Detail kennen – zuerst [lineare und quadratische
 Funktionen](../lineare-quadratische/), später Potenz-, Exponential- und
 trigonometrische Funktionen. Für alle gelten die Begriffe dieser Seite.
+
+## Quiz
+
+Zum Abschluss: Klicke bei jeder Frage eine Antwort an – die Auswertung kommt sofort.
+
+<Quiz fragen={[
+  { frage: 'Wann ist eine Zuordnung eine Funktion?',
+    antworten: ['Wenn jedem x genau ein y zugeordnet wird', 'Wenn jedem y genau ein x zugeordnet wird', 'Wenn der Graph eine Gerade ist', 'Wenn es unendlich viele Wertepaare gibt'],
+    richtig: 0, erklaerung: 'Genau das ist die Definition: jedem x aus D genau ein Funktionswert – keiner mehr, keiner weniger.' },
+  { frage: 'Warum ist der Kreis x² + y² = 9 kein Funktionsgraph?',
+    antworten: ['Weil er keine Nullstellen hat', 'Weil eine senkrechte Gerade ihn zweimal schneidet', 'Weil er nicht durch den Ursprung geht', 'Weil er keinen y-Achsenabschnitt hat'],
+    richtig: 1, erklaerung: 'Der Senkrechten-Test schlägt fehl: Zu einem x gehören zwei y-Werte – die Zuordnung ist nicht eindeutig.' },
+  { frage: 'f(x) = x² + 1. Was ist f(−2)?',
+    antworten: ['−3', '5', '3', '−5'],
+    richtig: 1, erklaerung: 'Mit Klammer einsetzen: (−2)² + 1 = 4 + 1 = 5. Ohne Klammer entsteht der klassische Fehler −3.' },
+  { frage: 'Was ist der maximale Definitionsbereich von f(x) = √(x − 4)?',
+    antworten: ['x ≠ 4', 'x ≥ 4', 'x ≥ −4', 'alle reellen Zahlen'],
+    richtig: 1, erklaerung: 'Der Radikand darf nicht negativ sein: x − 4 ≥ 0, also x ≥ 4.' },
+  { frage: 'Welchen Wertebereich hat f(x) = x² + 3?',
+    antworten: ['ℝ', '[0; ∞[', '[3; ∞[', ']−∞; 3]'],
+    richtig: 2, erklaerung: 'x² ist nie negativ, der kleinste Wert ist f(0) = 3 – alles ab 3 kommt vor.' },
+]} />

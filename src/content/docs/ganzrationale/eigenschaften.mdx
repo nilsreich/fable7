@@ -5,6 +5,8 @@ sidebar:
   order: 1
 ---
 
+import Quiz from '../../../components/Quiz.astro';
+
 ## Worum geht's?
 
 Nach der Einnahme einer Tablette steigt die Wirkstoffkonzentration im Blut
@@ -458,3 +460,28 @@ hängt von der **Vielfachheit** der Nullstelle ab – das Thema der Seite
 systematisch **berechnet** (Ausklammern, Substitution, Polynomdivision,
 Horner-Schema), zeigt die nächste Seite: [Nullstellen
 bestimmen](../nullstellen/).
+
+## Quiz
+
+Zum Abschluss: Klicke bei jeder Frage eine Antwort an – die Auswertung kommt sofort.
+
+<Quiz fragen={[
+  { frage: 'Welchen Grad hat f(x) = −2x⁴ + x − 7?',
+    antworten: ['−2', '4', '3', '7'],
+    richtig: 1, erklaerung: 'Der Grad ist der höchste Exponent: 4. Der Koeffizient −2 ändert daran nichts.' },
+  { frage: 'Welches Randverhalten hat f(x) = −2x⁴ + x − 7?',
+    antworten: ['Beide Enden nach +∞', 'Beide Enden nach −∞', 'Von −∞ nach +∞', 'Von +∞ nach −∞'],
+    richtig: 1, erklaerung: 'Es zählt nur der Leitterm −2x⁴: gerader Grad, negativer Koeffizient – beide Enden laufen nach unten.' },
+  { frage: 'Ein Term enthält nur ungerade Exponenten. Welche Symmetrie hat der Graph?',
+    antworten: ['Achsensymmetrisch zur y-Achse', 'Punktsymmetrisch zum Ursprung', 'Symmetrisch zur x-Achse', 'Keine Aussage möglich'],
+    richtig: 1, erklaerung: 'Nur ungerade Exponenten bedeutet f(−x) = −f(x) – Punktsymmetrie zum Ursprung.' },
+  { frage: 'Wo schneidet f(x) = x³ − 4x + 2 die y-Achse?',
+    antworten: ['Bei 0', 'Bei −4', 'Bei 2', 'Bei 3'],
+    richtig: 2, erklaerung: 'f(0) = Absolutglied = 2, also im Punkt (0|2).' },
+  { frage: 'Wie viele Nullstellen hat eine ganzrationale Funktion dritten Grades mindestens?',
+    antworten: ['Keine', 'Genau drei', 'Eine', 'Zwei'],
+    richtig: 2, erklaerung: 'Ungerader Grad: Der Graph läuft von −∞ nach +∞ (oder umgekehrt) und muss die x-Achse mindestens einmal kreuzen.' },
+  { frage: 'Welche Funktion ist ganzrational?',
+    antworten: ['f(x) = √x', 'f(x) = 1/x', 'f(x) = x³ − 2x', 'f(x) = 2ˣ'],
+    richtig: 2, erklaerung: 'Ganzrational = Summe von Potenzen mit natürlichen Exponenten. Wurzel (x^½), Bruch (x⁻¹) und Exponentialterm fallen raus.' },
+]} />

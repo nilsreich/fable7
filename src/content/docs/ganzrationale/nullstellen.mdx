@@ -5,6 +5,8 @@ sidebar:
   order: 2
 ---
 
+import Quiz from '../../../components/Quiz.astro';
+
 ## Worum geht's?
 
 Wann ist der Wirkstoff vollständig abgebaut? Wann durchbricht der Graph
@@ -878,3 +880,34 @@ Kandidat keine Nullstelle – und man kennt trotzdem schon $f(x_0)$.
 die vollständige [Linearfaktorzerlegung](../linearfaktorzerlegung/) –
 und mit ihr die Antwort, warum doppelte Nullstellen den Graphen nur
 „berühren“ lassen.
+
+## Quiz
+
+Zum Abschluss: Klicke bei jeder Frage eine Antwort an – die Auswertung kommt sofort.
+
+<Quiz fragen={[
+  { frage: 'Was ist der beste erste Schritt bei x³ − 5x² = 0?',
+    antworten: ['pq-Formel anwenden', 'x² ausklammern', 'Eine Nullstelle raten', 'Substitution z = x²'],
+    richtig: 1, erklaerung: 'Kein Absolutglied → ausklammern: x²(x − 5) = 0 liefert sofort alle Lösungen.' },
+  { frage: 'Warum darf man bei x² = 4x nicht einfach durch x teilen?',
+    antworten: ['Weil man durch 4 teilen müsste', 'Weil die Lösung x = 0 verloren geht', 'Weil x negativ sein könnte', 'Man darf durch x teilen'],
+    richtig: 1, erklaerung: 'Division durch x ist nur für x ≠ 0 erlaubt – die Lösung x = 0 verschwindet dabei. Stattdessen ausklammern!' },
+  { frage: 'Welche Substitution passt zu x⁴ − 13x² + 36 = 0?',
+    antworten: ['z = x⁴', 'z = x²', 'z = 13x', 'z = x − 36'],
+    richtig: 1, erklaerung: 'Mit z = x² wird daraus die quadratische Gleichung z² − 13z + 36 = 0.' },
+  { frage: 'Die Rücksubstitution liefert x² = 9. Welche x-Werte folgen?',
+    antworten: ['x = 9', 'x = 3', 'x = 3 und x = −3', 'x = 81'],
+    richtig: 2, erklaerung: 'Aus einem positiven z-Wert werden zwei x-Werte: ±√9 = ±3.' },
+  { frage: 'Welche Kandidaten testet man beim Raten ganzzahliger Nullstellen?',
+    antworten: ['Die Teiler des Absolutglieds', 'Die Teiler des Leitkoeffizienten', 'Nur 0, 1 und −1', 'Beliebige Zahlen'],
+    richtig: 0, erklaerung: 'Eine ganzzahlige Nullstelle muss das Absolutglied teilen – das schränkt die Auswahl stark ein.' },
+  { frage: 'Die Polynomdivision durch (x − 2) geht mit Rest 0 auf. Was bedeutet das?',
+    antworten: ['2 ist keine Nullstelle', 'x = 2 ist eine Nullstelle', 'Das Polynom hat Grad 2', 'Die Division war falsch'],
+    richtig: 1, erklaerung: 'Rest 0 heißt: (x − 2) ist Faktor des Polynoms, also ist f(2) = 0.' },
+  { frage: 'Was zeigt die letzte Zahl im Horner-Schema an?',
+    antworten: ['Den Grad des Polynoms', 'Den Funktionswert f(x₀)', 'Die nächste Nullstelle', 'Den Leitkoeffizienten'],
+    richtig: 1, erklaerung: 'Die letzte Zahl ist f(x₀) – steht dort 0, ist der Kandidat eine Nullstelle, und davor stehen die Quotienten-Koeffizienten.' },
+  { frage: 'Welche Lösungen hat x · (x − 2)² = 0?',
+    antworten: ['0 und 2 (doppelt)', '0, 2 und −2', 'Nur 2', '0 und 4'],
+    richtig: 0, erklaerung: 'Faktoren null setzen: x = 0 (einfach) und x = 2 (doppelt, wegen des Quadrats).' },
+]} />
