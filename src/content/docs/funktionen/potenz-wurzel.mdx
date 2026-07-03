@@ -1,6 +1,6 @@
 ---
 title: Potenz- und Wurzelfunktionen
-description: "Potenzfunktionen mit natürlichen und negativen Exponenten sowie Wurzelfunktionen."
+description: "Potenzfunktionen mit natürlichen und negativen Exponenten, Wurzelfunktionen und der Begriff der Umkehrfunktion."
 sidebar:
   order: 3
 ---
@@ -81,6 +81,39 @@ Man kann sie auch als Potenzfunktion schreiben: $\sqrt{x} = x^{\frac{1}{2}}$.
 **Wurzelgleichungen** löst man durch Quadrieren – aber Vorsicht:
 Quadrieren ist keine Äquivalenzumformung, deshalb ist die **Probe
 Pflicht** (es können Scheinlösungen entstehen).
+
+### Umkehrfunktionen
+
+Was hier für Quadrieren und Wurzelziehen passiert ist, hat einen eigenen
+Namen: $g$ heißt **Umkehrfunktion** von $f$, wenn $g$ die Wirkung von $f$
+rückgängig macht – erst $f$, dann $g$ anwenden führt zurück zum Start:
+
+$$
+g\big(f(x)\big) = x, \qquad \text{z. B.} \quad \sqrt{x^2} = x
+\ \ (x \geq 0)
+$$
+
+Man schreibt dafür $f^{-1}$ (gelesen „$f$ invers“). Zwei Dinge lassen
+sich immer sagen:
+
+- **Graph:** Der Graph von $f^{-1}$ ist die Spiegelung des Graphen von
+  $f$ an der Winkelhalbierenden $y = x$ (siehe Plot oben) – dabei
+  tauschen Definitions- und Wertebereich die Rollen.
+- **Voraussetzung:** Umkehrbar ist $f$ nur, wenn jeder $y$-Wert **genau
+  einmal** getroffen wird. Die Parabel $y = x^2$ trifft $y = 4$ zweimal
+  ($x = \pm 2$) – deshalb muss man sie erst auf $x \geq 0$ einschränken,
+  bevor die Wurzel sie umkehren kann.
+
+Weitere Umkehrpaare in diesem Schuljahr: [Exponentialfunktion und
+Logarithmus](../exponential-logarithmus/#der-logarithmus) sowie – als
+Rechenoperationen – Kubieren und dritte Wurzel.
+
+:::caution
+$f^{-1}$ ist **nicht** $\frac{1}{f}$! Das hochgestellte $-1$ bezeichnet
+hier die Umkehrung, keinen Kehrwert: $\sqrt{x}$ ist die Umkehrfunktion
+von $x^2$ (für $x \geq 0$), aber $\frac{1}{x^2}$ ist etwas völlig
+anderes.
+:::
 
 ## Beispiele
 
@@ -457,7 +490,9 @@ zu jeder Wurzelgleichung die Probe in der Ausgangsgleichung.
 **Ausblick:** Summen von Potenzfunktionen mit Koeffizienten – etwa
 $f(x) = 2x^3 - 5x^2 + 1$ – heißen [ganzrationale
 Funktionen](../../ganzrationale/eigenschaften/). Ihre Symmetrie- und
-Verlaufsregeln bauen direkt auf dieser Seite auf.
+Verlaufsregeln bauen direkt auf dieser Seite auf. Und die Hyperbeln mit
+ihren Polstellen und Asymptoten bekommen auf der nächsten Seite Familie:
+die [gebrochenrationalen Funktionen](../gebrochenrationale/).
 
 ## Quiz
 
@@ -482,4 +517,7 @@ Zum Abschluss: Klicke bei jeder Frage eine Antwort an – die Auswertung kommt s
   { frage: 'Warum ist nach dem Lösen einer Wurzelgleichung die Probe Pflicht?',
     antworten: ['Weil man sich verrechnet haben könnte', 'Weil Quadrieren keine Äquivalenzumformung ist und Scheinlösungen erzeugen kann', 'Weil Wurzeln nie exakt sind', 'Die Probe ist freiwillig'],
     richtig: 1, erklaerung: 'Aus a = b folgt a² = b², aber nicht umgekehrt – beim Quadrieren können Lösungen dazukommen, die die Ausgangsgleichung nicht erfüllen.' },
+  { frage: 'Was bedeutet f⁻¹ (f invers)?',
+    antworten: ['Den Kehrwert 1/f', 'Die Umkehrfunktion, die die Wirkung von f rückgängig macht', 'Die Ableitung von f', 'Die Spiegelung an der x-Achse'],
+    richtig: 1, erklaerung: 'f⁻¹ macht f rückgängig: f⁻¹(f(x)) = x. Der Graph entsteht durch Spiegelung an y = x – mit dem Kehrwert hat das nichts zu tun.' },
 ]} />
