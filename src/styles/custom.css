@@ -38,6 +38,55 @@
 }
 
 /* --------------------------------------------------------------------------
+   Checklisten zur Klassenarbeit: Die Kästchen werden per interaktiv.js
+   freigeschaltet (Stand bleibt pro Seite gespeichert). Groß genug für
+   Fingerbedienung am Tablet; abgehakte Punkte treten optisch zurück.
+   -------------------------------------------------------------------------- */
+.sl-markdown-content ul:has(> li.task-list-item) {
+	list-style: none;
+	padding-inline-start: 0.25rem;
+}
+
+.sl-markdown-content li.task-list-item > input[type='checkbox'] {
+	width: 1.1rem;
+	height: 1.1rem;
+	margin-inline-end: 0.4rem;
+	vertical-align: -0.15rem;
+	accent-color: var(--sl-color-accent);
+	cursor: pointer;
+}
+
+.sl-markdown-content li.task-list-item:has(> input:checked) {
+	color: var(--sl-color-gray-3);
+}
+
+/* --------------------------------------------------------------------------
+   Beamer-Schalter (per interaktiv.js eingefügt): dezenter Knopf unten
+   rechts, damit der Modus am Tablet ohne URL-Tipperei umschaltbar ist.
+   -------------------------------------------------------------------------- */
+.beamer-schalter {
+	position: fixed;
+	right: 0.75rem;
+	bottom: 0.75rem;
+	z-index: 10;
+	border: 1px solid var(--sl-color-gray-5);
+	border-radius: 999px;
+	padding: 0.3rem 0.85rem;
+	font-size: var(--sl-text-xs);
+	font-weight: 600;
+	color: var(--sl-color-gray-2);
+	background-color: var(--sl-color-bg);
+	cursor: pointer;
+	opacity: 0.55;
+	transition: opacity 0.15s;
+}
+
+.beamer-schalter:hover,
+.beamer-schalter:focus-visible {
+	opacity: 1;
+}
+
+/* --------------------------------------------------------------------------
    KaTeX: Displayformeln dürfen nie horizontal überlaufen; im Zweifel
    scrollen statt das Layout sprengen (halbe Beamerbreite!).
    -------------------------------------------------------------------------- */
@@ -61,14 +110,50 @@ html.beamer {
 	--sl-content-width: 100%;
 	--sl-content-inline-start: 0rem;
 	--sl-mobile-toc-height: 0rem;
+	--sl-nav-height: 0rem;
 }
 
-/* Linke Sidebar und rechtes Inhaltsverzeichnis ausblenden */
+/* Topbar, linke Sidebar und rechtes Inhaltsverzeichnis ausblenden —
+   an der Wand zählt nur der Inhalt. Raus aus dem Modus: Beamer-Schalter
+   unten rechts oder ?beamer=off. */
+html.beamer header.header,
 html.beamer nav.sidebar,
 html.beamer .right-sidebar-container,
 html.beamer mobile-starlight-toc,
 html.beamer starlight-menu-button {
 	display: none !important;
+}
+
+/* Laserpointer: Systemcursor aus, stattdessen folgt der rote Leuchtpunkt
+   (.laserpunkt, per interaktiv.js eingefügt) Maus, Stift oder Finger. */
+html.beamer,
+html.beamer * {
+	cursor: none !important;
+}
+
+.laserpunkt {
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 30px;
+	height: 30px;
+	margin: -15px 0 0 -15px;
+	border-radius: 50%;
+	pointer-events: none;
+	z-index: 9999;
+	background: radial-gradient(
+		circle,
+		rgba(255, 235, 235, 0.95) 0 12%,
+		rgba(255, 45, 45, 0.9) 30%,
+		rgba(255, 45, 45, 0.35) 55%,
+		transparent 72%
+	);
+	box-shadow: 0 0 14px 5px rgba(255, 0, 0, 0.35);
+}
+
+html.beamer .laserpunkt {
+	display: block;
 }
 
 /* Inhalt auf volle Breite */
