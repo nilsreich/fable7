@@ -61,14 +61,27 @@
 }
 
 /* --------------------------------------------------------------------------
-   Beamer-Schalter (per interaktiv.js eingefügt): dezenter Knopf unten
-   rechts, damit der Modus am Tablet ohne URL-Tipperei umschaltbar ist.
+   Leiste unten rechts (per interaktiv.js eingefügt): Beamer-Schalter und
+   – nur im Beamer-Modus – der Übungs-Timer. Dezent, bis man sie braucht.
    -------------------------------------------------------------------------- */
-.beamer-schalter {
+.ecken-leiste {
 	position: fixed;
 	right: 0.75rem;
 	bottom: 0.75rem;
 	z-index: 10;
+	display: flex;
+	gap: 0.4rem;
+	align-items: center;
+	opacity: 0.55;
+	transition: opacity 0.15s;
+}
+
+.ecken-leiste:hover,
+.ecken-leiste:focus-within {
+	opacity: 1;
+}
+
+.pult-knopf {
 	border: 1px solid var(--sl-color-gray-5);
 	border-radius: 999px;
 	padding: 0.3rem 0.85rem;
@@ -77,13 +90,61 @@
 	color: var(--sl-color-gray-2);
 	background-color: var(--sl-color-bg);
 	cursor: pointer;
-	opacity: 0.55;
-	transition: opacity 0.15s;
 }
 
-.beamer-schalter:hover,
-.beamer-schalter:focus-visible {
-	opacity: 1;
+.pult-knopf:hover {
+	border-color: var(--sl-color-accent);
+}
+
+/* Timer-Bedienung nur im Beamer-Modus anbieten */
+.timer-knopf,
+.timer-vorwahl {
+	display: none;
+}
+
+html.beamer .timer-knopf {
+	display: inline-block;
+}
+
+html.beamer .timer-vorwahl.offen {
+	display: inline-flex;
+	gap: 0.4rem;
+}
+
+/* Countdown oben rechts: aus der letzten Reihe ablesbar, Antippen beendet.
+   Bewusst rem-frei dimensioniert, damit er im Beamer-Modus nicht mitwächst. */
+.timer-anzeige {
+	display: none;
+	position: fixed;
+	top: 12px;
+	right: 12px;
+	z-index: 30;
+	border: 1px solid var(--sl-color-gray-5);
+	border-radius: 10px;
+	padding: 6px 14px;
+	font-size: 44px;
+	line-height: 1.2;
+	font-weight: 700;
+	font-variant-numeric: tabular-nums;
+	color: var(--sl-color-white);
+	background-color: var(--sl-color-bg);
+	cursor: pointer;
+}
+
+html.beamer .timer-anzeige.laeuft {
+	display: block;
+}
+
+.timer-anzeige.abgelaufen {
+	color: var(--sl-color-red, #d1242f);
+	border-color: var(--sl-color-red, #d1242f);
+	animation: timer-puls 1.2s ease-in-out infinite;
+}
+
+@keyframes timer-puls {
+	50% {
+		opacity: 0.35;
+	}
 }
 
 /* --------------------------------------------------------------------------
@@ -122,38 +183,6 @@ html.beamer .right-sidebar-container,
 html.beamer mobile-starlight-toc,
 html.beamer starlight-menu-button {
 	display: none !important;
-}
-
-/* Laserpointer: Systemcursor aus, stattdessen folgt der rote Leuchtpunkt
-   (.laserpunkt, per interaktiv.js eingefügt) Maus, Stift oder Finger. */
-html.beamer,
-html.beamer * {
-	cursor: none !important;
-}
-
-.laserpunkt {
-	display: none;
-	position: fixed;
-	left: 0;
-	top: 0;
-	width: 30px;
-	height: 30px;
-	margin: -15px 0 0 -15px;
-	border-radius: 50%;
-	pointer-events: none;
-	z-index: 9999;
-	background: radial-gradient(
-		circle,
-		rgba(255, 235, 235, 0.95) 0 12%,
-		rgba(255, 45, 45, 0.9) 30%,
-		rgba(255, 45, 45, 0.35) 55%,
-		transparent 72%
-	);
-	box-shadow: 0 0 14px 5px rgba(255, 0, 0, 0.35);
-}
-
-html.beamer .laserpunkt {
-	display: block;
 }
 
 /* Inhalt auf volle Breite */

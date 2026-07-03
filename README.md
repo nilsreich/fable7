@@ -19,9 +19,16 @@ Mathematik-Rendering mit KaTeX, Funktionsgraphen als statische SVGs.
 Für die Projektion im Unterricht (halber Bildschirm neben dem Schreib-Canvas):
 an eine beliebige Seiten-URL `?beamer` anhängen **oder** den Knopf „Beamer“
 unten rechts antippen. Topbar, Sidebar und Inhaltsverzeichnis verschwinden,
-Schrift und Formeln werden größer, und statt des Mauscursors folgt ein roter
-Laserpointer-Punkt Maus, Stift oder Finger. Der Modus bleibt beim
-Seitenwechsel erhalten; `?beamer=off` oder erneutes Antippen beendet ihn.
+Schrift und Formeln werden größer. Beim Einschalten wird außerdem das helle
+Farbschema erzwungen (Projektoren!) und alle offenen Lösungen werden
+zugeklappt; beim Ausschalten kommt das vorherige Farbschema zurück. Der
+Modus bleibt beim Seitenwechsel erhalten; `?beamer=off` oder erneutes
+Antippen beendet ihn.
+
+Im Beamer-Modus gibt es zusätzlich einen **Übungs-Timer** (Knopf „Timer“
+unten rechts, Vorwahl 5/10/15/25 min): großer Countdown oben rechts, aus
+der letzten Reihe ablesbar, läuft über Seitenwechsel hinweg weiter und
+pulsiert nach Ablauf rot. Antippen des Countdowns beendet ihn.
 
 ## PWA
 
