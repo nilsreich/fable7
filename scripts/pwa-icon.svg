@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+	<!-- Quelle der PWA-Icons: mit `node scripts/pwa-icons.mjs` nach public/ rastern.
+	     Alle Bildelemente liegen in der Safe-Zone (innere 80 %) für maskable Icons. -->
+	<rect width="512" height="512" fill="#4338ca"/>
+	<!-- Achsenkreuz -->
+	<g stroke="#c7d2fe" stroke-width="14" stroke-linecap="round" fill="none">
+		<path d="M76 396 H428"/>
+		<path d="M410 382 428 396 410 410"/>
+		<path d="M124 428 V92"/>
+		<path d="M110 110 124 92 138 110"/>
+	</g>
+	<!-- Parabel -->
+	<path d="M150 128 Q 262 560 404 140" fill="none" stroke="#ffffff" stroke-width="30" stroke-linecap="round"/>
+</svg>

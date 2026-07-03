@@ -34,10 +34,15 @@ export default defineConfig({
 })();`,
 				},
 				{
-					// Checklisten abhakbar machen + Beamer-Schalter (siehe public/interaktiv.js)
+					// Checklisten abhakbar machen, Beamer-Schalter, Laserpointer,
+					// Service-Worker-Registrierung (siehe public/interaktiv.js)
 					tag: 'script',
 					attrs: { src: '/interaktiv.js', defer: true },
 				},
+				// PWA: Manifest, Statusleisten-Farbe, Homescreen-Icon für iOS
+				{ tag: 'link', attrs: { rel: 'manifest', href: '/manifest.webmanifest' } },
+				{ tag: 'meta', attrs: { name: 'theme-color', content: '#4338ca' } },
+				{ tag: 'link', attrs: { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' } },
 			],
 			customCss: ['katex/dist/katex.min.css', './src/styles/custom.css'],
 			sidebar: [

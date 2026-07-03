@@ -7,6 +7,9 @@
 // 2. Beamer-Schalter: kleiner Knopf unten rechts, der den Beamer-Modus
 //    ohne URL-Parameter umschaltet (gleicher sessionStorage-Zustand wie
 //    das ?beamer-Skript im <head>).
+// 3. Laserpointer: Im Beamer-Modus ersetzt ein roter Leuchtpunkt den
+//    Cursor und folgt Maus, Stift und Finger (Sichtbarkeit regelt CSS).
+// 4. Service Worker für die PWA (Offline-Nutzung besuchter Seiten).
 (function () {
 	function init() {
 		// --- Checklisten freischalten und Stand merken -----------------------
@@ -54,6 +57,25 @@
 		});
 		beschrifte();
 		document.body.appendChild(knopf);
+
+		// --- Laserpointer -----------------------------------------------------
+		var laser = document.createElement('div');
+		laser.className = 'laserpunkt';
+		laser.setAttribute('aria-hidden', 'true');
+		laser.style.transform = 'translate(-100px, -100px)'; // bis zur ersten Bewegung außerhalb
+		document.body.appendChild(laser);
+		function zeige(e) {
+			laser.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
+		}
+		document.addEventListener('pointermove', zeige, { passive: true });
+		document.addEventListener('pointerdown', zeige, { passive: true });
+
+		// --- Service Worker (PWA) ---------------------------------------------
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('/sw.js').catch(function () {
+				/* z. B. lokal ohne HTTPS – die Seite funktioniert auch ohne */
+			});
+		}
 	}
 
 	if (document.readyState === 'loading') {

@@ -18,9 +18,19 @@ Mathematik-Rendering mit KaTeX, Funktionsgraphen als statische SVGs.
 
 Für die Projektion im Unterricht (halber Bildschirm neben dem Schreib-Canvas):
 an eine beliebige Seiten-URL `?beamer` anhängen **oder** den Knopf „Beamer“
-unten rechts antippen. Sidebar und Inhaltsverzeichnis verschwinden, Schrift
-und Formeln werden größer. Der Modus bleibt beim Seitenwechsel erhalten;
-`?beamer=off` oder erneutes Antippen beendet ihn.
+unten rechts antippen. Topbar, Sidebar und Inhaltsverzeichnis verschwinden,
+Schrift und Formeln werden größer, und statt des Mauscursors folgt ein roter
+Laserpointer-Punkt Maus, Stift oder Finger. Der Modus bleibt beim
+Seitenwechsel erhalten; `?beamer=off` oder erneutes Antippen beendet ihn.
+
+## PWA
+
+Die Website ist als Progressive Web App installierbar („Zum Startbildschirm
+hinzufügen“) und läuft dann ohne Browser-Chrome. Ein Service Worker
+(`public/sw.js`) cacht jede besuchte Seite; einmal geöffnete Themen sind
+danach offline verfügbar und werden bei bestehender Verbindung im
+Hintergrund aktualisiert. Manifest: `public/manifest.webmanifest`.
+Die Icons entstehen aus `scripts/pwa-icon.svg` per `node scripts/pwa-icons.mjs`.
 
 ## Interaktive Elemente
 
