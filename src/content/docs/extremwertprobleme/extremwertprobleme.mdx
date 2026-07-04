@@ -52,6 +52,18 @@ $P''(x) = -2 < 0$ → Maximum. $y = 10$, $P = 100$.
 
 **Antwort:** Beide Zahlen 10, maximales Produkt 100.
 
+<details class="verstaendnis">
+<summary>Verständnisfrage: Warum muss die Nebenbedingung eingesetzt werden, <em>bevor</em> abgeleitet wird?</summary>
+
+Unsere Ableitungsregeln funktionieren nur für Funktionen **einer**
+Variablen. $P = x \cdot y$ mit zwei freien Größen kann man nicht
+sinnvoll ableiten – erst die Nebenbedingung $y = 20 - x$ macht daraus
+$P(x) = x(20-x)$, eine gewöhnliche Funktion von $x$. Sie transportiert
+außerdem die entscheidende Information: $x$ und $y$ sind nicht
+unabhängig.
+
+</details>
+
 ### Randwerte nicht vergessen
 
 Der Definitionsbereich der Zielfunktion ist im Sachkontext fast immer
@@ -59,12 +71,33 @@ ein **Intervall**. Das gesuchte Optimum kann statt an einer Stelle mit
 $f' = 0$ auch **am Rand** liegen – deshalb gehören die Randwerte zur
 Kontrolle dazu (Aufgabe 30 zeigt einen solchen Fall).
 
+<details class="verstaendnis">
+<summary>Verständnisfrage: Warum übersieht die Bedingung $f'(x) = 0$ Optima am Rand?</summary>
+
+$f'(x_0) = 0$ sucht Stellen mit waagerechter Tangente – also Gipfel und
+Täler **im Inneren**. Am Rand kann der größte Wert aber auch „im
+Anstieg“ erreicht werden: Eine auf $[0;\ 5]$ streng steigende Funktion
+hat ihr Maximum bei $x = 5$, obwohl die Ableitung dort nicht null ist.
+Deshalb: Kandidaten aus $f' = 0$ **und** Randwerte vergleichen.
+
+</details>
+
 :::caution
 Häufigster Fehler: Es wird die **falsche Größe** optimiert. Die
 Zielfunktion ist immer die Größe aus der Frage („… soll maximal
 werden“); die Nebenbedingung ist der feste Zusammenhang („… stehen
 100 m Zaun zur Verfügung“). Erst benennen, dann rechnen!
 :::
+
+<details class="verstaendnis">
+<summary>Verständnisfrage: „100 m Zaun, die eingezäunte Fläche soll möglichst groß werden“ – was ist hier Zielfunktion, was Nebenbedingung?</summary>
+
+Die **Frage** nennt die Zielfunktion: Die *Fläche* $A = a \cdot b$ soll
+maximal werden. Die **feste Vorgabe** ist die Nebenbedingung: Der
+*Umfang* ist mit $2a + 2b = 100$ vorgegeben. Wer versehentlich den
+Umfang ableitet, optimiert die Größe, die längst feststeht.
+
+</details>
 
 ## Beispiele
 
@@ -1142,6 +1175,33 @@ Beispiel 4 und Aufgabe 33 stets $h = 2r$ heraus.
 
 </details>
 
+<details class="aufgabe">
+<summary>Aufgabe 36 ⭐⭐ · Verständnisaufgabe</summary>
+
+a) Finde den Fehler: „100 m Zaun, maximale Rechteckfläche: Ich leite den
+Umfang $U = 2a + 2b$ ab und setze ihn null.“
+b) Wahr oder falsch? „Wenn $P'(x_0) = 0$ und $P''(x_0) < 0$ gilt, ist
+$x_0$ automatisch die Antwort auf die Sachfrage.“
+
+<details>
+<summary>Lösung zu Aufgabe 36</summary>
+
+a) Hier wird die **falsche Größe** optimiert: Der Umfang steht mit
+100 m längst fest – er ist die Nebenbedingung. Maximal werden soll die
+**Fläche**: Zielfunktion $A = a \cdot b$, Nebenbedingung
+$b = 50 - a$ einsetzen, dann $A(a) = a(50 - a)$ ableiten.
+
+b) **Falsch.** Damit ist $x_0$ nur ein **lokales Maximum** der
+Zielfunktion. Für die Antwort fehlen drei Prüfungen: Liegt $x_0$
+überhaupt im sinnvollen Definitionsbereich? Ist der Wert größer als die
+**Randwerte**? Und was war eigentlich gefragt – oft will die Aufgabe
+noch die zweite Größe oder den optimalen Wert selbst wissen
+(Antwortsatz mit Einheiten!).
+
+</details>
+
+</details>
+
 ## Merksatz
 
 <details>
@@ -1204,4 +1264,10 @@ Zum Abschluss: Klicke bei jeder Frage eine Antwort an – die Auswertung kommt s
   { frage: 'Warum darf man statt des Abstands das Abstandsquadrat minimieren?',
     antworten: ['Weil es dasselbe Ergebnis mit einfacherer Rechnung liefert', 'Weil der Abstand nie minimal wird', 'Darf man nicht', 'Weil Quadrate immer kleiner sind'],
     richtig: 0, erklaerung: 'Quadrieren ist für nichtnegative Zahlen monoton – Minimum an derselben Stelle, aber ohne störende Wurzel im Term.' },
+  { frage: 'Verständnisfrage: Warum kann man die Zielfunktion P = x · y nicht direkt ableiten?',
+    antworten: ['Weil Produkte nicht abgeleitet werden können', 'Weil sie noch zwei unabhängige Variablen enthält – erst die Nebenbedingung macht daraus eine Funktion einer Variablen', 'Weil P zu groß werden kann', 'Man kann: P′ = y'],
+    richtig: 1, erklaerung: 'Unsere Ableitungsregeln gelten für Funktionen einer Variablen. Die Nebenbedingung (z. B. y = 20 − x) eliminiert die zweite Größe.' },
+  { frage: 'Verständnisfrage: Die Zielfunktion ist auf [0; 5] streng steigend. Wo liegt das Maximum?',
+    antworten: ['Nirgends – f′ wird nie null', 'Bei x = 0', 'Am rechten Rand x = 5, obwohl dort f′ ≠ 0 ist', 'In der Intervallmitte'],
+    richtig: 2, erklaerung: 'f′ = 0 findet nur innere Gipfel. Auf einem Intervall kann das Optimum am Rand sitzen – deshalb gehören Randwerte immer zur Kontrolle.' },
 ]} />

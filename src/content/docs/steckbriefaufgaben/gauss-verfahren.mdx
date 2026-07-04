@@ -27,6 +27,17 @@ Unbekannten. Die Lösungsmenge ändert sich **nicht**, wenn man
 2. eine Gleichung mit einer Zahl $\neq 0$ **multipliziert**,
 3. das Vielfache einer Gleichung zu einer anderen **addiert**.
 
+<details class="verstaendnis">
+<summary>Verständnisfrage: Warum steht bei Umformung 2 ausdrücklich „$\neq 0$“?</summary>
+
+Multiplizieren mit 0 macht aus jeder Gleichung die nichtssagende Zeile
+$0 = 0$ – die Information der Gleichung ist **vernichtet**, und die
+Lösungsmenge wird größer als vorher. Alle erlaubten Umformungen sind
+**umkehrbar** (man kommt zum alten System zurück); genau deshalb bleibt
+die Lösungsmenge unverändert. Mal 0 ist nicht umkehrbar.
+
+</details>
+
 ### Die Idee des Gauß-Verfahrens: Stufenform
 
 Mit den erlaubten Umformungen werden systematisch Unbekannte
@@ -100,6 +111,17 @@ x + 2y - z &= 2
 \end{array}\right)
 $$
 
+<details class="verstaendnis">
+<summary>Verständnisfrage: Warum darf man die Buchstaben $x$, $y$, $z$ einfach weglassen?</summary>
+
+Weil die **Spaltenposition** die Information übernimmt: Erste Spalte =
+$x$-Koeffizienten, zweite = $y$, dritte = $z$, hinter dem Strich die
+rechte Seite. Die Buchstaben rechnen ohnehin nie mit – sie stehen nur
+daneben. Wichtig ist deshalb, fehlende Unbekannte als **0** zu notieren,
+damit die Spalten nicht verrutschen.
+
+</details>
+
 Die Zeilenumformungen laufen identisch; Ziel ist die
 **Dreiecksgestalt** (unterhalb der Diagonale nur Nullen):
 
@@ -118,6 +140,17 @@ die Sonderfälle in der letzten Zeile:
 
 - Zeile $0 = 5$ (falsche Aussage) → **keine Lösung**
 - Zeile $0 = 0$ (immer wahr) → **unendlich viele Lösungen**
+
+<details class="verstaendnis">
+<summary>Verständnisfrage: Warum bedeutet die Zeile $0 = 0$ „unendlich viele Lösungen“ – sie stimmt doch einfach immer?</summary>
+
+Genau darum: Sie stellt **keine Bedingung** mehr. Eine der Gleichungen
+war nur eine Kombination der anderen – es bleiben effektiv zwei
+Gleichungen für drei Unbekannte. Eine Unbekannte darf man frei wählen,
+und jede Wahl liefert eine Lösung: unendlich viele. (Zum Vergleich:
+$0 = 5$ ist eine *unerfüllbare* Bedingung – keine Lösung.)
+
+</details>
 
 ## Beispiele
 
@@ -881,6 +914,34 @@ Seiten sind Vielfache voneinander.
 
 </details>
 
+<details class="aufgabe">
+<summary>Aufgabe 26 ⭐⭐ · Verständnisaufgabe</summary>
+
+Wahr oder falsch? Begründe:
+a) „Ich multipliziere Zeile II mit 0 – dann steht dort $0 = 0$, und das
+LGS hat unendlich viele Lösungen.“
+b) „Ein LGS mit vier Gleichungen und nur drei Unbekannten kann niemals
+eine Lösung haben.“
+
+<details>
+<summary>Lösung zu Aufgabe 26</summary>
+
+a) **Falsch.** Multiplizieren mit 0 ist keine erlaubte Umformung – es
+vernichtet die Information der Gleichung, statt sie umzuformen. Die
+Zeile $0 = 0$ sagt nur dann „unendlich viele Lösungen“, wenn sie durch
+*erlaubte* Umformungen entsteht, weil eine Gleichung wirklich von den
+anderen abhängig war.
+
+b) **Falsch.** Wenn die vierte Gleichung zu den anderen **passt** (also
+von ihnen abhängig ist), wird sie beim Gauß-Verfahren zur Zeile
+$0 = 0$, und die eindeutige Lösung der ersten drei bleibt. Genau das
+nutzt man bei Steckbriefaufgaben als eingebaute Probe: Eine Bedingung
+mehr als nötig schadet nicht, solange sie konsistent ist.
+
+</details>
+
+</details>
+
 ## Merksatz
 
 <details>
@@ -942,6 +1003,12 @@ Zum Abschluss: Klicke bei jeder Frage eine Antwort an – die Auswertung kommt s
   { frage: 'In welcher Reihenfolge löst man ein System in Stufenform?',
     antworten: ['Von oben nach unten', 'Von unten nach oben (Rückwärtseinsetzen)', 'In beliebiger Reihenfolge', 'Alle gleichzeitig'],
     richtig: 1, erklaerung: 'Die unterste Zeile enthält nur noch eine Unbekannte – ihr Wert wird nach oben durchgereicht.' },
+  { frage: 'Verständnisfrage: Warum darf eine Zeile nicht mit 0 multipliziert werden?',
+    antworten: ['Weil 0 keine Zahl ist', 'Weil die Information der Gleichung dabei unwiederbringlich verloren geht', 'Weil dann die Matrix zu klein wird', 'Man darf – das Ergebnis bleibt gleich'],
+    richtig: 1, erklaerung: 'Aus jeder Gleichung würde 0 = 0. Erlaubte Umformungen sind umkehrbar – nur deshalb bleibt die Lösungsmenge unverändert.' },
+  { frage: 'Verständnisfrage: Wieso funktioniert die Matrixschreibweise ohne die Buchstaben x, y, z?',
+    antworten: ['Die Buchstaben sind in der Matrix versteckt', 'Die Spaltenposition speichert, zu welcher Unbekannten ein Koeffizient gehört', 'Es funktioniert nur bei drei Unbekannten', 'Weil die rechte Seite wegfällt'],
+    richtig: 1, erklaerung: 'Spalte 1 = x, Spalte 2 = y, Spalte 3 = z, hinter dem Strich die rechte Seite. Deshalb fehlende Unbekannte unbedingt als 0 eintragen!' },
 ]} />
 
 ## Checkliste zur Klassenarbeit

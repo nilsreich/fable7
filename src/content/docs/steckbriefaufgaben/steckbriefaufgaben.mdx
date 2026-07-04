@@ -34,6 +34,17 @@ jetzt ist es **umgekehrt**. Der Weg:
 Ein Ansatz vom Grad $n$ hat $n + 1$ Unbekannte – man braucht also
 **$n + 1$ Bedingungen** (Grad 3 → 4 Bedingungen).
 
+<details class="verstaendnis">
+<summary>Verständnisfrage: Warum braucht Grad 3 genau <em>vier</em> Bedingungen – nicht drei?</summary>
+
+Gezählt werden die **Koeffizienten**, nicht der Grad: In
+$ax^3 + bx^2 + cx + d$ stecken vier Unbekannte ($a$ bis $d$) – das
+Absolutglied zählt mit. Jede unabhängige Bedingung legt eine davon
+fest. Mit nur drei Gleichungen bliebe ein Koeffizient frei, und
+unendlich viele Funktionen würden passen.
+
+</details>
+
 ### Das Übersetzungs-Wörterbuch
 
 | Eigenschaft | Gleichung(en) |
@@ -50,12 +61,34 @@ Ein Ansatz vom Grad $n$ hat $n + 1$ Unbekannte – man braucht also
 Ein „Punkt mit Zusatzeigenschaft“ liefert also gleich **zwei**
 Gleichungen – so kommen die nötigen $n + 1$ Bedingungen zusammen.
 
+<details class="verstaendnis">
+<summary>Verständnisfrage: Was geht beim Übersetzen von „Hochpunkt $H(2 \mid 5)$“ in Gleichungen verloren?</summary>
+
+Das „Hoch“! Übersetzt wird nur: Punkt liegt drauf ($f(2) = 5$) und
+Tangente waagerecht ($f'(2) = 0$) – beides sind **notwendige**
+Bedingungen. Ob dort wirklich ein Hochpunkt (und nicht ein Tief- oder
+Sattelpunkt) entsteht, weiß man erst nach der Rechnung – deshalb ist
+die Probe mit der hinreichenden Bedingung Pflicht.
+
+</details>
+
 ### Symmetrie verkürzt den Ansatz
 
 - **punktsymmetrisch** zum Ursprung → nur ungerade Exponenten:
   $f(x) = ax^3 + cx$ (2 Unbekannte statt 4!)
 - **achsensymmetrisch** zur $y$-Achse → nur gerade Exponenten:
   $f(x) = ax^4 + bx^2 + c$
+
+<details class="verstaendnis">
+<summary>Verständnisfrage: Warum darf man bei Punktsymmetrie $b$ und $d$ von vornherein weglassen?</summary>
+
+Punktsymmetrie verlangt $f(-x) = -f(x)$ – und das schaffen nur die
+ungeraden Potenzen. Schon ein kleines $d \neq 0$ (oder $b \neq 0$)
+zerstört die Symmetrie: $g(x) = x^3 + 5$ erfüllt
+$g(-1) = 4 \neq -g(1) = -6$. Die Symmetrie-Angabe ersetzt also zwei
+Gleichungen und halbiert das Gleichungssystem.
+
+</details>
 
 ### Lösen des Gleichungssystems
 
@@ -882,6 +915,31 @@ keine Lösung (es käme $a = 0$ heraus – dann wäre der Grad nicht 3).
 
 </details>
 
+<details class="aufgabe">
+<summary>Aufgabe 26 ⭐⭐ · Verständnisaufgabe</summary>
+
+a) Finde den Fehler: „Wendepunkt $W(1 \mid 3)$ übersetze ich als
+$f''(1) = 3$.“
+b) Wahr oder falsch? „Wenn das Gleichungssystem eindeutig lösbar war,
+erfüllt die gefundene Funktion sicher alle Forderungen des Steckbriefs.“
+
+<details>
+<summary>Lösung zu Aufgabe 26</summary>
+
+a) Die zweite Ableitung ist an der Wendestelle **null**, nicht 3. Die 3
+ist der Funktionswert. Richtig: $f(1) = 3$ **und** $f''(1) = 0$ – ein
+Wendepunkt liefert wie jeder „Punkt mit Zusatzeigenschaft“ zwei
+Gleichungen.
+
+b) **Falsch.** Das LGS verarbeitet nur die **notwendigen** Bedingungen.
+Ob aus $f'(a) = 0$ wirklich der geforderte *Hoch*punkt wurde (und nicht
+ein Tief- oder Sattelpunkt), zeigt erst die Probe mit der hinreichenden
+Bedingung – sie gehört immer ans Ende.
+
+</details>
+
+</details>
+
 ## Merksatz
 
 <details>
@@ -941,4 +999,10 @@ Zum Abschluss: Klicke bei jeder Frage eine Antwort an – die Auswertung kommt s
   { frage: 'Eine Parabel ist durch zwei Punkte gegeben. Wie viele passende Parabeln gibt es?',
     antworten: ['Genau eine', 'Zwei', 'Keine', 'Unendlich viele'],
     richtig: 3, erklaerung: 'Grad 2 braucht drei Bedingungen – mit nur zwei bleibt ein Koeffizient frei: unendlich viele Lösungen.' },
+  { frage: 'Verständnisfrage: Warum zählt beim Ansatz ax³ + bx² + cx + d auch das d als Unbekannte?',
+    antworten: ['Es zählt nicht – d ist immer 0', 'Weil alle vier Koeffizienten den Graphen mitbestimmen und festgelegt werden müssen', 'Weil d der Grad ist', 'Weil d die Nullstelle angibt'],
+    richtig: 1, erklaerung: 'd verschiebt den Graphen in y-Richtung – ohne eine Bedingung dafür passen unendlich viele Funktionen. Grad n ⇒ n + 1 Unbekannte.' },
+  { frage: 'Verständnisfrage: Die Symmetrieangabe „punktsymmetrisch zum Ursprung“ ersetzt beim Grad-3-Ansatz wie viel?',
+    antworten: ['Nichts – sie ist nur ein Hinweis', 'Zwei Bedingungen: b = 0 und d = 0 stehen sofort fest', 'Eine Bedingung', 'Das ganze LGS'],
+    richtig: 1, erklaerung: 'Nur ungerade Exponenten bleiben: Der Ansatz schrumpft auf ax³ + cx mit zwei Unbekannten – die halbe Arbeit.' },
 ]} />
