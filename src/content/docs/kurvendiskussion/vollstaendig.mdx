@@ -34,6 +34,17 @@ komplette Aufgaben.
 Dazu je nach Aufgabe: Monotonie-Intervalle (Vorzeichen von $f'$),
 Krümmung (Vorzeichen von $f''$), Wertebereich, Tangenten.
 
+<details class="verstaendnis">
+<summary>Verständnisfrage: Warum ist die Reihenfolge des Schemas nicht beliebig?</summary>
+
+Die Schritte bauen aufeinander auf: Die Symmetrie (2) halbiert alle
+folgenden Rechnungen. Randverhalten (3) und Nullstellen (4) spannen das
+Grundgerüst auf, in das Extrem- (5) und Wendepunkte (6) eingeordnet
+werden. Und die Skizze (7) funktioniert nur als Schlusskontrolle, wenn
+alle Ergebnisse schon vorliegen.
+
+</details>
+
 ### Selbstkontrolle beim Skizzieren
 
 Alle Teilergebnisse müssen zusammenpassen – das ist die eingebaute
@@ -48,12 +59,33 @@ Fehlerkontrolle der Kurvendiskussion:
 Passt etwas nicht zusammen, ist ein Rechenfehler im Spiel – zurückgehen
 und prüfen.
 
+<details class="verstaendnis">
+<summary>Verständnisfrage: Warum <em>ist</em> eine doppelte Nullstelle automatisch ein Extrempunkt auf der $x$-Achse?</summary>
+
+An einer doppelten Nullstelle berührt der Graph die Achse ohne
+Vorzeichenwechsel: In einer Umgebung liegt er komplett oberhalb (oder
+komplett unterhalb) und tippt die Achse nur im einen Punkt an. Der
+Berührpunkt ist also lokal der tiefste bzw. höchste Punkt – ein Tief-
+oder Hochpunkt mit $y = 0$.
+
+</details>
+
 ### Zeitmanagement in der Klassenarbeit
 
 Reihenfolge einhalten (das Schema baut aufeinander auf), Zwischenwerte
 sauber notieren ($f'$, $f''$ nur **einmal** ausrechnen!), am Ende jede
 Koordinate am Graphen gegenchecken. Symmetrie zuerst prüfen – sie
 halbiert die restliche Arbeit (Beispiel 2).
+
+<details class="verstaendnis">
+<summary>Verständnisfrage: Warum liegt der Wendepunkt bei kubischen Funktionen <em>genau</em> in der Mitte zwischen Hoch- und Tiefpunkt?</summary>
+
+Jede kubische Funktion ist **punktsymmetrisch zu ihrem Wendepunkt** –
+der Graph sieht, um den Wendepunkt gedreht, wieder gleich aus. Also
+müssen sich auch Hoch- und Tiefpunkt symmetrisch um ihn verteilen. Bei
+höheren Graden gilt diese Kontrolle nicht mehr!
+
+</details>
 
 ## Beispiele
 
@@ -1427,6 +1459,32 @@ maximal.)
 
 </details>
 
+<details class="aufgabe">
+<summary>Aufgabe 46 ⭐⭐ · Verständnisaufgabe</summary>
+
+Beurteile ohne nachzurechnen:
+a) „Meine Kurvendiskussion ergab einfache Nullstellen bei $x = 1$ und
+$x = 3$ und den einzigen Extrempunkt bei $x = 5$.“ Kann das stimmen?
+b) „$f(x) = x^4 + 2x^2 - 3$: Ich untersuche nur $x \geq 0$ und spiegele
+alle Ergebnisse an der $y$-Achse.“ Ist das erlaubt?
+
+<details>
+<summary>Lösung zu Aufgabe 46</summary>
+
+a) **Nein.** An einfachen Nullstellen wechselt $f$ das Vorzeichen: Bei
+$x = 1$ kreuzt der Graph die Achse, bei $x = 3$ kreuzt er zurück.
+Dazwischen muss er umkehren – zwischen 1 und 3 liegt zwingend ein
+Extrempunkt. Irgendwo steckt ein Rechenfehler.
+
+b) **Ja.** Der Term enthält nur gerade Exponenten ($x^4$, $x^2$, und
+$-3 = -3x^0$), die Funktion ist also achsensymmetrisch zur $y$-Achse.
+Jede Nullstelle, jeder Extrempunkt rechts hat ein exaktes Spiegelbild
+links – die halbe Rechnung genügt.
+
+</details>
+
+</details>
+
 ## Merksatz
 
 <details>
@@ -1495,6 +1553,12 @@ Zum Abschluss: Klicke bei jeder Frage eine Antwort an – die Auswertung kommt s
   { frage: 'Die beste schnelle Fehlerkontrolle am Ende einer Kurvendiskussion?',
     antworten: ['Alles noch einmal rechnen', 'Prüfen, ob alle Ergebnisse zur Skizze zusammenpassen', 'Den Taschenrechner fragen', 'Die Aufgabe überspringen'],
     richtig: 1, erklaerung: 'Nullstellen, Extrema, Wendepunkt und Randverhalten müssen ein stimmiges Bild ergeben – Widersprüche zeigen Rechenfehler an.' },
+  { frage: 'Verständnisfrage: Einfache Nullstellen bei 1 und 3, aber angeblich kein Extremum dazwischen. Was folgt?',
+    antworten: ['Das ist möglich, wenn f Grad 3 hat', 'Rechenfehler: Zwischen zwei Vorzeichenwechseln muss der Graph umkehren', 'Der Wendepunkt ersetzt das Extremum', 'Die Nullstellen sind falsch nummeriert'],
+    richtig: 1, erklaerung: 'Bei x = 1 wechselt f z. B. von + nach −, bei x = 3 zurück – dazwischen muss ein Tiefpunkt liegen. Die Selbstkontrolle schlägt an.' },
+  { frage: 'Verständnisfrage: Warum liegt der Wendepunkt kubischer Funktionen exakt zwischen Hoch- und Tiefpunkt?',
+    antworten: ['Zufall, der meistens gilt', 'Weil kubische Graphen punktsymmetrisch zu ihrem Wendepunkt sind', 'Weil f″ eine Gerade ist, gilt es für alle Funktionen', 'Weil der Wendepunkt immer auf der y-Achse liegt'],
+    richtig: 1, erklaerung: 'Die Punktsymmetrie zum Wendepunkt erzwingt gleiche Abstände zu H und T. Ab Grad 4 gibt es diese Garantie nicht mehr.' },
 ]} />
 
 ## Checkliste zur Klassenarbeit

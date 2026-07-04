@@ -26,6 +26,16 @@ eigene Kurve, die **Ortskurve** der Tiefpunkte:
 
 ![Drei Parabeln der Schar f_t(x) = x² − tx; ihre Tiefpunkte liegen auf der gestrichelten violetten Ortskurve y = −x²](../../../assets/plots/scharen/ortskurven/tiefpunkte-parabel.svg)
 
+<details class="verstaendnis">
+<summary>Verständnisfrage: Ist die Ortskurve selbst eine Kurve der Schar?</summary>
+
+Nein. Jede Scharkurve gehört zu *einem* festen $t$. Die Ortskurve
+dagegen sammelt von **jeder** Scharkurve genau einen markanten Punkt
+(z. B. den Tiefpunkt) ein – sie läuft quer durch die ganze Familie und
+hat in der Regel eine völlig andere Gleichung als die Scharkurven.
+
+</details>
+
 ### Das Standardverfahren (3 Schritte)
 
 1. **Punkte in Abhängigkeit von $t$ bestimmen:** Extrem- bzw.
@@ -47,6 +57,18 @@ Die Ortskurve der Tiefpunkte ist $y = -x^2$ – genau die gestrichelte
 Kurve im Bild. In der Skizze wird die Ortskurve **gestrichelt**
 gezeichnet, um sie von den Scharkurven zu unterscheiden.
 
+<details class="verstaendnis">
+<summary>Verständnisfrage: Warum muss $t$ am Ende verschwinden – die Tiefpunkte hängen doch von $t$ ab?</summary>
+
+$t$ ist nur die „Laufnummer“, die sagt, von *welcher* Kurve der Punkt
+stammt. Die Ortskurve soll aber die **Bahn** dieser Punkte im
+$x$-$y$-Koordinatensystem beschreiben – eine Beziehung allein zwischen
+$x$ und $y$. Sobald $t$ durch $x$ ausgedrückt ist, übernimmt $x$ das
+Durchlaufen der Schar. Steht am Ende noch ein $t$ im Ergebnis, ist die
+Aufgabe nicht fertig.
+
+</details>
+
 ### Gültigkeitsbereich beachten
 
 Durchläuft $t$ nur bestimmte Werte (z. B. $t > 0$), durchläuft auch
@@ -57,6 +79,17 @@ Zwei Sonderfälle: Hängt die $x$-Koordinate nicht von $t$ ab (z. B.
 Maximum immer bei $x = 4$), ist die „Ortskurve“ eine **senkrechte
 Gerade** – keine Funktion. Hängt gar nichts von $t$ ab, bleibt der
 Punkt einfach fest.
+
+<details class="verstaendnis">
+<summary>Verständnisfrage: Die Tiefpunkte liegen bei $T\!\left(\frac{t}{2} \mid -\frac{t^2}{4}\right)$ und es gilt $t > 0$. Warum ist die Ortskurve dann nicht die komplette Parabel $y = -x^2$?</summary>
+
+Aus $x = \frac{t}{2}$ und $t > 0$ folgt $x > 0$: Es werden nur
+Tiefpunkte mit **positiver** $x$-Koordinate durchlaufen. Die Ortskurve
+ist also nur der rechte Ast, $y = -x^2$ mit $x > 0$. Der
+Gültigkeitsbereich der Ortskurve erbt immer die Einschränkung des
+Parameters.
+
+</details>
 
 ## Beispiele
 
@@ -886,6 +919,31 @@ Ortskurve: $y = -\frac{1}{2}x^3$ (für $x \neq 0$).
 
 </details>
 
+<details class="aufgabe">
+<summary>Aufgabe 31 ⭐⭐ · Verständnisaufgabe</summary>
+
+a) Finde den Fehler: „Die Tiefpunkte liegen bei
+$T\!\left(\frac{t}{2} \mid -\frac{t^2}{4}\right)$. Die Ortskurve lautet
+also $y = -\frac{t^2}{4}$.“
+b) Wahr oder falsch? „Auf der Ortskurve $y = -x^2$ (aus dem
+Erklärungs-Beispiel) gehört zu jedem Punkt genau eine Scharkurve.“
+
+<details>
+<summary>Lösung zu Aufgabe 31</summary>
+
+a) Der Parameter wurde **nicht eliminiert** – im Ergebnis darf kein $t$
+mehr stehen, und es fehlt der Zusammenhang mit $x$. Richtig: Aus
+$x = \frac{t}{2}$ folgt $t = 2x$, einsetzen liefert
+$y = -\frac{(2x)^2}{4} = -x^2$.
+
+b) **Wahr.** Die Zuordnung $t \mapsto x = \frac{t}{2}$ ist umkehrbar:
+Zu jedem $x$-Wert der Ortskurve gehört genau das $t = 2x$ – also genau
+eine Kurve der Schar, deren Tiefpunkt dort liegt.
+
+</details>
+
+</details>
+
 ## Merksatz
 
 <details>
@@ -945,4 +1003,10 @@ Zum Abschluss: Klicke bei jeder Frage eine Antwort an – die Auswertung kommt s
   { frage: 'Die Tiefpunkte liegen bei T(0 | t) für alle t. Was ist die „Ortskurve“?',
     antworten: ['y = 0', 'Die x-Achse', 'Die senkrechte Gerade x = 0 – keine Funktion', 'y = t'],
     richtig: 2, erklaerung: 'Die x-Koordinate ist konstant – die Punkte wandern auf der y-Achse. Eine senkrechte Gerade besteht den Senkrechten-Test nicht.' },
+  { frage: 'Verständnisfrage: Ist die Ortskurve eine der Scharkurven?',
+    antworten: ['Ja, die zu t = 0', 'Nein – sie sammelt von jeder Scharkurve einen markanten Punkt ein', 'Ja, die steilste', 'Nur bei Parabelscharen'],
+    richtig: 1, erklaerung: 'Jede Scharkurve gehört zu einem festen t; die Ortskurve läuft quer durch die Familie und verbindet z. B. alle Tiefpunkte.' },
+  { frage: 'Verständnisfrage: Warum wird der Parameter t bei der Ortskurve eliminiert?',
+    antworten: ['Damit die Rechnung kürzer wird', 'Weil die Ortskurve eine Beziehung nur zwischen x und y beschreibt – t war bloß die Nummer der Kurve', 'Weil t immer null ist', 'Damit die Ortskurve durch den Ursprung geht'],
+    richtig: 1, erklaerung: 'Die Bahn der Punkte lebt im x-y-System. Nach t auflösen und einsetzen überträgt das Durchlaufen der Schar auf x.' },
 ]} />
