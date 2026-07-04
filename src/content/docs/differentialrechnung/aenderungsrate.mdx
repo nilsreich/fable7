@@ -39,6 +39,17 @@ Je nach Kontext hat die mittlere Änderungsrate eine eigene Bedeutung:
 Durchschnitts­geschwindigkeit (Weg pro Zeit), durchschnittliches
 Wachstum, mittlere Abbaurate eines Medikaments …
 
+<details class="verstaendnis">
+<summary>Verständnisfrage: Was verrät die mittlere Änderungsrate über den Verlauf <em>innerhalb</em> des Intervalls?</summary>
+
+Nichts! In den Differenzenquotienten gehen nur die **Randwerte** $f(a)$
+und $f(b)$ ein. Eine Fieberkurve kann auf $[0;\ 4]$ die mittlere
+Änderungsrate 0 haben und trotzdem zwischendurch stark gestiegen und
+wieder gefallen sein – entscheidend ist nur, dass Start- und Endwert
+gleich sind.
+
+</details>
+
 ### Beispiel Sprint: das Weg-Zeit-Modell
 
 Für die Beschleunigungsphase eines 100-m-Sprints verwenden wir das stark
@@ -66,6 +77,17 @@ Die Steigung der Tangente im Punkt $P$ heißt **lokale** (oder momentane)
 **Änderungsrate** von $f$ an der Stelle $a$. Im Sprintkontext ist sie die
 **Momentangeschwindigkeit** – die Zahl, die ein Blitzer messen würde.
 
+<details class="verstaendnis">
+<summary>Verständnisfrage: Warum kann man die Momentangeschwindigkeit bei $t = 3$ nicht einfach als Differenzenquotient auf $[3;\ 3]$ berechnen?</summary>
+
+Dann stünde $\frac{s(3) - s(3)}{3 - 3} = \frac{0}{0}$ – und durch null
+darf man nicht teilen. Ein einzelner Zeitpunkt hat keine „Strecke pro
+Zeit“. Deshalb der Umweg: Intervalle $[3;\ 3+h]$ immer weiter
+schrumpfen lassen und schauen, welchem Wert sich die Sekantensteigungen
+nähern.
+
+</details>
+
 ![Sekante durch P und Q sowie Tangente im dazwischenliegenden Punkt B am Graphen von f(x) = 0,5x²](../../../assets/plots/differentialrechnung/aenderungsrate/sekante-tangente.svg)
 
 **Zusammengefasst:**
@@ -78,6 +100,16 @@ Die Steigung der Tangente im Punkt $P$ heißt **lokale** (oder momentane)
 
 Wie man die Tangentensteigung **exakt** berechnet (nicht nur näherungs­weise),
 zeigt die nächste Seite ([h-Methode](../ableitung-h-methode/)).
+
+<details class="verstaendnis">
+<summary>Verständnisfrage: Woran erkennst du in einer Textaufgabe, ob die mittlere oder die lokale Änderungsrate gefragt ist?</summary>
+
+An der Zeitangabe: Ein **Zeitraum** („zwischen Sekunde 1 und 3“, „im
+ersten Jahr“, „durchschnittlich“) verlangt die mittlere Änderungsrate
+(Sekante). Ein **Zeitpunkt** („genau bei $t = 3$“, „momentan“, „in
+diesem Augenblick“) verlangt die lokale Änderungsrate (Tangente).
+
+</details>
 
 ## Beispiele
 
@@ -520,6 +552,30 @@ Ein besseres Modell müsste dort in eine Gerade (konstantes Tempo)
 
 </details>
 
+<details class="aufgabe">
+<summary>Aufgabe 17 ⭐⭐ · Verständnisaufgabe</summary>
+
+Wahr oder falsch? Begründe:
+a) „Ist die mittlere Änderungsrate auf $[0;\ 4]$ gleich null, war die
+Funktion dort konstant.“
+b) „Die Momentangeschwindigkeit bei $t = 3$ erhält man als
+Differenzenquotient auf dem Intervall $[3;\ 3]$.“
+
+<details>
+<summary>Lösung zu Aufgabe 17</summary>
+
+a) **Falsch.** Null bedeutet nur $f(0) = f(4)$ – die Randwerte sind
+gleich. Dazwischen kann die Funktion beliebig steigen und fallen, wie
+eine Fieberkurve, die hoch- und wieder herunterläuft.
+
+b) **Falsch.** Das ergäbe $\frac{f(3)-f(3)}{3-3} = \frac{0}{0}$ –
+Division durch null. Die lokale Änderungsrate entsteht erst als
+**Grenzwert** der Sekantensteigungen auf $[3;\ 3+h]$ für $h \to 0$.
+
+</details>
+
+</details>
+
 ## Merksatz
 
 <details>
@@ -573,4 +629,10 @@ Zum Abschluss: Klicke bei jeder Frage eine Antwort an – die Auswertung kommt s
   { frage: 'Was passiert mit den Sekanten, wenn h gegen 0 läuft?',
     antworten: ['Sie werden waagerecht', 'Sie kippen in die Tangente', 'Sie verschwinden', 'Sie werden senkrecht'],
     richtig: 1, erklaerung: 'Der zweite Punkt rückt auf den ersten zu – die Sekante nähert sich der Tangente, ihre Steigung dem Grenzwert.' },
+  { frage: 'Verständnisfrage: Die mittlere Änderungsrate von f auf [0; 4] ist null. Was folgt daraus?',
+    antworten: ['f war auf [0; 4] konstant', 'f(0) = f(4) – dazwischen kann alles passiert sein', 'f hat bei x = 2 eine Nullstelle', 'f ist auf [0; 4] gefallen'],
+    richtig: 1, erklaerung: 'In den Differenzenquotienten gehen nur die Randwerte ein. Gleiche Randwerte ⇒ Sekantensteigung 0, egal was dazwischen passiert.' },
+  { frage: 'Verständnisfrage: Warum darf man in (f(3+h) − f(3))/h nicht einfach h = 0 einsetzen?',
+    antworten: ['Weil h immer positiv sein muss', 'Weil dann 0/0 dastünde – man braucht den Grenzwert h → 0', 'Weil f(3) dann nicht definiert ist', 'Man darf – das Ergebnis ist 0'],
+    richtig: 1, erklaerung: 'Bei h = 0 sind Zähler und Nenner null. Die Kunst der h-Methode: erst vereinfachen und kürzen, dann h gegen 0 laufen lassen.' },
 ]} />

@@ -39,6 +39,18 @@ $f'(0) = 0$, aber der Graph steigt links **und** rechts von 0 – ein
 Bedingung überprüft werden.
 :::
 
+<details class="verstaendnis">
+<summary>Verständnisfrage: Was bedeuten „notwendig“ und „hinreichend“ eigentlich genau?</summary>
+
+**Notwendig** heißt: Ohne diese Eigenschaft geht es nicht – jeder
+Extrempunkt *hat* eine waagerechte Tangente. Sie filtert also die
+Kandidaten heraus, beweist aber nichts. **Hinreichend** heißt: Wenn das
+zusätzlich gilt, ist der Fall sicher entschieden. Alltagsvergleich:
+Volljährig sein ist *notwendig* für den Führerschein, reicht allein aber
+nicht – die bestandene Prüfung ist *hinreichend*.
+
+</details>
+
 ### Extrempunkte: hinreichende Bedingungen
 
 **Variante 1 – Vorzeichenwechsel (VZW) von $f'$:**
@@ -66,6 +78,17 @@ Am Zusammenspiel der Ableitungen sieht man beide Kriterien gleichzeitig:
 
 ![f(x) = x³ − 3x (blau), f'(x) = 3x² − 3 (rot) und f''(x) = 6x (grün) im selben Koordinatensystem](../../../assets/plots/differentialrechnung/extrem-wendepunkte/f-fstrich-fzweistrich.svg)
 
+<details class="verstaendnis">
+<summary>Verständnisfrage: Warum zeigt $f''(x_0) < 0$ (zusammen mit $f'(x_0) = 0$) einen <em>Hochpunkt</em> an?</summary>
+
+$f''$ misst, wie sich die **Steigung** ändert. $f''(x_0) < 0$ heißt:
+Die Steigung nimmt ab – sie geht von positiv über null zu negativ. Erst
+bergauf, oben waagerecht, dann bergab: genau das Profil eines Gipfels.
+Anschaulich ist der Graph dort rechtsgekrümmt, er „hängt durch wie ein
+trauriger Mund“.
+
+</details>
+
 ### Wendepunkte
 
 Im **Wendepunkt** wechselt die Krümmung: von rechtsgekrümmt (Kurve
@@ -79,6 +102,17 @@ $$
 $$
 
 ![Kubische Funktion mit Hochpunkt H(1|4), Wendepunkt W(2|2) und Tiefpunkt T(3|0): Der Wendepunkt liegt genau zwischen den Extrempunkten](../../../assets/plots/differentialrechnung/extrem-wendepunkte/wendepunkt.svg)
+
+<details class="verstaendnis">
+<summary>Verständnisfrage: Warum ist der Graph ausgerechnet am Wendepunkt lokal am steilsten (oder am flachsten)?</summary>
+
+Der Wendepunkt von $f$ liegt dort, wo $f'$ ein **Extremum** hat
+($f'' = 0$ mit Vorzeichenwechsel heißt ja: die Steigung hört auf zu
+wachsen und beginnt zu fallen – oder umgekehrt). Ein Maximum der
+Steigung ist die steilste Stelle. Deshalb bedeutet der Wendepunkt einer
+Fieberkurve: Hier steigt das Fieber am schnellsten.
+
+</details>
 
 ### Rezept (für Extrem- wie Wendepunkte)
 
@@ -537,6 +571,31 @@ $f''(x_0) \neq 0$ mit passendem Vorzeichen – sichert den Extrempunkt.
 
 </details>
 
+<details class="aufgabe">
+<summary>Aufgabe 17 ⭐⭐ · Verständnisaufgabe</summary>
+
+Wahr oder falsch? Begründe:
+a) „$f''(x_0) = 0$, also hat $f$ bei $x_0$ einen Wendepunkt.“
+b) „Zwischen zwei Hochpunkten eines Graphen muss immer ein Tiefpunkt
+liegen.“
+
+<details>
+<summary>Lösung zu Aufgabe 17</summary>
+
+a) **Falsch.** $f''(x_0) = 0$ ist nur die notwendige Bedingung.
+Gegenbeispiel $f(x) = x^4$: Es gilt $f''(0) = 0$, aber bei $x = 0$ liegt
+ein **Tiefpunkt** – die Krümmung wechselt dort nicht. Es braucht
+zusätzlich $f'''(x_0) \neq 0$ oder den Vorzeichenwechsel von $f''$.
+
+b) **Wahr** (für unsere durchgängig differenzierbaren Funktionen). Vom
+ersten Gipfel geht es bergab, zum zweiten wieder bergauf – irgendwo
+dazwischen muss der Graph vom Fallen ins Steigen wechseln: ein
+Tiefpunkt, an dem $f'$ das Vorzeichen von $-$ nach $+$ wechselt.
+
+</details>
+
+</details>
+
 ## Merksatz
 
 <details>
@@ -599,6 +658,12 @@ Zum Abschluss: Klicke bei jeder Frage eine Antwort an – die Auswertung kommt s
   { frage: 'Was bedeutet ein Wendepunkt im Sachkontext (z. B. Fieberkurve)?',
     antworten: ['Der höchste Wert', 'Die Stelle der stärksten Zu- oder Abnahme', 'Der Startwert', 'Das Ende des Vorgangs'],
     richtig: 1, erklaerung: 'Am Wendepunkt ist die Änderungsrate extremal – das Fieber steigt (oder fällt) dort am schnellsten.' },
+  { frage: 'Verständnisfrage: Was leistet die notwendige Bedingung f′(x₀) = 0 – und was nicht?',
+    antworten: ['Sie beweist den Extrempunkt', 'Sie liefert nur Kandidaten; die Entscheidung trifft die hinreichende Bedingung', 'Sie liefert die y-Koordinate', 'Sie schließt Sattelpunkte aus'],
+    richtig: 1, erklaerung: 'Jeder Extrempunkt hat eine waagerechte Tangente – aber nicht jede waagerechte Tangente gehört zu einem Extrempunkt (Sattelpunkt!).' },
+  { frage: 'Verständnisfrage: f″(x₀) = 0. Liegt bei x₀ sicher ein Wendepunkt?',
+    antworten: ['Ja, das ist die Definition', 'Nein – bei f(x) = x⁴ ist f″(0) = 0, aber dort liegt ein Tiefpunkt', 'Ja, wenn auch f′(x₀) = 0 gilt', 'Nein, es ist immer ein Sattelpunkt'],
+    richtig: 1, erklaerung: 'Auch hier gilt: notwendig ≠ hinreichend. Erst f‴(x₀) ≠ 0 oder der Vorzeichenwechsel von f″ sichern den Wendepunkt.' },
 ]} />
 
 ## Checkliste zur Klassenarbeit

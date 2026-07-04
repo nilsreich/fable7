@@ -44,6 +44,17 @@ $$
 
 ![Tangente y = 2x − 1 im Punkt B(2|3) an der Parabel f(x) = 0,5x² + 1](../../../assets/plots/differentialrechnung/tangente-normale/tangente.svg)
 
+<details class="verstaendnis">
+<summary>Verständnisfrage: Wozu braucht man $f(x_0)$ <em>und</em> $f'(x_0)$ – reicht nicht eins von beiden?</summary>
+
+Eine Gerade ist erst durch **zwei** Angaben festgelegt: einen Punkt und
+eine Steigung. $f(x_0)$ liefert den Berührpunkt (wo?), $f'(x_0)$ die
+Steigung (wie steil?). Wer beides verwechselt – etwa $f'(x_0)$ als
+$y$-Koordinate einsetzt –, baut eine Gerade, die mit der Kurve nichts zu
+tun hat.
+
+</details>
+
 ### Die Normale
 
 Die **Normale** steht im Berührpunkt **senkrecht** auf der Tangente.
@@ -66,6 +77,17 @@ $$
 Sonderfall: Ist die Tangente **waagerecht** ($m_t = 0$), ist die Normale
 die **senkrechte** Gerade $x = x_0$ (keine Funktionsgleichung).
 
+<details class="verstaendnis">
+<summary>Verständnisfrage: Warum gilt für senkrechte Geraden gerade $m_t \cdot m_n = -1$?</summary>
+
+Dreht man das Steigungsdreieck („1 nach rechts, $m$ nach oben“) um 90°,
+wird daraus „$m$ nach links, 1 nach oben“ – die gedrehte Gerade hat also
+die Steigung $\frac{1}{-m} = -\frac{1}{m}$. Das Produkt beider Steigungen
+ist dann immer $m \cdot \left(-\frac{1}{m}\right) = -1$. Probe im
+Beispiel: $2 \cdot \left(-\frac{1}{2}\right) = -1$. ✓
+
+</details>
+
 ### Steilheit im Kontext: Steigungswinkel
 
 Aus der Tangentensteigung folgt der **Steigungswinkel** gegenüber der
@@ -74,6 +96,16 @@ Beispiel: $m = -1$ bedeutet 45° Gefälle – relevante Information für
 jede Rampe:
 
 ![Skaterrampe h(x) = −0,25x² + 4 mit Tangente y = −x + 5 im Punkt B(2|3): Dort beträgt das Gefälle 45 Grad](../../../assets/plots/differentialrechnung/tangente-normale/rampe.svg)
+
+<details class="verstaendnis">
+<summary>Verständnisfrage: „Die Tangente berührt den Graphen nur und schneidet ihn nie“ – stimmt das?</summary>
+
+Nur **lokal**, also in der Nähe des Berührpunkts. Weiter draußen darf
+die Tangente die Kurve durchaus wieder treffen: Bei $f(x) = x^3 - 3x$
+schneidet z. B. jede Tangente den Graphen noch ein zweites Mal. „Genau
+ein gemeinsamer Punkt“ gilt als Tangenten-Kriterium nur bei Parabeln.
+
+</details>
 
 ## Beispiele
 
@@ -544,6 +576,31 @@ Symmetrieachse der Parabel.)
 
 </details>
 
+<details class="aufgabe">
+<summary>Aufgabe 17 ⭐⭐ · Verständnisaufgabe</summary>
+
+a) Finde den Fehler: „Tangente an $f(x) = x^2 - 1$ bei $x_0 = 1$: Die
+Steigung ist $m = f(1) = 0$, also ist die Tangente waagerecht.“
+b) Wahr oder falsch? „Eine Tangente hat mit dem Graphen immer genau
+einen gemeinsamen Punkt.“
+
+<details>
+<summary>Lösung zu Aufgabe 17</summary>
+
+a) Hier wurde der **Funktionswert** mit der **Steigung** verwechselt:
+$f(1) = 0$ ist die $y$-Koordinate des Berührpunkts $B(1 \mid 0)$. Die
+Steigung liefert die Ableitung: $f'(x) = 2x$, also $m = f'(1) = 2$ –
+die Tangente lautet $y = 2x - 2$ und ist keineswegs waagerecht.
+
+b) **Falsch.** „Berühren“ ist eine lokale Eigenschaft. Weiter entfernt
+darf die Tangente den Graphen erneut treffen – bei kubischen Funktionen
+passiert das ständig. Nur bei Parabeln gilt: Tangente ⇔ genau ein
+gemeinsamer Punkt (Diskriminante 0).
+
+</details>
+
+</details>
+
 ## Merksatz
 
 <details>
@@ -601,4 +658,10 @@ Zum Abschluss: Klicke bei jeder Frage eine Antwort an – die Auswertung kommt s
   { frage: 'Woran erkennt man beim Gleichsetzen von Gerade und Parabel, dass die Gerade Tangente ist?',
     antworten: ['Es gibt zwei Lösungen', 'Es gibt genau eine (doppelte) Lösung', 'Es gibt keine Lösung', 'Die Gerade hat Steigung 0'],
     richtig: 1, erklaerung: 'Berühren = genau ein gemeinsamer Punkt: Die quadratische Gleichung hat Diskriminante 0.' },
+  { frage: 'Verständnisfrage: Welche zwei Zutaten legen die Tangente an der Stelle x₀ fest?',
+    antworten: ['f(x₀) und f′(x₀) – Punkt und Steigung', 'f(x₀) und f(0)', 'f′(x₀) und f″(x₀)', 'Zwei Punkte auf der Kurve'],
+    richtig: 0, erklaerung: 'Eine Gerade braucht Punkt + Steigung: f(x₀) sagt wo, f′(x₀) sagt wie steil. Verwechslung der beiden ist der häufigste Fehler.' },
+  { frage: 'Verständnisfrage: Darf die Tangente den Graphen an einer anderen Stelle nochmal schneiden?',
+    antworten: ['Nein, nie – sonst wäre sie keine Tangente', 'Ja – „berühren“ gilt nur lokal am Berührpunkt', 'Nur wenn f′(x₀) = 0', 'Nur bei Parabeln'],
+    richtig: 1, erklaerung: 'Bei f(x) = x³ − 3x trifft jede Tangente den Graphen ein zweites Mal. Das Ein-Punkt-Kriterium funktioniert nur bei Parabeln.' },
 ]} />

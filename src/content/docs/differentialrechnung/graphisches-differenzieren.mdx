@@ -33,6 +33,16 @@ Daraus ergeben sich feste Übersetzungsregeln:
 
 ![Über den Extrempunkten H(−1|2) und T(1|−2) von f liegen genau die Nullstellen der rot eingezeichneten Ableitung f'; gepunktete senkrechte Hilfslinien verbinden sie](../../../assets/plots/differentialrechnung/graphisches-differenzieren/schema-f-und-fstrich.svg)
 
+<details class="verstaendnis">
+<summary>Verständnisfrage: Unter jedem Extrempunkt von $f$ liegt eine Nullstelle von $f'$ – gilt das auch umgekehrt?</summary>
+
+Nein! Eine Nullstelle von $f'$ heißt nur: waagerechte Tangente. Das kann
+ein Hoch- oder Tiefpunkt sein – oder ein **Sattelpunkt**, bei dem $f$
+danach in dieselbe Richtung weiterläuft. Entscheidend ist der
+**Vorzeichenwechsel** von $f'$: ohne Wechsel kein Extremum.
+
+</details>
+
 ### Vorgehen in drei Schritten
 
 1. **Besondere Stellen übertragen:** Unter jedem Hoch-/Tiefpunkt von
@@ -48,6 +58,17 @@ Daraus ergeben sich feste Übersetzungsregeln:
 aus einer Parabel wird eine Gerade, aus einer kubischen Kurve eine
 Parabel, aus einer W-Form eine kubische Kurve.
 
+<details class="verstaendnis">
+<summary>Verständnisfrage: Warum ist der $f'$-Graph immer „eine Stufe einfacher“ als der $f$-Graph?</summary>
+
+Wegen der Potenzregel: Aus dem Leitterm $a x^n$ wird $n a x^{n-1}$ – der
+Grad sinkt beim Ableiten um genau 1. Anschaulich: Eine Kurve mit zwei
+„Buckeln“ (Grad 3) hat zwei Stellen mit waagerechter Tangente, ihre
+Ableitung braucht also zwei Nullstellen – eine Parabel (Grad 2) reicht
+dafür genau.
+
+</details>
+
 ### Rückwärts lesen: von f′ auf f
 
 Auch die Gegenrichtung folgt dem Wörterbuch, von rechts nach links
@@ -55,6 +76,16 @@ gelesen: Nullstelle von $f'$ mit Vorzeichenwechsel von $-$ nach $+$ →
 Tiefpunkt von $f$, usw. **Aber:** $f$ ist dabei nur bis auf eine
 Verschiebung in $y$-Richtung bestimmt – alle senkrecht verschobenen
 Kopien haben dieselbe Ableitung.
+
+<details class="verstaendnis">
+<summary>Verständnisfrage: Der $f'$-Graph hat bei $x = 1$ einen Hochpunkt. Was passiert dort am $f$-Graphen?</summary>
+
+Der $y$-Wert von $f'$ ist die Steigung von $f$ – ein Maximum von $f'$
+bedeutet also: Bei $x = 1$ ist $f$ **am steilsten**. Das ist ein
+**Wendepunkt** von $f$: Bis dahin wurde der Anstieg immer stärker, ab
+dort flacht er wieder ab.
+
+</details>
 
 ## Beispiele
 
@@ -451,6 +482,30 @@ Plateau, Abfahrt und Zielflachstück als positiv/null/negativ/null ab.
 
 </details>
 
+<details class="aufgabe">
+<summary>Aufgabe 17 ⭐⭐ · Verständnisaufgabe</summary>
+
+Wahr oder falsch? Begründe:
+a) „$f'(3) = 0$, also hat $f$ bei $x = 3$ einen Extrempunkt.“
+b) „Die Ableitung einer nach unten geöffneten Parabel ist eine steigende
+Gerade.“
+
+<details>
+<summary>Lösung zu Aufgabe 17</summary>
+
+a) **Falsch.** $f'(3) = 0$ garantiert nur eine waagerechte Tangente.
+Wechselt $f'$ dort das Vorzeichen nicht, liegt ein **Sattelpunkt** vor –
+wie bei $f(x) = x^3$ an der Stelle 0.
+
+b) **Falsch.** Links vom Scheitel steigt die Parabel ($f' > 0$), rechts
+fällt sie ($f' < 0$) – die Steigungen werden von links nach rechts
+**kleiner**. Die Ableitung ist also eine **fallende** Gerade (bei
+$f(x) = -x^2$ etwa $f'(x) = -2x$).
+
+</details>
+
+</details>
+
 ## Merksatz
 
 <details>
@@ -502,4 +557,10 @@ Zum Abschluss: Klicke bei jeder Frage eine Antwort an – die Auswertung kommt s
   { frage: 'Warum ist f durch den Graphen von f′ nicht eindeutig bestimmt?',
     antworten: ['Weil f′ ungenau ist', 'Weil alle in y-Richtung verschobenen Kopien von f dieselbe Ableitung haben', 'Weil f′ nur für x &gt; 0 gilt', 'f ist eindeutig bestimmt'],
     richtig: 1, erklaerung: 'Konstante Summanden fallen beim Ableiten weg – f + c hat für jedes c dieselbe Ableitung.' },
+  { frage: 'Verständnisfrage: f′(x₀) = 0. Hat f bei x₀ auf jeden Fall einen Extrempunkt?',
+    antworten: ['Ja, das ist die Definition', 'Nein – ohne Vorzeichenwechsel von f′ ist es ein Sattelpunkt', 'Ja, wenn f eine Parabel ist – sonst nie', 'Nein, f hat dort immer einen Wendepunkt'],
+    richtig: 1, erklaerung: 'Waagerechte Tangente ist nur notwendig, nicht hinreichend: Bei f(x) = x³ ist f′(0) = 0, aber x = 0 ist ein Sattelpunkt.' },
+  { frage: 'Verständnisfrage: Der f′-Graph hat bei x = 1 ein Maximum. Was gilt für f?',
+    antworten: ['f hat bei x = 1 einen Hochpunkt', 'f ist bei x = 1 am steilsten – ein Wendepunkt', 'f hat bei x = 1 eine Nullstelle', 'f fällt ab x = 1'],
+    richtig: 1, erklaerung: 'f′-Werte sind Steigungen: Das Maximum von f′ markiert die steilste Stelle von f – dort wendet sich das Krümmungsverhalten.' },
 ]} />
