@@ -50,6 +50,17 @@ ausschließen. Mehr braucht es nicht – und die Gleichungstechniken dafür
 kennst du aus dem
 [Algebra-Werkzeugkasten](../../basiswissen/algebra-werkzeugkasten/#erklärung).
 
+<details class="verstaendnis">
+<summary>Verständnisfrage: Warum liefert der <em>Nenner</em> die Definitionslücken und der <em>Zähler</em> die Nullstellen – und nicht umgekehrt?</summary>
+
+Ein Bruch scheitert genau dann, wenn unten null steht (Division durch
+null) – deshalb bestimmen die Nenner-Nullstellen, welche $x$ verboten
+sind. Und ein Bruch **hat den Wert** null genau dann, wenn oben null
+steht: $\frac{0}{5} = 0$, aber $\frac{5}{0}$ existiert nicht. Merke:
+Nenner → wo die Funktion *nicht lebt*, Zähler → wo sie *null ist*.
+
+</details>
+
 ### Polstellen und senkrechte Asymptoten
 
 Was passiert **nahe** der Definitionslücke? Einsetzen von Werten dicht bei
@@ -75,6 +86,17 @@ Ob der Graph an der Polstelle die Seite wechselt, entscheidet der Nenner:
 - $\dfrac{1}{(x-1)^2}$: Das Quadrat ist auf beiden Seiten positiv → der
   Graph geht beidseitig nach $+\infty$ (**ohne** Vorzeichenwechsel).
 
+<details class="verstaendnis">
+<summary>Verständnisfrage: Darf der Graph eine senkrechte Asymptote wenigstens berühren?</summary>
+
+Nein – an der Stelle der senkrechten Asymptote liegt eine
+Definitionslücke: Dort gibt es **gar keinen** Funktionswert, also auch
+keinen Punkt des Graphen, der die Gerade berühren könnte. Die Werte
+daneben explodieren nur nach $\pm\infty$. (Waagerechte Asymptoten sind
+weniger streng – siehe unten.)
+
+</details>
+
 ### Verhalten im Unendlichen: waagerechte Asymptoten
 
 Für betragsgroße $x$ wird ein Bruch mit großem Nenner winzig:
@@ -95,6 +117,17 @@ g(x) = \frac{2x+1}{x} = \frac{2x}{x} + \frac{1}{x} = 2 + \frac{1}{x}
 $$
 
 ![Der Graph von g(x) = (2x+1)/x nähert sich für x gegen plus und minus unendlich der gestrichelten waagerechten Asymptote y = 2](../../../assets/plots/funktionen/gebrochenrationale/waagerechte-asymptote.svg)
+
+<details class="verstaendnis">
+<summary>Verständnisfrage: Darf ein Graph seine <em>waagerechte</em> Asymptote schneiden?</summary>
+
+Ja! Die waagerechte Asymptote beschreibt nur das Verhalten **ganz weit
+draußen** ($x \to \pm\infty$). Im Mittelteil darf der Graph sie kreuzen:
+$f(x) = \frac{x}{x^2+1}$ hat die Asymptote $y = 0$ und schneidet sie
+trotzdem bei $x = 0$. Nur die senkrechte Asymptote ist tabu – dort ist
+die Funktion nicht definiert.
+
+</details>
 
 ### Nullstellen
 
@@ -680,6 +713,30 @@ Asymptote $y = 2$.
 
 </details>
 
+<details class="aufgabe">
+<summary>Aufgabe 17 ⭐⭐ · Verständnisaufgabe</summary>
+
+Wahr oder falsch? Begründe:
+a) „Ein Graph darf seine waagerechte Asymptote niemals schneiden.“
+b) „$f(x) = \dfrac{5}{x+3}$ hat die Nullstelle $x = -3$.“
+
+<details>
+<summary>Lösung zu Aufgabe 17</summary>
+
+a) **Falsch.** Die waagerechte Asymptote beschreibt nur das Verhalten für
+$x \to \pm\infty$. Beispiel: $g(x) = \frac{x}{x^2+1}$ hat die Asymptote
+$y = 0$ und schneidet sie bei $x = 0$. Nur senkrechte Asymptoten kann der
+Graph nie berühren – dort ist die Funktion nicht definiert.
+
+b) **Falsch.** Bei $x = -3$ wird der **Nenner** null: Das ist eine
+Definitionslücke (Polstelle), kein Punkt des Graphen. Nullstellen kommen
+vom Zähler – und der Zähler 5 wird nie null. $f$ hat also gar keine
+Nullstelle.
+
+</details>
+
+</details>
+
 ## Merksatz
 
 <details>
@@ -737,4 +794,10 @@ Zum Abschluss: Klicke bei jeder Frage eine Antwort an – die Auswertung kommt s
   { frage: 'Warum ist „x = 1 ist Nullstelle von f(x) = 5/(x − 1)“ falsch?',
     antworten: ['Die Nullstelle ist x = −1', 'Bei x = 1 ist f gar nicht definiert – und der Zähler 5 wird nie null', 'Die Nullstelle ist x = 5', 'Die Aussage ist richtig'],
     richtig: 1, erklaerung: 'Nenner null ⇒ Definitionslücke, nicht Nullstelle. Nullstellen kommen vom Zähler, und 5 ≠ 0 – f hat keine Nullstelle.' },
+  { frage: 'Verständnisfrage: Darf der Graph einer Funktion seine senkrechte Asymptote berühren?',
+    antworten: ['Ja, aber nur in einem Punkt', 'Ja, wenn der Zähler groß genug ist', 'Nein – an dieser Stelle ist die Funktion gar nicht definiert', 'Nein, aber nur bei Hyperbeln'],
+    richtig: 2, erklaerung: 'Die senkrechte Asymptote steht an einer Definitionslücke: Dort existiert kein Funktionswert, also auch kein Berührpunkt.' },
+  { frage: 'Verständnisfrage: Woran erkennst du am Term, ob der Graph an der Polstelle die Seite wechselt?',
+    antworten: ['Am Vorzeichen des Zählers', 'An der Potenz des Nennerfaktors: ungerade → Sprung ±∞, gerade → beide Seiten gleich', 'An der waagerechten Asymptote', 'Das sieht man nur am Graphen'],
+    richtig: 1, erklaerung: 'Bei (x − a)¹ wechselt der Nenner das Vorzeichen (Sprung), bei (x − a)² bleibt er positiv – beide Seiten laufen in dieselbe Richtung.' },
 ]} />

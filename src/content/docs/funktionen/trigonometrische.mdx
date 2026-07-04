@@ -33,6 +33,17 @@ $$
 
 (Taschenrechner auf **RAD** stellen!)
 
+<details class="verstaendnis">
+<summary>Verständnisfrage: Warum rechnet die Analysis mit dem Bogenmaß statt mit Grad?</summary>
+
+Das Bogenmaß ist eine **Länge** am Einheitskreis, also eine gewöhnliche
+reelle Zahl ohne Einheit. Damit leben Eingabe $x$ und Ausgabe $\sin(x)$
+auf derselben Zahlenskala – man kann die Sinusfunktion wie jede andere
+Funktion zeichnen, verschieben und (später) ableiten. Grad sind dagegen
+eine willkürliche Einteilung des Kreises in 360 Schritte.
+
+</details>
+
 ### Sinus- und Kosinusfunktion
 
 Am Einheitskreis ist $\sin(x)$ die $y$-Koordinate und $\cos(x)$ die
@@ -53,6 +64,16 @@ Eigenschaften von $\sin$ und $\cos$:
   ($\cos(-x) = \cos(x)$)
 - Nullstellen: $\sin(x) = 0$ bei $x = 0,\ \pm\pi,\ \pm 2\pi,\ \dots$;
   $\ \cos(x) = 0$ bei $x = \pm\frac{\pi}{2},\ \pm\frac{3\pi}{2},\ \dots$
+
+<details class="verstaendnis">
+<summary>Verständnisfrage: Warum hat die Gleichung $\sin(x) = 1{,}5$ keine Lösung?</summary>
+
+$\sin(x)$ ist die $y$-Koordinate eines Punktes auf dem **Einheitskreis** –
+und der hat Radius 1. Höher als 1 und tiefer als $-1$ kommt kein
+Kreispunkt, also gilt immer $-1 \leq \sin(x) \leq 1$. Der Wert $1{,}5$
+liegt außerhalb des Wertebereichs.
+
+</details>
 
 ### Die allgemeine Sinusfunktion
 
@@ -76,6 +97,17 @@ $$
 Wertebereich wird $[d - |a|;\ d + |a|]$:
 
 ![f(x) = 2·sin(x) + 1 schwingt mit Amplitude 2 um die gestrichelte Mittellinie y = 1](../../../assets/plots/funktionen/trigonometrische/amplitude-mittellinie.svg)
+
+<details class="verstaendnis">
+<summary>Verständnisfrage: Wie liest du $a$, $b$ und $d$ aus einem gezeichneten Wellengraphen ab?</summary>
+
+Am besten in dieser Reihenfolge: **Mittellinie** $d$ = Mitte zwischen
+höchstem und tiefstem Wert. **Amplitude** $|a|$ = Abstand vom Maximum zur
+Mittellinie. **Periode** $T$ = Länge einer vollen Schwingung (z. B. von
+Hochpunkt zu Hochpunkt), daraus $b = \frac{2\pi}{T}$. Wer mit der
+Mittellinie beginnt, verwechselt Amplitude und Maximum nicht mehr.
+
+</details>
 
 ## Beispiele
 
@@ -493,6 +525,29 @@ Um **3 Uhr** nachts.
 
 </details>
 
+<details class="aufgabe">
+<summary>Aufgabe 17 ⭐⭐ · Verständnisaufgabe</summary>
+
+Wahr oder falsch? Begründe:
+a) „Verdoppelt man in $f(x) = \sin(b \cdot x)$ den Faktor $b$, verdoppelt
+sich die Periode.“
+b) „$f(x) = 5 \cdot \sin(x)$ hat den Wertebereich $[-1;\ 1]$, denn der
+Sinus liegt immer zwischen $-1$ und $1$.“
+
+<details>
+<summary>Lösung zu Aufgabe 17</summary>
+
+a) **Falsch.** Es gilt $T = \frac{2\pi}{b}$: Ein doppelt so großes $b$
+**halbiert** die Periode – die Welle schwingt doppelt so schnell.
+
+b) **Falsch.** $\sin(x)$ liegt zwischen $-1$ und $1$, aber jeder Wert
+wird noch mit 5 multipliziert: Der Wertebereich ist $[-5;\ 5]$, die
+Amplitude 5.
+
+</details>
+
+</details>
+
 ## Merksatz
 
 <details>
@@ -547,4 +602,10 @@ Zum Abschluss: Klicke bei jeder Frage eine Antwort an – die Auswertung kommt s
   { frage: 'In welchem Modus muss der Taschenrechner beim Bogenmaß stehen?',
     antworten: ['DEG', 'GRAD', 'RAD', 'Egal'],
     richtig: 2, erklaerung: 'Bogenmaß = Radiant: Im DEG-Modus wäre z. B. sin(π) nicht 0 – ein Klassiker unter den Klausurfehlern.' },
+  { frage: 'Verständnisfrage: Warum hat sin(x) = 2 keine Lösung?',
+    antworten: ['Weil 2 keine Bogenmaß-Zahl ist', 'Weil sin(x) die y-Koordinate am Einheitskreis ist und daher nie über 1 kommt', 'Weil der Taschenrechner im falschen Modus steht', 'Sie hat eine Lösung: x = 2π'],
+    richtig: 1, erklaerung: 'Der Einheitskreis hat Radius 1 – die y-Koordinate seiner Punkte liegt immer zwischen −1 und 1.' },
+  { frage: 'Verständnisfrage: Ein Wellengraph schwingt zwischen y = 3 und y = 7. Was liest du daraus ab?',
+    antworten: ['Mittellinie d = 5, Amplitude 2', 'Mittellinie d = 4, Amplitude 4', 'Mittellinie d = 5, Amplitude 4', 'Amplitude 7, Mittellinie 3'],
+    richtig: 0, erklaerung: 'd liegt in der Mitte: (3 + 7)/2 = 5. Die Amplitude ist der Abstand zum Maximum: 7 − 5 = 2.' },
 ]} />
