@@ -42,6 +42,17 @@ $$
 **Nullstelle:** $f(x) = 0$ setzen und nach $x$ auflösen. Eine Gerade mit
 $m \neq 0$ hat genau eine Nullstelle.
 
+<details class="verstaendnis">
+<summary>Verständnisfrage: Warum hat eine Gerade mit $m \neq 0$ <em>genau eine</em> Nullstelle – und was passiert bei $m = 0$?</summary>
+
+Mit $m \neq 0$ steigt oder fällt die Gerade ständig – sie muss die
+$x$-Achse irgendwann kreuzen, kann danach aber nie zurückkommen: genau
+eine Nullstelle. Bei $m = 0$ verläuft die Gerade waagerecht: Für $b \neq 0$
+gibt es **keine** Nullstelle, für $b = 0$ liegt die Gerade *auf* der
+$x$-Achse – jedes $x$ ist Nullstelle.
+
+</details>
+
 ### Quadratische Funktionen
 
 Allgemeine Form und Scheitelform:
@@ -55,6 +66,17 @@ $$
 Aus der **Scheitelform** liest man den **Scheitelpunkt** $S(d \mid e)$
 direkt ab – den tiefsten Punkt (für $a > 0$) bzw. höchsten Punkt (für
 $a < 0$) der Parabel.
+
+<details class="verstaendnis">
+<summary>Verständnisfrage: In $f(x) = (x - 3)^2 + 2$ steht „$-3$“ – warum liegt der Scheitel trotzdem bei $x = +3$?</summary>
+
+Das Quadrat $(x-3)^2$ ist nie negativ; sein kleinstmöglicher Wert ist $0$,
+und den nimmt es genau dann an, wenn die Klammer null wird – also bei
+$x = 3$. Dort ist $f$ am kleinsten: $f(3) = 0 + 2 = 2$, der Scheitel ist
+$S(3 \mid 2)$. Man liest also nicht das Vorzeichen ab, sondern fragt:
+„Wann wird die Klammer null?“
+
+</details>
 
 ![Verschobene Parabel f(x) = (x − 2)² − 1 mit Scheitelpunkt S(2|−1), zum Vergleich gestrichelt die Normalparabel y = x²](../../../assets/plots/funktionen/lineare-quadratische/parabel-scheitelform.svg)
 
@@ -79,6 +101,17 @@ $$
 **Nullstellen** quadratischer Funktionen liefert die pq-Formel (siehe
 [Algebra-Werkzeugkasten](../../basiswissen/algebra-werkzeugkasten/)). Je
 nach Lage des Scheitels gibt es zwei, eine oder keine Nullstelle.
+
+<details class="verstaendnis">
+<summary>Verständnisfrage: Wie erkennst du an Scheitel und Öffnungsrichtung – ganz ohne pq-Formel –, wie viele Nullstellen eine Parabel hat?</summary>
+
+Liegt der Scheitel einer nach oben geöffneten Parabel **unter** der
+$x$-Achse, muss der Graph sie auf beiden Seiten kreuzen: zwei Nullstellen.
+Liegt der Scheitel **auf** der Achse: genau eine. Liegt er **darüber**:
+keine – tiefer als der Scheitel kommt die Parabel nicht. Bei $a < 0$
+genau umgekehrt.
+
+</details>
 
 ![Parabel f(x) = x² − x − 6 mit den Nullstellen N₁(−2|0) und N₂(3|0) und dem Scheitelpunkt S(0,5|−6,25)](../../../assets/plots/funktionen/lineare-quadratische/parabel-nullstellen.svg)
 
@@ -570,6 +603,29 @@ $(1 \mid 2)$.
 
 </details>
 
+<details class="aufgabe">
+<summary>Aufgabe 17 ⭐⭐ · Verständnisaufgabe</summary>
+
+Wahr oder falsch? Begründe:
+a) „Wenn zwei Geraden dieselbe Nullstelle haben, sind sie identisch.“
+b) „Eine nach oben geöffnete Parabel, deren Scheitel oberhalb der
+$x$-Achse liegt, hat keine Nullstelle.“
+
+<details>
+<summary>Lösung zu Aufgabe 17</summary>
+
+a) **Falsch.** Durch einen Punkt der $x$-Achse laufen unendlich viele
+Geraden mit verschiedenen Steigungen – z. B. haben $f(x) = x - 2$ und
+$g(x) = 3x - 6$ beide die Nullstelle $x = 2$, sind aber verschieden.
+
+b) **Wahr.** Der Scheitel ist bei $a > 0$ der *tiefste* Punkt des Graphen.
+Liegt schon der tiefste Punkt oberhalb der $x$-Achse, verläuft die ganze
+Parabel darüber – kein Punkt hat den $y$-Wert $0$.
+
+</details>
+
+</details>
+
 ## Merksatz
 
 <details>
@@ -625,4 +681,10 @@ Zum Abschluss: Klicke bei jeder Frage eine Antwort an – die Auswertung kommt s
   { frage: 'Die Diskriminante der pq-Formel ist negativ. Wie viele Nullstellen gibt es?',
     antworten: ['Zwei', 'Genau eine', 'Keine', 'Das hängt von p ab'],
     richtig: 2, erklaerung: 'Aus einer negativen Zahl kann man keine (reelle) Wurzel ziehen – keine Lösung, keine Nullstelle.' },
+  { frage: 'Verständnisfrage: Eine nach unten geöffnete Parabel hat ihren Scheitel unterhalb der x-Achse. Wie viele Nullstellen hat sie?',
+    antworten: ['Zwei', 'Genau eine', 'Keine', 'Ohne Funktionsterm nicht entscheidbar'],
+    richtig: 2, erklaerung: 'Bei a &lt; 0 ist der Scheitel der höchste Punkt. Liegt schon er unter der x-Achse, bleibt der ganze Graph darunter.' },
+  { frage: 'Verständnisfrage: Warum liegt der Scheitel von f(x) = (x + 4)² − 1 bei x = −4?',
+    antworten: ['Weil man das Vorzeichen aus der Klammer übernimmt', 'Weil die Klammer für x = −4 null wird und das Quadrat dort am kleinsten ist', 'Weil −4 der y-Achsenabschnitt ist', 'Weil die Parabel bei −4 die x-Achse schneidet'],
+    richtig: 1, erklaerung: '(x + 4)² ≥ 0 mit Minimum 0 bei x = −4 – dort ist f am kleinsten: S(−4|−1). Immer fragen: Wann wird die Klammer null?' },
 ]} />

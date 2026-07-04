@@ -49,6 +49,16 @@ $P(1 \mid 1)$:
 
 ![Die Graphen von y = x, x², x³ und x⁴ zwischen 0 und 1,5: alle laufen durch den Ursprung und durch P(1|1); zwischen 0 und 1 liegt der Graph umso tiefer, je größer der Exponent ist](../../../assets/plots/funktionen/potenz-wurzel/potenz-vergleich.svg)
 
+<details class="verstaendnis">
+<summary>Verständnisfrage: Für große $x$ wächst $x^4$ viel schneller als $x^2$ – warum liegt $x^4$ zwischen $0$ und $1$ trotzdem <em>unter</em> $x^2$?</summary>
+
+Multipliziert man eine Zahl zwischen 0 und 1 mit sich selbst, wird sie
+**kleiner**: $0{,}5^2 = 0{,}25$, aber $0{,}5^4 = 0{,}0625$. Je öfter man
+multipliziert, desto kleiner das Ergebnis – deshalb drückt ein größerer
+Exponent den Graphen dort nach unten. Erst ab $x = 1$ kehrt sich das um.
+
+</details>
+
 ### Negative Exponenten
 
 $$
@@ -64,6 +74,16 @@ $$
   waagerechte Asymptote.
 - Symmetrie wie oben: gerades $n$ → achsensymmetrisch, ungerades $n$ →
   punktsymmetrisch.
+
+<details class="verstaendnis">
+<summary>Verständnisfrage: Warum kommt der Graph von $f(x) = \frac{1}{x}$ der $x$-Achse beliebig nahe, erreicht sie aber nie?</summary>
+
+Ein Bruch ist nur dann null, wenn sein **Zähler** null ist – hier steht
+oben aber immer die 1. Für wachsendes $x$ wird $\frac{1}{x}$ zwar winzig
+($\frac{1}{1000} = 0{,}001$), aber nie exakt null. Deshalb hat $f$ keine
+Nullstelle, und die $x$-Achse ist nur Asymptote.
+
+</details>
 
 ### Wurzelfunktionen
 
@@ -107,6 +127,17 @@ sich immer sagen:
 Weitere Umkehrpaare in diesem Schuljahr: [Exponentialfunktion und
 Logarithmus](../exponential-logarithmus/#der-logarithmus) sowie – als
 Rechenoperationen – Kubieren und dritte Wurzel.
+
+<details class="verstaendnis">
+<summary>Verständnisfrage: Warum tauschen Definitions- und Wertebereich bei der Umkehrfunktion die Rollen?</summary>
+
+Die Umkehrfunktion liest jedes Wertepaar rückwärts: Aus „Eingabe $x$,
+Ausgabe $y$“ wird „Eingabe $y$, Ausgabe $x$“. Alles, was bei $f$
+herauskam ($W_f$), wird bei $f^{-1}$ eingesetzt – und alles, was bei $f$
+eingesetzt wurde ($D_f$), kommt bei $f^{-1}$ heraus. Genau das zeigt auch
+die Spiegelung an $y = x$: Sie vertauscht die Koordinaten jedes Punktes.
+
+</details>
 
 :::caution
 $f^{-1}$ ist **nicht** $\frac{1}{f}$! Das hochgestellte $-1$ bezeichnet
@@ -540,6 +571,29 @@ Beim **dreifachen** Abstand ($k = -3$ scheidet aus: Abstände sind positiv).
 
 </details>
 
+<details class="aufgabe">
+<summary>Aufgabe 17 ⭐⭐ · Verständnisaufgabe</summary>
+
+Wahr oder falsch? Begründe:
+a) „Für sehr große $x$ ist $x^{-2}$ irgendwann gleich null.“
+b) „Jede Funktion besitzt eine Umkehrfunktion.“
+
+<details>
+<summary>Lösung zu Aufgabe 17</summary>
+
+a) **Falsch.** $x^{-2} = \frac{1}{x^2}$ ist ein Bruch mit Zähler 1 – er
+wird beliebig klein, aber nie null. Die $x$-Achse ist Asymptote, keine
+Nullstelle.
+
+b) **Falsch.** Umkehrbar ist eine Funktion nur, wenn jeder $y$-Wert genau
+einmal getroffen wird. Die Normalparabel $y = x^2$ trifft $y = 4$ zweimal
+($x = \pm 2$) – erst nach Einschränkung auf $x \geq 0$ kehrt $\sqrt{x}$
+sie um.
+
+</details>
+
+</details>
+
 ## Merksatz
 
 <details>
@@ -600,4 +654,10 @@ Zum Abschluss: Klicke bei jeder Frage eine Antwort an – die Auswertung kommt s
   { frage: 'Was bedeutet f⁻¹ (f invers)?',
     antworten: ['Den Kehrwert 1/f', 'Die Umkehrfunktion, die die Wirkung von f rückgängig macht', 'Die Ableitung von f', 'Die Spiegelung an der x-Achse'],
     richtig: 1, erklaerung: 'f⁻¹ macht f rückgängig: f⁻¹(f(x)) = x. Der Graph entsteht durch Spiegelung an y = x – mit dem Kehrwert hat das nichts zu tun.' },
+  { frage: 'Verständnisfrage: Für x zwischen 0 und 1 – welche Aussage stimmt?',
+    antworten: ['x⁴ &lt; x², denn wiederholtes Multiplizieren mit einer Zahl unter 1 verkleinert', 'x⁴ &gt; x², denn der größere Exponent gewinnt immer', 'x⁴ = x², denn beide laufen durch (1|1)', 'Das hängt vom Vorzeichen ab'],
+    richtig: 0, erklaerung: 'Beispiel x = 0,5: x² = 0,25, x⁴ = 0,0625. Erst ab x = 1 wächst die höhere Potenz schneller.' },
+  { frage: 'Verständnisfrage: Warum hat f(x) = 1/x keine Nullstelle?',
+    antworten: ['Weil x = 0 verboten ist', 'Weil ein Bruch nur null wird, wenn der Zähler null ist – hier steht aber immer 1', 'Weil der Graph die y-Achse nicht schneidet', 'f hat doch eine Nullstelle bei x = 0'],
+    richtig: 1, erklaerung: 'Nullstelle heißt f(x) = 0. Ein Bruch ist null, wenn sein Zähler null ist – der Zähler 1 wird nie null.' },
 ]} />

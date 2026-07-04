@@ -58,6 +58,16 @@ $a \cdot 0 = 0$).
 
 ![Vorher-Nachher: f(x) = x³ − 3x (gestrichelt) wird mit Faktor 2 in y-Richtung gestreckt und mit Faktor 0,5 gestaucht; die Nullstellen bleiben unverändert](../../../assets/plots/funktionen/transformationen/streckung-y.svg)
 
+<details class="verstaendnis">
+<summary>Verständnisfrage: Warum bleiben bei $g(x) = a \cdot f(x)$ genau die Nullstellen liegen – und sonst (fast) kein Punkt?</summary>
+
+Jeder $y$-Wert wird mit $a$ multipliziert. Ein Punkt bleibt nur dann, wo
+er ist, wenn sein $y$-Wert das Multiplizieren unbeschadet übersteht – und
+das gilt nur für $y = 0$: $a \cdot 0 = 0$. Alle anderen Punkte rücken von
+der $x$-Achse weg ($|a| > 1$) oder zu ihr hin ($|a| < 1$).
+
+</details>
+
 ### Streckung in x-Richtung: f(b · x)
 
 $g(x) = f(b \cdot x)$ staucht den Graphen für $b > 1$ in $x$-Richtung auf
@@ -65,6 +75,17 @@ das $\frac{1}{b}$-Fache (alles passiert „schneller“) – bekannt von der
 Periode $T = \frac{2\pi}{b}$ der Sinusfunktion.
 
 ![Vorher-Nachher: f(x) = x³ − 3x (gestrichelt) und g(x) = f(2x): der Graph ist in x-Richtung auf die halbe Breite gestaucht](../../../assets/plots/funktionen/transformationen/streckung-x.svg)
+
+<details class="verstaendnis">
+<summary>Verständnisfrage: Bei $g(x) = f(2x)$ wird mit 2 multipliziert – warum wird der Graph trotzdem <em>schmaler</em> statt breiter?</summary>
+
+Die 2 wirkt auf die **Eingabe**, nicht auf den Funktionswert: Schon bei
+$x = 1$ berechnet $g$ den Wert $f(2)$ – alles, was $f$ erst bei 2 zeigt,
+passiert bei $g$ schon bei 1. Der komplette Verlauf ist auf die halbe
+Breite zusammengeschoben. Wie bei der $x$-Verschiebung gilt: Eingriffe
+*innerhalb* der Klammer wirken „umgekehrt“.
+
+</details>
 
 ### Spiegelungen
 
@@ -93,6 +114,17 @@ Auch **Asymptoten wandern mit**: $g(x) = 2^x - 4$ hat die waagerechte
 Asymptote $y = -4$ statt $y = 0$ – und schneidet jetzt die $x$-Achse:
 
 ![Vorher-Nachher: f(x) = 2 hoch x (gestrichelt) wird um 4 nach unten verschoben; die Asymptote (gepunktet) liegt bei y = −4, Nullstelle N(2|0)](../../../assets/plots/funktionen/transformationen/exponential-verschoben.svg)
+
+<details class="verstaendnis">
+<summary>Verständnisfrage: $2^x$ hat keine Nullstelle – warum hat $2^x - 4$ plötzlich eine?</summary>
+
+$2^x$ liefert nur **positive** Werte, die $x$-Achse wird nie erreicht.
+Schiebt man alles um 4 nach unten, liegen die Werte zwischen $-4$ und
+$\infty$ – die 0 ist jetzt dabei: $2^x - 4 = 0$ genau bei $2^x = 4$, also
+$x = 2$. Verschiebungen in $y$-Richtung können Nullstellen erzeugen oder
+vernichten.
+
+</details>
 
 ## Beispiele
 
@@ -699,6 +731,30 @@ $x_1 \approx 3{,}29$, $x_2 \approx 0{,}71$.
 
 </details>
 
+<details class="aufgabe">
+<summary>Aufgabe 25 ⭐⭐ · Verständnisaufgabe</summary>
+
+Finde und erkläre den Denkfehler:
+a) „$f(x + 2)$ verschiebt den Graphen nach rechts – plus heißt ja
+vorwärts.“
+b) „Bei $g(x) = 3 \cdot f(x)$ wird jeder Punkt von der $x$-Achse
+weggezogen, also verschieben sich auch die Nullstellen.“
+
+<details>
+<summary>Lösung zu Aufgabe 25</summary>
+
+a) **Falsch.** $f(x+2) = f(x - (-2))$ verschiebt um $d = -2$, also nach
+**links**: $g$ zeigt bei $x = -2$ schon das, was $f$ erst bei $0$ tut.
+Innerhalb der Klammer wirkt alles „umgekehrt“.
+
+b) **Falsch.** Gestreckt werden die $y$-Werte: Aus $f(x_0) = 0$ wird
+$3 \cdot 0 = 0$. Punkte **auf** der $x$-Achse haben nichts, was gestreckt
+werden könnte – die Nullstellen bleiben exakt liegen.
+
+</details>
+
+</details>
+
 ## Merksatz
 
 <details>
@@ -760,6 +816,12 @@ Zum Abschluss: Klicke bei jeder Frage eine Antwort an – die Auswertung kommt s
   { frage: 'Welche Asymptote hat g(x) = 2ˣ − 4?',
     antworten: ['y = 0', 'y = 2', 'y = −4', 'x = −4'],
     richtig: 2, erklaerung: 'Die Asymptote y = 0 von 2ˣ wandert bei der Verschiebung mit: y = −4.' },
+  { frage: 'Verständnisfrage: Worin unterscheiden sich f(x) + 2 und f(x + 2)?',
+    antworten: ['Gar nicht – Addition ist Addition', 'f(x) + 2 schiebt nach oben, f(x + 2) nach links', 'f(x) + 2 schiebt nach oben, f(x + 2) nach rechts', 'Beide strecken den Graphen'],
+    richtig: 1, erklaerung: 'Außerhalb der Klammer wirkt die +2 auf die y-Werte (nach oben). In der Klammer wirkt sie auf die Eingabe – und zwar umgekehrt: nach links.' },
+  { frage: 'Verständnisfrage: Warum hat 2ˣ − 4 eine Nullstelle, 2ˣ selbst aber nicht?',
+    antworten: ['Weil die 4 eine Nullstelle bei x = 4 erzeugt', 'Weil 2ˣ nur positive Werte hat und erst die Verschiebung nach unten die 0 in den Wertebereich holt', 'Weil sich die Asymptote nicht ändert', '2ˣ hat doch eine Nullstelle bei x = 0'],
+    richtig: 1, erklaerung: '2ˣ &gt; 0 für alle x. Nach der Verschiebung liegen die Werte in ]−4; ∞[ – die 0 wird bei 2ˣ = 4, also x = 2 erreicht.' },
 ]} />
 
 ## Checkliste zur Klassenarbeit

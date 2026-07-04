@@ -43,6 +43,17 @@ $$
 (a + b)(c + d) = ac + ad + bc + bd
 $$
 
+<details class="verstaendnis">
+<summary>Verständnisfrage: Warum darf man $3x^2$ und $5x$ nicht zu $8x^2$ (oder $8x$) zusammenfassen?</summary>
+
+Weil es verschiedene Termarten sind: $x^2$ und $x$ stehen für verschiedene
+Zahlen. Einsetzen entlarvt den Fehler sofort – für $x = 2$ ist
+$3x^2 + 5x = 12 + 10 = 22$, aber $8x^2 = 32$ und $8x = 16$.
+Zusammenfassen darf man nur Terme mit gleicher Variable **und** gleicher
+Potenz.
+
+</details>
+
 ### Ausklammern (Faktorisieren)
 
 Ausklammern ist das Rückwärtslesen des Distributivgesetzes. Man zieht den
@@ -124,6 +135,15 @@ vergessen. Und: Aus $x \cdot (x-4) = 0$ darf man **nicht** durch $x$
 teilen, sonst verliert man die Lösung $x = 0$.
 :::
 
+<details class="verstaendnis">
+<summary>Verständnisfrage: Woran siehst du ohne jede Rechnung, dass $x^2 + 9 = 0$ keine Lösung hat?</summary>
+
+$x^2$ ist für jede reelle Zahl mindestens $0$. Dann ist $x^2 + 9$ immer
+mindestens $9$ – der Wert $0$ wird nie erreicht. Genau das meldet auch die
+pq-Formel: Die Diskriminante wäre negativ.
+
+</details>
+
 ### Bruchgleichungen (einfacher Fall)
 
 Erst die **Definitionsmenge** bestimmen (Nenner $\neq 0$), dann mit dem
@@ -136,6 +156,16 @@ $$
 x &= 4
 \end{aligned}
 $$
+
+<details class="verstaendnis">
+<summary>Verständnisfrage: Warum bestimmt man die Definitionsmenge, <em>bevor</em> man die Bruchgleichung umformt?</summary>
+
+Beim Multiplizieren mit dem Nenner verschwindet der Bruch – und mit ihm die
+Information, welche $x$ verboten waren. Kommt am Ende genau so ein
+verbotener Wert heraus, ist er **keine** Lösung (Scheinlösung). Das merkt
+man nur, wenn man die Definitionsmenge vorher notiert hat.
+
+</details>
 
 ## Beispiele
 
@@ -786,6 +816,33 @@ Lösung $x = -3$ ✓ (analog $t = -6$ mit $x = 3$).
 
 </details>
 
+<details class="aufgabe">
+<summary>Aufgabe 25 ⭐⭐ · Verständnisaufgabe</summary>
+
+Finde und erkläre den Fehler:
+a) „$(a+b)^2 = a^2 + b^2$“
+b) „$2x^2 + 8x = 0$ – ich teile durch $2x$ und erhalte $x = -4$ als
+einzige Lösung.“
+
+<details>
+<summary>Lösung zu Aufgabe 25</summary>
+
+a) Das **Mittelglied fehlt**: $(a+b)^2 = a^2 + 2ab + b^2$. Kontrolle mit
+Zahlen: $(2+3)^2 = 25$, aber $2^2 + 3^2 = 13$.
+
+b) Durch $2x$ zu teilen ist nur erlaubt, wenn $x \neq 0$ – genau dieser
+Fall geht dabei verloren. Richtig ist Ausklammern:
+
+$$
+2x^2 + 8x = 2x(x + 4) = 0 \quad\Rightarrow\quad x_1 = 0,\ x_2 = -4
+$$
+
+Die Gleichung hat **zwei** Lösungen.
+
+</details>
+
+</details>
+
 ## Merksatz
 
 <details>
@@ -823,4 +880,10 @@ Zum Abschluss: Klicke bei jeder Frage eine Antwort an – die Auswertung kommt s
   { frage: 'Welche Zahl darf man in 5/(x − 2) nicht einsetzen?',
     antworten: ['x = 0', 'x = 5', 'x = 2', 'x = −2'],
     richtig: 2, erklaerung: 'Der Nenner darf nicht null werden: x − 2 = 0 bei x = 2.' },
+  { frage: 'Verständnisfrage: Warum ist Ausklammern beim Gleichungslösen so wertvoll?',
+    antworten: ['Weil der Term dadurch kürzer wird', 'Weil ein Produkt genau dann null ist, wenn ein Faktor null ist', 'Weil man danach die pq-Formel nie mehr braucht', 'Weil sich Vorzeichenfehler vermeiden lassen'],
+    richtig: 1, erklaerung: 'In Produktform liefert der Satz vom Nullprodukt die Lösungen direkt – jeder Faktor wird einzeln null gesetzt.' },
+  { frage: 'Verständnisfrage: Wie viele Lösungen hat x² + 9 = 0 – und warum?',
+    antworten: ['Zwei: x = 3 und x = −3', 'Eine: x = −9', 'Keine, denn x² ist nie negativ, also ist x² + 9 ≥ 9', 'Keine, denn 9 ist keine Quadratzahl'],
+    richtig: 2, erklaerung: 'x² ≥ 0 für alle reellen x. Damit ist x² + 9 ≥ 9 und wird nie null – die Diskriminante wäre negativ.' },
 ]} />

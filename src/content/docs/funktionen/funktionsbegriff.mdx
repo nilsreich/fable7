@@ -41,6 +41,16 @@ genau eine Temperatur $T(t)$. Umgekehrt ist die Zuordnung „Temperatur
 $\mapsto$ Uhrzeit“ **keine** Funktion: 4 °C wird hier z. B. morgens *und*
 abends erreicht.
 
+<details class="verstaendnis">
+<summary>Verständnisfrage: Darf eine Funktion zwei verschiedenen $x$-Werten denselben $y$-Wert zuordnen?</summary>
+
+Ja! Die Eindeutigkeit gilt nur in Richtung $x \to y$: *Jedes* $x$ bekommt
+*genau ein* $y$. Dass mehrere $x$-Werte beim selben $y$ landen, ist erlaubt –
+bei $f(x) = x^2$ ist $f(2) = f(-2) = 4$, und trotzdem ist $f$ eine Funktion.
+Verboten wäre nur, dass **ein** $x$ **zwei** verschiedene $y$-Werte bekommt.
+
+</details>
+
 ### Darstellungsformen
 
 Ein und dieselbe Funktion kann man auf vier Arten angeben:
@@ -60,6 +70,15 @@ Ein und dieselbe Funktion kann man auf vier Arten angeben:
 **Funktionswert berechnen** heißt: $x$ in den Term einsetzen.
 **Funktionswert ablesen** heißt: vom $x$-Wert senkrecht zum Graphen, dann
 waagerecht zur $y$-Achse (gestrichelte Hilfslinien).
+
+<details class="verstaendnis">
+<summary>Verständnisfrage: Woran erkennst du schon an einer Wertetabelle, dass die Zuordnung keine Funktion ist?</summary>
+
+Wenn derselbe $x$-Wert zweimal auftaucht und dabei **verschiedene**
+$y$-Werte hat – dann wäre einem $x$ mehr als ein Wert zugeordnet. Taucht
+derselbe $y$-Wert mehrfach auf, ist das dagegen kein Problem.
+
+</details>
 
 ### Der Senkrechten-Test
 
@@ -81,6 +100,16 @@ für die sich der Term berechnen lässt. Zwei klassische Einschränkungen:
 
 In Anwendungen schränkt oft der **Sachzusammenhang** ein: Eine Strecke oder
 eine Zeit ist nicht negativ.
+
+<details class="verstaendnis">
+<summary>Verständnisfrage: Warum muss bei $f(x) = \frac{1}{x-2}$ genau der Wert $x = 2$ ausgeschlossen werden – und kein anderer?</summary>
+
+Für $x = 2$ steht im Nenner $2 - 2 = 0$, und durch null kann man nicht
+teilen – es gibt keinen Funktionswert. Für jedes andere $x$ ist der Nenner
+$\neq 0$ und die Rechnung liefert genau ein Ergebnis. Der Definitionsbereich
+nimmt also nur die $x$ heraus, bei denen die Rechnung wirklich scheitert.
+
+</details>
 
 ![Graph der Wurzelfunktion f(x) = Wurzel x auf dem Definitionsbereich von 0 bis 9, Endpunkt Q(9|3)](../../../assets/plots/funktionen/funktionsbegriff/wurzel-definitionsbereich.svg)
 
@@ -591,6 +620,31 @@ Um 4 Uhr morgens und um 24 Uhr beträgt die Temperatur 4 °C.
 
 </details>
 
+<details class="aufgabe">
+<summary>Aufgabe 17 ⭐⭐ · Verständnisaufgabe</summary>
+
+Nimm zu beiden Aussagen Stellung und begründe mit der Definition:
+a) „$f(x) = x^2$ ist keine Funktion, denn zu $y = 4$ gehören die beiden
+$x$-Werte $2$ und $-2$.“
+b) „Eine waagerechte Gerade wie $y = 3$ ist kein Funktionsgraph, weil alle
+$x$-Werte denselben $y$-Wert haben.“
+
+<details>
+<summary>Lösung zu Aufgabe 17</summary>
+
+a) **Falsch.** Die Definition verlangt: *jedem $x$* genau *ein* $y$. Sie
+verbietet nicht, dass mehrere $x$-Werte denselben Funktionswert haben.
+Zu $x = 2$ gehört genau ein Wert ($4$), zu $x = -2$ ebenfalls genau einer
+($4$) – alles in Ordnung, $f$ ist eine Funktion.
+
+b) **Falsch.** Auch hier bekommt jedes $x$ genau ein $y$ (nämlich immer
+$3$). Der Senkrechten-Test bestätigt das: Jede senkrechte Gerade schneidet
+die Waagerechte genau einmal. $f(x) = 3$ ist eine (konstante) Funktion.
+
+</details>
+
+</details>
+
 ## Merksatz
 
 <details>
@@ -644,4 +698,10 @@ Zum Abschluss: Klicke bei jeder Frage eine Antwort an – die Auswertung kommt s
   { frage: 'Welchen Wertebereich hat f(x) = x² + 3?',
     antworten: ['ℝ', '[0; ∞[', '[3; ∞[', ']−∞; 3]'],
     richtig: 2, erklaerung: 'x² ist nie negativ, der kleinste Wert ist f(0) = 3 – alles ab 3 kommt vor.' },
+  { frage: 'Verständnisfrage: In einer Wertetabelle steht f(1) = 4 und f(3) = 4. Was folgt daraus?',
+    antworten: ['Die Tabelle gehört zu keiner Funktion', 'Kein Problem – mehrere x dürfen denselben y-Wert haben', 'Die Tabelle enthält einen Rechenfehler', 'f muss eine konstante Funktion sein'],
+    richtig: 1, erklaerung: 'Eindeutigkeit gilt nur von x nach y. Verboten wäre, dass ein x zwei verschiedene y-Werte hat – nicht umgekehrt.' },
+  { frage: 'Verständnisfrage: Was bedeutet die Schreibweise f(3) = 5 am Graphen?',
+    antworten: ['Der Punkt (3 | 5) liegt auf dem Graphen', 'Der Punkt (5 | 3) liegt auf dem Graphen', 'Der Graph schneidet die x-Achse bei 3 und 5', 'Die Funktion hat die Steigung 5'],
+    richtig: 0, erklaerung: 'f(3) = 5 heißt: Zum x-Wert 3 gehört der Funktionswert 5 – also liegt (3 | 5) auf dem Graphen.' },
 ]} />
