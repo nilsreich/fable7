@@ -51,6 +51,16 @@ bei Abnahme um $p\,\%$.
 
 ![Exponentialfunktionen mit den Basen 1,5, 2 und 3: je größer die Basis, desto steiler wächst der Graph](../../../assets/plots/funktionen/exponential-logarithmus/basis-vergleich.svg)
 
+<details class="verstaendnis">
+<summary>Verständnisfrage: Warum wird die Basis $a = 1$ in der Definition ausgeschlossen?</summary>
+
+$1^x = 1$ für jedes $x$ – die „Exponentialfunktion“ wäre eine konstante
+Gerade, es gäbe weder Wachstum noch Zerfall. Alles Typische (streng
+steigend/fallend, Asymptote, Verdopplungszeit) ginge verloren. Deshalb
+verlangt man $a > 0$ und $a \neq 1$.
+
+</details>
+
 ### Wachstumsprozesse modellieren
 
 Ein Bestand mit Startwert $b$, der sich pro Zeiteinheit um den Faktor $a$
@@ -64,6 +74,17 @@ $$
 
 Typisch für exponentielles Wachstum: Am Anfang wirkt es harmlos, dann
 explodiert es – jede Potenzfunktion wird irgendwann überholt.
+
+<details class="verstaendnis">
+<summary>Verständnisfrage: Was ist der Kernunterschied zwischen linearem und exponentiellem Wachstum?</summary>
+
+Linear heißt: Pro Schritt kommt eine **feste Zahl dazu** ($+d$, z. B.
+jeden Monat 50 € aufs Sparbuch). Exponentiell heißt: Pro Schritt wird mit
+einem **festen Faktor multipliziert** ($\cdot\, a$, z. B. jedes Jahr
+$\cdot\, 1{,}05$). Deshalb wachsen die Zuwächse beim exponentiellen
+Wachstum selbst mit – und genau das macht es auf Dauer so dramatisch.
+
+</details>
 
 ### Halbwertszeit und Verdopplungszeit
 
@@ -106,6 +127,17 @@ Winkelhalbierenden $y = x$, genau wie bei Quadrieren und Wurzelziehen.
 Sie ist nur für $x > 0$ definiert.
 
 ![Der Graph von g(x) = Logarithmus zur Basis 2 entsteht durch Spiegelung des Graphen von f(x) = 2 hoch x an der gestrichelten Winkelhalbierenden y = x](../../../assets/plots/funktionen/exponential-logarithmus/logarithmus-umkehrung.svg)
+
+<details class="verstaendnis">
+<summary>Verständnisfrage: Warum ist $\log_2(-4)$ nicht definiert?</summary>
+
+$\log_2(-4)$ fragt: „$2$ hoch was ergibt $-4$?“ Aber $2^x$ liefert für
+jedes $x$ einen **positiven** Wert – kein Exponent führt zu $-4$ (oder zu
+$0$). Deshalb ist der Logarithmus nur für positive Zahlen definiert:
+Sein Definitionsbereich ist der Wertebereich $]0;\ \infty[$ der
+Exponentialfunktion.
+
+</details>
 
 ## Beispiele
 
@@ -229,7 +261,10 @@ Kontrolle: $3^{2{,}73} \approx 20$ ✓
 
 ## Aufgaben
 
-**Aufgabe 1** (⭐) Berechne $2^x$ für $x = 0,\ 1,\ 2,\ 3,\ 4$ und $x = -2$.
+<details class="aufgabe">
+<summary>Aufgabe 1 ⭐</summary>
+
+Berechne $2^x$ für $x = 0,\ 1,\ 2,\ 3,\ 4$ und $x = -2$.
 
 <details>
 <summary>Lösung zu Aufgabe 1</summary>
@@ -241,7 +276,12 @@ $$
 
 </details>
 
-**Aufgabe 2** (⭐) Gib den Wachstumsfaktor an:
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 2 ⭐</summary>
+
+Gib den Wachstumsfaktor an:
 a) Zunahme um 3 % b) Abnahme um 20 % c) Zunahme um 150 %
 
 <details>
@@ -255,7 +295,12 @@ c) $a = 1 + 1{,}50 = 2{,}5$
 
 </details>
 
-**Aufgabe 3** (⭐) Welche prozentuale Änderung pro Schritt steckt im Faktor?
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 3 ⭐</summary>
+
+Welche prozentuale Änderung pro Schritt steckt im Faktor?
 a) $a = 1{,}05$  b) $a = 0{,}93$  c) $a = 2$
 
 <details>
@@ -265,7 +310,12 @@ a) $+5\ \%$  b) $-7\ \%$  c) $+100\ \%$ (Verdopplung)
 
 </details>
 
-**Aufgabe 4** (⭐) $f(x) = 3 \cdot 2^x$. Berechne $f(0)$, $f(2)$ und $f(5)$.
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 4 ⭐</summary>
+
+$f(x) = 3 \cdot 2^x$. Berechne $f(0)$, $f(2)$ und $f(5)$.
 
 <details>
 <summary>Lösung zu Aufgabe 4</summary>
@@ -277,7 +327,12 @@ $$
 
 </details>
 
-**Aufgabe 5** (⭐) Wachstum oder Zerfall? Gib auch den Startwert an:
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 5 ⭐</summary>
+
+Wachstum oder Zerfall? Gib auch den Startwert an:
 a) $f(x) = 0{,}97^x$  b) $g(x) = 4 \cdot 1{,}2^x$  c) $h(x) = 5 \cdot 0{,}5^x$
 
 <details>
@@ -291,7 +346,12 @@ c) $a = 0{,}5 < 1$ → Zerfall; Startwert $5$
 
 </details>
 
-**Aufgabe 6** (⭐) Wo schneidet der Graph von $f(x) = 4 \cdot 1{,}5^x$ die
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 6 ⭐</summary>
+
+Wo schneidet der Graph von $f(x) = 4 \cdot 1{,}5^x$ die
 $y$-Achse? Begründe allgemein für $f(x) = b \cdot a^x$.
 
 <details>
@@ -304,7 +364,12 @@ $y$-Achsenabschnitt.
 
 </details>
 
-**Aufgabe 7** (⭐⭐) Ein Sparguthaben von 500 € wächst mit 8 % Zins pro Jahr.
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 7 ⭐⭐</summary>
+
+Ein Sparguthaben von 500 € wächst mit 8 % Zins pro Jahr.
 Stelle den Funktionsterm auf und berechne das Guthaben nach 10 Jahren.
 
 <details>
@@ -322,7 +387,12 @@ Nach 10 Jahren sind es rund **1079 €** – mehr als das Doppelte.
 
 </details>
 
-**Aufgabe 8** (⭐⭐) Von 60 mg eines Wirkstoffs werden pro Stunde 25 %
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 8 ⭐⭐</summary>
+
+Von 60 mg eines Wirkstoffs werden pro Stunde 25 %
 abgebaut. Wie viel ist nach 4 Stunden noch vorhanden?
 
 <details>
@@ -342,7 +412,12 @@ Nach 4 Stunden sind noch etwa **19 mg** vorhanden.
 
 </details>
 
-**Aufgabe 9** (⭐⭐) Löse exakt (ohne Taschenrechner):
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 9 ⭐⭐</summary>
+
+Löse exakt (ohne Taschenrechner):
 a) $2^x = 32$  b) $10^x = 0{,}001$  c) $4^x = \frac{1}{16}$
 
 <details>
@@ -356,7 +431,12 @@ c) $\frac{1}{16} = 4^{-2}$, also $x = -2$
 
 </details>
 
-**Aufgabe 10** (⭐⭐) Löse mit dem Logarithmus (auf zwei Dezimalen):
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 10 ⭐⭐</summary>
+
+Löse mit dem Logarithmus (auf zwei Dezimalen):
 a) $3^x = 50$  b) $1{,}05^x = 2$
 
 <details>
@@ -376,7 +456,12 @@ $$
 
 </details>
 
-**Aufgabe 11** (⭐⭐) Eine Population wächst um 4 % pro Jahr. Berechne die
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 11 ⭐⭐</summary>
+
+Eine Population wächst um 4 % pro Jahr. Berechne die
 Verdopplungszeit.
 
 <details>
@@ -392,7 +477,12 @@ Die Population verdoppelt sich etwa alle **17,7 Jahre**.
 
 </details>
 
-**Aufgabe 12** (⭐⭐) Ein Stoff zerfällt um 10 % pro Tag. Berechne die
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 12 ⭐⭐</summary>
+
+Ein Stoff zerfällt um 10 % pro Tag. Berechne die
 Halbwertszeit.
 
 <details>
@@ -408,7 +498,12 @@ Die Halbwertszeit beträgt etwa **6,6 Tage**.
 
 </details>
 
-**Aufgabe 13** (⭐⭐) Zum Bakterien-Graphen der Erklärung
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 13 ⭐⭐</summary>
+
+Zum Bakterien-Graphen der Erklärung
 ($N(t) = 2 \cdot 1{,}5^t$, $N$ in Tausend):
 a) Wie viele Zellen sind es am Anfang? Um wie viel Prozent wächst die
 Kultur pro Stunde?
@@ -430,7 +525,12 @@ Nach 4 Stunden: rund **10 100 Zellen**.
 
 </details>
 
-**Aufgabe 14** (⭐⭐) Liegt der Punkt auf dem Graphen?
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 14 ⭐⭐</summary>
+
+Liegt der Punkt auf dem Graphen?
 a) $P(3 \mid 24)$ auf $f(x) = 3 \cdot 2^x$
 b) $Q(2 \mid 10)$ auf $g(x) = 2 \cdot 2^x$
 
@@ -443,7 +543,12 @@ b) $g(2) = 2 \cdot 4 = 8 \neq 10$ → $Q$ liegt nicht auf dem Graphen.
 
 </details>
 
-**Aufgabe 15** (⭐⭐) Eine Exponentialfunktion $f(x) = b \cdot a^x$ ($a > 0$)
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 15 ⭐⭐</summary>
+
+Eine Exponentialfunktion $f(x) = b \cdot a^x$ ($a > 0$)
 hat die Werte $f(0) = 5$ und $f(2) = 20$. Bestimme $b$ und $a$.
 
 <details>
@@ -463,7 +568,12 @@ Also $f(x) = 5 \cdot 2^x$.
 
 </details>
 
-**Aufgabe 16** (⭐⭐) Vergleiche $f(x) = 2^x$ und $g(x) = x^2$ an den Stellen
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 16 ⭐⭐</summary>
+
+Vergleiche $f(x) = 2^x$ und $g(x) = x^2$ an den Stellen
 $x = 2$, $x = 4$ und $x = 10$. Was fällt auf?
 
 <details>
@@ -479,7 +589,12 @@ Exponentielles Wachstum überholt **jede** Potenzfunktion.
 
 </details>
 
-**Aufgabe 17** (⭐⭐) Zum Medikamenten-Graphen der Erklärung
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 17 ⭐⭐</summary>
+
+Zum Medikamenten-Graphen der Erklärung
 ($K(t) = 80 \cdot 0{,}5^{t/6}$):
 a) Lies $K(6)$ und $K(12)$ ab.
 b) Nach welcher Zeit sind nur noch 10 mg im Blut? (exakt lösbar!)
@@ -504,7 +619,12 @@ Nach **18 Stunden** (drei Halbwertszeiten: $80 \to 40 \to 20 \to 10$).
 
 </details>
 
-**Aufgabe 18** (⭐⭐) Ein Prozess halbiert sich alle 6 Stunden. Um wie viel
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 18 ⭐⭐</summary>
+
+Ein Prozess halbiert sich alle 6 Stunden. Um wie viel
 Prozent nimmt er **pro Stunde** ab?
 
 <details>
@@ -521,7 +641,12 @@ Pro Stunde bleibt also 89,1 % übrig – der Bestand nimmt um etwa
 
 </details>
 
-**Aufgabe 19** (⭐⭐⭐) Die Halbwertszeit von C-14 beträgt 5730 Jahre. In
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 19 ⭐⭐⭐</summary>
+
+Die Halbwertszeit von C-14 beträgt 5730 Jahre. In
 einem Knochenfund sind noch 25 % des ursprünglichen C-14-Gehalts enthalten.
 Wie alt ist der Fund?
 
@@ -539,7 +664,12 @@ Der Fund ist etwa **11 460 Jahre** alt.
 
 </details>
 
-**Aufgabe 20** (⭐⭐⭐) Eine Bakterienkultur (Start: 500 Zellen) verdoppelt
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 20 ⭐⭐⭐</summary>
+
+Eine Bakterienkultur (Start: 500 Zellen) verdoppelt
 sich alle 3 Stunden.
 a) Stelle den Funktionsterm mit der Verdopplungszeit auf.
 b) Wie viele Zellen sind es nach 12 Stunden?
@@ -570,7 +700,12 @@ Nach **18 Stunden**.
 
 </details>
 
-**Aufgabe 21** (⭐⭐⭐) Zwei Gehaltsangebote, Startgehalt jeweils 40 000 €:
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 21 ⭐⭐⭐</summary>
+
+Zwei Gehaltsangebote, Startgehalt jeweils 40 000 €:
 Firma A erhöht jährlich um 1000 € (linear), Firma B um 3 % (exponentiell).
 Welches Gehalt ist nach 10 Jahren höher?
 
@@ -594,7 +729,12 @@ Zinseszins-Effekt.
 
 </details>
 
-**Aufgabe 22** (⭐⭐) Berechne ohne Taschenrechner:
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 22 ⭐⭐</summary>
+
+Berechne ohne Taschenrechner:
 a) $\log_2(8)$  b) $\log_3(81)$  c) $\log_{10}(1000)$  d) $\log_5(1)$
 
 <details>
@@ -610,7 +750,12 @@ d) $5^0 = 1$ → $\log_5(1) = 0$
 
 </details>
 
-**Aufgabe 23** (⭐⭐) Ein Guthaben von 200 € wächst mit 6 % pro Jahr. Wann
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 23 ⭐⭐</summary>
+
+Ein Guthaben von 200 € wächst mit 6 % pro Jahr. Wann
 hat es sich auf 400 € verdoppelt?
 
 <details>
@@ -628,7 +773,12 @@ Nach knapp **12 Jahren**.
 
 </details>
 
-**Aufgabe 24** (⭐⭐⭐) Die Weltbevölkerung wachse modellhaft um 2 % pro
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 24 ⭐⭐⭐</summary>
+
+Die Weltbevölkerung wachse modellhaft um 2 % pro
 Jahr. Zeige, dass sie sich dann in etwa 55,5 Jahren **verdreifacht**, und
 erkläre, warum das Ergebnis nicht vom Startwert abhängt.
 
@@ -646,6 +796,33 @@ $$
 Der Startwert $b$ kürzt sich beim Dividieren weg – die
 Verdreifachungszeit ist (wie Halbwerts- und Verdopplungszeit) eine
 Eigenschaft des **Faktors**, nicht des Bestands.
+
+</details>
+
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 25 ⭐⭐ · Verständnisaufgabe</summary>
+
+Wahr oder falsch? Begründe ohne Taschenrechner-Marathon:
+a) „Wächst ein Kapital 10 Jahre lang um je 10 %, ist es danach um 100 %
+gewachsen – also verdoppelt.“
+b) „Ein Stoff mit Halbwertszeit 5 Tage ist nach 10 Tagen vollständig
+zerfallen.“
+
+<details>
+<summary>Lösung zu Aufgabe 25</summary>
+
+a) **Falsch.** Prozente wirken multiplikativ, nicht additiv: Nach 10
+Jahren ist das Kapital auf das $1{,}1^{10} \approx 2{,}59$-Fache gewachsen
+– rund $+159\ \%$, deutlich mehr als verdoppelt. Der Zuwachs jedes Jahres
+wird im Folgejahr mitverzinst (Zinseszins).
+
+b) **Falsch.** Nach jeder Halbwertszeit ist noch die **Hälfte** da: nach
+5 Tagen $50\ \%$, nach 10 Tagen $25\ \%$, nach 15 Tagen $12{,}5\ \%$ …
+Der Bestand nähert sich der 0, erreicht sie aber nie ganz.
+
+</details>
 
 </details>
 
@@ -709,4 +886,10 @@ Zum Abschluss: Klicke bei jeder Frage eine Antwort an – die Auswertung kommt s
   { frage: 'Welche Asymptote hat der Graph von y = 2ˣ?',
     antworten: ['x = 0', 'y = 1', 'y = 0', 'Keine'],
     richtig: 2, erklaerung: 'Für x → −∞ nähern sich die Werte der 0 – die x-Achse ist waagerechte Asymptote.' },
+  { frage: 'Verständnisfrage: Ein Bestand wächst zwei Jahre lang um je 10 %. Um wie viel Prozent ist er insgesamt gewachsen?',
+    antworten: ['Um genau 20 %', 'Um 21 %, denn der Zuwachs des ersten Jahres wächst mit', 'Um 10 %', 'Das lässt sich ohne Startwert nicht sagen'],
+    richtig: 1, erklaerung: '1,1 · 1,1 = 1,21 – Prozente multiplizieren sich. Der Zuwachs aus Jahr 1 wird in Jahr 2 mitverzinst (Zinseszins-Effekt).' },
+  { frage: 'Verständnisfrage: Warum ist log₂(−4) nicht definiert?',
+    antworten: ['Weil man den Taschenrechner braucht', 'Weil 2ˣ für jedes x positiv ist – kein Exponent ergibt −4', 'Weil −4 keine ganze Potenz von 2 ist', 'Es ist definiert: log₂(−4) = −2'],
+    richtig: 1, erklaerung: 'log₂(−4) fragt: „2 hoch was ergibt −4?“ Da 2ˣ &gt; 0 für alle x, gibt es keine Antwort – der Logarithmus existiert nur für positive Zahlen.' },
 ]} />

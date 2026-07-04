@@ -50,6 +50,17 @@ ausschließen. Mehr braucht es nicht – und die Gleichungstechniken dafür
 kennst du aus dem
 [Algebra-Werkzeugkasten](../../basiswissen/algebra-werkzeugkasten/#erklärung).
 
+<details class="verstaendnis">
+<summary>Verständnisfrage: Warum liefert der <em>Nenner</em> die Definitionslücken und der <em>Zähler</em> die Nullstellen – und nicht umgekehrt?</summary>
+
+Ein Bruch scheitert genau dann, wenn unten null steht (Division durch
+null) – deshalb bestimmen die Nenner-Nullstellen, welche $x$ verboten
+sind. Und ein Bruch **hat den Wert** null genau dann, wenn oben null
+steht: $\frac{0}{5} = 0$, aber $\frac{5}{0}$ existiert nicht. Merke:
+Nenner → wo die Funktion *nicht lebt*, Zähler → wo sie *null ist*.
+
+</details>
+
 ### Polstellen und senkrechte Asymptoten
 
 Was passiert **nahe** der Definitionslücke? Einsetzen von Werten dicht bei
@@ -75,6 +86,17 @@ Ob der Graph an der Polstelle die Seite wechselt, entscheidet der Nenner:
 - $\dfrac{1}{(x-1)^2}$: Das Quadrat ist auf beiden Seiten positiv → der
   Graph geht beidseitig nach $+\infty$ (**ohne** Vorzeichenwechsel).
 
+<details class="verstaendnis">
+<summary>Verständnisfrage: Darf der Graph eine senkrechte Asymptote wenigstens berühren?</summary>
+
+Nein – an der Stelle der senkrechten Asymptote liegt eine
+Definitionslücke: Dort gibt es **gar keinen** Funktionswert, also auch
+keinen Punkt des Graphen, der die Gerade berühren könnte. Die Werte
+daneben explodieren nur nach $\pm\infty$. (Waagerechte Asymptoten sind
+weniger streng – siehe unten.)
+
+</details>
+
 ### Verhalten im Unendlichen: waagerechte Asymptoten
 
 Für betragsgroße $x$ wird ein Bruch mit großem Nenner winzig:
@@ -95,6 +117,17 @@ g(x) = \frac{2x+1}{x} = \frac{2x}{x} + \frac{1}{x} = 2 + \frac{1}{x}
 $$
 
 ![Der Graph von g(x) = (2x+1)/x nähert sich für x gegen plus und minus unendlich der gestrichelten waagerechten Asymptote y = 2](../../../assets/plots/funktionen/gebrochenrationale/waagerechte-asymptote.svg)
+
+<details class="verstaendnis">
+<summary>Verständnisfrage: Darf ein Graph seine <em>waagerechte</em> Asymptote schneiden?</summary>
+
+Ja! Die waagerechte Asymptote beschreibt nur das Verhalten **ganz weit
+draußen** ($x \to \pm\infty$). Im Mittelteil darf der Graph sie kreuzen:
+$f(x) = \frac{x}{x^2+1}$ hat die Asymptote $y = 0$ und schneidet sie
+trotzdem bei $x = 0$. Nur die senkrechte Asymptote ist tabu – dort ist
+die Funktion nicht definiert.
+
+</details>
 
 ### Nullstellen
 
@@ -237,7 +270,10 @@ $\frac{400}{x} > 0$ für jedes $x$.
 
 ## Aufgaben
 
-**Aufgabe 1** (⭐) $f(x) = \dfrac{6}{x}$. Berechne $f(2)$, $f(12)$,
+<details class="aufgabe">
+<summary>Aufgabe 1 ⭐</summary>
+
+$f(x) = \dfrac{6}{x}$. Berechne $f(2)$, $f(12)$,
 $f(-3)$ und $f(0{,}5)$. Warum darf man $x = 0$ nicht einsetzen?
 
 <details>
@@ -253,7 +289,12 @@ also $D = \mathbb{R} \setminus \{0\}$.
 
 </details>
 
-**Aufgabe 2** (⭐) Gib den maximalen Definitionsbereich an:
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 2 ⭐</summary>
+
+Gib den maximalen Definitionsbereich an:
 a) $f(x) = \dfrac{3}{x-4}$  b) $g(x) = \dfrac{5}{2x+6}$
 c) $h(x) = \dfrac{x+1}{x^2-9}$
 
@@ -271,7 +312,12 @@ $\ D_h = \mathbb{R} \setminus \{-3;\ 3\}$
 
 </details>
 
-**Aufgabe 3** (⭐) Gib die Polstelle und die Gleichung der senkrechten
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 3 ⭐</summary>
+
+Gib die Polstelle und die Gleichung der senkrechten
 Asymptote an: a) $f(x) = \dfrac{1}{x+3}$  b) $g(x) = \dfrac{2}{5-x}$
 c) $h(x) = \dfrac{x}{x-1}$
 
@@ -288,7 +334,12 @@ c) $x - 1 = 0 \Rightarrow x = 1$: senkrechte Asymptote $x = 1$
 
 </details>
 
-**Aufgabe 4** (⭐) Gib das Verhalten für $x \to +\infty$ in der
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 4 ⭐</summary>
+
+Gib das Verhalten für $x \to +\infty$ in der
 Grenzwert-Schreibweise an:
 a) $f(x) = \dfrac{4}{x}$  b) $g(x) = 2 + \dfrac{3}{x}$
 c) $h(x) = -\dfrac{5}{x^2}$
@@ -305,7 +356,12 @@ c) $\lim\limits_{x \to +\infty} \left(-\dfrac{5}{x^2}\right) = 0$
 
 </details>
 
-**Aufgabe 5** (⭐) Bestimme alle Nullstellen:
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 5 ⭐</summary>
+
+Bestimme alle Nullstellen:
 a) $f(x) = \dfrac{x-3}{x+1}$  b) $g(x) = \dfrac{2x+8}{x}$
 c) $h(x) = \dfrac{5}{x-2}$
 
@@ -322,7 +378,12 @@ c) Zähler konstant $5 \neq 0$: **keine** Nullstelle
 
 </details>
 
-**Aufgabe 6** (⭐⭐) Ordne jedem Term das passende Asymptoten-Paar zu:
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 6 ⭐⭐</summary>
+
+Ordne jedem Term das passende Asymptoten-Paar zu:
 
 Terme: $\ f(x) = \dfrac{1}{x-1}$, $\ g(x) = \dfrac{1}{x} + 2$,
 $\ h(x) = \dfrac{1}{x+2}$, $\ k(x) = \dfrac{3}{x-2} + 1$
@@ -340,7 +401,12 @@ $f \to$ (C), $\quad g \to$ (D), $\quad h \to$ (A), $\quad k \to$ (B)
 
 </details>
 
-**Aufgabe 7** (⭐⭐) $f(x) = \dfrac{1}{x+1} - 2$.
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 7 ⭐⭐</summary>
+
+$f(x) = \dfrac{1}{x+1} - 2$.
 a) Gib Definitionsbereich und beide Asymptoten an.
 b) Beschreibe, wie der Graph aus der Hyperbel $y = \frac{1}{x}$ entsteht.
 c) Berechne die Nullstelle.
@@ -368,7 +434,12 @@ Nullstelle $N\!\left(-\frac{1}{2} \mid 0\right)$.
 
 </details>
 
-**Aufgabe 8** (⭐⭐) Bestimme die waagerechte Asymptote mit dem
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 8 ⭐⭐</summary>
+
+Bestimme die waagerechte Asymptote mit dem
 Zerlegungstrick: a) $f(x) = \dfrac{3x-1}{x}$  b) $g(x) = \dfrac{4x+2}{2x}$
 
 <details>
@@ -390,7 +461,12 @@ $$
 
 </details>
 
-**Aufgabe 9** (⭐⭐) $f(x) = \dfrac{1}{x-1}$ und $g(x) = \dfrac{1}{(x-1)^2}$
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 9 ⭐⭐</summary>
+
+$f(x) = \dfrac{1}{x-1}$ und $g(x) = \dfrac{1}{(x-1)^2}$
 haben beide die Polstelle $x = 1$. Begründe, warum sich die Graphen dort
 trotzdem völlig unterschiedlich verhalten.
 
@@ -409,7 +485,12 @@ Vorzeichenwechsel).
 
 </details>
 
-**Aufgabe 10** (⭐⭐) Löse die Bruchgleichungen (Definitionsbereich
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 10 ⭐⭐</summary>
+
+Löse die Bruchgleichungen (Definitionsbereich
 beachten): a) $\dfrac{6}{x} = 3$  b) $\dfrac{4}{x-1} = 2$
 c) $\dfrac{1}{x+2} = -1$
 
@@ -426,7 +507,12 @@ Alle Lösungen liegen im jeweiligen Definitionsbereich.
 
 </details>
 
-**Aufgabe 11** (⭐⭐) Eine Funktion der Form $f(x) = \dfrac{a}{x-d} + c$
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 11 ⭐⭐</summary>
+
+Eine Funktion der Form $f(x) = \dfrac{a}{x-d} + c$
 hat die Asymptoten $x = 1$ und $y = 2$ und läuft durch $P(2 \mid 5)$.
 Bestimme den Funktionsterm.
 
@@ -450,7 +536,12 @@ Funktionsterm: $f(x) = \dfrac{3}{x-1} + 2$
 
 </details>
 
-**Aufgabe 12** (⭐⭐) Fehlersuche: In einem Heft steht „$f(x) =
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 12 ⭐⭐</summary>
+
+Fehlersuche: In einem Heft steht „$f(x) =
 \dfrac{3}{x-2}$ hat die Nullstelle $x = 2$, denn dort wird der Nenner
 null.“ Finde beide Fehler.
 
@@ -466,7 +557,12 @@ $3 \neq 0$ – die Funktion hat also **überhaupt keine** Nullstelle.
 
 </details>
 
-**Aufgabe 13** (⭐⭐) Untersuche rechnerisch auf Symmetrie:
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 13 ⭐⭐</summary>
+
+Untersuche rechnerisch auf Symmetrie:
 a) $f(x) = \dfrac{2}{x}$  b) $g(x) = \dfrac{1}{x^2} + 1$
 
 <details>
@@ -490,7 +586,12 @@ $$
 
 </details>
 
-**Aufgabe 14** (⭐⭐⭐) Ein Betrieb fertigt USB-Sticks mit Fixkosten 600 €
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 14 ⭐⭐⭐</summary>
+
+Ein Betrieb fertigt USB-Sticks mit Fixkosten 600 €
 und variablen Kosten 0,80 € pro Stück:
 $k(x) = \dfrac{0{,}8x + 600}{x}$ (Stückkosten in €).
 a) Berechne $k(100)$ und $k(1\,000)$.
@@ -527,7 +628,12 @@ erreicht wird der Wert nie.
 
 </details>
 
-**Aufgabe 15** (⭐⭐⭐) Die Wirkung eines Medikaments in Abhängigkeit von
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 15 ⭐⭐⭐</summary>
+
+Die Wirkung eines Medikaments in Abhängigkeit von
 der Dosis $d$ (in mg) wird modelliert durch
 $W(d) = \dfrac{90\,d}{d+5}$ (Wirkung in Prozent der Maximalwirkung,
 $d \geq 0$).
@@ -572,7 +678,12 @@ Wirkung.
 
 </details>
 
-**Aufgabe 16** (⭐⭐⭐) $f(x) = \dfrac{2x^2}{x^2+1}$.
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 16 ⭐⭐⭐</summary>
+
+$f(x) = \dfrac{2x^2}{x^2+1}$.
 a) Begründe: $D = \mathbb{R}$ – obwohl $x$ im Nenner steht.
 b) Bestimme die Nullstelle und untersuche auf Symmetrie.
 c) Zeige mit einer Zerlegung, dass $y = 2$ waagerechte Asymptote ist.
@@ -597,6 +708,32 @@ $$
 
 Wegen $\frac{2}{x^2+1} > 0$ bleibt der Graph immer **unterhalb** der
 Asymptote $y = 2$.
+
+</details>
+
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 17 ⭐⭐ · Verständnisaufgabe</summary>
+
+Wahr oder falsch? Begründe:
+a) „Ein Graph darf seine waagerechte Asymptote niemals schneiden.“
+b) „$f(x) = \dfrac{5}{x+3}$ hat die Nullstelle $x = -3$.“
+
+<details>
+<summary>Lösung zu Aufgabe 17</summary>
+
+a) **Falsch.** Die waagerechte Asymptote beschreibt nur das Verhalten für
+$x \to \pm\infty$. Beispiel: $g(x) = \frac{x}{x^2+1}$ hat die Asymptote
+$y = 0$ und schneidet sie bei $x = 0$. Nur senkrechte Asymptoten kann der
+Graph nie berühren – dort ist die Funktion nicht definiert.
+
+b) **Falsch.** Bei $x = -3$ wird der **Nenner** null: Das ist eine
+Definitionslücke (Polstelle), kein Punkt des Graphen. Nullstellen kommen
+vom Zähler – und der Zähler 5 wird nie null. $f$ hat also gar keine
+Nullstelle.
+
+</details>
 
 </details>
 
@@ -657,4 +794,10 @@ Zum Abschluss: Klicke bei jeder Frage eine Antwort an – die Auswertung kommt s
   { frage: 'Warum ist „x = 1 ist Nullstelle von f(x) = 5/(x − 1)“ falsch?',
     antworten: ['Die Nullstelle ist x = −1', 'Bei x = 1 ist f gar nicht definiert – und der Zähler 5 wird nie null', 'Die Nullstelle ist x = 5', 'Die Aussage ist richtig'],
     richtig: 1, erklaerung: 'Nenner null ⇒ Definitionslücke, nicht Nullstelle. Nullstellen kommen vom Zähler, und 5 ≠ 0 – f hat keine Nullstelle.' },
+  { frage: 'Verständnisfrage: Darf der Graph einer Funktion seine senkrechte Asymptote berühren?',
+    antworten: ['Ja, aber nur in einem Punkt', 'Ja, wenn der Zähler groß genug ist', 'Nein – an dieser Stelle ist die Funktion gar nicht definiert', 'Nein, aber nur bei Hyperbeln'],
+    richtig: 2, erklaerung: 'Die senkrechte Asymptote steht an einer Definitionslücke: Dort existiert kein Funktionswert, also auch kein Berührpunkt.' },
+  { frage: 'Verständnisfrage: Woran erkennst du am Term, ob der Graph an der Polstelle die Seite wechselt?',
+    antworten: ['Am Vorzeichen des Zählers', 'An der Potenz des Nennerfaktors: ungerade → Sprung ±∞, gerade → beide Seiten gleich', 'An der waagerechten Asymptote', 'Das sieht man nur am Graphen'],
+    richtig: 1, erklaerung: 'Bei (x − a)¹ wechselt der Nenner das Vorzeichen (Sprung), bei (x − a)² bleibt er positiv – beide Seiten laufen in dieselbe Richtung.' },
 ]} />

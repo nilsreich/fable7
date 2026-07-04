@@ -41,6 +41,16 @@ genau eine Temperatur $T(t)$. Umgekehrt ist die Zuordnung „Temperatur
 $\mapsto$ Uhrzeit“ **keine** Funktion: 4 °C wird hier z. B. morgens *und*
 abends erreicht.
 
+<details class="verstaendnis">
+<summary>Verständnisfrage: Darf eine Funktion zwei verschiedenen $x$-Werten denselben $y$-Wert zuordnen?</summary>
+
+Ja! Die Eindeutigkeit gilt nur in Richtung $x \to y$: *Jedes* $x$ bekommt
+*genau ein* $y$. Dass mehrere $x$-Werte beim selben $y$ landen, ist erlaubt –
+bei $f(x) = x^2$ ist $f(2) = f(-2) = 4$, und trotzdem ist $f$ eine Funktion.
+Verboten wäre nur, dass **ein** $x$ **zwei** verschiedene $y$-Werte bekommt.
+
+</details>
+
 ### Darstellungsformen
 
 Ein und dieselbe Funktion kann man auf vier Arten angeben:
@@ -60,6 +70,15 @@ Ein und dieselbe Funktion kann man auf vier Arten angeben:
 **Funktionswert berechnen** heißt: $x$ in den Term einsetzen.
 **Funktionswert ablesen** heißt: vom $x$-Wert senkrecht zum Graphen, dann
 waagerecht zur $y$-Achse (gestrichelte Hilfslinien).
+
+<details class="verstaendnis">
+<summary>Verständnisfrage: Woran erkennst du schon an einer Wertetabelle, dass die Zuordnung keine Funktion ist?</summary>
+
+Wenn derselbe $x$-Wert zweimal auftaucht und dabei **verschiedene**
+$y$-Werte hat – dann wäre einem $x$ mehr als ein Wert zugeordnet. Taucht
+derselbe $y$-Wert mehrfach auf, ist das dagegen kein Problem.
+
+</details>
 
 ### Der Senkrechten-Test
 
@@ -81,6 +100,16 @@ für die sich der Term berechnen lässt. Zwei klassische Einschränkungen:
 
 In Anwendungen schränkt oft der **Sachzusammenhang** ein: Eine Strecke oder
 eine Zeit ist nicht negativ.
+
+<details class="verstaendnis">
+<summary>Verständnisfrage: Warum muss bei $f(x) = \frac{1}{x-2}$ genau der Wert $x = 2$ ausgeschlossen werden – und kein anderer?</summary>
+
+Für $x = 2$ steht im Nenner $2 - 2 = 0$, und durch null kann man nicht
+teilen – es gibt keinen Funktionswert. Für jedes andere $x$ ist der Nenner
+$\neq 0$ und die Rechnung liefert genau ein Ergebnis. Der Definitionsbereich
+nimmt also nur die $x$ heraus, bei denen die Rechnung wirklich scheitert.
+
+</details>
 
 ![Graph der Wurzelfunktion f(x) = Wurzel x auf dem Definitionsbereich von 0 bis 9, Endpunkt Q(9|3)](../../../assets/plots/funktionen/funktionsbegriff/wurzel-definitionsbereich.svg)
 
@@ -176,7 +205,10 @@ Also $D_g = [-3;\ \infty[$.
 
 ## Aufgaben
 
-**Aufgabe 1** (⭐) $f(x) = 3x - 4$. Berechne $f(0)$, $f(2)$ und $f(-1)$.
+<details class="aufgabe">
+<summary>Aufgabe 1 ⭐</summary>
+
+$f(x) = 3x - 4$. Berechne $f(0)$, $f(2)$ und $f(-1)$.
 
 <details>
 <summary>Lösung zu Aufgabe 1</summary>
@@ -191,7 +223,12 @@ $$
 
 </details>
 
-**Aufgabe 2** (⭐) $f(x) = x^2 + 1$. Berechne $f(-2)$, $f\!\left(\frac{1}{2}\right)$ und $f(10)$.
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 2 ⭐</summary>
+
+$f(x) = x^2 + 1$. Berechne $f(-2)$, $f\!\left(\frac{1}{2}\right)$ und $f(10)$.
 
 <details>
 <summary>Lösung zu Aufgabe 2</summary>
@@ -209,7 +246,12 @@ $-2^2 = -4$.
 
 </details>
 
-**Aufgabe 3** (⭐) Lege eine Wertetabelle für $f(x) = 2x - 3$ an
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 3 ⭐</summary>
+
+Lege eine Wertetabelle für $f(x) = 2x - 3$ an
 ($x = -2$ bis $x = 2$, Schrittweite 1).
 
 <details>
@@ -223,7 +265,12 @@ Rechnung z. B. für $x = -2$: $f(-2) = 2 \cdot (-2) - 3 = -7$.
 
 </details>
 
-**Aufgabe 4** (⭐) Funktion oder nicht? Begründe kurz.
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 4 ⭐</summary>
+
+Funktion oder nicht? Begründe kurz.
 a) Jedem Auto wird sein amtliches Kennzeichen zugeordnet.
 b) Jedem Tag des Jahres wird die Niederschlagsmenge in Trier zugeordnet.
 c) Jeder natürlichen Zahl werden ihre Teiler zugeordnet.
@@ -240,7 +287,12 @@ $x$ werden mehrere Werte zugeordnet.
 
 </details>
 
-**Aufgabe 5** (⭐) Begründe mit dem Senkrechten-Test, dass der Kreis aus der
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 5 ⭐</summary>
+
+Begründe mit dem Senkrechten-Test, dass der Kreis aus der
 Erklärung kein Funktionsgraph ist. Gib die beiden $y$-Werte an, die dort zu
 $x = 0$ gehören.
 
@@ -259,7 +311,12 @@ eindeutig, der Kreis ist kein Funktionsgraph.
 
 </details>
 
-**Aufgabe 6** (⭐⭐) Lies am Graphen von $f(x) = 0{,}5x^2 - 2$ (Erklärung) den
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 6 ⭐⭐</summary>
+
+Lies am Graphen von $f(x) = 0{,}5x^2 - 2$ (Erklärung) den
 Wert $f(3)$ ab und bestätige ihn durch Rechnung. Für welche $x$ gilt
 $f(x) = 0$?
 
@@ -286,7 +343,12 @@ $$
 
 </details>
 
-**Aufgabe 7** (⭐⭐) $f(x) = x^2 - 4$. Für welche $x$ gilt a) $f(x) = 0$,
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 7 ⭐⭐</summary>
+
+$f(x) = x^2 - 4$. Für welche $x$ gilt a) $f(x) = 0$,
 b) $f(x) = 5$?
 
 <details>
@@ -310,7 +372,12 @@ $$
 
 </details>
 
-**Aufgabe 8** (⭐⭐) Liegen die Punkte auf dem Graphen von $f(x) = 2x - 1$?
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 8 ⭐⭐</summary>
+
+Liegen die Punkte auf dem Graphen von $f(x) = 2x - 1$?
 a) $P(2 \mid 3)$  b) $Q(-1 \mid -2)$
 
 <details>
@@ -324,7 +391,12 @@ Graphen.
 
 </details>
 
-**Aufgabe 9** (⭐⭐) Bestimme den maximalen Definitionsbereich:
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 9 ⭐⭐</summary>
+
+Bestimme den maximalen Definitionsbereich:
 a) $f(x) = \dfrac{1}{x}$  b) $g(x) = \dfrac{5}{x + 5}$  c) $h(x) = \sqrt{x - 1}$
 
 <details>
@@ -339,7 +411,12 @@ $\ D_h = [1;\ \infty[$
 
 </details>
 
-**Aufgabe 10** (⭐⭐) Gib den Wertebereich an: a) $f(x) = x^2$
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 10 ⭐⭐</summary>
+
+Gib den Wertebereich an: a) $f(x) = x^2$
 b) $g(x) = x^2 + 3$  c) $h(x) = -x^2$
 
 <details>
@@ -354,7 +431,12 @@ c) Das Minus spiegelt: alle Werte $\leq 0$: $W_h = \ ]-\infty;\ 0]$
 
 </details>
 
-**Aufgabe 11** (⭐⭐) $f(x) = 2x + 1$ und $g(x) = -x + 7$. Für welches $x$
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 11 ⭐⭐</summary>
+
+$f(x) = 2x + 1$ und $g(x) = -x + 7$. Für welches $x$
 gilt $f(x) = g(x)$? Gib den zugehörigen Punkt an.
 
 <details>
@@ -376,7 +458,12 @@ Beide Graphen schneiden sich im Punkt $S(2 \mid 5)$.
 
 </details>
 
-**Aufgabe 12** (⭐⭐) Eine Taxifahrt kostet 4 € Grundpreis plus 2 € pro
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 12 ⭐⭐</summary>
+
+Eine Taxifahrt kostet 4 € Grundpreis plus 2 € pro
 Kilometer.
 a) Stelle den Funktionsterm für den Preis $K(x)$ bei $x$ km auf.
 b) Was kostet eine 7-km-Fahrt?
@@ -407,7 +494,12 @@ Für 12 € kommt man 4 km weit.
 
 </details>
 
-**Aufgabe 13** (⭐⭐) Finde zur Wertetabelle einen passenden Funktionsterm:
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 13 ⭐⭐</summary>
+
+Finde zur Wertetabelle einen passenden Funktionsterm:
 
 | $x$ | $1$ | $2$ | $3$ | $4$ |
 | --- | --- | --- | --- | --- |
@@ -426,7 +518,12 @@ Kontrolle: $f(4) = 12$ ✓
 
 </details>
 
-**Aufgabe 14** (⭐⭐⭐) $f(x) = \sqrt{x}$ mit $D = [0;\ 9]$ (Graph in der
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 14 ⭐⭐⭐</summary>
+
+$f(x) = \sqrt{x}$ mit $D = [0;\ 9]$ (Graph in der
 Erklärung).
 a) Warum enthält $D$ keine negativen Zahlen?
 b) Bestimme den Wertebereich $W$.
@@ -447,7 +544,12 @@ $$
 
 </details>
 
-**Aufgabe 15** (⭐⭐⭐) Zwei Handytarife: Tarif A kostet 10 € Grundgebühr plus
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 15 ⭐⭐⭐</summary>
+
+Zwei Handytarife: Tarif A kostet 10 € Grundgebühr plus
 0,05 € pro Minute, Tarif B keine Grundgebühr, aber 0,15 € pro Minute.
 a) Stelle für beide Tarife den Funktionsterm der Monatskosten auf
 ($m$ = Gesprächsminuten).
@@ -478,7 +580,12 @@ Monat ist Tarif A günstiger.
 
 </details>
 
-**Aufgabe 16** (⭐⭐⭐) Der Temperaturverlauf aus der Erklärung lässt sich
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 16 ⭐⭐⭐</summary>
+
+Der Temperaturverlauf aus der Erklärung lässt sich
 durch $T(t) = -0{,}05(t - 14)^2 + 9$ beschreiben ($t$ in Stunden, $T$ in °C,
 $0 \leq t \leq 24$).
 a) Berechne die Temperatur um Mitternacht ($t = 0$).
@@ -508,6 +615,33 @@ t_1 = 24,\quad t_2 &= 4
 $$
 
 Um 4 Uhr morgens und um 24 Uhr beträgt die Temperatur 4 °C.
+
+</details>
+
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 17 ⭐⭐ · Verständnisaufgabe</summary>
+
+Nimm zu beiden Aussagen Stellung und begründe mit der Definition:
+a) „$f(x) = x^2$ ist keine Funktion, denn zu $y = 4$ gehören die beiden
+$x$-Werte $2$ und $-2$.“
+b) „Eine waagerechte Gerade wie $y = 3$ ist kein Funktionsgraph, weil alle
+$x$-Werte denselben $y$-Wert haben.“
+
+<details>
+<summary>Lösung zu Aufgabe 17</summary>
+
+a) **Falsch.** Die Definition verlangt: *jedem $x$* genau *ein* $y$. Sie
+verbietet nicht, dass mehrere $x$-Werte denselben Funktionswert haben.
+Zu $x = 2$ gehört genau ein Wert ($4$), zu $x = -2$ ebenfalls genau einer
+($4$) – alles in Ordnung, $f$ ist eine Funktion.
+
+b) **Falsch.** Auch hier bekommt jedes $x$ genau ein $y$ (nämlich immer
+$3$). Der Senkrechten-Test bestätigt das: Jede senkrechte Gerade schneidet
+die Waagerechte genau einmal. $f(x) = 3$ ist eine (konstante) Funktion.
+
+</details>
 
 </details>
 
@@ -564,4 +698,10 @@ Zum Abschluss: Klicke bei jeder Frage eine Antwort an – die Auswertung kommt s
   { frage: 'Welchen Wertebereich hat f(x) = x² + 3?',
     antworten: ['ℝ', '[0; ∞[', '[3; ∞[', ']−∞; 3]'],
     richtig: 2, erklaerung: 'x² ist nie negativ, der kleinste Wert ist f(0) = 3 – alles ab 3 kommt vor.' },
+  { frage: 'Verständnisfrage: In einer Wertetabelle steht f(1) = 4 und f(3) = 4. Was folgt daraus?',
+    antworten: ['Die Tabelle gehört zu keiner Funktion', 'Kein Problem – mehrere x dürfen denselben y-Wert haben', 'Die Tabelle enthält einen Rechenfehler', 'f muss eine konstante Funktion sein'],
+    richtig: 1, erklaerung: 'Eindeutigkeit gilt nur von x nach y. Verboten wäre, dass ein x zwei verschiedene y-Werte hat – nicht umgekehrt.' },
+  { frage: 'Verständnisfrage: Was bedeutet die Schreibweise f(3) = 5 am Graphen?',
+    antworten: ['Der Punkt (3 | 5) liegt auf dem Graphen', 'Der Punkt (5 | 3) liegt auf dem Graphen', 'Der Graph schneidet die x-Achse bei 3 und 5', 'Die Funktion hat die Steigung 5'],
+    richtig: 0, erklaerung: 'f(3) = 5 heißt: Zum x-Wert 3 gehört der Funktionswert 5 – also liegt (3 | 5) auf dem Graphen.' },
 ]} />

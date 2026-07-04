@@ -48,6 +48,18 @@ $$
 
 Beispiel: $\left(4x^3\right)' = 4 \cdot 3x^2 = 12x^2$.
 
+<details class="verstaendnis">
+<summary>Verständnisfrage: Warum darf der konstante Faktor beim Ableiten einfach stehen bleiben?</summary>
+
+$c \cdot g(x)$ ist der in $y$-Richtung gestreckte Graph von $g$ – und die
+Streckung erfasst **alle** $y$-Werte, also auch jedes Steigungsdreieck:
+$\Delta y$ wird verdreifacht, $\Delta x$ bleibt. Jede Steigung ist damit
+genau $c$-mal so groß wie vorher. Achtung: Das gilt nur für
+**konstante** Faktoren – für Produkte wie $x^2(x-3)$ erst
+ausmultiplizieren!
+
+</details>
+
 ### Summenregel
 
 Summen (und Differenzen) werden **gliedweise** abgeleitet:
@@ -77,6 +89,17 @@ Am Bild sieht man die Bedeutung: Wo $f$ fällt, verläuft $f'$ unterhalb
 der $x$-Achse; am Scheitel gilt $f'(2) = 0$; wo $f$ steigt, ist $f'$
 positiv.
 
+<details class="verstaendnis">
+<summary>Verständnisfrage: $f(x) = x^2$ und $g(x) = x^2 + 7$ haben dieselbe Ableitung $2x$. Wie kann das sein?</summary>
+
+Der Graph von $g$ ist nur der um 7 nach oben geschobene Graph von $f$ –
+an der **Steilheit** ändert das nichts, an jeder Stelle sind beide
+Tangenten parallel. Die Ableitung „sieht“ Verschiebungen in $y$-Richtung
+nicht: Aus $f'$ allein kann man $f$ deshalb nie vollständig
+rekonstruieren.
+
+</details>
+
 ### Höhere Ableitungen
 
 Die Ableitungsfunktion kann man erneut ableiten: $f''$ (**zweite
@@ -96,6 +119,17 @@ Die zweite Ableitung wird ab der Seite
 [Extrem- und Wendepunkte](../extrem-wendepunkte/) gebraucht; im
 Bewegungskontext ist sie die **Beschleunigung** (Änderungsrate der
 Geschwindigkeit).
+
+<details class="verstaendnis">
+<summary>Verständnisfrage: Was misst die zweite Ableitung anschaulich?</summary>
+
+$f''$ ist die Ableitung von $f'$ – sie misst also, wie schnell sich die
+**Steigung** ändert. Beim Autofahren: $s(t)$ = Ort, $s'(t)$ =
+Geschwindigkeit (Tacho), $s''(t)$ = Beschleunigung (Gaspedal/Bremse).
+Ein positives $f''$ heißt: Die Steigung nimmt zu, der Graph macht eine
+Linkskurve.
+
+</details>
 
 ## Beispiele
 
@@ -167,7 +201,10 @@ $$
 
 ## Aufgaben
 
-**Aufgabe 1** (⭐) Leite ab: a) $x^4$  b) $x^7$  c) $x^{100}$
+<details class="aufgabe">
+<summary>Aufgabe 1 ⭐</summary>
+
+Leite ab: a) $x^4$  b) $x^7$  c) $x^{100}$
 
 <details>
 <summary>Lösung zu Aufgabe 1</summary>
@@ -176,7 +213,12 @@ a) $4x^3$  b) $7x^6$  c) $100x^{99}$
 
 </details>
 
-**Aufgabe 2** (⭐) Leite ab: a) $3x^2$  b) $-5x^4$  c) $\frac{1}{2}x^3$
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 2 ⭐</summary>
+
+Leite ab: a) $3x^2$  b) $-5x^4$  c) $\frac{1}{2}x^3$
 
 <details>
 <summary>Lösung zu Aufgabe 2</summary>
@@ -185,7 +227,12 @@ a) $6x$  b) $-20x^3$  c) $\frac{3}{2}x^2$
 
 </details>
 
-**Aufgabe 3** (⭐) Leite ab: a) $f(x) = x^2 + x$  b) $g(x) = x^3 - 2x + 5$
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 3 ⭐</summary>
+
+Leite ab: a) $f(x) = x^2 + x$  b) $g(x) = x^3 - 2x + 5$
 
 <details>
 <summary>Lösung zu Aufgabe 3</summary>
@@ -196,7 +243,12 @@ b) $g'(x) = 3x^2 - 2$ (die $+5$ fällt weg)
 
 </details>
 
-**Aufgabe 4** (⭐) Leite ab: $f(x) = 2x^3 - 4x^2 + x - 8$
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 4 ⭐</summary>
+
+Leite ab: $f(x) = 2x^3 - 4x^2 + x - 8$
 
 <details>
 <summary>Lösung zu Aufgabe 4</summary>
@@ -207,7 +259,12 @@ $$
 
 </details>
 
-**Aufgabe 5** (⭐) Leite ab: a) $f(x) = 9$  b) $g(x) = x + 9$
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 5 ⭐</summary>
+
+Leite ab: a) $f(x) = 9$  b) $g(x) = x + 9$
 
 <details>
 <summary>Lösung zu Aufgabe 5</summary>
@@ -218,7 +275,12 @@ b) $g'(x) = 1$ (die 9 fällt weg, $x$ hat Ableitung 1)
 
 </details>
 
-**Aufgabe 6** (⭐⭐) Leite ab: $f(x) = -0{,}5x^4 + 2x^2 - 3$
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 6 ⭐⭐</summary>
+
+Leite ab: $f(x) = -0{,}5x^4 + 2x^2 - 3$
 
 <details>
 <summary>Lösung zu Aufgabe 6</summary>
@@ -229,7 +291,12 @@ $$
 
 </details>
 
-**Aufgabe 7** (⭐⭐) $f(x) = x^3 - 3x$.
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 7 ⭐⭐</summary>
+
+$f(x) = x^3 - 3x$.
 a) Bestimme $f'$ und berechne $f'(0)$ und $f'(2)$.
 b) An welchen Stellen gilt $f'(x) = 0$?
 
@@ -248,7 +315,12 @@ $$
 
 </details>
 
-**Aufgabe 8** (⭐⭐) An welcher Stelle hat der Graph von
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 8 ⭐⭐</summary>
+
+An welcher Stelle hat der Graph von
 $f(x) = x^2 - 4x + 3$ eine waagerechte Tangente? Gib den zugehörigen
 Punkt an.
 
@@ -264,7 +336,12 @@ $f(2) = 4 - 8 + 3 = -1$ → waagerechte Tangente im Punkt $S(2 \mid -1)$
 
 </details>
 
-**Aufgabe 9** (⭐⭐) $f(x) = x^4 - 2x^3$. Bestimme $f'$, $f''$ und $f'''$.
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 9 ⭐⭐</summary>
+
+$f(x) = x^4 - 2x^3$. Bestimme $f'$, $f''$ und $f'''$.
 
 <details>
 <summary>Lösung zu Aufgabe 9</summary>
@@ -277,7 +354,12 @@ $$
 
 </details>
 
-**Aufgabe 10** (⭐⭐) $f(x) = 0{,}5x^4 - x^2$. Berechne die
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 10 ⭐⭐</summary>
+
+$f(x) = 0{,}5x^4 - x^2$. Berechne die
 Tangentensteigung an den Stellen $1$ und $-2$.
 
 <details>
@@ -294,7 +376,12 @@ Bei $x = 1$ waagerechte Tangente, bei $x = -2$ steil fallend.
 
 </details>
 
-**Aufgabe 11** (⭐⭐) In welchem Punkt hat die Normalparabel
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 11 ⭐⭐</summary>
+
+In welchem Punkt hat die Normalparabel
 $f(x) = x^2$ die Steigung 4?
 
 <details>
@@ -308,7 +395,12 @@ $f(2) = 4$ → im Punkt $(2 \mid 4)$.
 
 </details>
 
-**Aufgabe 12** (⭐⭐) Schreibe als Potenz und leite ab:
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 12 ⭐⭐</summary>
+
+Schreibe als Potenz und leite ab:
 a) $f(x) = \dfrac{1}{x}$  b) $g(x) = \dfrac{1}{x^2}$
 
 <details>
@@ -328,7 +420,12 @@ $$
 
 </details>
 
-**Aufgabe 13** (⭐⭐) Leite ab (erst umformen!):
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 13 ⭐⭐</summary>
+
+Leite ab (erst umformen!):
 a) $f(x) = x^2(x - 3)$  b) $g(x) = (x + 2)(x - 2)$
 
 <details>
@@ -340,7 +437,12 @@ b) $g(x) = x^2 - 4$ (3. binomische Formel) → $g'(x) = 2x$
 
 </details>
 
-**Aufgabe 14** (⭐⭐⭐) Für welchen Wert von $a$ hat der Graph von
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 14 ⭐⭐⭐</summary>
+
+Für welchen Wert von $a$ hat der Graph von
 $f(x) = ax^2$ an der Stelle $3$ die Steigung 12?
 
 <details>
@@ -354,7 +456,12 @@ $$
 
 </details>
 
-**Aufgabe 15** (⭐⭐⭐) Sprintmodell $s(t) = 1{,}5t^2$.
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 15 ⭐⭐⭐</summary>
+
+Sprintmodell $s(t) = 1{,}5t^2$.
 a) Bestimme die Geschwindigkeit $v(t) = s'(t)$ und die Beschleunigung
 $a(t) = v'(t)$.
 b) Deute das Ergebnis für $a(t)$.
@@ -371,7 +478,12 @@ Weg → Geschwindigkeit → Beschleunigung.
 
 </details>
 
-**Aufgabe 16** (⭐⭐⭐) Zeige: Der Graph von $f(x) = x^3$ hat an keiner
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 16 ⭐⭐⭐</summary>
+
+Zeige: Der Graph von $f(x) = x^3$ hat an keiner
 Stelle eine negative Tangentensteigung. An welcher Stelle ist die
 Steigung genau 0, und wie sieht der Graph dort aus?
 
@@ -388,6 +500,32 @@ Steigung 0 nur bei $x = 0$. Dort liegt aber kein Hoch- oder Tiefpunkt:
 Der Graph steigt davor und danach – ein **Sattelpunkt** mit waagerechter
 Tangente. (Warum $f'(x_0) = 0$ allein keinen Extrempunkt garantiert,
 klärt die Seite [Extrem- und Wendepunkte](../extrem-wendepunkte/).)
+
+</details>
+
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 17 ⭐⭐ · Verständnisaufgabe</summary>
+
+a) Finde den Fehler: „$\left(x^3 \cdot x^2\right)' = 3x^2 \cdot 2x = 6x^3$.“
+b) Wahr oder falsch? „Wenn $f'(x) = g'(x)$ für alle $x$ gilt, dann ist
+$f = g$.“
+
+<details>
+<summary>Lösung zu Aufgabe 17</summary>
+
+a) Es gibt (noch) keine Regel „Produkt = Produkt der Ableitungen“! Erst
+mit den Potenzgesetzen zusammenfassen: $x^3 \cdot x^2 = x^5$, dann
+Potenzregel: $\left(x^5\right)' = 5x^4$. (Der falsche Weg liefert
+$6x^3$ – schon der Exponent passt nicht.)
+
+b) **Falsch.** Gleiche Ableitung heißt nur: an jeder Stelle gleiche
+Steigung. Die Graphen können parallel übereinander liegen –
+$f(x) = x^2$ und $g(x) = x^2 + 7$ haben beide die Ableitung $2x$.
+$f$ und $g$ unterscheiden sich höchstens um eine Konstante.
+
+</details>
 
 </details>
 
@@ -446,4 +584,10 @@ Zum Abschluss: Klicke bei jeder Frage eine Antwort an – die Auswertung kommt s
   { frage: 'Was ist die zweite Ableitung von f(x) = x⁴?',
     antworten: ['4x³', '12x²', '24x', 'x²'],
     richtig: 1, erklaerung: 'Zweimal Potenzregel: f′(x) = 4x³, dann f″(x) = 12x².' },
+  { frage: 'Verständnisfrage: f′(x) = g′(x) für alle x. Was folgt für f und g?',
+    antworten: ['f = g', 'f und g unterscheiden sich höchstens um eine Konstante', 'f und g haben dieselben Nullstellen', 'g ist die zweite Ableitung von f'],
+    richtig: 1, erklaerung: 'Gleiche Steigung überall heißt: Die Graphen verlaufen parallel – wie x² und x² + 7. Die Verschiebung sieht die Ableitung nicht.' },
+  { frage: 'Verständnisfrage: s(t) beschreibt den Ort eines Autos. Was bedeutet s″(t)?',
+    antworten: ['Die Geschwindigkeit', 'Den doppelten Weg', 'Die Beschleunigung – die Änderungsrate der Geschwindigkeit', 'Die Fahrzeit'],
+    richtig: 2, erklaerung: 's′ ist die Geschwindigkeit (Tacho); deren Änderungsrate s″ spürt man als Gasgeben oder Bremsen.' },
 ]} />

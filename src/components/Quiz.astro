@@ -1,9 +1,11 @@
 ---
 /**
- * Multiple-Choice-Quiz ohne Client-JavaScript.
+ * Multiple-Choice-Quiz, eine Frage nach der anderen.
  *
  * Feedback rein per CSS: Radio-Buttons + :checked zeigen sofort
  * „Richtig“/„Falsch“; bei richtiger Antwort erscheint die Erklärung.
+ * Ein kleines Skript blendet immer nur die aktuelle Frage ein
+ * (Weiter/Zurück); ohne JavaScript bleiben alle Fragen sichtbar.
  *
  * Verwendung in MDX:
  *   <Quiz fragen={[
@@ -57,7 +59,76 @@ const uid = `quiz-${zaehler}`;
 			</fieldset>
 		))
 	}
+	<div class="quiz-nav" hidden>
+		<button type="button" class="quiz-knopf quiz-zurueck">← Zurück</button>
+		<button type="button" class="quiz-knopf quiz-weiter">Weiter →</button>
+	</div>
+	<div class="quiz-ende" hidden>
+		<p><strong>Geschafft!</strong> Du hast alle {fragen.length} Fragen bearbeitet.</p>
+		<button type="button" class="quiz-knopf quiz-neustart">Nochmal von vorn</button>
+	</div>
 </section>
+
+<script>
+	// Immer nur eine Frage zeigen. Ohne JavaScript (hidden bleibt gesetzt,
+	// Fragen bleiben sichtbar) funktioniert das Quiz wie eine lange Liste.
+	document.querySelectorAll<HTMLElement>('.quiz').forEach((quiz) => {
+		const fragen = Array.from(quiz.querySelectorAll<HTMLElement>('.quiz-frage'));
+		const nav = quiz.querySelector<HTMLElement>('.quiz-nav');
+		const ende = quiz.querySelector<HTMLElement>('.quiz-ende');
+		const zurueck = quiz.querySelector<HTMLButtonElement>('.quiz-zurueck');
+		const weiter = quiz.querySelector<HTMLButtonElement>('.quiz-weiter');
+		const neustart = quiz.querySelector<HTMLButtonElement>('.quiz-neustart');
+		if (fragen.length < 2 || !nav || !ende || !zurueck || !weiter || !neustart) return;
+
+		let aktuell = 0;
+
+		const beantwortet = () => !!fragen[aktuell].querySelector('input:checked');
+
+		function aktualisieren() {
+			fragen.forEach((frage, i) => (frage.hidden = i !== aktuell));
+			ende.hidden = true;
+			nav.hidden = false;
+			zurueck.disabled = aktuell === 0;
+			// Erst weiterklicken, wenn eine Antwort gewählt wurde
+			weiter.disabled = !beantwortet();
+			weiter.textContent = aktuell === fragen.length - 1 ? 'Fertig ✓' : 'Weiter →';
+		}
+
+		quiz.addEventListener('change', () => {
+			weiter.disabled = !beantwortet();
+		});
+
+		weiter.addEventListener('click', () => {
+			if (aktuell < fragen.length - 1) {
+				aktuell += 1;
+				aktualisieren();
+			} else {
+				// Abschluss: Fragen ausblenden, Schlusskarte zeigen
+				fragen.forEach((frage) => (frage.hidden = true));
+				nav.hidden = true;
+				ende.hidden = false;
+			}
+		});
+
+		zurueck.addEventListener('click', () => {
+			if (aktuell > 0) {
+				aktuell -= 1;
+				aktualisieren();
+			}
+		});
+
+		neustart.addEventListener('click', () => {
+			quiz.querySelectorAll<HTMLInputElement>('input[type="radio"]').forEach((radio) => {
+				radio.checked = false;
+			});
+			aktuell = 0;
+			aktualisieren();
+		});
+
+		aktualisieren();
+	});
+</script>
 
 <style>
 	.quiz {
@@ -186,5 +257,46 @@ const uid = `quiz-${zaehler}`;
 
 	.quiz-frage:has(.ist-richtig input:checked) .quiz-erklaerung {
 		display: block;
+	}
+
+	/* Navigation unter der aktuellen Frage */
+	.quiz-nav {
+		display: flex;
+		justify-content: space-between;
+		gap: 0.75rem;
+	}
+
+	.quiz-knopf {
+		border: 1px solid var(--sl-color-gray-5);
+		border-radius: 999px;
+		padding: 0.4rem 1.1rem;
+		font-size: var(--sl-text-sm);
+		font-weight: 600;
+		color: var(--sl-color-white);
+		background-color: var(--sl-color-bg);
+		cursor: pointer;
+		transition: border-color 0.15s;
+	}
+
+	.quiz-knopf:hover:not(:disabled) {
+		border-color: var(--sl-color-accent);
+	}
+
+	.quiz-knopf:disabled {
+		opacity: 0.45;
+		cursor: not-allowed;
+	}
+
+	/* Schlusskarte nach der letzten Frage */
+	.quiz-ende {
+		border: 1px solid var(--sl-color-gray-5);
+		border-radius: 0.5rem;
+		padding: 1rem 1.25rem;
+		background-color: var(--sl-color-gray-7, var(--sl-color-gray-6));
+		text-align: center;
+	}
+
+	.quiz-ende p {
+		margin: 0 0 0.75rem;
 	}
 </style>

@@ -39,6 +39,17 @@ Je nach Kontext hat die mittlere Änderungsrate eine eigene Bedeutung:
 Durchschnitts­geschwindigkeit (Weg pro Zeit), durchschnittliches
 Wachstum, mittlere Abbaurate eines Medikaments …
 
+<details class="verstaendnis">
+<summary>Verständnisfrage: Was verrät die mittlere Änderungsrate über den Verlauf <em>innerhalb</em> des Intervalls?</summary>
+
+Nichts! In den Differenzenquotienten gehen nur die **Randwerte** $f(a)$
+und $f(b)$ ein. Eine Fieberkurve kann auf $[0;\ 4]$ die mittlere
+Änderungsrate 0 haben und trotzdem zwischendurch stark gestiegen und
+wieder gefallen sein – entscheidend ist nur, dass Start- und Endwert
+gleich sind.
+
+</details>
+
 ### Beispiel Sprint: das Weg-Zeit-Modell
 
 Für die Beschleunigungsphase eines 100-m-Sprints verwenden wir das stark
@@ -66,6 +77,17 @@ Die Steigung der Tangente im Punkt $P$ heißt **lokale** (oder momentane)
 **Änderungsrate** von $f$ an der Stelle $a$. Im Sprintkontext ist sie die
 **Momentangeschwindigkeit** – die Zahl, die ein Blitzer messen würde.
 
+<details class="verstaendnis">
+<summary>Verständnisfrage: Warum kann man die Momentangeschwindigkeit bei $t = 3$ nicht einfach als Differenzenquotient auf $[3;\ 3]$ berechnen?</summary>
+
+Dann stünde $\frac{s(3) - s(3)}{3 - 3} = \frac{0}{0}$ – und durch null
+darf man nicht teilen. Ein einzelner Zeitpunkt hat keine „Strecke pro
+Zeit“. Deshalb der Umweg: Intervalle $[3;\ 3+h]$ immer weiter
+schrumpfen lassen und schauen, welchem Wert sich die Sekantensteigungen
+nähern.
+
+</details>
+
 ![Sekante durch P und Q sowie Tangente im dazwischenliegenden Punkt B am Graphen von f(x) = 0,5x²](../../../assets/plots/differentialrechnung/aenderungsrate/sekante-tangente.svg)
 
 **Zusammengefasst:**
@@ -78,6 +100,16 @@ Die Steigung der Tangente im Punkt $P$ heißt **lokale** (oder momentane)
 
 Wie man die Tangentensteigung **exakt** berechnet (nicht nur näherungs­weise),
 zeigt die nächste Seite ([h-Methode](../ableitung-h-methode/)).
+
+<details class="verstaendnis">
+<summary>Verständnisfrage: Woran erkennst du in einer Textaufgabe, ob die mittlere oder die lokale Änderungsrate gefragt ist?</summary>
+
+An der Zeitangabe: Ein **Zeitraum** („zwischen Sekunde 1 und 3“, „im
+ersten Jahr“, „durchschnittlich“) verlangt die mittlere Änderungsrate
+(Sekante). Ein **Zeitpunkt** („genau bei $t = 3$“, „momentan“, „in
+diesem Augenblick“) verlangt die lokale Änderungsrate (Tangente).
+
+</details>
 
 ## Beispiele
 
@@ -158,7 +190,10 @@ Maximum erreicht, die lokale Änderungsrate dort ist 0).
 
 ## Aufgaben
 
-**Aufgabe 1** (⭐) Berechne die mittlere Änderungsrate von $f(x) = x^2$
+<details class="aufgabe">
+<summary>Aufgabe 1 ⭐</summary>
+
+Berechne die mittlere Änderungsrate von $f(x) = x^2$
 auf $[1;\ 3]$.
 
 <details>
@@ -170,7 +205,12 @@ $$
 
 </details>
 
-**Aufgabe 2** (⭐) Begründe: Die mittlere Änderungsrate von
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 2 ⭐</summary>
+
+Begründe: Die mittlere Änderungsrate von
 $f(x) = 2x + 5$ ist auf **jedem** Intervall gleich. Wie groß ist sie?
 
 <details>
@@ -185,7 +225,12 @@ $$
 
 </details>
 
-**Aufgabe 3** (⭐) Radtour: $s(0) = 0$, $s(1) = 12$, $s(2) = 20$,
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 3 ⭐</summary>
+
+Radtour: $s(0) = 0$, $s(1) = 12$, $s(2) = 20$,
 $s(3) = 24$ (km nach $t$ Stunden). Berechne die mittlere Geschwindigkeit
 für jede der drei Stunden und für die Gesamttour.
 
@@ -203,7 +248,12 @@ langsamer.
 
 </details>
 
-**Aufgabe 4** (⭐) Berechne die mittlere Änderungsrate von
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 4 ⭐</summary>
+
+Berechne die mittlere Änderungsrate von
 $f(x) = x^2 - 2x$ auf $[0;\ 2]$ und erkläre das Ergebnis am Graphen.
 
 <details>
@@ -220,7 +270,12 @@ wieder hinauf.
 
 </details>
 
-**Aufgabe 5** (⭐⭐) Berechne die mittlere Änderungsrate von $f(x) = x^3$
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 5 ⭐⭐</summary>
+
+Berechne die mittlere Änderungsrate von $f(x) = x^3$
 auf $[1;\ 2]$.
 
 <details>
@@ -232,7 +287,12 @@ $$
 
 </details>
 
-**Aufgabe 6** (⭐⭐) $f(x) = 0{,}5x^2 + 1$ (Graph mit Steigungsdreieck in
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 6 ⭐⭐</summary>
+
+$f(x) = 0{,}5x^2 + 1$ (Graph mit Steigungsdreieck in
 der Erklärung). Berechne die mittlere Änderungsrate auf $[1;\ 3]$ und
 vergleiche mit dem eingezeichneten Dreieck.
 
@@ -248,7 +308,12 @@ $\frac{\Delta y}{\Delta x} = 2$. ✓
 
 </details>
 
-**Aufgabe 7** (⭐⭐) Sprintmodell $s(t) = 1{,}5t^2$: Berechne die mittlere
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 7 ⭐⭐</summary>
+
+Sprintmodell $s(t) = 1{,}5t^2$: Berechne die mittlere
 Geschwindigkeit auf $[3;\ 5]$ und vergleiche mit der auf $[0;\ 5]$
 (Beispiel 1). Was zeigt der Vergleich?
 
@@ -265,7 +330,12 @@ Durchschnitt „versteckt“ die Beschleunigung.
 
 </details>
 
-**Aufgabe 8** (⭐⭐) $f(x) = x^2$, Stelle $a = 1$. Berechne die
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 8 ⭐⭐</summary>
+
+$f(x) = x^2$, Stelle $a = 1$. Berechne die
 Sekantensteigungen auf $[1;\ 2]$, $[1;\ 1{,}5]$, $[1;\ 1{,}1]$ und
 $[1;\ 1{,}01]$. Welche lokale Änderungsrate vermutest du?
 
@@ -284,7 +354,12 @@ ist vermutlich 2 (vgl. Sekantenschar-Graph in der Erklärung).
 
 </details>
 
-**Aufgabe 9** (⭐⭐) $f(x) = x^2 + 1$. Vereinfache den
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 9 ⭐⭐</summary>
+
+$f(x) = x^2 + 1$. Vereinfache den
 Differenzenquotienten auf dem Intervall $[2;\ 2 + h]$ so weit wie
 möglich. Was passiert für $h \to 0$?
 
@@ -306,7 +381,12 @@ Für $h \to 0$ strebt der Wert gegen **4** – das ist die lokale
 
 </details>
 
-**Aufgabe 10** (⭐⭐) Auf der Autobahn: Ein Streckenradar misst die Zeit
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 10 ⭐⭐</summary>
+
+Auf der Autobahn: Ein Streckenradar misst die Zeit
 zwischen zwei 3 km entfernten Brücken, ein Blitzer die Geschwindigkeit an
 einem Punkt. Ordne den Messungen die Begriffe mittlere/lokale
 Änderungsrate zu und erkläre, warum man mit dem Streckenradar zu schnell
@@ -325,7 +405,12 @@ Durchschnitt stimmen, obwohl man kurzzeitig zu schnell war.
 
 </details>
 
-**Aufgabe 11** (⭐⭐) Wirkstoffmodell $K(t) = -0{,}1t^2 + 2{,}4t$
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 11 ⭐⭐</summary>
+
+Wirkstoffmodell $K(t) = -0{,}1t^2 + 2{,}4t$
 (Beispiel 3). Berechne die mittlere Änderungsrate auf $[4;\ 8]$ und
 ordne sie in die Ergebnisse aus Beispiel 3 ein.
 
@@ -343,7 +428,12 @@ Intervall zu Intervall ab, die Kurve wird immer flacher.
 
 </details>
 
-**Aufgabe 12** (⭐⭐) An welcher Stelle ist die **lokale** Änderungsrate
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 12 ⭐⭐</summary>
+
+An welcher Stelle ist die **lokale** Änderungsrate
 des Wirkstoffmodells $K(t) = -0{,}1t^2 + 2{,}4t$ gleich 0? Argumentiere
 mit dem Graphen (Parabel!), ohne zu rechnen.
 
@@ -358,7 +448,12 @@ sich momentan nicht.
 
 </details>
 
-**Aufgabe 13** (⭐⭐⭐) $f(x) = x^3$, Stelle $a = 1$. Berechne die
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 13 ⭐⭐⭐</summary>
+
+$f(x) = x^3$, Stelle $a = 1$. Berechne die
 Sekantensteigungen auf $[1;\ 1{,}1]$ und $[1;\ 1{,}01]$ und gib die
 vermutete lokale Änderungsrate an.
 
@@ -378,7 +473,12 @@ der Stelle 1 ist 3.
 
 </details>
 
-**Aufgabe 14** (⭐⭐⭐) Der Temperaturverlauf eines Tages sei
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 14 ⭐⭐⭐</summary>
+
+Der Temperaturverlauf eines Tages sei
 $T(t) = -0{,}05(t - 14)^2 + 9$ ($t$ in h, $T$ in °C).
 a) Berechne die mittlere Änderungsrate zwischen 6 Uhr und 14 Uhr.
 b) Wie groß ist die lokale Änderungsrate um 14 Uhr? Begründe ohne
@@ -401,7 +501,12 @@ Temperatur steigt in diesem Moment nicht mehr und fällt noch nicht.
 
 </details>
 
-**Aufgabe 15** (⭐⭐) $f(x) = x^2$. Gib ohne Rechnung an, für welche
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 15 ⭐⭐</summary>
+
+$f(x) = x^2$. Gib ohne Rechnung an, für welche
 Stellen die lokale Änderungsrate negativ, null bzw. positiv ist.
 
 <details>
@@ -415,7 +520,12 @@ Tangentensteigungen an der Normalparabel:
 
 </details>
 
-**Aufgabe 16** (⭐⭐⭐) Modellkritik: Das Sprintmodell $s(t) = 1{,}5t^2$
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 16 ⭐⭐⭐</summary>
+
+Modellkritik: Das Sprintmodell $s(t) = 1{,}5t^2$
 liefert auf $[4;\ 5]$ eine mittlere Geschwindigkeit von 13,5 m/s –
 Usain Bolts tatsächliche Spitzengeschwindigkeit lag aber bei etwa
 12,4 m/s. Rechne den Wert nach und erkläre, warum das Modell trotzdem
@@ -437,6 +547,32 @@ Spitzengeschwindigkeit. Für die **ersten** Sekunden (Anfahrphase) passt
 die Parabel gut; ab etwa $t = 4$ überschätzt sie die Geschwindigkeit.
 Ein besseres Modell müsste dort in eine Gerade (konstantes Tempo)
 übergehen – jedes Modell hat einen Gültigkeitsbereich.
+
+</details>
+
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 17 ⭐⭐ · Verständnisaufgabe</summary>
+
+Wahr oder falsch? Begründe:
+a) „Ist die mittlere Änderungsrate auf $[0;\ 4]$ gleich null, war die
+Funktion dort konstant.“
+b) „Die Momentangeschwindigkeit bei $t = 3$ erhält man als
+Differenzenquotient auf dem Intervall $[3;\ 3]$.“
+
+<details>
+<summary>Lösung zu Aufgabe 17</summary>
+
+a) **Falsch.** Null bedeutet nur $f(0) = f(4)$ – die Randwerte sind
+gleich. Dazwischen kann die Funktion beliebig steigen und fallen, wie
+eine Fieberkurve, die hoch- und wieder herunterläuft.
+
+b) **Falsch.** Das ergäbe $\frac{f(3)-f(3)}{3-3} = \frac{0}{0}$ –
+Division durch null. Die lokale Änderungsrate entsteht erst als
+**Grenzwert** der Sekantensteigungen auf $[3;\ 3+h]$ für $h \to 0$.
+
+</details>
 
 </details>
 
@@ -493,4 +629,10 @@ Zum Abschluss: Klicke bei jeder Frage eine Antwort an – die Auswertung kommt s
   { frage: 'Was passiert mit den Sekanten, wenn h gegen 0 läuft?',
     antworten: ['Sie werden waagerecht', 'Sie kippen in die Tangente', 'Sie verschwinden', 'Sie werden senkrecht'],
     richtig: 1, erklaerung: 'Der zweite Punkt rückt auf den ersten zu – die Sekante nähert sich der Tangente, ihre Steigung dem Grenzwert.' },
+  { frage: 'Verständnisfrage: Die mittlere Änderungsrate von f auf [0; 4] ist null. Was folgt daraus?',
+    antworten: ['f war auf [0; 4] konstant', 'f(0) = f(4) – dazwischen kann alles passiert sein', 'f hat bei x = 2 eine Nullstelle', 'f ist auf [0; 4] gefallen'],
+    richtig: 1, erklaerung: 'In den Differenzenquotienten gehen nur die Randwerte ein. Gleiche Randwerte ⇒ Sekantensteigung 0, egal was dazwischen passiert.' },
+  { frage: 'Verständnisfrage: Warum darf man in (f(3+h) − f(3))/h nicht einfach h = 0 einsetzen?',
+    antworten: ['Weil h immer positiv sein muss', 'Weil dann 0/0 dastünde – man braucht den Grenzwert h → 0', 'Weil f(3) dann nicht definiert ist', 'Man darf – das Ergebnis ist 0'],
+    richtig: 1, erklaerung: 'Bei h = 0 sind Zähler und Nenner null. Die Kunst der h-Methode: erst vereinfachen und kürzen, dann h gegen 0 laufen lassen.' },
 ]} />

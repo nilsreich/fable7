@@ -38,6 +38,36 @@
 }
 
 /* --------------------------------------------------------------------------
+   Aufgaben als zugeklappte Karten: Die Seite zeigt nur eine ruhige Liste
+   "Aufgabe N ⭐⭐"; Text und Lösung erscheinen erst beim Aufklappen.
+   Neutraler Hintergrund, damit sich die Lösungs-Details darin abheben.
+   -------------------------------------------------------------------------- */
+.sl-markdown-content details.aufgabe {
+	background-color: var(--sl-color-bg);
+}
+
+.sl-markdown-content details.aufgabe > summary {
+	color: var(--sl-color-white);
+}
+
+/* --------------------------------------------------------------------------
+   Verständnisfragen: kurze Denkanstöße in der Erklärung. Die Frage steht
+   sichtbar in der Zeile, die Antwort klappt auf – erst selbst überlegen!
+   -------------------------------------------------------------------------- */
+.sl-markdown-content details.verstaendnis {
+	border-inline-start: 3px solid var(--sl-color-accent);
+	background-color: var(--sl-color-accent-low, var(--sl-color-gray-6));
+}
+
+.sl-markdown-content details.verstaendnis > summary {
+	color: var(--sl-color-white);
+}
+
+.sl-markdown-content details.verstaendnis > summary::before {
+	content: '🤔 ';
+}
+
+/* --------------------------------------------------------------------------
    Checklisten zur Klassenarbeit: Die Kästchen werden per interaktiv.js
    freigeschaltet (Stand bleibt pro Seite gespeichert). Groß genug für
    Fingerbedienung am Tablet; abgehakte Punkte treten optisch zurück.

@@ -26,6 +26,16 @@ eigene Kurve, die **Ortskurve** der Tiefpunkte:
 
 ![Drei Parabeln der Schar f_t(x) = x² − tx; ihre Tiefpunkte liegen auf der gestrichelten violetten Ortskurve y = −x²](../../../assets/plots/scharen/ortskurven/tiefpunkte-parabel.svg)
 
+<details class="verstaendnis">
+<summary>Verständnisfrage: Ist die Ortskurve selbst eine Kurve der Schar?</summary>
+
+Nein. Jede Scharkurve gehört zu *einem* festen $t$. Die Ortskurve
+dagegen sammelt von **jeder** Scharkurve genau einen markanten Punkt
+(z. B. den Tiefpunkt) ein – sie läuft quer durch die ganze Familie und
+hat in der Regel eine völlig andere Gleichung als die Scharkurven.
+
+</details>
+
 ### Das Standardverfahren (3 Schritte)
 
 1. **Punkte in Abhängigkeit von $t$ bestimmen:** Extrem- bzw.
@@ -47,6 +57,18 @@ Die Ortskurve der Tiefpunkte ist $y = -x^2$ – genau die gestrichelte
 Kurve im Bild. In der Skizze wird die Ortskurve **gestrichelt**
 gezeichnet, um sie von den Scharkurven zu unterscheiden.
 
+<details class="verstaendnis">
+<summary>Verständnisfrage: Warum muss $t$ am Ende verschwinden – die Tiefpunkte hängen doch von $t$ ab?</summary>
+
+$t$ ist nur die „Laufnummer“, die sagt, von *welcher* Kurve der Punkt
+stammt. Die Ortskurve soll aber die **Bahn** dieser Punkte im
+$x$-$y$-Koordinatensystem beschreiben – eine Beziehung allein zwischen
+$x$ und $y$. Sobald $t$ durch $x$ ausgedrückt ist, übernimmt $x$ das
+Durchlaufen der Schar. Steht am Ende noch ein $t$ im Ergebnis, ist die
+Aufgabe nicht fertig.
+
+</details>
+
 ### Gültigkeitsbereich beachten
 
 Durchläuft $t$ nur bestimmte Werte (z. B. $t > 0$), durchläuft auch
@@ -57,6 +79,17 @@ Zwei Sonderfälle: Hängt die $x$-Koordinate nicht von $t$ ab (z. B.
 Maximum immer bei $x = 4$), ist die „Ortskurve“ eine **senkrechte
 Gerade** – keine Funktion. Hängt gar nichts von $t$ ab, bleibt der
 Punkt einfach fest.
+
+<details class="verstaendnis">
+<summary>Verständnisfrage: Die Tiefpunkte liegen bei $T\!\left(\frac{t}{2} \mid -\frac{t^2}{4}\right)$ und es gilt $t > 0$. Warum ist die Ortskurve dann nicht die komplette Parabel $y = -x^2$?</summary>
+
+Aus $x = \frac{t}{2}$ und $t > 0$ folgt $x > 0$: Es werden nur
+Tiefpunkte mit **positiver** $x$-Koordinate durchlaufen. Die Ortskurve
+ist also nur der rechte Ast, $y = -x^2$ mit $x > 0$. Der
+Gültigkeitsbereich der Ortskurve erbt immer die Einschränkung des
+Parameters.
+
+</details>
 
 ## Beispiele
 
@@ -227,7 +260,10 @@ auf halber Höhe seiner Entfernung.
 
 ## Aufgaben
 
-**Aufgabe 1** (⭐) Erkläre in eigenen Worten, was eine Ortskurve ist,
+<details class="aufgabe">
+<summary>Aufgabe 1 ⭐</summary>
+
+Erkläre in eigenen Worten, was eine Ortskurve ist,
 und nenne ein Beispiel von dieser Seite.
 
 <details>
@@ -240,7 +276,12 @@ $f_t(x) = x^2 - tx$ liegen auf $y = -x^2$.
 
 </details>
 
-**Aufgabe 2** (⭐) Die Tiefpunkte einer Schar sind
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 2 ⭐</summary>
+
+Die Tiefpunkte einer Schar sind
 $T_t(t \mid t^2)$. Bestimme die Ortskurve.
 
 <details>
@@ -254,7 +295,12 @@ $$
 
 </details>
 
-**Aufgabe 3** (⭐) Die Hochpunkte einer Schar sind
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 3 ⭐</summary>
+
+Die Hochpunkte einer Schar sind
 $H_t(2t \mid 4t)$. Bestimme die Ortskurve.
 
 <details>
@@ -270,7 +316,12 @@ Ortskurve: Gerade $y = 2x$.
 
 </details>
 
-**Aufgabe 4** (⭐) Die Tiefpunkte einer Schar sind
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 4 ⭐</summary>
+
+Die Tiefpunkte einer Schar sind
 $T_t(t \mid 3t - 1)$. Bestimme die Ortskurve.
 
 <details>
@@ -280,7 +331,12 @@ $t = x$, also $y = 3x - 1$ (Gerade).
 
 </details>
 
-**Aufgabe 5** (⭐⭐) Die Extrempunkte einer Schar sind
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 5 ⭐⭐</summary>
+
+Die Extrempunkte einer Schar sind
 $E_t\left(\frac{t}{2} \mid -\frac{t^2}{2}\right)$. Bestimme die
 Ortskurve.
 
@@ -295,7 +351,12 @@ $$
 
 </details>
 
-**Aufgabe 6** (⭐⭐) Die Wendepunkte einer Schar sind
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 6 ⭐⭐</summary>
+
+Die Wendepunkte einer Schar sind
 $W_t\left(t \mid -2t^3\right)$. Bestimme die Ortskurve.
 
 <details>
@@ -309,7 +370,12 @@ $$
 
 </details>
 
-**Aufgabe 7** (⭐⭐) Die Hochpunkte einer Schar sind
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 7 ⭐⭐</summary>
+
+Die Hochpunkte einer Schar sind
 $H_t(-t \mid t^2 + 1)$. Bestimme die Ortskurve.
 
 <details>
@@ -323,7 +389,12 @@ $$
 
 </details>
 
-**Aufgabe 8** (⭐⭐) Die Tiefpunkte einer Schar sind
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 8 ⭐⭐</summary>
+
+Die Tiefpunkte einer Schar sind
 $T_t(3t \mid 6t^2)$. Bestimme die Ortskurve.
 
 <details>
@@ -337,7 +408,12 @@ $$
 
 </details>
 
-**Aufgabe 9** (⭐⭐) Bestimme die Ortskurve der Tiefpunkte von
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 9 ⭐⭐</summary>
+
+Bestimme die Ortskurve der Tiefpunkte von
 $f_t(x) = x^2 + tx$ (komplette Rechnung).
 
 <details>
@@ -363,7 +439,12 @@ Ortskurve: $y = -x^2$.
 
 </details>
 
-**Aufgabe 10** (⭐⭐) Bestimme die Ortskurve der Tiefpunkte von
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 10 ⭐⭐</summary>
+
+Bestimme die Ortskurve der Tiefpunkte von
 $f_t(x) = x^2 - 2tx$.
 
 <details>
@@ -383,7 +464,12 @@ $$
 
 </details>
 
-**Aufgabe 11** (⭐⭐) Bestimme die Ortskurve der Tiefpunkte von
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 11 ⭐⭐</summary>
+
+Bestimme die Ortskurve der Tiefpunkte von
 $f_t(x) = x^2 - 2tx + 2t^2$.
 
 <details>
@@ -401,7 +487,12 @@ Normalparabel.
 
 </details>
 
-**Aufgabe 12** (⭐⭐) Bestimme die Ortskurve der Hochpunkte von
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 12 ⭐⭐</summary>
+
+Bestimme die Ortskurve der Hochpunkte von
 $f_t(x) = -x^2 + 2tx$.
 
 <details>
@@ -418,7 +509,12 @@ Ortskurve: $y = x^2$.
 
 </details>
 
-**Aufgabe 13** (⭐⭐⭐) $f_t(x) = x^3 - 3t^2x$ mit $t > 0$. Bestimme die
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 13 ⭐⭐⭐</summary>
+
+$f_t(x) = x^3 - 3t^2x$ mit $t > 0$. Bestimme die
 Ortskurve **aller** Extrempunkte.
 
 <details>
@@ -441,7 +537,12 @@ Hochpunkte auf dem linken Ast).
 
 </details>
 
-**Aufgabe 14** (⭐⭐) Bestimme die Ortskurve der Wendepunkte von
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 14 ⭐⭐</summary>
+
+Bestimme die Ortskurve der Wendepunkte von
 $f_t(x) = x^3 - 3tx^2$ (komplette Rechnung).
 
 <details>
@@ -457,7 +558,12 @@ $t = x$: Ortskurve $y = -2x^3$.
 
 </details>
 
-**Aufgabe 15** (⭐⭐⭐) Bestimme die Ortskurve der Wendepunkte von
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 15 ⭐⭐⭐</summary>
+
+Bestimme die Ortskurve der Wendepunkte von
 $f_t(x) = x^4 - tx^2$ mit $t > 0$.
 
 <details>
@@ -476,7 +582,12 @@ Ortskurve beider Wendepunkte: $y = -5x^4$.
 
 </details>
 
-**Aufgabe 16** (⭐⭐⭐) $f_t(x) = x^4 - tx^2$ mit $t > 0$.
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 16 ⭐⭐⭐</summary>
+
+$f_t(x) = x^4 - tx^2$ mit $t > 0$.
 a) Zeige: Der Hochpunkt liegt für jedes $t$ im Ursprung.
 b) Bestimme die Ortskurve der beiden Tiefpunkte.
 
@@ -498,7 +609,12 @@ Ortskurve der Tiefpunkte: $y = -x^4$.
 
 </details>
 
-**Aufgabe 17** (⭐⭐) Die Tiefpunkte der Schar $f_t(x) = tx^2 - 4x$
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 17 ⭐⭐</summary>
+
+Die Tiefpunkte der Schar $f_t(x) = tx^2 - 4x$
 ($t > 0$) sind $T\left(\frac{2}{t} \mid -\frac{4}{t}\right)$. Leite
 die Ortskurve $y = -2x$ her.
 
@@ -515,7 +631,12 @@ Ortskurve: $y = -2x$ für $x > 0$.
 
 </details>
 
-**Aufgabe 18** (⭐⭐) Prüfe: Liegt der Tiefpunkt der Kurve $f_3$ aus
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 18 ⭐⭐</summary>
+
+Prüfe: Liegt der Tiefpunkt der Kurve $f_3$ aus
 Aufgabe 10 tatsächlich auf der dort berechneten Ortskurve?
 
 <details>
@@ -528,7 +649,12 @@ Selbstkontrolle.)
 
 </details>
 
-**Aufgabe 19** (⭐⭐⭐) Umgekehrt: Gib eine Schar an, deren Tiefpunkte
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 19 ⭐⭐⭐</summary>
+
+Umgekehrt: Gib eine Schar an, deren Tiefpunkte
 die Ortskurve $y = x^2$ haben, und weise es nach.
 
 <details>
@@ -548,7 +674,12 @@ ausmultipliziert.)
 
 </details>
 
-**Aufgabe 20** (⭐⭐) Die Wirkstoffschar $K_d(t) = 0{,}1d \cdot
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 20 ⭐⭐</summary>
+
+Die Wirkstoffschar $K_d(t) = 0{,}1d \cdot
 t(t - 12)^2$ hat ihre Maxima bei $(4 \mid 25{,}6\,d)$. Warum ist die
 „Ortskurve“ der Maxima hier **keine** Funktion von $x$? Beschreibe sie.
 
@@ -563,7 +694,12 @@ der Achse). Eine senkrechte Gerade besteht den Senkrechten-Test nicht
 
 </details>
 
-**Aufgabe 21** (⭐⭐) Leite die Ortskurve der Wurfparabel-Scheitel
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 21 ⭐⭐</summary>
+
+Leite die Ortskurve der Wurfparabel-Scheitel
 $S\left(\frac{v^2}{20} \mid \frac{v^2}{40}\right)$ her.
 
 <details>
@@ -579,7 +715,12 @@ Ortskurve: $y = \frac{x}{2}$ (für $x > 0$).
 
 </details>
 
-**Aufgabe 22** (⭐⭐) Deute die Ortsgerade $y = \frac{x}{2}$ aus
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 22 ⭐⭐</summary>
+
+Deute die Ortsgerade $y = \frac{x}{2}$ aus
 Aufgabe 21 sportpraktisch: Was gilt für jeden 45°-Wurf über den
 höchsten Punkt?
 
@@ -593,7 +734,12 @@ maximale Höhe stets $\frac{w}{4}$: Ein 12-m-Wurf steigt auf 3 m.
 
 </details>
 
-**Aufgabe 23** (⭐⭐⭐) Bei welcher Abwurfgeschwindigkeit liegt der
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 23 ⭐⭐⭐</summary>
+
+Bei welcher Abwurfgeschwindigkeit liegt der
 Scheitel bei $x = 10$ m? Wie hoch fliegt der Ball dann?
 
 <details>
@@ -608,7 +754,12 @@ Höhe über die Ortskurve: $y = \frac{10}{2} = 5$ m (Wurfweite 20 m).
 
 </details>
 
-**Aufgabe 24** (⭐⭐) In Beispiel 2 gilt $t > 0$. Erkläre, warum die
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 24 ⭐⭐</summary>
+
+In Beispiel 2 gilt $t > 0$. Erkläre, warum die
 Tiefpunkte deshalb nur auf dem Teil der Ortskurve $y = -2x^3$ mit
 $x > 0$ liegen.
 
@@ -623,7 +774,12 @@ Gültigkeitsbereiche der Ortskurve immer mitprüfen!
 
 </details>
 
-**Aufgabe 25** (⭐⭐) Beschreibe, wie im ersten Plot der Erklärung die
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 25 ⭐⭐</summary>
+
+Beschreibe, wie im ersten Plot der Erklärung die
 Ortskurve grafisch zu erkennen ist, und woran man sie von den
 Scharkurven unterscheidet.
 
@@ -638,7 +794,12 @@ auseinander.
 
 </details>
 
-**Aufgabe 26** (⭐⭐⭐) Zeige: Für die Schar $f_t(x) = x^3 - 3tx$
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 26 ⭐⭐⭐</summary>
+
+Zeige: Für die Schar $f_t(x) = x^3 - 3tx$
 ($t > 0$) liegen Hoch- **und** Tiefpunkte auf $y = -2x^3$, und die
 Ortskurve ist punktsymmetrisch – wie die Schar selbst.
 
@@ -655,7 +816,12 @@ punktsymmetrisch sein. ∎
 
 </details>
 
-**Aufgabe 27** (⭐⭐) Formuliere das Standardverfahren zur Bestimmung
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 27 ⭐⭐</summary>
+
+Formuliere das Standardverfahren zur Bestimmung
 einer Ortskurve in drei Schritten.
 
 <details>
@@ -669,7 +835,12 @@ einer Ortskurve in drei Schritten.
 
 </details>
 
-**Aufgabe 28** (⭐⭐⭐) $f_t(x) = x^2 + t$. Bestimme die „Ortskurve“ der
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 28 ⭐⭐⭐</summary>
+
+$f_t(x) = x^2 + t$. Bestimme die „Ortskurve“ der
 Tiefpunkte und erkläre die Besonderheit.
 
 <details>
@@ -686,7 +857,12 @@ nach $t$ auflösen“) – genau das Signal für diesen Sonderfall.
 
 </details>
 
-**Aufgabe 29** (⭐⭐⭐) Bestimme die Ortskurve der Tiefpunkte von
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 29 ⭐⭐⭐</summary>
+
+Bestimme die Ortskurve der Tiefpunkte von
 $f_t(x) = x^2 - 4tx + 4t^2 + 2t$.
 
 <details>
@@ -707,7 +883,12 @@ Ortskurve: die **Winkelhalbierende** $y = x$.
 
 </details>
 
-**Aufgabe 30** (⭐⭐⭐) Klassenarbeitsstil: $f_t(x) = x^3 - 3tx^2$
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 30 ⭐⭐⭐</summary>
+
+Klassenarbeitsstil: $f_t(x) = x^3 - 3tx^2$
 ($t \neq 0$).
 a) Bestimme die Extrempunkte in Abhängigkeit von $t$
 (Fallunterscheidung $t > 0$ / $t < 0$ für die Art!).
@@ -733,6 +914,33 @@ y = -4 \cdot \frac{x^3}{8} = -\frac{x^3}{2}
 $$
 
 Ortskurve: $y = -\frac{1}{2}x^3$ (für $x \neq 0$).
+
+</details>
+
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 31 ⭐⭐ · Verständnisaufgabe</summary>
+
+a) Finde den Fehler: „Die Tiefpunkte liegen bei
+$T\!\left(\frac{t}{2} \mid -\frac{t^2}{4}\right)$. Die Ortskurve lautet
+also $y = -\frac{t^2}{4}$.“
+b) Wahr oder falsch? „Auf der Ortskurve $y = -x^2$ (aus dem
+Erklärungs-Beispiel) gehört zu jedem Punkt genau eine Scharkurve.“
+
+<details>
+<summary>Lösung zu Aufgabe 31</summary>
+
+a) Der Parameter wurde **nicht eliminiert** – im Ergebnis darf kein $t$
+mehr stehen, und es fehlt der Zusammenhang mit $x$. Richtig: Aus
+$x = \frac{t}{2}$ folgt $t = 2x$, einsetzen liefert
+$y = -\frac{(2x)^2}{4} = -x^2$.
+
+b) **Wahr.** Die Zuordnung $t \mapsto x = \frac{t}{2}$ ist umkehrbar:
+Zu jedem $x$-Wert der Ortskurve gehört genau das $t = 2x$ – also genau
+eine Kurve der Schar, deren Tiefpunkt dort liegt.
+
+</details>
 
 </details>
 
@@ -795,4 +1003,10 @@ Zum Abschluss: Klicke bei jeder Frage eine Antwort an – die Auswertung kommt s
   { frage: 'Die Tiefpunkte liegen bei T(0 | t) für alle t. Was ist die „Ortskurve“?',
     antworten: ['y = 0', 'Die x-Achse', 'Die senkrechte Gerade x = 0 – keine Funktion', 'y = t'],
     richtig: 2, erklaerung: 'Die x-Koordinate ist konstant – die Punkte wandern auf der y-Achse. Eine senkrechte Gerade besteht den Senkrechten-Test nicht.' },
+  { frage: 'Verständnisfrage: Ist die Ortskurve eine der Scharkurven?',
+    antworten: ['Ja, die zu t = 0', 'Nein – sie sammelt von jeder Scharkurve einen markanten Punkt ein', 'Ja, die steilste', 'Nur bei Parabelscharen'],
+    richtig: 1, erklaerung: 'Jede Scharkurve gehört zu einem festen t; die Ortskurve läuft quer durch die Familie und verbindet z. B. alle Tiefpunkte.' },
+  { frage: 'Verständnisfrage: Warum wird der Parameter t bei der Ortskurve eliminiert?',
+    antworten: ['Damit die Rechnung kürzer wird', 'Weil die Ortskurve eine Beziehung nur zwischen x und y beschreibt – t war bloß die Nummer der Kurve', 'Weil t immer null ist', 'Damit die Ortskurve durch den Ursprung geht'],
+    richtig: 1, erklaerung: 'Die Bahn der Punkte lebt im x-y-System. Nach t auflösen und einsetzen überträgt das Durchlaufen der Schar auf x.' },
 ]} />

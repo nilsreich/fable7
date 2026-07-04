@@ -55,6 +55,16 @@ der Graph „hereinkommt und hinausgeht“:
 
 ![Randverhalten bei ungeradem Grad: f(x) = x³ − 3x läuft von unten links nach oben rechts, g(x) = −x³ + 3x von oben links nach unten rechts](../../../assets/plots/ganzrationale/eigenschaften/verlauf-ungerader-grad.svg)
 
+<details class="verstaendnis">
+<summary>Verständnisfrage: Warum entscheidet <em>allein</em> der Leitterm über das Randverhalten – die anderen Summanden stehen doch auch im Term?</summary>
+
+Weil die höchste Potenz für betragsgroße $x$ alle anderen erdrückt: Bei
+$x = 100$ ist $x^4 = 100{.}000{.}000$, während $3x^3 = 3{.}000{.}000$
+daneben verblasst – je weiter draußen, desto krasser das Verhältnis. Die
+niedrigeren Summanden verbiegen den Graphen nur im „Mittelteil“.
+
+</details>
+
 Kurzschreibweise: $\ x \to +\infty:\ f(x) \to +\infty$ (usw.). Die
 Mathematik hat dafür auch eine eigene Notation, den **Grenzwert**
 (lateinisch *limes* = Grenze):
@@ -84,6 +94,17 @@ Am Term sofort erkennbar (Symmetrie zur $y$-Achse bzw. zum Ursprung):
 
 ![Der Graph von h(x) = x³ − 3x² mit gemischten Exponenten ist weder achsen- noch punktsymmetrisch](../../../assets/plots/ganzrationale/eigenschaften/keine-symmetrie.svg)
 
+<details class="verstaendnis">
+<summary>Verständnisfrage: Warum zählt das Absolutglied bei der Symmetrie-Regel als <em>gerader</em> Exponent?</summary>
+
+Wegen $a_0 = a_0 \cdot x^0$ – und $0$ ist eine gerade Zahl. Das passt
+auch anschaulich: $f(x) = x^2 + 5$ ist die um 5 nach oben geschobene
+Normalparabel und bleibt achsensymmetrisch. Dagegen zerstört ein
+Absolutglied jede Punktsymmetrie: $g(x) = x^3 + 5$ erfüllt
+$g(-x) = -x^3 + 5 \neq -g(x)$.
+
+</details>
+
 ### Nullstellen: höchstens n Stück
 
 Eine ganzrationale Funktion vom Grad $n$ hat **höchstens $n$
@@ -91,6 +112,18 @@ Nullstellen**. Ist der Grad ungerade, gibt es wegen des Randverhaltens
 (von $-\infty$ nach $+\infty$ oder umgekehrt) **mindestens eine**.
 
 ![Die Funktion f(x) = x³ − 4x vom Grad 3 hat die maximal möglichen drei Nullstellen N₁(−2|0), N₂(0|0) und N₃(2|0)](../../../assets/plots/ganzrationale/eigenschaften/nullstellen-anzahl.svg)
+
+<details class="verstaendnis">
+<summary>Verständnisfrage: Warum hat jede Funktion <em>ungeraden</em> Grades mindestens eine Nullstelle – bei geradem Grad aber vielleicht gar keine?</summary>
+
+Bei ungeradem Grad kommen die beiden Enden des Graphen von
+**verschiedenen** Seiten ($-\infty$ und $+\infty$). Auf dem Weg von ganz
+unten nach ganz oben muss der Graph die $x$-Achse irgendwo kreuzen. Bei
+geradem Grad starten und enden beide Enden auf **derselben** Seite – der
+Graph kann komplett über (oder unter) der Achse bleiben, wie
+$f(x) = x^4 + 1$.
+
+</details>
 
 ## Beispiele
 
@@ -180,7 +213,10 @@ danach ist das Modell (und die Wirkung) zu Ende.
 
 ## Aufgaben
 
-**Aufgabe 1** (⭐) $f(x) = 3x^5 - x^2 + 7$. Gib Grad, alle Koeffizienten
+<details class="aufgabe">
+<summary>Aufgabe 1 ⭐</summary>
+
+$f(x) = 3x^5 - x^2 + 7$. Gib Grad, alle Koeffizienten
 und das Absolutglied an.
 
 <details>
@@ -191,7 +227,12 @@ $a_1 = 0$, $a_0 = 7$ (Absolutglied).
 
 </details>
 
-**Aufgabe 2** (⭐) Welche Funktionen sind ganzrational?
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 2 ⭐</summary>
+
+Welche Funktionen sind ganzrational?
 a) $f(x) = x^3 - 2x$  b) $g(x) = \sqrt{x}$  c) $h(x) = \frac{1}{x}$
 d) $k(x) = 5$  e) $m(x) = 2^x$
 
@@ -206,7 +247,12 @@ e) $2^x$: $x$ steht im Exponenten – Exponentialfunktion.
 
 </details>
 
-**Aufgabe 3** (⭐) Gib den $y$-Achsenabschnitt an:
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 3 ⭐</summary>
+
+Gib den $y$-Achsenabschnitt an:
 a) $f(x) = x^3 - 4x + 2$  b) $g(x) = -x^4 + 3x$
 
 <details>
@@ -218,7 +264,12 @@ b) $g(0) = 0$ → der Graph läuft durch den Ursprung.
 
 </details>
 
-**Aufgabe 4** (⭐) Gib das Randverhalten an:
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 4 ⭐</summary>
+
+Gib das Randverhalten an:
 a) $y = x^3$  b) $y = -2x^3$  c) $y = x^4$  d) $y = -0{,}5x^6$
 
 <details>
@@ -234,7 +285,12 @@ d) beidseitig $y \to -\infty$
 
 </details>
 
-**Aufgabe 5** (⭐) Entscheide am Term über die Symmetrie:
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 5 ⭐</summary>
+
+Entscheide am Term über die Symmetrie:
 a) $x^4 - 2x^2$  b) $x^5 - x$  c) $x^4 + x^3$  d) $-3x^6 + x^2 - 1$
 
 <details>
@@ -250,7 +306,12 @@ d) nur gerade (auch $-1 = -1 \cdot x^0$) → achsensymmetrisch
 
 </details>
 
-**Aufgabe 6** (⭐⭐) $f(x) = -0{,}5x^4 + 3x^3 - 7$.
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 6 ⭐⭐</summary>
+
+$f(x) = -0{,}5x^4 + 3x^3 - 7$.
 a) Gib das Randverhalten an.
 b) Begründe mit dem Zahlenbeispiel $x = 100$, warum dabei nur der
 Leitterm zählt.
@@ -273,7 +334,12 @@ bedeutungslos.
 
 </details>
 
-**Aufgabe 7** (⭐⭐) Weise die Symmetrie von $f(x) = x^4 - 3x^2$ rechnerisch
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 7 ⭐⭐</summary>
+
+Weise die Symmetrie von $f(x) = x^4 - 3x^2$ rechnerisch
 nach.
 
 <details>
@@ -287,7 +353,12 @@ $f(-x) = f(x)$ für alle $x$ → achsensymmetrisch zur $y$-Achse. ∎
 
 </details>
 
-**Aufgabe 8** (⭐⭐) Weise nach, dass $g(x) = 2x^3 - 4x$ punktsymmetrisch
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 8 ⭐⭐</summary>
+
+Weise nach, dass $g(x) = 2x^3 - 4x$ punktsymmetrisch
 zum Ursprung ist.
 
 <details>
@@ -301,7 +372,12 @@ $g(-x) = -g(x)$ für alle $x$ → punktsymmetrisch zum Ursprung. ∎
 
 </details>
 
-**Aufgabe 9** (⭐⭐) Zeige mit konkreten Zahlen, dass $h(x) = x^3 - 3x^2$
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 9 ⭐⭐</summary>
+
+Zeige mit konkreten Zahlen, dass $h(x) = x^3 - 3x^2$
 weder achsen- noch punktsymmetrisch ist.
 
 <details>
@@ -320,7 +396,12 @@ Ein einziges Gegenbeispiel genügt zum Widerlegen.
 
 </details>
 
-**Aufgabe 10** (⭐⭐) Wie viele Nullstellen kann eine ganzrationale Funktion
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 10 ⭐⭐</summary>
+
+Wie viele Nullstellen kann eine ganzrationale Funktion
 höchstens bzw. muss sie mindestens haben, wenn ihr Grad a) 3, b) 4 ist?
 
 <details>
@@ -335,7 +416,12 @@ oberhalb (oder unterhalb) der Achse bleiben, z. B. $y = x^4 + 1$.
 
 </details>
 
-**Aufgabe 11** (⭐⭐) In den beiden Randverhalten-Graphen der Erklärung sind
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 11 ⭐⭐</summary>
+
+In den beiden Randverhalten-Graphen der Erklärung sind
 je zwei Kurven zu sehen. Ordne die vier Terme $x^4 - 3x^2$,
 $-x^4 + 3x^2$, $x^3 - 3x$ und $-x^3 + 3x$ nur anhand des Randverhaltens zu.
 
@@ -350,7 +436,12 @@ $-x^4 + 3x^2$, $x^3 - 3x$ und $-x^3 + 3x$ nur anhand des Randverhaltens zu.
 
 </details>
 
-**Aufgabe 12** (⭐⭐) Berechne die Nullstellen von $f(x) = x^3 - 4x$ durch
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 12 ⭐⭐</summary>
+
+Berechne die Nullstellen von $f(x) = x^3 - 4x$ durch
 Ausklammern und vergleiche mit dem Graphen der Erklärung.
 
 <details>
@@ -369,7 +460,12 @@ $N_1$, $N_2$, $N_3$. ✓
 
 </details>
 
-**Aufgabe 13** (⭐⭐) Liegt der Punkt auf dem Graphen von
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 13 ⭐⭐</summary>
+
+Liegt der Punkt auf dem Graphen von
 $f(x) = x^3 - 4x + 1$? a) $P(2 \mid 1)$  b) $Q(-1 \mid 3)$
 
 <details>
@@ -381,7 +477,12 @@ b) $f(-1) = -1 + 4 + 1 = 4 \neq 3$ → $Q$ liegt nicht auf dem Graphen.
 
 </details>
 
-**Aufgabe 14** (⭐⭐⭐) Zur Wirkstofffunktion $K(t) = 0{,}1t(t - 12)^2$ auf
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 14 ⭐⭐⭐</summary>
+
+Zur Wirkstofffunktion $K(t) = 0{,}1t(t - 12)^2$ auf
 $[0;\ 12]$:
 a) Berechne $K(6)$.
 b) Bestimme alle Nullstellen von $K$ und deute sie im Sachzusammenhang.
@@ -404,7 +505,12 @@ unsinnig, das Modell gilt nur bis zum vollständigen Abbau.
 
 </details>
 
-**Aufgabe 15** (⭐⭐⭐) Bestimme $a$ so, dass der Graph von
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 15 ⭐⭐⭐</summary>
+
+Bestimme $a$ so, dass der Graph von
 $f(x) = ax^4 - 2x^2 + 1$ durch den Punkt $P(2 \mid 1)$ verläuft.
 
 <details>
@@ -425,7 +531,12 @@ Also $f(x) = 0{,}5x^4 - 2x^2 + 1$.
 
 </details>
 
-**Aufgabe 16** (⭐⭐⭐) Begründe ohne Rechnung: Jede ganzrationale Funktion
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 16 ⭐⭐⭐</summary>
+
+Begründe ohne Rechnung: Jede ganzrationale Funktion
 **ungeraden** Grades hat mindestens eine Nullstelle.
 
 <details>
@@ -439,6 +550,33 @@ $x$-Achse **mindestens einmal** überqueren – dort liegt eine Nullstelle. ∎
 
 (Bei geradem Grad zeigen beide Enden in dieselbe Richtung – der Graph
 kann über der Achse bleiben, z. B. $y = x^2 + 1$.)
+
+</details>
+
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 17 ⭐⭐ · Verständnisaufgabe</summary>
+
+Wahr oder falsch? Begründe:
+a) „$f(x) = x^3 + x^2$ ist punktsymmetrisch zum Ursprung, denn $x^3$ hat
+einen ungeraden Exponenten.“
+b) „Eine ganzrationale Funktion vierten Grades hat immer vier
+Nullstellen.“
+
+<details>
+<summary>Lösung zu Aufgabe 17</summary>
+
+a) **Falsch.** Die Regel verlangt: **nur** ungerade Exponenten. Hier ist
+mit $x^2$ ein gerader dabei – der Term ist gemischt, also weder achsen-
+noch punktsymmetrisch. Kontrolle: $f(-1) = -1 + 1 = 0$, aber
+$-f(1) = -(1+1) = -2$.
+
+b) **Falsch.** Grad 4 bedeutet **höchstens** vier Nullstellen. Es können
+auch weniger sein – oder gar keine: $f(x) = x^4 + 1$ liegt komplett
+oberhalb der $x$-Achse.
+
+</details>
 
 </details>
 
@@ -498,4 +636,10 @@ Zum Abschluss: Klicke bei jeder Frage eine Antwort an – die Auswertung kommt s
   { frage: 'Welche Funktion ist ganzrational?',
     antworten: ['f(x) = √x', 'f(x) = 1/x', 'f(x) = x³ − 2x', 'f(x) = 2ˣ'],
     richtig: 2, erklaerung: 'Ganzrational = Summe von Potenzen mit natürlichen Exponenten. Wurzel (x^½), Bruch (x⁻¹) und Exponentialterm fallen raus.' },
+  { frage: 'Verständnisfrage: Warum bestimmt allein der Leitterm das Randverhalten?',
+    antworten: ['Weil er im Term ganz vorne steht', 'Weil die höchste Potenz für große |x| alle anderen Summanden erdrückt', 'Weil die anderen Koeffizienten meist klein sind', 'Weil das Absolutglied null ist'],
+    richtig: 1, erklaerung: 'Bei x = 100 ist x⁴ = 100 Mio., 3x³ nur 3 Mio. – je größer |x|, desto bedeutungsloser werden die niedrigeren Potenzen.' },
+  { frage: 'Verständnisfrage: Kann eine Funktion 4. Grades ganz ohne Nullstelle auskommen?',
+    antworten: ['Nein, Grad 4 heißt vier Nullstellen', 'Nein, mindestens eine gibt es immer', 'Ja, z. B. x⁴ + 1: beide Enden oben und der Graph bleibt über der x-Achse', 'Nur wenn das Absolutglied null ist'],
+    richtig: 2, erklaerung: 'Bei geradem Grad laufen beide Enden auf dieselbe Seite – der Graph muss die x-Achse nicht kreuzen. x⁴ + 1 ≥ 1 für alle x.' },
 ]} />

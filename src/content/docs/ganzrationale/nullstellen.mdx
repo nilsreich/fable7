@@ -49,6 +49,17 @@ Niemals durch $x$ **teilen**, um es „wegzukürzen“ – dabei geht die
 Nullstelle $x = 0$ verloren! Immer ausklammern.
 :::
 
+<details class="verstaendnis">
+<summary>Verständnisfrage: Warum <em>berührt</em> der Graph die $x$-Achse bei einer doppelten Nullstelle nur, statt sie zu schneiden?</summary>
+
+Der Faktor $(x-2)^2$ ist ein Quadrat und damit **auf beiden Seiten von
+$x = 2$ positiv** – er wechselt dort das Vorzeichen nicht. Also wechselt
+auch $f(x)$ das Vorzeichen nicht: Der Graph kommt zur Achse herunter,
+tippt sie an und dreht wieder um. Bei einer einfachen Nullstelle wechselt
+der Linearfaktor das Vorzeichen – der Graph kreuzt.
+
+</details>
+
 ### Methode 2: Substitution
 
 Kommen nur $x^4$ und $x^2$ vor (**biquadratische** Gleichung), macht die
@@ -72,6 +83,16 @@ $$
 
 Negative $z$-Werte liefern **keine** $x$-Lösungen ($x^2 \geq 0$).
 
+<details class="verstaendnis">
+<summary>Verständnisfrage: Warum ist man nach der pq-Formel mit $z_1 = 4,\ z_2 = 1$ noch nicht fertig?</summary>
+
+$z$ war nur eine **Hilfsvariable** – gefragt ist nach $x$! Jedes positive
+$z$ steht für $x^2$ und liefert **zwei** $x$-Werte ($x = \pm\sqrt{z}$),
+jedes negative $z$ keinen. Wer die Rücksubstitution vergisst, gibt
+Lösungen einer ganz anderen Gleichung an.
+
+</details>
+
 ### Methode 3: Nullstelle raten + Polynomdivision
 
 Hilft nichts von beidem (Absolutglied vorhanden, keine Substitution
@@ -82,6 +103,17 @@ $\pm 1, \pm 2, \pm 3, \pm 6$):
 $$
 f(1) = 1 - 2 - 5 + 6 = 0 \quad\Rightarrow\quad x_1 = 1
 $$
+
+<details class="verstaendnis">
+<summary>Verständnisfrage: Warum kommen als ganzzahlige Nullstellen überhaupt nur die Teiler des Absolutglieds infrage?</summary>
+
+Setzt man eine ganze Zahl $x_0$ ein, enthält jeder Summand außer dem
+Absolutglied den Faktor $x_0$: $x_0^3 - 2x_0^2 - 5x_0$ ist durch $x_0$
+teilbar. Soll die ganze Summe $0$ ergeben, muss auch das Absolutglied
+durch $x_0$ teilbar sein – sonst geht die Rechnung nie auf. Deshalb
+testet man nur $\pm 1, \pm 2, \pm 3, \pm 6$.
+
+</details>
 
 Dann wird der **Linearfaktor** $(x - 1)$ durch **Polynomdivision**
 abgespalten – wie schriftliches Dividieren, nur mit $x$:
@@ -279,7 +311,10 @@ die richtige Reihenfolge spart viel Arbeit.
 
 ## Aufgaben
 
-**Aufgabe 1** (⭐) Löse mit dem Satz vom Nullprodukt:
+<details class="aufgabe">
+<summary>Aufgabe 1 ⭐</summary>
+
+Löse mit dem Satz vom Nullprodukt:
 a) $(x - 2)(x + 5) = 0$  b) $x(x - 3)(x + 1) = 0$
 
 <details>
@@ -291,7 +326,12 @@ b) $x_1 = 0$, $x_2 = 3$, $x_3 = -1$
 
 </details>
 
-**Aufgabe 2** (⭐) Löse durch Ausklammern:
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 2 ⭐</summary>
+
+Löse durch Ausklammern:
 a) $x^2 - 6x = 0$  b) $x^3 + 2x^2 = 0$
 
 <details>
@@ -303,7 +343,12 @@ b) $x^2(x + 2) = 0$ → $x_1 = 0$ (doppelt), $x_2 = -2$
 
 </details>
 
-**Aufgabe 3** (⭐) Löse: $x^3 - 9x = 0$
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 3 ⭐</summary>
+
+Löse: $x^3 - 9x = 0$
 
 <details>
 <summary>Lösung zu Aufgabe 3</summary>
@@ -316,7 +361,12 @@ $x_1 = 0$, $x_2 = -3$, $x_3 = 3$
 
 </details>
 
-**Aufgabe 4** (⭐⭐) Löse: $2x^3 - 8x = 0$
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 4 ⭐⭐</summary>
+
+Löse: $2x^3 - 8x = 0$
 
 <details>
 <summary>Lösung zu Aufgabe 4</summary>
@@ -329,7 +379,12 @@ $x_1 = 0$, $x_2 = -2$, $x_3 = 2$
 
 </details>
 
-**Aufgabe 5** (⭐⭐) Löse: $x^3 - 5x^2 + 6x = 0$
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 5 ⭐⭐</summary>
+
+Löse: $x^3 - 5x^2 + 6x = 0$
 
 <details>
 <summary>Lösung zu Aufgabe 5</summary>
@@ -345,7 +400,12 @@ $x_1 = 0$, $x_2 = 2$, $x_3 = 3$
 
 </details>
 
-**Aufgabe 6** (⭐⭐) Löse: $x^4 - 16x^2 = 0$
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 6 ⭐⭐</summary>
+
+Löse: $x^4 - 16x^2 = 0$
 
 <details>
 <summary>Lösung zu Aufgabe 6</summary>
@@ -358,7 +418,12 @@ $x_1 = 0$ (doppelt), $x_2 = -4$, $x_3 = 4$
 
 </details>
 
-**Aufgabe 7** (⭐) Löse mit der pq-Formel: $x^2 - 7x + 12 = 0$
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 7 ⭐</summary>
+
+Löse mit der pq-Formel: $x^2 - 7x + 12 = 0$
 
 <details>
 <summary>Lösung zu Aufgabe 7</summary>
@@ -371,7 +436,12 @@ $x_1 = 4$, $x_2 = 3$
 
 </details>
 
-**Aufgabe 8** (⭐⭐) Löse: $x^2 + 3x - 10 = 0$
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 8 ⭐⭐</summary>
+
+Löse: $x^2 + 3x - 10 = 0$
 
 <details>
 <summary>Lösung zu Aufgabe 8</summary>
@@ -384,7 +454,12 @@ $x_1 = 2$, $x_2 = -5$
 
 </details>
 
-**Aufgabe 9** (⭐⭐) Löse durch Substitution: $x^4 - 13x^2 + 36 = 0$
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 9 ⭐⭐</summary>
+
+Löse durch Substitution: $x^4 - 13x^2 + 36 = 0$
 
 <details>
 <summary>Lösung zu Aufgabe 9</summary>
@@ -406,7 +481,12 @@ Vier Nullstellen: $\pm 2,\ \pm 3$
 
 </details>
 
-**Aufgabe 10** (⭐⭐) Löse: $x^4 - 10x^2 + 9 = 0$
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 10 ⭐⭐</summary>
+
+Löse: $x^4 - 10x^2 + 9 = 0$
 
 <details>
 <summary>Lösung zu Aufgabe 10</summary>
@@ -420,7 +500,12 @@ $$
 
 </details>
 
-**Aufgabe 11** (⭐⭐) Löse: $x^4 - 3x^2 - 4 = 0$
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 11 ⭐⭐</summary>
+
+Löse: $x^4 - 3x^2 - 4 = 0$
 
 <details>
 <summary>Lösung zu Aufgabe 11</summary>
@@ -435,7 +520,12 @@ Nullstellen: nur $\pm 2$.
 
 </details>
 
-**Aufgabe 12** (⭐⭐⭐) Löse mit einer geeigneten Substitution:
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 12 ⭐⭐⭐</summary>
+
+Löse mit einer geeigneten Substitution:
 $x^6 - 9x^3 + 8 = 0$
 
 <details>
@@ -456,7 +546,12 @@ $$
 
 </details>
 
-**Aufgabe 13** (⭐⭐) Begründe ohne vollständige Rechnung, dass
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 13 ⭐⭐</summary>
+
+Begründe ohne vollständige Rechnung, dass
 $x^4 + 4x^2 + 3 = 0$ keine Lösung hat.
 
 <details>
@@ -474,7 +569,12 @@ beide negativ, keine Rücksubstitution möglich.)
 
 </details>
 
-**Aufgabe 14** (⭐⭐) $f(x) = x^3 - 3x^2 - x + 3$.
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 14 ⭐⭐</summary>
+
+$f(x) = x^3 - 3x^2 - x + 3$.
 a) Zeige, dass $x = 1$ eine Nullstelle ist.
 b) Bestimme die übrigen Nullstellen per Polynomdivision.
 
@@ -504,7 +604,12 @@ Alle Nullstellen: $-1,\ 1,\ 3$
 
 </details>
 
-**Aufgabe 15** (⭐⭐) $f(x) = x^3 - 2x^2 - 5x + 6$ (Graph in der Erklärung)
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 15 ⭐⭐</summary>
+
+$f(x) = x^3 - 2x^2 - 5x + 6$ (Graph in der Erklärung)
 hat die Nullstelle $x = 3$. Spalte $(x - 3)$ per Polynomdivision ab und
 bestimme die übrigen Nullstellen.
 
@@ -532,7 +637,12 @@ $-2,\ 1,\ 3$.
 
 </details>
 
-**Aufgabe 16** (⭐⭐) Bestimme alle Nullstellen von
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 16 ⭐⭐</summary>
+
+Bestimme alle Nullstellen von
 $f(x) = x^3 + x^2 - 10x + 8$.
 
 <details>
@@ -553,7 +663,12 @@ Alle Nullstellen: $-4,\ 1,\ 2$
 
 </details>
 
-**Aufgabe 17** (⭐⭐⭐) Bestimme alle Nullstellen von
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 17 ⭐⭐⭐</summary>
+
+Bestimme alle Nullstellen von
 $f(x) = 2x^3 - 4x^2 - 10x + 12$.
 
 <details>
@@ -581,7 +696,12 @@ Alle Nullstellen: $-2,\ 1,\ 3$
 
 </details>
 
-**Aufgabe 18** (⭐⭐⭐) Dividiere $\left(x^3 + 2x^2 - 5\right) : (x - 1)$.
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 18 ⭐⭐⭐</summary>
+
+Dividiere $\left(x^3 + 2x^2 - 5\right) : (x - 1)$.
 Was bedeutet der Rest für die Frage, ob $x = 1$ Nullstelle ist?
 
 <details>
@@ -606,7 +726,12 @@ Teststelle. $x = 1$ ist **keine** Nullstelle.
 
 </details>
 
-**Aufgabe 19** (⭐⭐) Führe das Horner-Schema für $f(x) = x^3 - 7x + 6$ mit
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 19 ⭐⭐</summary>
+
+Führe das Horner-Schema für $f(x) = x^3 - 7x + 6$ mit
 $x_0 = 2$ durch und bestimme die restlichen Nullstellen.
 
 <details>
@@ -624,7 +749,12 @@ $x = -1 \pm 2$ → $x_2 = 1$, $x_3 = -3$.
 
 </details>
 
-**Aufgabe 20** (⭐⭐) Bestimme alle Nullstellen von
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 20 ⭐⭐</summary>
+
+Bestimme alle Nullstellen von
 $f(x) = x^3 - 6x^2 + 11x - 6$ mit dem Horner-Schema.
 
 <details>
@@ -644,7 +774,12 @@ Alle Nullstellen: $1,\ 2,\ 3$
 
 </details>
 
-**Aufgabe 21** (⭐⭐⭐) $f(x) = x^3 + 3x^2 - 4$.
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 21 ⭐⭐⭐</summary>
+
+$f(x) = x^3 + 3x^2 - 4$.
 a) Zeige mit dem Horner-Schema, dass $x = -2$ Nullstelle ist.
 b) Bestimme alle Nullstellen. Was fällt auf?
 
@@ -669,7 +804,12 @@ $-2$ und schneidet sie bei $1$.
 
 </details>
 
-**Aufgabe 22** (⭐⭐) Warum sind beim Raten ganzzahliger Nullstellen die
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 22 ⭐⭐</summary>
+
+Warum sind beim Raten ganzzahliger Nullstellen die
 Teiler des Absolutglieds die richtigen Kandidaten? Finde damit eine
 Nullstelle von $f(x) = x^3 - x^2 - 4x + 4$ und bestimme die übrigen.
 
@@ -694,7 +834,12 @@ Alle Nullstellen: $-2,\ 1,\ 2$
 
 </details>
 
-**Aufgabe 23** (⭐⭐) Nenne für jede Gleichung die passende Methode und löse:
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 23 ⭐⭐</summary>
+
+Nenne für jede Gleichung die passende Methode und löse:
 a) $x^3 + 5x^2 = 0$  b) $x^4 - 6x^2 + 8 = 0$
 c) $(x - 2)\left(x^2 - 9\right) = 0$
 
@@ -710,7 +855,12 @@ c) **Nullprodukt direkt:** $x_1 = 2$, $x_{2,3} = \pm 3$
 
 </details>
 
-**Aufgabe 24** (⭐⭐) $f(x) = x^4 - 4x^2$ (Graph in der Erklärung der Seite –
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 24 ⭐⭐</summary>
+
+$f(x) = x^4 - 4x^2$ (Graph in der Erklärung der Seite –
 letzte Abbildung). Berechne die Nullstellen und erkläre, warum der Graph
 bei $x = 0$ die Achse nur berührt.
 
@@ -729,7 +879,12 @@ dreht wieder um: **Berührpunkt** statt Durchgang.
 
 </details>
 
-**Aufgabe 25** (⭐⭐) Berechne die Nullstellen von $f(x) = x^3 - 4x^2 + 4x$
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 25 ⭐⭐</summary>
+
+Berechne die Nullstellen von $f(x) = x^3 - 4x^2 + 4x$
 und beschreibe das Verhalten des Graphen an jeder Nullstelle.
 
 <details>
@@ -745,7 +900,12 @@ Erklärung).
 
 </details>
 
-**Aufgabe 26** (⭐⭐⭐) Bestimme alle Nullstellen von
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 26 ⭐⭐⭐</summary>
+
+Bestimme alle Nullstellen von
 $f(x) = -x^3 + 9x^2 - 24x + 20$.
 
 <details>
@@ -768,7 +928,12 @@ und $5$.
 
 </details>
 
-**Aufgabe 27** (⭐⭐⭐) Für welche Werte von $c$ hat $f(x) = x^3 - cx$ genau
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 27 ⭐⭐⭐</summary>
+
+Für welche Werte von $c$ hat $f(x) = x^3 - cx$ genau
 **eine** Nullstelle?
 
 <details>
@@ -785,7 +950,12 @@ Genau eine Nullstelle für $\boxed{c \leq 0}$.
 
 </details>
 
-**Aufgabe 28** (⭐⭐) Zeige ohne pq-Formel, dass $f(x) = x^4 + 2x^2 + 1$
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 28 ⭐⭐</summary>
+
+Zeige ohne pq-Formel, dass $f(x) = x^4 + 2x^2 + 1$
 keine Nullstellen hat.
 
 <details>
@@ -802,7 +972,12 @@ Nullstellen.
 
 </details>
 
-**Aufgabe 29** (⭐⭐⭐) Begründe: $x = 1$ ist für **jede** natürliche Zahl
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 29 ⭐⭐⭐</summary>
+
+Begründe: $x = 1$ ist für **jede** natürliche Zahl
 $n$ eine Nullstelle von $f(x) = x^n - 1$. Für welche $n$ ist auch
 $x = -1$ eine Nullstelle?
 
@@ -818,7 +993,12 @@ $x = -1$ ist genau für gerade $n$ Nullstelle.
 
 </details>
 
-**Aufgabe 30** (⭐⭐⭐) $f(x) = x^3 - x^2 - 9x + 9$. Bestimme alle
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 30 ⭐⭐⭐</summary>
+
+$f(x) = x^3 - x^2 - 9x + 9$. Bestimme alle
 Nullstellen auf **zwei** Wegen: a) Raten + Polynomdivision,
 b) geschicktes Gruppieren und Ausklammern.
 
@@ -845,6 +1025,34 @@ x^3 - x^2 - 9x + 9 &= x^2(x - 1) - 9(x - 1) \\
 $$
 
 Beide Wege: $x_1 = 1$, $x_2 = -3$, $x_3 = 3$. ✓
+
+</details>
+
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 31 ⭐⭐ · Verständnisaufgabe</summary>
+
+Finde und erkläre den Fehler:
+a) „$x^4 - 5x^2 + 4 = 0$: Mit $z = x^2$ erhalte ich $z_1 = 4$ und
+$z_2 = 1$. Die Gleichung hat also die Lösungen $4$ und $1$.“
+b) „$(x-3)(x+1) = 5$: Nach dem Satz vom Nullprodukt ist $x - 3 = 5$ oder
+$x + 1 = 5$.“
+
+<details>
+<summary>Lösung zu Aufgabe 31</summary>
+
+a) Die **Rücksubstitution fehlt**: $z$ steht für $x^2$. Aus $x^2 = 4$
+folgt $x = \pm 2$, aus $x^2 = 1$ folgt $x = \pm 1$ – die Gleichung hat
+die vier Lösungen $\pm 1,\ \pm 2$, nicht „4 und 1“.
+
+b) Der Satz vom Nullprodukt gilt **nur für $= 0$**: Ein Produkt kann auf
+viele Arten 5 ergeben ($1 \cdot 5$, $2 \cdot 2{,}5$, …), aber null nur,
+wenn ein Faktor null ist. Richtig: ausmultiplizieren, alles auf eine
+Seite bringen ($x^2 - 2x - 8 = 0$) und dann lösen ($x_1 = 4$,
+$x_2 = -2$).
+
+</details>
 
 </details>
 
@@ -910,4 +1118,10 @@ Zum Abschluss: Klicke bei jeder Frage eine Antwort an – die Auswertung kommt s
   { frage: 'Welche Lösungen hat x · (x − 2)² = 0?',
     antworten: ['0 und 2 (doppelt)', '0, 2 und −2', 'Nur 2', '0 und 4'],
     richtig: 0, erklaerung: 'Faktoren null setzen: x = 0 (einfach) und x = 2 (doppelt, wegen des Quadrats).' },
+  { frage: 'Verständnisfrage: Der Graph berührt die x-Achse bei x = 2 nur, ohne sie zu kreuzen. Was folgt für den Term?',
+    antworten: ['(x − 2) kommt in gerader Potenz vor (doppelte Nullstelle)', '(x − 2) kommt genau einmal vor', 'x = 2 ist gar keine Nullstelle', 'Das Absolutglied ist 2'],
+    richtig: 0, erklaerung: 'Ein Quadrat wie (x − 2)² wechselt das Vorzeichen nicht – der Graph tippt die Achse nur an. Einfache Faktoren erzeugen echte Kreuzungen.' },
+  { frage: 'Verständnisfrage: Warum darf man aus (x − 3)(x + 1) = 5 nicht „x − 3 = 5 oder x + 1 = 5“ folgern?',
+    antworten: ['Weil man erst ausklammern muss', 'Weil der Satz vom Nullprodukt nur für Produkte gilt, die null ergeben', 'Weil 5 kein Teiler des Absolutglieds ist', 'Man darf das – die Lösungen stimmen'],
+    richtig: 1, erklaerung: '5 lässt sich auf unendlich viele Arten als Produkt schreiben (1 · 5, 2 · 2,5 …). Nur bei = 0 muss einer der Faktoren null sein.' },
 ]} />

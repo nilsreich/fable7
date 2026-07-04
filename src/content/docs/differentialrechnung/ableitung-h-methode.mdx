@@ -37,6 +37,17 @@ $$
 
 ![Die Tangente y = 2x − 1 berührt die Normalparabel im Punkt P(1|1); ihre Steigung ist die Ableitung f'(1) = 2](../../../assets/plots/differentialrechnung/ableitung-h-methode/tangente-parabel.svg)
 
+<details class="verstaendnis">
+<summary>Verständnisfrage: Was unterscheidet Differenzenquotient und Differentialquotient?</summary>
+
+Der **Differenzenquotient** ist eine gewöhnliche Division: Sekantensteigung
+über einem echten Intervall der Breite $h$. Der **Differentialquotient**
+ist sein **Grenzwert** für $h \to 0$: die Tangentensteigung an einer
+einzigen Stelle. Merkhilfe: Differenzen = zwei Punkte, Differential =
+ein Punkt (nach dem Grenzübergang).
+
+</details>
+
 ### Die h-Methode in drei Schritten
 
 Man kann nicht einfach $h = 0$ einsetzen ($\frac{0}{0}$!). Der Trick:
@@ -67,6 +78,17 @@ $$
 Exakt das Ergebnis, das die Zahlenfolgen vermuten ließen – ohne jede
 Näherung.
 
+<details class="verstaendnis">
+<summary>Verständnisfrage: Warum darf man das $h$ kürzen – es läuft doch gegen null?</summary>
+
+„$h \to 0$“ heißt: $h$ wird beliebig klein, ist aber unterwegs **nie
+exakt null** – und für jedes $h \neq 0$ ist das Kürzen erlaubt. Erst
+*nachdem* der Bruch zu $2 + h$ vereinfacht ist, schaut man, wohin der
+Ausdruck für $h \to 0$ strebt. Genau diese Reihenfolge – erst kürzen,
+dann Grenzübergang – umgeht die verbotene $\frac{0}{0}$-Situation.
+
+</details>
+
 ### Von der Stelle zur Ableitungsfunktion
 
 Führt man die h-Methode an einer **allgemeinen** Stelle $x$ durch,
@@ -82,6 +104,17 @@ das Muster nahe – und Beispiel 1 beweist es: $f'(x) = 2x$.
 
 Ablesen am Bild: Wo $f$ fällt, ist $f'$ negativ; am Scheitel ist
 $f'(0) = 0$; wo $f$ steigt, ist $f'$ positiv.
+
+<details class="verstaendnis">
+<summary>Verständnisfrage: Was ist der Unterschied zwischen $f'(3)$ und $f'(x)$?</summary>
+
+$f'(3)$ ist eine **Zahl**: die Tangentensteigung an der einen Stelle
+$x = 3$ (bei $f(x) = x^2$ also $6$). $f'(x)$ ist eine ganze **Funktion**:
+Sie liefert zu *jeder* Stelle die dortige Steigung. Aus der
+Ableitungsfunktion bekommt man jede einzelne Steigung durch Einsetzen –
+umgekehrt geht das nicht.
+
+</details>
 
 ## Beispiele
 
@@ -170,7 +203,10 @@ $x^2 - 4x = (x - 2)^2 - 4$ hat bei $x = 2$ ihren Scheitel.
 
 ## Aufgaben
 
-**Aufgabe 1** (⭐) $f(x) = x^2$. Stelle den Differenzenquotienten an der
+<details class="aufgabe">
+<summary>Aufgabe 1 ⭐</summary>
+
+$f(x) = x^2$. Stelle den Differenzenquotienten an der
 Stelle $x_0 = 3$ auf, vereinfache ihn und bestimme $f'(3)$.
 
 <details>
@@ -188,7 +224,12 @@ Grenzübergang: $f'(3) = \lim_{h \to 0}(6 + h) = 6$.
 
 </details>
 
-**Aufgabe 2** (⭐) Berechne mit der h-Methode $f'(2)$ für $f(x) = x^2$.
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 2 ⭐</summary>
+
+Berechne mit der h-Methode $f'(2)$ für $f(x) = x^2$.
 
 <details>
 <summary>Lösung zu Aufgabe 2</summary>
@@ -203,7 +244,12 @@ $$
 
 </details>
 
-**Aufgabe 3** (⭐) Berechne mit der h-Methode $f'(-1)$ für $f(x) = x^2$.
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 3 ⭐</summary>
+
+Berechne mit der h-Methode $f'(-1)$ für $f(x) = x^2$.
 
 <details>
 <summary>Lösung zu Aufgabe 3</summary>
@@ -220,7 +266,12 @@ $$
 
 </details>
 
-**Aufgabe 4** (⭐) Was bedeutet das Ergebnis $f'(3) = 6$ aus Aufgabe 1
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 4 ⭐</summary>
+
+Was bedeutet das Ergebnis $f'(3) = 6$ aus Aufgabe 1
 grafisch? Gib auch an, was es für $f(x) = x^2$ als Weg-Zeit-Funktion
 bedeuten würde.
 
@@ -233,7 +284,12 @@ Steigung 6. Als Weg-Zeit-Funktion gelesen: Zum Zeitpunkt 3 beträgt die
 
 </details>
 
-**Aufgabe 5** (⭐⭐) Bestimme mit der h-Methode die Ableitungsfunktion von
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 5 ⭐⭐</summary>
+
+Bestimme mit der h-Methode die Ableitungsfunktion von
 $f(x) = x^2 + 3$. Was fällt im Vergleich zu $x^2$ auf?
 
 <details>
@@ -253,7 +309,12 @@ nach oben und ändert keine einzige Tangentensteigung.
 
 </details>
 
-**Aufgabe 6** (⭐⭐) Bestimme mit der h-Methode die Ableitungsfunktion von
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 6 ⭐⭐</summary>
+
+Bestimme mit der h-Methode die Ableitungsfunktion von
 $f(x) = 2x^2$.
 
 <details>
@@ -271,7 +332,12 @@ $$
 
 </details>
 
-**Aufgabe 7** (⭐⭐) Berechne mit der h-Methode $f'(1)$ für $f(x) = x^3$.
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 7 ⭐⭐</summary>
+
+Berechne mit der h-Methode $f'(1)$ für $f(x) = x^3$.
 
 <details>
 <summary>Lösung zu Aufgabe 7</summary>
@@ -286,7 +352,12 @@ $$
 
 </details>
 
-**Aufgabe 8** (⭐⭐) Berechne mit der h-Methode $f'(2)$ für $f(x) = x^3$.
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 8 ⭐⭐</summary>
+
+Berechne mit der h-Methode $f'(2)$ für $f(x) = x^3$.
 
 <details>
 <summary>Lösung zu Aufgabe 8</summary>
@@ -303,7 +374,12 @@ $$
 
 </details>
 
-**Aufgabe 9** (⭐⭐) Bestimme mit der h-Methode die Ableitung von
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 9 ⭐⭐</summary>
+
+Bestimme mit der h-Methode die Ableitung von
 $f(x) = 5x + 2$ und deute das Ergebnis.
 
 <details>
@@ -321,7 +397,12 @@ Steigung – jede Tangente ist die Gerade selbst.
 
 </details>
 
-**Aufgabe 10** (⭐⭐) Bestimme mit der h-Methode die Ableitung einer
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 10 ⭐⭐</summary>
+
+Bestimme mit der h-Methode die Ableitung einer
 konstanten Funktion $f(x) = c$.
 
 <details>
@@ -335,7 +416,12 @@ Ein waagerechter Graph hat überall Steigung 0.
 
 </details>
 
-**Aufgabe 11** (⭐⭐) $f(x) = x^2 - 4x$. Bestimme mit der h-Methode die
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 11 ⭐⭐</summary>
+
+$f(x) = x^2 - 4x$. Bestimme mit der h-Methode die
 Ableitungsfunktion $f'$ und berechne, an welcher Stelle die Tangente
 waagerecht ist.
 
@@ -360,7 +446,12 @@ $$
 
 </details>
 
-**Aufgabe 12** (⭐⭐) Für $f(x) = x^2$ gilt $f'(x) = 2x$.
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 12 ⭐⭐</summary>
+
+Für $f(x) = x^2$ gilt $f'(x) = 2x$.
 a) Gib die Tangentensteigungen an den Stellen $-2$, $0$ und $3$ an.
 b) An welcher Stelle hat der Graph die Steigung 5?
 
@@ -377,7 +468,12 @@ $$
 
 </details>
 
-**Aufgabe 13** (⭐⭐⭐) Berechne mit der h-Methode $f'(2)$ für
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 13 ⭐⭐⭐</summary>
+
+Berechne mit der h-Methode $f'(2)$ für
 $f(x) = \dfrac{1}{x}$.
 
 <details>
@@ -400,7 +496,12 @@ $-\frac{1}{4}$.
 
 </details>
 
-**Aufgabe 14** (⭐⭐⭐) Bestimme mit der h-Methode die Ableitungsfunktion
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 14 ⭐⭐⭐</summary>
+
+Bestimme mit der h-Methode die Ableitungsfunktion
 von $f(x) = x^3 - x$.
 
 <details>
@@ -421,7 +522,12 @@ von $-x$.)
 
 </details>
 
-**Aufgabe 15** (⭐⭐) Fehlersuche! Ein Schüler rechnet für $f(x) = x^2$:
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 15 ⭐⭐</summary>
+
+Fehlersuche! Ein Schüler rechnet für $f(x) = x^2$:
 
 $$
 \frac{(x + h)^2 - x^2}{h} = \frac{x^2 + h^2 - x^2}{h} = \frac{h^2}{h} = h
@@ -445,7 +551,12 @@ $f'(x) = 2x$.
 
 </details>
 
-**Aufgabe 16** (⭐⭐⭐) Sprintmodell $s(t) = 1{,}5t^2$ (vorige Seite).
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 16 ⭐⭐⭐</summary>
+
+Sprintmodell $s(t) = 1{,}5t^2$ (vorige Seite).
 a) Zeige mit der h-Methode: Die Geschwindigkeitsfunktion ist $v(t) = 3t$.
 b) Berechne $v(3)$ und vergleiche mit der Näherung „9 m/s“ der vorigen
 Seite.
@@ -466,6 +577,32 @@ $$
 b) $v(3) = 9$ m/s – die Zahlenfolge der vorigen Seite (10,5; 9,75;
 9,15; 9,015 …) hatte also exakt den richtigen Grenzwert. Die h-Methode
 liefert ihn in einer Rechnung.
+
+</details>
+
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 17 ⭐⭐ · Verständnisaufgabe</summary>
+
+Wahr oder falsch? Begründe:
+a) „$f'(2) = 4$ bedeutet: Die Funktion hat an der Stelle 2 den Wert 4.“
+b) „Weil beim Einsetzen von $h = 0$ der verbotene Ausdruck $\frac{0}{0}$
+entsteht, existiert die Ableitung gar nicht.“
+
+<details>
+<summary>Lösung zu Aufgabe 17</summary>
+
+a) **Falsch.** Den Funktionswert liefert $f(2)$. $f'(2) = 4$ sagt: Die
+**Tangente** im Punkt $(2 \mid f(2))$ hat die **Steigung** 4 – der Graph
+steigt dort gerade mit „4 nach oben pro 1 nach rechts“.
+
+b) **Falsch.** Man setzt ja nicht ein, sondern bildet den **Grenzwert**:
+Erst wird der Bruch vereinfacht, bis sich $h$ kürzt, dann lässt man
+$h \to 0$ laufen. Für $f(x) = x^2$ bleibt z. B. $2x_0 + h \to 2x_0$ –
+ein völlig bestimmter Wert.
+
+</details>
 
 </details>
 
@@ -524,4 +661,10 @@ Zum Abschluss: Klicke bei jeder Frage eine Antwort an – die Auswertung kommt s
   { frage: 'Was passiert mit dem Summanden +5 in f(x) = x² + 5 beim Ableiten?',
     antworten: ['Er bleibt stehen', 'Er wird zu 5x', 'Er fällt weg', 'Er wird zu 1/5'],
     richtig: 2, erklaerung: 'Konstanten verschieben den Graphen nur nach oben und ändern keine Steigung – ihre Ableitung ist 0.' },
+  { frage: 'Verständnisfrage: Was sagt f′(2) = −3 über den Graphen von f?',
+    antworten: ['Der Punkt (2|−3) liegt auf dem Graphen', 'Der Graph fällt bei x = 2; die Tangente dort hat Steigung −3', 'Der Graph hat bei x = 2 eine Nullstelle', 'f hat bei x = −3 den Wert 2'],
+    richtig: 1, erklaerung: 'f′ liefert Steigungen, keine Funktionswerte: Bei x = 2 geht es mit Tangentensteigung −3 bergab.' },
+  { frage: 'Verständnisfrage: Warum darf man in der h-Methode das h kürzen, obwohl h → 0 läuft?',
+    antworten: ['Weil h eine positive Zahl ist', 'Weil h beim Grenzprozess nie exakt null ist – gekürzt wird für h ≠ 0, der Grenzübergang kommt danach', 'Weil sich Fehler am Ende ausgleichen', 'Kürzen ist eigentlich nicht erlaubt'],
+    richtig: 1, erklaerung: 'Für jedes h ≠ 0 ist das Kürzen eine gewöhnliche Bruchrechnung. Erst der vereinfachte Ausdruck (z. B. 2x + h) wird dem Grenzwert unterworfen.' },
 ]} />

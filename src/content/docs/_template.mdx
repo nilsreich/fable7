@@ -46,6 +46,18 @@ Plots als Markdown-Bild mit deutschem Alt-Text:
 
 Bei mehreren Teilkonzepten `###`-Unterüberschriften verwenden.
 
+Nach jedem größeren Gedankenschritt eine **Verständnisfrage** einstreuen
+(2–3 pro Erklärung). Die Frage steht sichtbar in der Zeile, die Antwort
+klappt auf:
+
+<details class="verstaendnis">
+<summary>Verständnisfrage: Warum …?</summary>
+
+Kurze Antwort in 1–3 Sätzen, die auf das Konzept zielt (nicht rechnen,
+sondern begründen).
+
+</details>
+
 ## Beispiele
 
 **Beispiel 1:** Aufgabenstellung sichtbar.
@@ -67,7 +79,15 @@ $$
 
 ## Aufgaben
 
-**Aufgabe 1** (⭐) Grundniveau-Aufgabe.
+Jede Aufgabe steckt komplett (Text + Lösung) in `<details class="aufgabe">`,
+damit die Seite eine ruhige Liste bleibt. Mindestens eine Aufgabe pro Seite
+ist eine reine Verständnisaufgabe („Begründe …“, „Erkläre, warum …“,
+„Beurteile die Aussage …“) ohne Rechnung.
+
+<details class="aufgabe">
+<summary>Aufgabe 1 ⭐</summary>
+
+Grundniveau-Aufgabe.
 
 <details>
 <summary>Lösung zu Aufgabe 1</summary>
@@ -76,7 +96,12 @@ Vollständiger Rechenweg, nicht nur das Ergebnis.
 
 </details>
 
-**Aufgabe 2** (⭐⭐) Standard-/Klassenarbeitsniveau.
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 2 ⭐⭐</summary>
+
+Standard-/Klassenarbeitsniveau.
 
 <details>
 <summary>Lösung zu Aufgabe 2</summary>
@@ -85,12 +110,19 @@ Vollständiger Rechenweg.
 
 </details>
 
-**Aufgabe 3** (⭐⭐⭐) Transferaufgabe.
+</details>
+
+<details class="aufgabe">
+<summary>Aufgabe 3 ⭐⭐⭐</summary>
+
+Transferaufgabe.
 
 <details>
 <summary>Lösung zu Aufgabe 3</summary>
 
 Vollständiger Rechenweg.
+
+</details>
 
 </details>
 
@@ -111,3 +143,10 @@ Sonderfälle, typische Fehler, Ausblick auf das Folgethema.
 :::caution
 Typische Fehlerquelle hier beschreiben.
 :::
+
+## Quiz
+
+Zum Abschluss ein Quiz (Komponente `Quiz.astro`, zeigt eine Frage nach der
+anderen). Mischung aus Rechen- und **Verständnisfragen** – mindestens zwei
+Fragen zielen auf das Konzept („Warum …?“, „Was passiert, wenn …?“,
+typische Fehlvorstellungen als Distraktoren).
