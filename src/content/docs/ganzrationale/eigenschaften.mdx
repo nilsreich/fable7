@@ -55,6 +55,16 @@ der Graph „hereinkommt und hinausgeht“:
 
 ![Randverhalten bei ungeradem Grad: f(x) = x³ − 3x läuft von unten links nach oben rechts, g(x) = −x³ + 3x von oben links nach unten rechts](../../../assets/plots/ganzrationale/eigenschaften/verlauf-ungerader-grad.svg)
 
+<details class="verstaendnis">
+<summary>Verständnisfrage: Warum entscheidet <em>allein</em> der Leitterm über das Randverhalten – die anderen Summanden stehen doch auch im Term?</summary>
+
+Weil die höchste Potenz für betragsgroße $x$ alle anderen erdrückt: Bei
+$x = 100$ ist $x^4 = 100{.}000{.}000$, während $3x^3 = 3{.}000{.}000$
+daneben verblasst – je weiter draußen, desto krasser das Verhältnis. Die
+niedrigeren Summanden verbiegen den Graphen nur im „Mittelteil“.
+
+</details>
+
 Kurzschreibweise: $\ x \to +\infty:\ f(x) \to +\infty$ (usw.). Die
 Mathematik hat dafür auch eine eigene Notation, den **Grenzwert**
 (lateinisch *limes* = Grenze):
@@ -84,6 +94,17 @@ Am Term sofort erkennbar (Symmetrie zur $y$-Achse bzw. zum Ursprung):
 
 ![Der Graph von h(x) = x³ − 3x² mit gemischten Exponenten ist weder achsen- noch punktsymmetrisch](../../../assets/plots/ganzrationale/eigenschaften/keine-symmetrie.svg)
 
+<details class="verstaendnis">
+<summary>Verständnisfrage: Warum zählt das Absolutglied bei der Symmetrie-Regel als <em>gerader</em> Exponent?</summary>
+
+Wegen $a_0 = a_0 \cdot x^0$ – und $0$ ist eine gerade Zahl. Das passt
+auch anschaulich: $f(x) = x^2 + 5$ ist die um 5 nach oben geschobene
+Normalparabel und bleibt achsensymmetrisch. Dagegen zerstört ein
+Absolutglied jede Punktsymmetrie: $g(x) = x^3 + 5$ erfüllt
+$g(-x) = -x^3 + 5 \neq -g(x)$.
+
+</details>
+
 ### Nullstellen: höchstens n Stück
 
 Eine ganzrationale Funktion vom Grad $n$ hat **höchstens $n$
@@ -91,6 +112,18 @@ Nullstellen**. Ist der Grad ungerade, gibt es wegen des Randverhaltens
 (von $-\infty$ nach $+\infty$ oder umgekehrt) **mindestens eine**.
 
 ![Die Funktion f(x) = x³ − 4x vom Grad 3 hat die maximal möglichen drei Nullstellen N₁(−2|0), N₂(0|0) und N₃(2|0)](../../../assets/plots/ganzrationale/eigenschaften/nullstellen-anzahl.svg)
+
+<details class="verstaendnis">
+<summary>Verständnisfrage: Warum hat jede Funktion <em>ungeraden</em> Grades mindestens eine Nullstelle – bei geradem Grad aber vielleicht gar keine?</summary>
+
+Bei ungeradem Grad kommen die beiden Enden des Graphen von
+**verschiedenen** Seiten ($-\infty$ und $+\infty$). Auf dem Weg von ganz
+unten nach ganz oben muss der Graph die $x$-Achse irgendwo kreuzen. Bei
+geradem Grad starten und enden beide Enden auf **derselben** Seite – der
+Graph kann komplett über (oder unter) der Achse bleiben, wie
+$f(x) = x^4 + 1$.
+
+</details>
 
 ## Beispiele
 
@@ -522,6 +555,31 @@ kann über der Achse bleiben, z. B. $y = x^2 + 1$.)
 
 </details>
 
+<details class="aufgabe">
+<summary>Aufgabe 17 ⭐⭐ · Verständnisaufgabe</summary>
+
+Wahr oder falsch? Begründe:
+a) „$f(x) = x^3 + x^2$ ist punktsymmetrisch zum Ursprung, denn $x^3$ hat
+einen ungeraden Exponenten.“
+b) „Eine ganzrationale Funktion vierten Grades hat immer vier
+Nullstellen.“
+
+<details>
+<summary>Lösung zu Aufgabe 17</summary>
+
+a) **Falsch.** Die Regel verlangt: **nur** ungerade Exponenten. Hier ist
+mit $x^2$ ein gerader dabei – der Term ist gemischt, also weder achsen-
+noch punktsymmetrisch. Kontrolle: $f(-1) = -1 + 1 = 0$, aber
+$-f(1) = -(1+1) = -2$.
+
+b) **Falsch.** Grad 4 bedeutet **höchstens** vier Nullstellen. Es können
+auch weniger sein – oder gar keine: $f(x) = x^4 + 1$ liegt komplett
+oberhalb der $x$-Achse.
+
+</details>
+
+</details>
+
 ## Merksatz
 
 <details>
@@ -578,4 +636,10 @@ Zum Abschluss: Klicke bei jeder Frage eine Antwort an – die Auswertung kommt s
   { frage: 'Welche Funktion ist ganzrational?',
     antworten: ['f(x) = √x', 'f(x) = 1/x', 'f(x) = x³ − 2x', 'f(x) = 2ˣ'],
     richtig: 2, erklaerung: 'Ganzrational = Summe von Potenzen mit natürlichen Exponenten. Wurzel (x^½), Bruch (x⁻¹) und Exponentialterm fallen raus.' },
+  { frage: 'Verständnisfrage: Warum bestimmt allein der Leitterm das Randverhalten?',
+    antworten: ['Weil er im Term ganz vorne steht', 'Weil die höchste Potenz für große |x| alle anderen Summanden erdrückt', 'Weil die anderen Koeffizienten meist klein sind', 'Weil das Absolutglied null ist'],
+    richtig: 1, erklaerung: 'Bei x = 100 ist x⁴ = 100 Mio., 3x³ nur 3 Mio. – je größer |x|, desto bedeutungsloser werden die niedrigeren Potenzen.' },
+  { frage: 'Verständnisfrage: Kann eine Funktion 4. Grades ganz ohne Nullstelle auskommen?',
+    antworten: ['Nein, Grad 4 heißt vier Nullstellen', 'Nein, mindestens eine gibt es immer', 'Ja, z. B. x⁴ + 1: beide Enden oben und der Graph bleibt über der x-Achse', 'Nur wenn das Absolutglied null ist'],
+    richtig: 2, erklaerung: 'Bei geradem Grad laufen beide Enden auf dieselbe Seite – der Graph muss die x-Achse nicht kreuzen. x⁴ + 1 ≥ 1 für alle x.' },
 ]} />

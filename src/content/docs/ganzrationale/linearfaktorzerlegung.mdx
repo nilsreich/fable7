@@ -40,6 +40,17 @@ Beide Leserichtungen sind nützlich:
 Nicht jede Funktion zerfällt vollständig: Ein quadratischer Faktor ohne
 Nullstellen (z. B. $x^2 + 1$) bleibt als „unzerlegbarer Rest“ stehen.
 
+<details class="verstaendnis">
+<summary>Verständnisfrage: $(x-1)(x-3)$ und $2(x-1)(x-3)$ haben dieselben Nullstellen – warum sind es trotzdem verschiedene Funktionen?</summary>
+
+Die Nullstellen legen nur fest, **wo** der Graph die $x$-Achse trifft –
+nicht, wie hoch er dazwischen und außerhalb läuft. Ausmultiplizieren
+zeigt es: $x^2 - 4x + 3$ gegenüber $2x^2 - 8x + 6$; schon die
+$y$-Achsenabschnitte 3 und 6 unterscheiden sich. Der Leitkoeffizient
+gehört deshalb immer mit in die Zerlegung.
+
+</details>
+
 ### Vielfachheit von Nullstellen
 
 Taucht ein Linearfaktor mehrfach auf, heißt der Exponent
@@ -59,12 +70,34 @@ $x$-Achse trifft:
 Merkhilfe: **gerade Vielfachheit = kein Seitenwechsel** (wie bei $x^2$
 am Ursprung), ungerade = Seitenwechsel.
 
+<details class="verstaendnis">
+<summary>Verständnisfrage: Woran erkennst du am <em>Graphen</em>, welche Vielfachheit eine Nullstelle hat?</summary>
+
+Am Verhalten an der Achse: **Steiles Durchqueren** → einfache Nullstelle.
+**Berühren und Umkehren** (wie ein Parabelscheitel auf der Achse) →
+gerade Vielfachheit. **Flacher Sattel-Durchgang** (wie $x^3$ im Ursprung)
+→ ungerade Vielfachheit ab 3. Die exakte Zahl (2 oder 4?) sieht man dem
+Bild allerdings nicht an – nur gerade/ungerade.
+
+</details>
+
 ### Graphen skizzieren ohne Wertetabelle
 
 Aus der Produktform liest man in Sekunden ab: Nullstellen samt
 Verhalten (Vielfachheit), Randverhalten (Grad = Summe der
 Vielfachheiten, Vorzeichen von $a_n$) und den $y$-Achsenabschnitt
 ($x = 0$ einsetzen). Das reicht für eine qualitative Skizze.
+
+<details class="verstaendnis">
+<summary>Verständnisfrage: $f(x) = (x+2)(x-1)^2$ – warum weißt du ohne Rechnung, dass der Graph „von unten links nach oben rechts“ läuft?</summary>
+
+Der Grad ist die Summe der Vielfachheiten: $1 + 2 = 3$, also ungerade.
+Der Leitkoeffizient ist $1 > 0$ (vor den Klammern steht nichts). Ungerader
+Grad + positiver Leitkoeffizient bedeutet: von $-\infty$ nach $+\infty$.
+Zusammen mit den Nullstellen $-2$ (schneiden) und $1$ (berühren) steht
+die Skizze.
+
+</details>
 
 ## Beispiele
 
@@ -515,6 +548,30 @@ $$
 
 </details>
 
+<details class="aufgabe">
+<summary>Aufgabe 17 ⭐⭐ · Verständnisaufgabe</summary>
+
+Wahr oder falsch? Begründe:
+a) „$f(x) = (x - 4)^2$ hat die doppelte Nullstelle $x = -4$.“
+b) „$f(x) = (x-1)(x+2)$ und $g(x) = 3(x-1)(x+2)$ haben dieselben
+Nullstellen – also beschreiben sie dieselbe Funktion.“
+
+<details>
+<summary>Lösung zu Aufgabe 17</summary>
+
+a) **Falsch.** Die Nullstelle ist dort, wo die Klammer null wird:
+$x - 4 = 0 \Rightarrow x = 4$ (doppelt). Das Vorzeichen wird beim Ablesen
+umgedreht.
+
+b) **Falsch.** Gleiche Nullstellen heißt nur: gleiche Schnittpunkte mit
+der $x$-Achse. Der Faktor 3 streckt alle übrigen Funktionswerte auf das
+Dreifache – z. B. ist $f(0) = -2$, aber $g(0) = -6$. Erst Nullstellen
+**plus** Leitkoeffizient legen die Funktion fest.
+
+</details>
+
+</details>
+
 ## Merksatz
 
 <details>
@@ -571,4 +628,10 @@ Zum Abschluss: Klicke bei jeder Frage eine Antwort an – die Auswertung kommt s
   { frage: 'Warum lässt sich x² + 1 nicht in Linearfaktoren zerlegen?',
     antworten: ['Weil der Grad zu klein ist', 'Weil es keine reellen Nullstellen gibt', 'Weil das Absolutglied 1 ist', 'Es geht: (x + 1)(x − 1)'],
     richtig: 1, erklaerung: 'Jeder Linearfaktor gehört zu einer Nullstelle – x² + 1 ≥ 1 hat aber keine. ((x+1)(x−1) wäre x² − 1!)' },
+  { frage: 'Verständnisfrage: f und g = 3 · f haben exakt dieselben Nullstellen. Sind sie dieselbe Funktion?',
+    antworten: ['Ja – Nullstellen legen eine Funktion eindeutig fest', 'Nein – die Nullstellen bestimmen den Term nur bis auf den Vorfaktor', 'Ja, falls der Grad gleich ist', 'Nein, denn g hat mehr Nullstellen'],
+    richtig: 1, erklaerung: 'Der Faktor 3 lässt Punkte auf der x-Achse liegen, streckt aber alle anderen Werte. Für den vollständigen Term braucht man zusätzlich a&#8345; – etwa über einen weiteren Punkt.' },
+  { frage: 'Verständnisfrage: Ein Graph berührt die x-Achse bei x = 2 und schneidet sie steil bei x = −1 und x = 3. Welche Zerlegung passt?',
+    antworten: ['a(x − 2)(x + 1)(x − 3)', 'a(x − 2)²(x + 1)(x − 3)', 'a(x + 2)²(x − 1)(x + 3)', 'a(x − 2)²(x − 1)(x + 3)'],
+    richtig: 1, erklaerung: 'Berühren = gerade Vielfachheit → (x − 2)². Steiles Schneiden = einfache Faktoren bei −1 und 3 → (x + 1)(x − 3).' },
 ]} />
