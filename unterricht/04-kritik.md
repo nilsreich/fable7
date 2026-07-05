@@ -28,7 +28,9 @@ gewollt ist, gehört er als beschlossene Abweichung in die
 Bildungsgangkonferenz, nicht stillschweigend in den Plan.
 **Korrektur im überarbeiteten Plan:** Gebrochenrationale mit 4 DS vor
 Weihnachten (KA-2-relevant), Scharen/Ortskurven auf 4 DS kompakt als
-ausgewiesener, streichbarer Vorgriff nach KA 3.
+**fester, der Fachkonferenz offengelegter Vorgriff** nach KA 3
+(Entscheidung der Lehrkraft: der Vorgriff bleibt — er wird bei
+Zeitdruck komprimiert, nicht gestrichen).
 
 ### A2. Die 42-Wochen-Rechnung ist eine Vollauslastungs-Illusion
 
@@ -192,3 +194,29 @@ Ehrlichkeit über die eigenen Schwächen — auch die des Konzepts in
    Binnendifferenzierung nach oben (die ⭐⭐⭐-Schiene ist Aufgaben-,
    nicht Projektdifferenzierung; für sehr starke Lernende wäre z. B.
    eine GeoGebra-Forscheraufgabe pro Block besser).
+
+---
+
+## Umsetzungsstand (Revision 2)
+
+Die Punkte aus Teil B wurden in Konzept, Jahresplan und Spickzettel
+eingearbeitet:
+
+| Punkt | Umsetzung |
+| --- | --- |
+| B1 Evidenz-Vorsicht | Neuer Abschnitt „8. Evaluation des Konzepts selbst" im Konzept: Wiederholungsanteile auswerten, Exit-Ticket-Stapel als Datenquelle, Jahresfeedback W 42, zwei bewusste Website-freie Stunden pro Jahr |
+| B2 Ritualdichte | „Ritualbudget"-Regel in Konzept (2.2) und allen Spickzettel-Headern: genau ein Abruf-Opener pro DS (Startrampe *oder* Quiz-Voting), Exit-Ticket nur in B-Stunden |
+| B3 Spickzettel als Hypothesen | Warnung in den Spickzettel-Header von Block 1 übernommen |
+| B4 Website-Klumpenrisiko | „Ausfallsicherung" im Medienkonzept (§ 4): PWA-Cache-Routine, Papier-Notfallreserve pro Block (in jedem Spickzettel-Header konkretisiert), analoges Format B; dazu KA-Regel „mindestens eine strukturell neue Aufgabe" in Konzept (§ 5) und Jahresplan |
+| B5 GR-Kürzung offenlegen | Jahresplan Punkt 6: Beschlussvorlage für die Bildungsgangkonferenz (GR-Kürzung **und** Scharen-Vorgriff) |
+| B6 Scharen-Vorgriff | **Entscheidung: Scharen bleiben.** Aus der Kürzungskaskade entfernt (nur Notfall-Komprimierung 4 → 2 DS); Rahmung als Stufe-12/13-Material + Forscherauftrag Block 3 stützt die Motivation |
+| B7 Korrekturlast | Exit-Tickets: „sichten statt korrigieren" mit Drei-Stapel-Sortierung im Konzept (2.6) verankert |
+| B8 Distanz/Differenzierung oben | Distanzunterricht-Grundgerüst im Medienkonzept (§ 4); vier GeoGebra-Forscheraufträge (einer pro Block) in Konzept (§ 3.5) und Spickzettel-Headern. Offen bleibt: Sprachförderung über Satzmuster hinaus |
+
+Zusätzlich umgesetzt (Website): Der **Merksatz** steht jetzt auf allen
+Inhaltsseiten direkt **vor den Beispielen** (statt hinter den Aufgaben)
+— beim Üben ist er damit der Nachschlage-Anker über Beispielen und
+Aufgaben. Damit das Merksatz-Ritual (erst selbst formulieren!) nicht
+kollabiert, gilt im Unterricht: beim ersten Durchgang zugeklappt
+überspringen, erst in der Sicherung aufklappen (in Konzept 2.2 und
+Spickzettel-Headern verankert).

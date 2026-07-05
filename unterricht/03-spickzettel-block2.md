@@ -2,6 +2,16 @@
 
 Nach den Herbstferien: erste Startrampe bewusst groß (10′, 4 Aufgaben
 quer durch Block 1 — Abruf nach Pause festigt am stärksten).
+Ritualbudget und Merksatz-Regel wie in Block 1 (ein Abruf-Opener pro
+DS; Merksatz liegt zwischen Erklärung und Beispielen, erst in der
+Sicherung aufklappen).
+
+**Forscherauftrag Block 2:** In GeoGebra f(x) = 1/(x−t) mit
+Schieberegler erkunden — was macht der Parameter mit Polstelle und
+Asymptoten? (Vortrag in W 16.)
+
+**Notfallreserve:** Ausdrucke der Aufgabenblöcke Nullstellen und
+Gebrochenrationale; PWA-Cache vor W 11 auffrischen.
 
 ---
 

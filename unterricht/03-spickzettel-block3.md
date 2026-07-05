@@ -2,7 +2,15 @@
 
 Nach den Weihnachtsferien: große Startrampe (10′) mit Ableitungs-Drill —
 zwei Wochen Pause kosten Automatisierung, das ist normal und wird
-eingeplant statt beklagt.
+eingeplant statt beklagt. Ritualbudget und Merksatz-Regel wie in
+Block 1.
+
+**Forscherauftrag Block 3:** In GeoGebra eine eigene Kurvenschar bauen
+und die Linie finden, auf der ihre Hochpunkte wandern (Ortskurve
+entdecken, bevor sie im Unterricht drankommt — Vortrag in W 32).
+
+**Notfallreserve:** Ausdrucke der Teilschritt- und Diskussionsaufgaben
+der Kurvendiskussions-Seite; PWA-Cache vor W 21 auffrischen.
 
 ---
 
@@ -178,4 +186,4 @@ eingeplant statt beklagt.
 ### W32 · DS 2 — Ortskurven (2/2) · Vorgehen B
 **Fokus:** Wendepunkt-Ortskurven, Sonderfälle, Block-Abschluss
 - **Ablauf:** 10′ Quiz-Voting · 2 × 22′ Übungsband (Wendepunkt-Ortskurven; Sonderfall senkrechte Gerade; Runde 2 Mischblock KD-Teilschritte — KA-Stoff warmhalten) · 14′ Fehlerkonferenz · 12′ Blockabschluss: Scharen-Quiz als Team-Turnier.
-- **Hinweis:** Scharen/Ortskurven sind Streichposten Nr. 3 der Kürzungskaskade — falls der Block wegen Osterferien-Lage kollidiert, ersatzlos schieben/streichen, NICHT den Extremwert-Block anknabbern. **→ Osterferien um W 31/32**
+- **Hinweis:** Scharen/Ortskurven sind fester Bestandteil des Kurses (bewusster Vorgriff auf LB 4, der Fachkonferenz offengelegt). Kollidiert der Block mit der Osterferien-Lage: auf 2 DS **komprimieren** (je 1 DS Schar/Ortskurve, nur geführte Beispiele) oder hinter die Ferien schieben — nicht streichen und nicht den Extremwert-Block anknabbern. **→ Osterferien um W 31/32**

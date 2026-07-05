@@ -23,10 +23,18 @@ Wandertag, Projekttage, Krankheit, Veranstaltungen) — dieser Plan
    Qualifikationsphase (s. u.).
 4. **7 Puffer-DS und Reservewoche 42** fest eingeplant; dazu eine
    ausgewiesene **Kürzungskaskade** (s. u.).
-5. Kurvenscharen/Ortskurven bleiben als **kompakter Vorgriff** (4 DS)
-   auf LB 4 erhalten — nach KA 3, ohne KA-Relevanz, als Streichposten
-   erster Wahl markiert. (Lehrplan: Arbeiten mit Parametern ist erst im
-   Leistungsfach der Qualifikationsphase verpflichtend.)
+5. Kurvenscharen/Ortskurven bleiben als **fester Vorgriff** (4 DS) auf
+   LB 4 erhalten — nach KA 3, ohne KA-Relevanz. (Lehrplan: Arbeiten mit
+   Parametern ist erst im Leistungsfach der Qualifikationsphase
+   verpflichtend.) Sie stehen bewusst **nicht** in der Kürzungskaskade;
+   bei extremem Zeitdruck werden sie komprimiert, nicht gestrichen.
+6. **Offenlegung gegenüber der Fachkonferenz:** Zwei bewusste
+   Abweichungen vom Arbeitsplan gehören als Beschlussvorlage in die
+   Bildungsgangkonferenz — (a) der Scharen-/Ortskurven-Vorgriff auf
+   LB 4 und (b) die Kürzung der gebrochenrationalen Funktionen von
+   ca. 16 WS auf 8 WS (eine kompakte Website-Seite; Vertiefung inkl.
+   hebbarer Lücken folgt in Stufe 12, LB 4). Beides betrifft
+   Vergleichbarkeit mit Parallelklassen und Klassenwechsler.
 
 **Leseweise:** „Seite (2/3)" = zweite von drei DS zu dieser Website-Seite.
 Ferienlagen sind Richtwerte — bei abweichendem Ferienkalender ganze
@@ -153,9 +161,12 @@ Kurvendiskussion ✓.
 | **KA 4** | 41 (DS 1) | 90 min | Extremwertprobleme + Steckbriefe + Gauß |
 
 Jede KA enthält ~15 % Wiederholungsanteil aus früheren Blöcken
-(angekündigt — Spacing gilt auch für Prüfungen). Tests sind
-Frühwarnsystem: unbenotet oder gering gewichtet, mit individueller
-Rückmeldung entlang der Checklisten.
+(angekündigt — Spacing gilt auch für Prüfungen) und **mindestens eine
+strukturell neue Aufgabe**, die nicht als Variation einer
+Website-Aufgabe erkennbar ist — sonst belohnt die KA
+Wiedererkennungslernen statt Verständnis. Tests sind Frühwarnsystem:
+unbenotet oder gering gewichtet, mit individueller Rückmeldung entlang
+der Checklisten.
 
 ## Kürzungskaskade (wenn Wochen ausfallen)
 
@@ -163,10 +174,12 @@ In dieser Reihenfolge streichen — niemals Pflichtstoff zuerst:
 
 1. **Reservewoche 42** (−2 DS)
 2. **Puffer-DS** W 9/16/20/30/40 (je −1 DS, nur wenn Klasse stabil ist)
-3. **Kurvenscharen + Ortskurven** W 31–32 (−4 DS; Vorgriff auf LB 4,
-   nicht AP-pflichtig — entfällt ersatzlos, kommt in Stufe 12 wieder)
-4. **Kurvendiskussion 12 → 11 DS** (Vermischtes kürzen)
-5. **Extremwertprobleme 7 → 6 DS** (Ökonomie-Aufgaben kürzen)
+3. **Kurvendiskussion 12 → 11 DS** (Vermischtes kürzen)
+4. **Extremwertprobleme 7 → 6 DS** (Ökonomie-Aufgaben kürzen)
+5. **Nur im äußersten Notfall:** Kurvenscharen + Ortskurven von 4 auf
+   2 DS **komprimieren** (je 1 DS Schar/Ortskurve, nur geführte
+   Beispiele) — sie werden nicht gestrichen; der Vorgriff ist fester
+   Bestandteil des Kurses.
 
 Umgekehrt gilt bei schneller Klasse: Puffer-DS werden zu
 ⭐⭐⭐-Vertiefung, W 42 zur Scharen-Werkstatt.
