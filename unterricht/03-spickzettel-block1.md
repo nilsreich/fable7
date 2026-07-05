@@ -2,8 +2,29 @@
 
 Format je Doppelstunde (DS): Ziel → Ablauf (Minuten) → Kernfragen (mit
 erwarteter Antwort) → Stolperfallen → Hausaufgabe. Seitenangaben =
-Website-Pfad; im Unterricht `?beamer` anhängen. Startrampe (5–8 min)
-ab Woche 2 in jeder DS: 3 Kopfaufgaben, davon 1 aus einem Alt-Thema.
+Website-Pfad; im Unterricht `?beamer` anhängen.
+
+**Ritualbudget:** Pro DS genau **ein** Abruf-Opener — Startrampe
+(3 Kopfaufgaben, davon 1 Alt-Thema; ab W 2) *oder* Quiz-Voting, nie
+beides. Exit-Ticket nur in B-Stunden, nur sichten (3 Stapel:
+verstanden/wackelt/Alarm). Die Minutenangaben sind Hypothesen, keine
+Drehbücher — auf die Klasse reagieren schlägt Taktung.
+
+**Hinweis Merksatz-Position:** Der Merksatz steht auf jeder Seite
+eingeklappt zwischen Erklärung und Beispielen. Beim ersten Durchgang
+**überspringen** (zugeklappt lassen!) und erst im Sicherungsritual am
+Stundenende aufklappen; in Übungsstunden dient er als Nachschlage-Anker
+direkt über den Beispielen.
+
+**Forscherauftrag Block 1** (freiwillig, für sehr Starke, 5-min-Vortrag
+in W 9): In GeoGebra a·f(x−d)+e mit Schiebereglern für eine
+Funktionsklasse eigener Wahl bauen und die Wirkung der Parameter
+vorführen.
+
+**Notfallreserve:** Ausgedruckte Aufgabenblöcke (mit Lösungen) von
+Algebra-Werkzeugkasten, Lineare & quadratische F. und Transformationen
+in den Kursordner legen; PWA-Cache vor W 1 füllen (alle Blockseiten
+einmal auf dem Tablet öffnen).
 
 ---
 

@@ -3,7 +3,15 @@
 Leitmotiv des Blocks: **Modellieren ist der Engpass, nicht das Ableiten.**
 Zeitbudget in jeder Stunde entsprechend verteilen — das Aufstellen von
 Zielfunktion/Bedingungsgleichungen bekommt die Übungszeit, das Kalkül
-läuft als Startrampen-Drill nebenher.
+läuft als Startrampen-Drill nebenher. Ritualbudget und Merksatz-Regel
+wie in Block 1.
+
+**Forscherauftrag Block 4:** Das Schachtelproblem dynamisch in GeoGebra:
+V(x) mit Schieberegler für den Eckenschnitt x — wo liegt das Maximum
+und wie verändert es sich mit dem Kartonformat? (Vortrag in W 40.)
+
+**Notfallreserve:** Ausdrucke der Aufgabenblöcke Extremwertprobleme und
+Gauß-Verfahren; PWA-Cache vor W 33 auffrischen.
 
 ---
 

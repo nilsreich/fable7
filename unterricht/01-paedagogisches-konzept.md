@@ -73,14 +73,24 @@ Dunlosky et al. 2013 stufen Practice Testing als eine der zwei
 wirksamsten Lerntechniken ein).
 
 **Konsequenz.** Drei feste Abruf-Rituale:
-1. **Startrampe (5–8 min, jede DS):** 3 Kopfaufgaben ohne Hilfsmittel —
-   davon mindestens **eine aus einem zurückliegenden Thema** (siehe 2.3).
+1. **Startrampe (5–8 min):** 3 Kopfaufgaben ohne Hilfsmittel — davon
+   mindestens **eine aus einem zurückliegenden Thema** (siehe 2.3).
 2. **Quiz-Voting:** Das Seiten-Quiz als Klassenabstimmung (A–D per
    Handzeichen) am Stundenanfang der Folge-DS, nicht direkt nach der
    Erarbeitung — Abruf mit Verzögerung.
 3. **Merksatz-Ritual:** Kernsatz erst selbst formulieren lassen, dann
    den Website-Merksatz aufklappen und vergleichen (Abruf + Elaboration
-   statt Konsum).
+   statt Konsum). Der Merksatz steht auf jeder Seite eingeklappt
+   **zwischen Erklärung und Beispielen** — er wird beim ersten
+   Durchgang übersprungen (nicht vorwegnehmen!) und erst im
+   Sicherungsritual aufgeklappt; ab da dient er beim Üben als
+   Nachschlage-Anker direkt über den Beispielen.
+
+**Ritualbudget (Selbstschutz):** Pro Doppelstunde genau **ein**
+Abruf-Opener — Startrampe *oder* Quiz-Voting, nie beides. Exit-Tickets
+nur in Übungsband-Stunden (Vorgehen B). Rituale sind einzeln billig,
+in Summe teuer; wenn das Rahmenprogramm 20 Minuten übersteigt, fliegt
+zuerst das Exit-Ticket, nie die Übungszeit.
 
 ### 2.3 Verteilen und Verschränken (Spacing & Interleaving)
 
@@ -146,8 +156,12 @@ stärksten auf Aufgaben- und Prozessebene, kaum auf Personenebene
   der Fall wird anonymisiert dokumentiert; die **Fehlerkonferenz**
   macht daraus Klassenfeedback auf Prozessebene („der Fehler ist
   vernünftig — hier ist die Denkfalle").
-- **Exit-Tickets** (eine ⭐⭐-Aufgabe auf Zettel) geben der Lehrkraft
-  pro Stunde ein ehrliches Lagebild; Auflösung eröffnet die Folgestunde.
+- **Exit-Tickets** (eine ⭐⭐-Aufgabe auf Zettel, nur in B-Stunden)
+  geben der Lehrkraft ein ehrliches Lagebild; Auflösung eröffnet die
+  Folgestunde. **Korrekturökonomie:** Tickets werden nur gesichtet und
+  in drei Stapel sortiert (verstanden / wackelt / Alarm), nicht
+  korrigiert — das Lagebild entsteht in fünf Minuten, sonst frisst das
+  Instrument die Kraft, die es sparen soll.
 - KA-Rückgaben laufen als **Fehleranalyse-Stunden** mit individueller
   Berichtigung entlang der Seiten-Checklisten, nicht als Notenverlesung.
 
@@ -231,6 +245,15 @@ Rechenersatz — im Sinne der Medienkompetenz-Markierungen des Arbeitsplans.
 4. **Nachteilsausgleich/Sprachförderung:** Antwortsätze mit Einheiten
    werden als Satzmuster eingeübt (Scaffolding); Fachbegriffe stehen
    dauerhaft sichtbar auf einer Glossar-Seite der Notizapp.
+5. **Differenzierung nach oben:** Die ⭐⭐⭐-Schiene ist Aufgaben-, keine
+   Projektdifferenzierung. Deshalb gibt es pro Block einen
+   **GeoGebra-Forscherauftrag** für sehr starke Lernende (freiwillig,
+   Präsentation in 5 Minuten am Blockende): Block 1 „Baue a·f(x−d)+e
+   mit Schiebereglern für eine Funktionsklasse deiner Wahl"; Block 2
+   „Was macht ein Parameter im Nenner? Erkunde f(x)=1/(x−t)"; Block 3
+   „Baue eine eigene Kurvenschar und finde die Linie, auf der ihre
+   Hochpunkte wandern"; Block 4 „Schachtelproblem dynamisch: Volumen
+   als Funktion des Schnitts x mit Schieberegler".
 
 ## 4. Medien- und Rollenkonzept
 
@@ -244,16 +267,35 @@ Rechenersatz — im Sinne der Medienkompetenz-Markierungen des Arbeitsplans.
 
 Das Stundenprotokoll (Website-Referenz + exportierte Handschrift) macht
 Unterricht **nachholbar** — wichtig bei Krankheit und für die
-KA-Vorbereitung, und anschlussfähig an Fernunterricht (im Arbeitsplan
-markierte Inhalte).
+KA-Vorbereitung.
+
+**Ausfallsicherung (Klumpenrisiko Website):** Fällt Beamer oder WLAN
+aus, darf die Stunde nicht mit ausfallen. Vorsorge: (a) die Website ist
+als PWA installiert und cacht besuchte Seiten offline — vor jedem Block
+einmal alle Blockseiten auf dem Unterrichtstablet öffnen; (b) pro Block
+liegt eine **Papier-Notfallreserve** im Ordner (je ein ausgedruckter
+Aufgabenblock mit Lösungen der 2–3 Kernseiten); (c) das
+Stundenformat B funktioniert notfalls komplett analog (Aufgaben
+diktieren, Fehlerklinik am Pult).
+
+**Distanzunterricht-Grundgerüst** (für die im Arbeitsplan markierten
+fernunterrichtstauglichen Inhalte): Die Website trägt die Stoffvermittlung
+(Erklärung + Beispiele + Selbstkontrolle über eingeklappte Lösungen),
+der Wochenrhythmus bleibt: Wochenplan mit Pflicht-⭐-Block und Quiz als
+Selbsttest, eine Videokonferenz pro Woche im Format „Fehlerkonferenz"
+(eingesandte Fotos von Rechenwegen, anonymisiert besprochen),
+Exit-Ticket als Foto-Upload. Die Startrampe wird zum täglichen
+3-Aufgaben-Selbsttest mit Musterlösung am Folgetag.
 
 ## 5. Leistungs- und Übungskonzept
 
 - **Summativ:** 4 Klassenarbeiten à 90 min (Lagen laut Arbeitsplan: vor
   Herbst-, vor Weihnachts-, vor Osterferien, gegen Schuljahresende).
   Jede KA enthält einen Wiederholungsanteil (~15 %) aus früheren Blöcken
-  — Spacing gilt auch für Prüfungen — und mindestens eine
-  Begründungs-/Modellierungsaufgabe.
+  — Spacing gilt auch für Prüfungen —, mindestens eine
+  Begründungs-/Modellierungsaufgabe und **mindestens eine strukturell
+  neue Aufgabe**, die keine Variation einer Website-Aufgabe ist
+  (sonst prüft die KA Wiedererkennen statt Können).
 - **Formativ (unbenotet oder gering gewichtet):** 4 Kurztests à 20 min
   als Frühwarnsystem; Exit-Tickets; Quiz-Votings; Checklisten-Abhaken
   vor jeder KA mit persönlichem Lückenauftrag.
@@ -283,11 +325,34 @@ auf zwei Übungsbänder).
 
 | Ritual | Wann | Zweck |
 | --- | --- | --- |
-| Startrampe (3 Aufgaben, 1 × Alt-Thema) | Stundenbeginn | Abruf, Spacing, Ankommen |
-| Quiz-Voting per Handzeichen | Beginn Folge-DS | verzögerter Abruf, Fehlerdiagnose |
+| Startrampe (3 Aufgaben, 1 × Alt-Thema) | Stundenbeginn (wenn kein Quiz-Voting) | Abruf, Spacing, Ankommen |
+| Quiz-Voting per Handzeichen | Beginn Folge-DS (ersetzt dort die Startrampe) | verzögerter Abruf, Fehlerdiagnose |
 | „Lösung erst nach eigenem Versuch" | immer | Selbstkontrolle, Worked-Example-Fading |
 | Fehler-Parkplatz (anonym) | Übungsphasen | Fehlerkultur, Material für Fehlerkonferenz |
 | Merksatz-Ritual (erst selbst, dann Seite) | Sicherung | Elaboration statt Konsum |
-| Exit-Ticket (⭐⭐-Aufgabe) | Stundenende (B) | formatives Lagebild |
+| Exit-Ticket (⭐⭐-Aufgabe) | Stundenende (nur B-Stunden) | formatives Lagebild (sichten, nicht korrigieren) |
 | PDF-Export der Notizseite | Stundenende | Protokoll, Nachholbarkeit |
 | Checklisten-Abhaken + Lückenauftrag | vor jeder KA | Metakognition, gezielte Vorbereitung |
+
+## 8. Evaluation des Konzepts selbst
+
+Die Evidenzbasis der Leitideen stammt überwiegend aus Labor- und
+Kurzzeitstudien; ob sie in **dieser** Klasse trägt, ist eine empirische
+Frage. Deshalb überprüft das Konzept sich selbst mit den Daten, die es
+ohnehin erzeugt:
+
+- **Nach jedem Test/jeder KA (4 × jährlich):** Trefferquote der
+  Wiederholungsanteile getrennt auswerten — steigt sie über das Jahr,
+  wirken Startrampe und Mischblöcke; stagniert sie, Dosis erhöhen oder
+  Format wechseln.
+- **Exit-Ticket-Stapel** („verstanden/wackelt/Alarm") pro Thema
+  notieren: Themen mit dauerhaft großem Alarm-Stapel bekommen in der
+  nächsten Planungsrunde mehr DS — das korrigiert die DS-Budgets der
+  Seiten mit echten Daten.
+- **Jahresfeedback (W 42):** Die Lernenden bewerten die Rituale einzeln
+  (geholfen/egal/gestört). Was zwei Jahre in Folge „egal" ist, fliegt
+  raus — Rituale rechtfertigen sich durch Wirkung, nicht durch Theorie.
+- **Eigene Stichprobe:** Zweimal im Jahr eine Stunde ohne
+  Beamer-Website unterrichten (Papier-Notfallreserve nutzen) — als
+  bewusster Test der Ausfallsicherung und als Kontrast-Erfahrung, was
+  die Website wirklich beiträgt.
